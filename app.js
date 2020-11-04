@@ -21,4 +21,4 @@ app.post('/url', function(req, res) {
 	});
 });
 
-app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
+app.listen(port, () => console.log(`listening on port ${port}!`));
