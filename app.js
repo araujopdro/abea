@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 3000;
-const urlShortener = require('node-url-shortener');
+const db = require('./models/index.js');
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: true}));
@@ -13,11 +13,12 @@ app.get('/', function(req, res) {
 });
 
 app.post('/url', function(req, res) {
-  const url = req.body.url
+  const nome = req.body.url
 
-  urlShortener.short(url, function(err, shortUrl){
-    res.send(shortUrl);
-  });
+  db.characters.findOrCreate({where: {nome: nome}})
+	.then(([urlObj, created]) => {
+	  res.send("personagem criado");
+	});
 });
 
 app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
