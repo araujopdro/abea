@@ -14,7 +14,6 @@ app.get('/', function(req, res) {
 
 app.post('/url', function(req, res) {
   const nome = req.body.url
-  console.log(db);
   db.Characters.findOrCreate({where: {nome: nome}})
 	.then(([urlObj, created]) => {
 	  res.send("personagem criado");
