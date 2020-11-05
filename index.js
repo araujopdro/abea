@@ -41,6 +41,7 @@ app
   .post(addChar)
 
 // Start server
+process.env.NODE_TLS_REJECT_UNAUTHORIZED='0';
 app.listen(process.env.PORT || 3002, () => {
   console.log(`Server listening`)
 })
