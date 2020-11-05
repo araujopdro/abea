@@ -1,41 +1,8 @@
 CREATE TABLE chars (
   id SERIAL PRIMARY KEY,
   nome VARCHAR(255) NOT NULL,
-  idade INTEGER NOT NULL,
-  nacionalidade VARCHAR(255) NOT NULL,
-  miscigenacao VARCHAR(255) NOT NULL,
-  caracteristicas VARCHAR(255) NOT NULL,
-  resistencia INTEGER NOT NULL,
-  crit INTEGER NOT NULL,
-  def_passiva INTEGER NOT NULL,
-  def_ativa INTEGER NOT NULL,
-  energia INTEGER NOT NULL,
-  habilidades VARCHAR(255) NOT NULL,
-  pontos_de_habilidade VARCHAR(255) NOT NULL,
-  dinheiro INTEGER NOT NULL,
-  bens VARCHAR(255) NOT NULL,
-  armas VARCHAR(255) NOT NULL,
-  historia TEXT NOT NULL
+  idade INTEGER NOT NULL
 );
 
-INSERT INTO chars (	nome,
-					idade,
-					nacionalidade,
-					miscigenacao,
-					caracteristicas,
-					resistencia,
-					crit,
-					def_passiva,
-					def_ativa,
-					energia,
-					habilidades,
-					pontos_de_habilidade,
-					dinheiro,
-					bens,
-					armas,
-					historia)
-VALUES  ('Pedro', 25, 'Brasileiro', 'Pardo', 'A;B;C', 10, 0, 0, 0, 0, 100, 'A;B;C', 2, 'A;B', 'D', 
-	'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi venenatis, aliquam massa a,
-	tincidunt nunc. Donec condimentum arcu vel hendrerit ornare. Pellentesque sollicitudin tortor arcu,
-	non semper est tristique sit amet. Nunc tempor felis sit amet lacinia varius. Vivamus semper purus
-	semper, fermentum felis vitae, iaculis nisi.');
+INSERT INTO chars (	nome,idade)
+VALUES  ('Pedro', 25);
