@@ -19,7 +19,7 @@
 	mysqli_query($bd, 'SET character_set_client=utf8');
 	mysqli_query($bd, 'SET character_set_results=utf8');
 
-	mysqli_query($bd, "INSERT INTO acesse07_abea_characters (`nome`, `idade`, `nacionalidade`, `etnia`, `caracteristicas`, `resistencia`, `habilidades`, `historia`) VALUES ('$nome', '$idade', '$nacionalidade', '$etnia', '$caracteristicas', '$resistencia', '$habilidades', '$historia')")or die(mysqli_error($bd));
+	mysqli_query($bd, "INSERT INTO characters (`nome`, `idade`, `nacionalidade`, `etnia`, `caracteristicas`, `resistencia`, `habilidades`, `historia`) VALUES ('$nome', '$idade', '$nacionalidade', '$etnia', '$caracteristicas', '$resistencia', '$habilidades', '$historia')")or die(mysqli_error($bd));
 
 	// if ($stmt = $bd->prepare('SELECT email FROM itaucultural WHERE email = ?')) {
 	// 	$stmt->bind_param('s', $_POST['email']);
