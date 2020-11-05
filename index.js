@@ -3,27 +3,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const {pool} = require('./config')
 
-const helmet = require('helmet')
-const compression = require('compression')
-const rateLimit = require('express-rate-limit')
-const {body, check} = require('express-validator')
-
 const app = express()
-
-const limiter = rateLimit({
-  windowMs: 1 * 60 * 1000, // 1 minute
-  max: 5, // 5 requests,
-})
-
-app.use(limiter)
-
-const postLimiter = rateLimit({
-  windowMs: 1 * 60 * 1000,
-  max: 1,
-})
-
-app.use(compression())
-app.use(helmet())
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
@@ -81,16 +61,14 @@ app.post(
     check('armas').not().isEmpty().isLength({min: 5, max: 255}).trim(),
     check('historia').not().isEmpty(),
   ],
-  postLimiter,
   (request, response) => {
     const errors = validationResult(request)
 
     if (!errors.isEmpty()) {
       return response.status(422).json({errors: errors.array()})
     }
-
-    const {author, title} = request.body
-
+    const {nome,idade,nacionalidade,miscigenacao,caracteristicas,resistencia,crit,def_passiva,def_ativa,energia,habilidades,pontos_de_habilidade,dinheiro,bens,armas,historia} = request.body
+    
     pool.query(
       'INSERT INTO chars (nome,idade,nacionalidade,miscigenacao,caracteristicas,resistencia,crit,def_passiva,def_ativa,energia,habilidades,pontos_de_habilidade,dinheiro,bens,armas,historia) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)',
       [nome,idade,nacionalidade,miscigenacao,caracteristicas,resistencia,crit,def_passiva,def_ativa,energia,habilidades,pontos_de_habilidade,dinheiro,bens,armas,historia],
