@@ -19,11 +19,41 @@ const getChars = (request, response) => {
 }
 
 const addChar = (request, response) => {
-  const {nome, idade} = request.body
+  const {nome,
+        idade,
+        nacionalidade,
+        miscigenacao,
+        caracteristicas,
+        resistencia,
+        crit,
+        def_passiva,
+        def_ativa,
+        energia,
+        habilidades,
+        pontos_de_habilidade,
+        dinheiro,
+        bens,
+        armas,
+        historia} = request.body
 
   pool.query(
-    'INSERT INTO chars (nome,idade) VALUES ($1, $2)',
-    [ nome,idade],
+    'INSERT INTO chars (nome,idade,nacionalidade,miscigenacao,caracteristicas,resistencia,crit,def_passiva,def_ativa,energia,habilidades,pontos_de_habilidade,dinheiro,bens,armas,historia) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)',
+    [ nome,
+      idade,
+      nacionalidade,
+      miscigenacao,
+      caracteristicas,
+      resistencia,
+      crit,
+      def_passiva,
+      def_ativa,
+      energia,
+      habilidades,
+      pontos_de_habilidade,
+      dinheiro,
+      bens,
+      armas,
+      historia],
     (error) => {
       if (error) {
         throw error
