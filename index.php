@@ -638,7 +638,9 @@
 	                	var div_niveis_holder = document.createElement("div");
 	                		div_niveis_holder.className = "habilidades-niveis-holder";
 	                		if(habilidades[i].niveis != null){
+	                			console.log(habilidades[i].nome);
 	                			for(var j = 0; j < habilidades[i].niveis.length; j++){
+	                				console.log(habilidades[i].niveis[j]);
 		                			var span_tooltip = document.createElement("span");
 					                	span_tooltip.className = "habilidades-tooltip-text";
 					                	span_tooltip.innerHTML = habilidades[i].descricao[j];
