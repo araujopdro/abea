@@ -499,27 +499,14 @@
 					]
 				}];
 			
-			function CreateNacionalidade(){
-				console.log("create nacionalidade");
-                //$('#select-nacionalidade').remove();
-                var select_nacionalidade = document.createElement("select");
-                select_nacionalidade.setAttribute("id", "select-nacionalidade");
-
+			function AddNacionalidades(){
+				console.log("add nacionalidades");
                 for(var i = 0; i < nacionalidades.length; i++){
-                	var option = document.createElement("option");
                 	console.log(nacionalidades[i].nome);
-                	option.setAttribute("value", nacionalidades[i].nome);
-    				option.text = nacionalidades[i].nome;
-    				select_nacionalidade.appendChild(option);
-                }
-
-                $('#holder-nacionalidade').append(select_nacionalidade);
-
-	   //          $('#select-nacionalidade').on('change', function() {
-			 //  		console.log(this.value);
-				// });
+    				$('<option>').val(nacionalidades[i].nome).text(nacionalidades[i].nome).appendTo('#input-nacionalidade');
+                };
             }
-            CreateNacionalidade();
+            AddNacionalidades();
 
 		</script>
 		<style type="text/css">
@@ -536,10 +523,9 @@
 			<form id="form">
 				<input class="input-field" id="input-nome" type="text" name="nome" required="true">
 				<input class="input-field" id="input-idade" type="number" name="idade" required="true">
-				<input class="input-field" id="input-nacionalidade" type="text" name="nacionalidade" required="true">
 				<div>
 					<div id="holder-nacionalidade">
-
+						<select id="input-nacionalidade" name="nacionalidade" required="true"></select>
 					</div>
 					<div id="flavor-nacionalidade">
 						<span></span>
