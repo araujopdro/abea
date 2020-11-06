@@ -508,6 +508,7 @@
 
                 for(var i = 0; i < nacionalidades.length; i++){
                 	var option = document.createElement("option");
+                	console.log(nacionalidades[i].nome);
                 	option.value = nacionalidades[i].nome;
     				option.text = nacionalidades[i].nome;
     				select.appendChild(option);
