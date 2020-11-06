@@ -641,33 +641,34 @@
 	                	var div_niveis_holder = document.createElement("div");
 	                		div_niveis_holder.className = "habilidades-niveis-holder";
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
-                				if(habilidades[i].habilidades[j].nome){
-	                				for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
-		                				console.log(habilidades[i].habilidades[j].nome[k]);
-		                				console.log(habilidades[i].habilidades[j].descricao[k]);
-		                				console.log(habilidades[i].habilidades[j].requisitos[k]);
+                				console.log(habilidades[i].habilidades[j]);
+          //       				if(habilidades[i].habilidades[j].nome){
+	         //        				for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
+		        //         				console.log(habilidades[i].habilidades[j].nome[k]);
+		        //         				console.log(habilidades[i].habilidades[j].descricao[k]);
+		        //         				console.log(habilidades[i].habilidades[j].requisitos[k]);
 
-		                				var span_tooltip = document.createElement("span");
-						                	span_tooltip.className = "habilidades-tooltip-text";
-						                	span_tooltip.innerHTML = habilidades[i].habilidades[j].descricao[k];
+		        //         				var span_tooltip = document.createElement("span");
+						    //             	span_tooltip.className = "habilidades-tooltip-text";
+						    //             	span_tooltip.innerHTML = habilidades[i].habilidades[j].descricao[k];
 
-						                var checkbox = document.createElement('input');
-					                		checkbox.className = "input-habilidades";
-				                		var _id = habilidades[i].habilidades[j].niveis[k].replace(/ /g,'')
-											checkbox.id = "input-habilidades-"+_id;
-											checkbox.name = "habilidades";
-											checkbox.type = "checkbox";
-											checkbox.value = habilidades[i].habilidades[j].niveis[k];
+						    //             var checkbox = document.createElement('input');
+					     //            		checkbox.className = "input-habilidades";
+				      //           		var _id = habilidades[i].habilidades[j].niveis[k].replace(/ /g,'')
+										// 	checkbox.id = "input-habilidades-"+_id;
+										// 	checkbox.name = "habilidades";
+										// 	checkbox.type = "checkbox";
+										// 	checkbox.value = habilidades[i].habilidades[j].niveis[k];
 
-										var label = document.createElement('label')
-											label.htmlFor = "input-habilidades-"+_id;
-											label.appendChild(document.createTextNode(habilidades[i].habilidades[j].niveis[k]));
+										// var label = document.createElement('label')
+										// 	label.htmlFor = "input-habilidades-"+_id;
+										// 	label.appendChild(document.createTextNode(habilidades[i].habilidades[j].niveis[k]));
 
-										div_niveis_holder.appendChild(span_tooltip);
-										div_niveis_holder.appendChild(checkbox);
-										div_niveis_holder.appendChild(label);
-	                				}
-	                			}
+										// div_niveis_holder.appendChild(span_tooltip);
+										// div_niveis_holder.appendChild(checkbox);
+										// div_niveis_holder.appendChild(label);
+	         //        				}
+	         //        			}
 	                		}
                 	div_holder.appendChild(div_niveis_holder);
                 	c.appendChild(div_holder);
