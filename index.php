@@ -282,7 +282,7 @@
 				"Cafuzo"];
 			var habilidades = [
 				{
-					"name":"Habilidades Gerais",
+					"nome":"Habilidades Gerais",
 					"habilidades":[
 						{"nome":"Acrobacia","niveis":["rolamentos básicos e estrelinhas","saltos mortais e piruetas","andar na corda bamba e fazer rotações e saltos entre barras"]},
 						{"nome":"Corrida","niveis":["correr com uma velocidade acima da média","correr distâncias maiores e em terrenos mais difíceis","correr grandes distâncias em terrenos difíceis"]},
@@ -295,7 +295,7 @@
 					]
 				},
 				{
-					"name":"Habilidades Silvestres",
+					"nome":"Habilidades Silvestres",
 					"habilidades":[
 						{"nome":"Armadilhas","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
 						{"nome":"Canoagem","niveis":["remar e navegar uma canoa","navegar águas mais difíceis com correnteza","navegar corredeiras"]},
@@ -309,7 +309,7 @@
 					]
 				},
 				{
-					"name":"Armas",
+					"nome":"Armas",
 					"habilidades":[
 						"Armas de arremesso",
 						"Armas de corte",
@@ -324,7 +324,7 @@
 					]
 				},
 				{
-					"name":"Artes Marciais",
+					"nome":"Artes Marciais",
 					"habilidades":[
 						{"nome":"Boxe","niveis":["dar golpes fortes com os punhos (dano 1)","ganha um ponto a mais de resistência","ganha outro ponto de resistência"]},
 						{"nome":"Capoeira","niveis":["pode usar esta habilidade para atacar com os pés (dano 1) ou para esquivas durante o combate","",""]},
@@ -332,7 +332,7 @@
 					]
 				},
 				{
-					"name":"Habilidades Sociais",
+					"nome":"Habilidades Sociais",
 					"habilidades":[
 						"Barganha",
 						"Oratória",
@@ -340,7 +340,7 @@
 					]
 				},
 				{
-					"name":"Habilidades Militares e Navais",
+					"nome":"Habilidades Militares e Navais",
 					"habilidades":[
 						"Artilharia",
 						"Militar",
@@ -348,7 +348,7 @@
 					]
 				},
 				{
-					"name":"Artesanatos",
+					"nome":"Artesanatos",
 					"habilidades":[
 						"Alfaiataria",
 						"Armaria",
@@ -360,7 +360,7 @@
 					]
 				},
 				{
-					"name":"Artes",
+					"nome":"Artes",
 					"habilidades":[
 						"Culinária",
 						"Dança",
@@ -374,7 +374,7 @@
 					]
 				},
 				{
-					"name":"Instrumentos Musicais",
+					"nome":"Instrumentos Musicais",
 					"habilidades":[
 						"Instrumentos de corda",
 						"Instrumentos de corda e arco",
@@ -385,7 +385,7 @@
 					]
 				},
 				{
-					"name":"Outros Ofícios",
+					"nome":"Outros Ofícios",
 					"habilidades":[
 						"Adestramento de cães",
 						"Administração",
@@ -405,7 +405,7 @@
 					]
 				},
 				{
-					"name":"Estudos Acadêmicos",
+					"nome":"Estudos Acadêmicos",
 					"habilidades":[
 						"Astronomia",
 						"Direito",
@@ -418,7 +418,7 @@
 					]
 				},
 				{
-					"name":"Línguas",
+					"nome":"Línguas",
 					"habilidades":[
 						"Português",
 						"Latim",
@@ -440,7 +440,7 @@
 					]
 				},
 				{
-					"name":"Graças Divinas",
+					"nome":"Graças Divinas",
 					"habilidades":[
 						{"nome":"Fé","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 
@@ -466,7 +466,7 @@
 					]
 				},
 				{
-					"name":"Poderes de Fôlego",
+					"nome":"Poderes de Fôlego",
 					"habilidades":[
 						{"nome":"Fôlego","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 
@@ -486,7 +486,7 @@
 					]
 				},
 				{
-					"name":"Poderes de Ifá",
+					"nome":"Poderes de Ifá",
 					"habilidades":[
 						"Ifá",
 						"Saúde",
@@ -616,6 +616,66 @@
 				});
             };
 
+            "nome":"Habilidades Gerais",
+					"habilidades":[
+						{"nome":"Acrobacia","niveis":["rolamentos básicos e estrelinhas","saltos mortais e piruetas","andar na corda bamba e fazer rotações e saltos entre barras"]}
+
+
+						{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]}
+
+			function CreateHabilidades(){
+                $('#holder-habilidades').empty();
+                for(var i = 0; i < habilidades.length; i++){
+	                var c = document.createDocumentFragment();
+	                var div_holder = document.createElement("div");
+	                	div_holder.className = "habilidades-categoria-holder";
+
+	                	var span_name = document.createElement("span");
+	                		span_name.className = "habilidades-categoria-name";
+	                		span_name.innerHTML = habilidades[i].nome;
+
+
+	                	var div_niveis_holder = document.createElement("div");
+	                		div_niveis_holder.className = "habilidades-niveis-holder";
+	                		if(habilidades[i].niveis == null){
+	                			continue;
+	                		}
+	                		for(var j = 0; j < habilidades[i].niveis.length; j++){
+	                			var span_tooltip = document.createElement("span");
+				                	span_tooltip.className = "habilidades-tooltip-text";
+				                	span_tooltip.innerHTML = habilidades[i].descricao[j];
+
+				                var checkbox = document.createElement('input');
+			                		checkbox.className = "input-habilidades";
+		                		var _id = habilidades[i].niveis[j].replace(/ /g,'')
+									checkbox.id = "input-habilidades-"+_id;
+									checkbox.name = "habilidades";
+									checkbox.type = "checkbox";
+									checkbox.value = habilidades[i].niveis[j];
+
+								var label = document.createElement('label')
+									label.htmlFor = "input-habilidades-"+_id;
+									label.appendChild(document.createTextNode(habilidades[i].niveis[j]));
+
+								div_niveis_holder.appendChild(span_tooltip);
+								div_niveis_holder.appendChild(checkbox);
+								div_niveis_holder.appendChild(label);
+	                		}
+
+                	c.appendChild(div_niveis_holder);
+
+                	$('#holder-habilidades').append(c);
+                }
+
+
+	   //          var limit = 3;
+				// $('input.input-caracteristicas').on('change', function(evt) {
+				//    if($("input[name='caracteristicas']:checked").length > limit) {
+				//        this.checked = false;
+				//    }
+				// });
+            };
+
             $(document).ready(function() {
             	CreateCaracteristicas();
             	CreateNacionalidade();
@@ -632,6 +692,12 @@
 				margin: 0;
 			    background-color: white;
 			}
+
+			.holder-caracteristicas{
+				display: grid;
+    			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			}
+
 			.caracteristicas-tooltip-holder{
 			    position: relative;
 			    display: block;
@@ -644,16 +710,15 @@
 			}
 
 			.caracteristicas-tooltip-holder .caracteristicas-tooltip-text {
-				visibility: hidden;
-				background-color: black;
-				color: #fff;
-				text-align: center;
-				padding: 5px 0;
-				border-radius: 6px;
-
-				position: absolute;
-    			transform: translateY(-100%);
-				z-index: 1;
+			    visibility: hidden;
+			    background-color: black;
+			    color: #fff;
+			    text-align: center;
+			    padding: 5px 0;
+			    border-radius: 6px;
+			    position: absolute;
+			    transform: translateY(24px);
+			    z-index: 1;
 			}
 			.caracteristicas-tooltip-holder:hover .caracteristicas-tooltip-text {
 				visibility: visible;
