@@ -503,7 +503,7 @@
 				console.log("add nacionalidades");
                 for(var i = 0; i < nacionalidades.length; i++){
                 	console.log(nacionalidades[i].nome);
-    				$('<option>').val(nacionalidades[i].nome).text(nacionalidades[i].nome).appendTo('#input-nacionalidade');
+    				$('<option>').val(nacionalidades[i].nome).text(nacionalidades[i].nome).appendTo('#nacionalidade');
                 };
             }
             AddNacionalidades();
