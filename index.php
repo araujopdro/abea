@@ -525,9 +525,35 @@
 				});
             };
 
+			function CreateIdade(){
+                $('#select-idade').remove();
+                var c = document.createDocumentFragment();
+                var select = document.createElement("select");
+                select.id = "select-idade";
+
+                var option = document.createElement("option");
+                	option.value = "";
+    				option.text = "(...)";
+				select.appendChild(option);
+
+                for(var i = 16; i < 61; i++){
+                	var option = document.createElement("option");
+	                	option.value = i;
+	    				option.text = i;
+    				select.appendChild(option);
+                }
+
+                c.appendChild(select);
+                $('#holder-idade').append(c);
+
+	            $('#select-idade').on('change', function() {
+			  		console.log(this.value);
+				});
+            };
 
             $(document).ready(function() {
             	CreateNacionalidade();
+            	CreateIdade();
             });
 
 
@@ -545,9 +571,12 @@
 		<div>
 			<form id="form">
 				<input class="input-field" id="input-nome" type="text" name="nome" required="true">
-				<input class="input-field" id="input-idade" type="number" name="idade" required="true">
-				<input class="input-field" id="input-nacionalidade" type="text" name="nacionalidade" required="true">
-				<div class="">
+				<div>
+					<div id="holder-idade">
+
+					</div>
+				</div>
+				<div>
 					<div id="holder-nacionalidade">
 
 					</div>
