@@ -589,6 +589,7 @@
 	                	span_tooltip.innerHTML = caracteristicas[i].flavor;
 
                 	var checkbox = document.createElement('input');
+                		checkbox.className = "input-caracteristicas";
 						checkbox.id = "input-caracteristicas-"+caracteristicas[i].nome;
 						checkbox.name = "caracteristicas";
 						checkbox.type = "checkbox";
@@ -607,8 +608,11 @@
                 }
 
 
-	            $('#select-nacionalidade').on('change', function() {
-			  		console.log(this.value);
+	            var limit = 3;
+				$('input.input-caracteristicas').on('change', function(evt) {
+				   if($("input[name='caracteristicas']:checked").length >= limit) {
+				       this.checked = false;
+				   }
 				});
             };
 
@@ -634,6 +638,7 @@
 			    border-bottom: 1px dotted black;
 			    cursor: pointer;
 			}
+
 			.caracteristicas-tooltip-holder label{
 			    cursor: pointer;
 			}
