@@ -500,6 +500,7 @@
 				}];
 			
 			function CreateNacionalidade(){
+				console.log("create nacionalidade");
                 $('#select-nacionalidade').remove();
                 var c = document.createDocumentFragment();
                 var select = document.createElement("select");
@@ -537,7 +538,7 @@
 				<input class="input-field" id="input-nome" type="text" name="nome" required="true">
 				<input class="input-field" id="input-idade" type="number" name="idade" required="true">
 				<input class="input-field" id="input-nacionalidade" type="text" name="nacionalidade" required="true">
-				<div class="">
+				<div>
 					<div id="holder-nacionalidade">
 
 					</div>
