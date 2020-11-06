@@ -629,14 +629,17 @@
 			    background-color: white;
 			}
 			.caracteristicas-tooltip-holder{
-				position: relative;
-			    display: inline-block;
+			    position: relative;
+			    display: block;
 			    border-bottom: 1px dotted black;
+			    cursor: pointer;
+			}
+			.caracteristicas-tooltip-holder label{
+			    cursor: pointer;
 			}
 
 			.caracteristicas-tooltip-holder .caracteristicas-tooltip-text {
 				visibility: hidden;
-				width: 120px;
 				background-color: black;
 				color: #fff;
 				text-align: center;
@@ -644,6 +647,7 @@
 				border-radius: 6px;
 
 				position: absolute;
+    			transform: translateY(-100%);
 				z-index: 1;
 			}
 			.caracteristicas-tooltip-holder:hover .caracteristicas-tooltip-text {
