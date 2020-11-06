@@ -501,13 +501,10 @@
 			
 			function CreateNacionalidade(){
 				console.log("create nacionalidade");
-                
-                $('#select-nacionalidade').remove();
-
-                var c = document.createDocumentFragment();
+                //$('#select-nacionalidade').remove();
                 var select_nacionalidade = document.createElement("select");
                 select_nacionalidade.setAttribute("id", "select-nacionalidade");
-                
+
                 for(var i = 0; i < nacionalidades.length; i++){
                 	var option = document.createElement("option");
                 	console.log(nacionalidades[i].nome);
@@ -516,12 +513,11 @@
     				select_nacionalidade.appendChild(option);
                 }
 
-                c.appendChild(select_nacionalidade);
-                $('#holder-nacionalidade').append(c);
+                $('#holder-nacionalidade').append(select_nacionalidade);
 
-	            $('#select-nacionalidade').on('change', function() {
-			  		console.log(this.value);
-				});
+	   //          $('#select-nacionalidade').on('change', function() {
+			 //  		console.log(this.value);
+				// });
             }
             CreateNacionalidade();
 
