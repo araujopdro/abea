@@ -616,12 +616,12 @@
 				});
             };
 
-            "nome":"Habilidades Gerais",
-					"habilidades":[
-						{"nome":"Acrobacia","niveis":["rolamentos básicos e estrelinhas","saltos mortais e piruetas","andar na corda bamba e fazer rotações e saltos entre barras"]}
+     //        "nome":"Habilidades Gerais",
+					// "habilidades":[
+					// 	{"nome":"Acrobacia","niveis":["rolamentos básicos e estrelinhas","saltos mortais e piruetas","andar na corda bamba e fazer rotações e saltos entre barras"]}
 
 
-						{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]}
+					// 	{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]}
 
 			function CreateHabilidades(){
                 $('#holder-habilidades').empty();
