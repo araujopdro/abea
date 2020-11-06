@@ -501,15 +501,17 @@
 			
 			function CreateNacionalidade(){
 				console.log("create nacionalidade");
+                
                 $('#select-nacionalidade').remove();
+
                 var c = document.createDocumentFragment();
-                var select = document.createElement("select");
-                select.id = "select-nacionalidade";
+                var select_nacionalidade = document.createElement("select");
+                select_nacionalidade.setAttribute("id", "select-nacionalidade");
 
                 for(var i = 0; i < nacionalidades.length; i++){
                 	var option = document.createElement("option");
                 	console.log(nacionalidades[i].nome);
-                	option.value = nacionalidades[i].nome;
+                	option.setAttribute("value", nacionalidades[i].nome);
     				option.text = nacionalidades[i].nome;
     				select.appendChild(option);
                 }
