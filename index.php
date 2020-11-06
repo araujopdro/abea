@@ -507,16 +507,16 @@
                 var c = document.createDocumentFragment();
                 var select_nacionalidade = document.createElement("select");
                 select_nacionalidade.setAttribute("id", "select-nacionalidade");
-
+                
                 for(var i = 0; i < nacionalidades.length; i++){
                 	var option = document.createElement("option");
                 	console.log(nacionalidades[i].nome);
                 	option.setAttribute("value", nacionalidades[i].nome);
     				option.text = nacionalidades[i].nome;
-    				select.appendChild(option);
+    				select_nacionalidade.appendChild(option);
                 }
 
-                c.appendChild(select);
+                c.appendChild(select_nacionalidade);
                 $('#holder-nacionalidade').append(c);
 
 	            $('#select-nacionalidade').on('change', function() {
