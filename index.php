@@ -39,6 +39,29 @@
 			    });
 			});
 
+			var armas = {
+				"nome":"Armas",
+				"habilidades":[
+					{"nome":"Armas de arremesso","niveis":["","",""],"descricao":[" pede a graça de sentir os efeitos de poderes ao redor dele", "ganha proteção pessoal contra poderes mágicos", "consegue anular algum efeito mágico"]},
+
+					{"nome":"Armas de corte","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
+
+					{"nome":"Armas de fogo","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
+
+					{"nome":"Armas de golpe","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
+
+					{"nome":"Armas de haste","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
+
+					{"nome":"Armas de sopro","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
+
+					{"nome":"Armas mecânicas","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
+
+					{"nome":"Arquearia","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
+
+					{"nome":"Esgrima","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
+
+					{"nome":"Armas exóticas","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]}
+				]}
 			var nacionalidades = [
 				{
 					"nome":"Português",
@@ -291,8 +314,7 @@
 						{"nome":"Furtividade","niveis":["esconder-se em condições ideais","esconder-se em situações adversas","esconder-se e locomover-se de forma despercebida ao disfarçar seu som, aparência e cheiro"]},
 						{"nome":"Medicina de campo","niveis":["tratar feridas básicas e remover um ponto de dano","remover dois pontos de dano","remover três pontos de dano"]},
 						{"nome":"Natação","niveis":["nadar em águas calmas","nadar em águas agitadas, fazer mergulho livre e socorrer outros em perigo","nadar grandes distâncias, socorrer pessoas em circunstâncias extremas e segurar o fôlego durante vários minutos debaixo da água"]},
-						{"nome":"Prestidigitação","niveis":["enganar os olhos de um espectador com ilusionismo","enganar múltiplos espectadores"," furtar objetos dos bolsos ou fazer outros feitos notáveis com as mãos, sem ninguém perceber"]}
-					]
+						{"nome":"Prestidigitação","niveis":["enganar os olhos de um espectador com ilusionismo","enganar múltiplos espectadores"," furtar objetos dos bolsos ou fazer outros feitos notáveis com as mãos, sem ninguém perceber"]}]
 				},
 				{
 					"nome":"Habilidades Silvestres",
@@ -305,73 +327,70 @@
 						{"nome":"Folclore","niveis":["o personagem adquire conhecimento de lendas e costumes"]},
 						{"nome":"Herbalismo","niveis":["curar 1 ponto de dano em qualquer pessoa","consegue tratar febres, doenças e venenos comuns","doenças e venenos incomuns"]},
 						{"nome":"Navegação terrestre","niveis":["reconhecer os pontos cardeais","encontrar um caminho quando perdido na selva","reencontrar um lugar previamente visitado"]},
-						{"nome":"Rastreamento","niveis":["identificar vestígios mais óbvios de pessoas e animais"," rastrear algum animal ou pessoa sob condições ideais","rastrear pessoas e animais sob condições mais difíceis"]}
-					]
-				},
-				{
-					"nome":"Armas",
-					"habilidades":[
-						"Armas de arremesso",
-						"Armas de corte",
-						"Armas de fogo",
-						"Armas de golpe",
-						"Armas de haste",
-						"Armas de sopro",
-						"Armas mecânicas",
-						"Arquearia",
-						"Esgrima",
-						"Armas exóticas"
-					]
+						{"nome":"Rastreamento","niveis":["identificar vestígios mais óbvios de pessoas e animais"," rastrear algum animal ou pessoa sob condições ideais","rastrear pessoas e animais sob condições mais difíceis"]}]
 				},
 				{
 					"nome":"Artes Marciais",
 					"habilidades":[
 						{"nome":"Boxe","niveis":["dar golpes fortes com os punhos (dano 1)","ganha um ponto a mais de resistência","ganha outro ponto de resistência"]},
 						{"nome":"Capoeira","niveis":["pode usar esta habilidade para atacar com os pés (dano 1) ou para esquivas durante o combate","",""]},
-						{"nome":"Luta livre","niveis":["pode usar esta habilidade para tentar imobilizar oponentes de tamanho e força humanas","",""]},
-					]
+						{"nome":"Luta livre","niveis":["pode usar esta habilidade para tentar imobilizar oponentes de tamanho e força humanas","",""]},]
 				},
 				{
 					"nome":"Habilidades Sociais",
 					"habilidades":[
-						"Barganha",
-						"Oratória",
-						"Persuasão"
-					]
+						{"nome":"Barganha","niveis":["negociar o custo de bens e serviços","negociar o custo de bens e serviços com mais facilidade","pode ser utilizada para convencer um vendedor mais “duro” ou conseguir um desconto maior"]},
+						{"nome":"Oratória","niveis":["desenvolvimento do poder da voz para persuadir um grupo"]},
+						{"nome":"Persuasão","niveis":["habilidade de persuadir outros, de levá-los para seu lado da discussão"]}]
 				},
 				{
 					"nome":"Habilidades Militares e Navais",
 					"habilidades":[
-						"Artilharia",
-						"Militar",
-						"Náutica"
-					]
+						{"nome":"Artilharia","niveis":["a artilharia só pode ser utilizada de pontos fixos, como fortalezas e navios. Artilharia não tem precisão para ser utilizada em pequenas batalhas. Estas peças servem para atacar grandes alvos, como navios e edifícios, ou para atirar no meio de exércitos."]},
+
+						{"nome":"Militar","niveis":["n uma habilidade básica para quem participa de guerras, como soldados e guerreiros nativos. Inclui aprendizagem de combate em grupo, cuidado de higiene e equipamento durante campanhas, nervos para enfrentar a batalha","começa a aprender táticas militares, podendo organizar pequenos grupos em batalha","aprende estratégia: como equipar grupos, preparar linhas de suprimento e escolher terrenos para travar batalhas"]},
+
+						{"nome":"Náutica","niveis":[" aprende a trabalhar com o vento, atar nós, limpar e cuidar de embarcações. Também consegue navegar barcos a vela pequenos","navegar rotas conhecidas, lidar com mares perigosos e enfrentar situações táticas","melhora as habilidades de navegação"]}]
 				},
 				{
 					"nome":"Artesanatos",
 					"habilidades":[
-						"Alfaiataria",
-						"Armaria",
-						"Ferraria",
-						"Marcenaria",
-						"Ourivesaria",
-						"Sapataria",
-						"Tanoaria"
-					]
+
+						{"nome":"Alfaiataria","descricao":["alfaiates trabalham com a confecção de roupas. Pode-se demorar um dia para criar uma roupa simples, ou um mês para as mais difíceis (após obter todos os materiais necessários)"]},
+
+						{"nome":"Armaria","descricao":["Através do manuseio de madeira e metal, os armeiros são especialistas no reparo e fabricação de armas de fogo. Uma encomenda mais simples, como um arcabuz com fecho de mecha, pode ser fabricada em duas semanas. Uma arma com fecho de roda é um trabalho mais complexo, que deve levar dois ou três meses. Trabalhos de qualidade excepcional podem levar seis meses"]},
+
+						{"nome":"Ferraria","descricao":["ferreiros trabalham com objetos de ferro. Um objeto simples pode ser criado em questão de horas, uma arma básica em uma semana e um objeto excepcional pode levar meses"]},
+
+						{"nome":"Marcenaria","descricao":["marceneiros trabalham com criação de móveis e outros objetos de madeira. Peças básicas podem levar um dia para fazer, já peças decorativas, de madeiras especiais, podem levar meses"]},
+
+						{"nome":"Ourivesaria","descricao":["o ourives faz trabalhos em prata e ouro. Trabalhos simples levam dias, e trabalhos grandes e complexos podem levar seis meses ou mais"]},
+
+						{"nome":"Sapataria","descricao":["o sapateiro monta calçados de couro. Um par básico de calçados pode levar um dia para ser feito, um par mais elaborado pode levar semanas"]},
+
+						{"nome":"Tanoaria","descricao":["tanoeiros confeccionam barris. A montagem de um barril leva um dia. Tanoeiros de níveis maiores são especialistas na seleção e formação da madeira, criando barris de melhor qualidade e maior durabilidade"]}]
 				},
 				{
 					"nome":"Artes",
 					"habilidades":[
-						"Culinária",
-						"Dança",
-						"Desenho",
-						"Entalhe",
-						"Escultura",
-						"Pintura",
-						"Poesia",
-						"Teatro",
-						"Vocal"
-					]
+
+						{"nome":"Culinária","descricao":["tendo os ingredientes certos, é capaz de criar pratos saborosos e até inéditos"]},
+
+						{"nome":"Dança","descricao":["estuda as técnicas de dança"]},
+
+						{"nome":"Desenho","descricao":["desenhista trabalha com carvão, lápis, xilogravura ou outras formas de desenho"]},
+
+						{"nome":"Entalhe","descricao":["consegue entalhar desenhos ou esculturas de madeira"]},
+
+						{"nome":"Escultura","descricao":["apreende esculpir obras de argila ou mármore"]},
+
+						{"nome":"Pintura","descricao":["trabalha com pintura em aquarela ou tinta a óleo"]},
+
+						{"nome":"Poesia","descricao":["pode trabalhar com poesia, letras ou peças"]},
+
+						{"nome":"Teatro","descricao":["tem habilidade nas artes cênicas, ou como ator/atriz de peças ou em outras áreas, como marionetes"]},
+
+						{"nome":"Vocal","descricao":["faz treinamento da voz para cantar"]}]
 				},
 				{
 					"nome":"Instrumentos Musicais",
@@ -462,8 +481,7 @@
 						{"nome":"Pão de cada dia","niveis":["Restaurar alimentação","Encontrar alimentação","Multiplicar alimentação"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["pede que alguma comida ou bebida estragada volte a ser comestível","em situações de necessidade, esta graça ajuda o personagem a encontrar comida e água","em tempos de necessidade, esta graça permite que pouca comida alimente um número de pessoas além do normal"]},
 
 
-						{"nome":"Benção","niveis":["Abençoar +1","Abençoar +2","Abençoar +3"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["oferece bônus de +1 nos testes do ser ou objeto abençoado","oferece bônus de +2 nos testes do ser ou objeto abençoado","oferece bônus de +3 nos testes do ser ou objeto abençoado"]}
-					]
+						{"nome":"Benção","niveis":["Abençoar +1","Abençoar +2","Abençoar +3"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["oferece bônus de +1 nos testes do ser ou objeto abençoado","oferece bônus de +2 nos testes do ser ou objeto abençoado","oferece bônus de +3 nos testes do ser ou objeto abençoado"]}]
 				},
 				{
 					"nome":"Poderes de Fôlego",
@@ -482,8 +500,7 @@
 						{"nome":"Mundo espiritual","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 						{"nome":"Tempo","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 						{"nome":"Controle da natureza","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-						{"nome":"Contra magia","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]}
-					]
+						{"nome":"Contra magia","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]}]
 				},
 				{
 					"nome":"Poderes de Ifá",
@@ -642,33 +659,31 @@
 	                		div_niveis_holder.className = "habilidades-niveis-holder";
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
                 				console.log(habilidades[i].habilidades[j]);
-          //       				if(habilidades[i].habilidades[j].nome){
-	         //        				for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
-		        //         				console.log(habilidades[i].habilidades[j].nome[k]);
-		        //         				console.log(habilidades[i].habilidades[j].descricao[k]);
-		        //         				console.log(habilidades[i].habilidades[j].requisitos[k]);
+                				for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
+	                				console.log(habilidades[i].habilidades[j].nome[k]);
+	                				console.log(habilidades[i].habilidades[j].descricao[k]);
+	                				console.log(habilidades[i].habilidades[j].requisitos[k]);
 
-		        //         				var span_tooltip = document.createElement("span");
-						    //             	span_tooltip.className = "habilidades-tooltip-text";
-						    //             	span_tooltip.innerHTML = habilidades[i].habilidades[j].descricao[k];
+	                				var span_tooltip = document.createElement("span");
+					                	span_tooltip.className = "habilidades-tooltip-text";
+					                	span_tooltip.innerHTML = habilidades[i].habilidades[j].descricao[k];
 
-						    //             var checkbox = document.createElement('input');
-					     //            		checkbox.className = "input-habilidades";
-				      //           		var _id = habilidades[i].habilidades[j].niveis[k].replace(/ /g,'')
-										// 	checkbox.id = "input-habilidades-"+_id;
-										// 	checkbox.name = "habilidades";
-										// 	checkbox.type = "checkbox";
-										// 	checkbox.value = habilidades[i].habilidades[j].niveis[k];
+					                var checkbox = document.createElement('input');
+				                		checkbox.className = "input-habilidades";
+			                		var _id = habilidades[i].habilidades[j].niveis[k].replace(/ /g,'')
+										checkbox.id = "input-habilidades-"+_id;
+										checkbox.name = "habilidades";
+										checkbox.type = "checkbox";
+										checkbox.value = habilidades[i].habilidades[j].niveis[k];
 
-										// var label = document.createElement('label')
-										// 	label.htmlFor = "input-habilidades-"+_id;
-										// 	label.appendChild(document.createTextNode(habilidades[i].habilidades[j].niveis[k]));
+									var label = document.createElement('label')
+										label.htmlFor = "input-habilidades-"+_id;
+										label.appendChild(document.createTextNode(habilidades[i].habilidades[j].niveis[k]));
 
-										// div_niveis_holder.appendChild(span_tooltip);
-										// div_niveis_holder.appendChild(checkbox);
-										// div_niveis_holder.appendChild(label);
-	         //        				}
-	         //        			}
+									div_niveis_holder.appendChild(span_tooltip);
+									div_niveis_holder.appendChild(checkbox);
+									div_niveis_holder.appendChild(label);
+                				}
 	                		}
                 	div_holder.appendChild(div_niveis_holder);
                 	c.appendChild(div_holder);
