@@ -499,15 +499,32 @@
 					]
 				}];
 			
-			function AddNacionalidades(){
-				console.log("add nacionalidades");
+			function CreateNacionalidade(){
+                $('#select-nacionalidade').remove();
+                var c = document.createDocumentFragment();
+                var select = document.createElement("select");
+                select.id = "select-nacionalidade";
 
-				var select = document.getElementById("select-nacionalidade");
                 for(var i = 0; i < nacionalidades.length; i++){
-                	select.options[select.options.length] = new Option(nacionalidades[i].nome, nacionalidades[i].nome);
-                };
+                	var option = document.createElement("option");
+                	option.value = nacionalidades[i].nome;
+    				option.text = nacionalidades[i].nome;
+    				select.appendChild(option);
+                }
+
+                c.appendChild(select);
+                $('#holder-nacionalidade').append(c);
+
+	            $('#select-nacionalidade').on('change', function() {
+			  		console.log(this.value);
+				});
             }
-            AddNacionalidades();
+
+
+            $( document ).ready(function() {
+            	CreateNacionalidade();
+            }
+
 
 		</script>
 		<style type="text/css">
@@ -524,11 +541,10 @@
 			<form id="form">
 				<input class="input-field" id="input-nome" type="text" name="nome" required="true">
 				<input class="input-field" id="input-idade" type="number" name="idade" required="true">
-				<div>
+				<input class="input-field" id="input-nacionalidade" type="text" name="nacionalidade" required="true">
+				<div class="">
 					<div id="holder-nacionalidade">
-						<select id="select-nacionalidade" name="nacionalidade" required="true">
-							<option value="" selected>(...)</option>
-						</select>
+
 					</div>
 					<div id="flavor-nacionalidade">
 						<span></span>
