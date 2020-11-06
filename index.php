@@ -501,9 +501,10 @@
 			
 			function AddNacionalidades(){
 				console.log("add nacionalidades");
+
+				var select = document.getElementById("select-nacionalidade");
                 for(var i = 0; i < nacionalidades.length; i++){
-                	console.log(nacionalidades[i].nome);
-                	$("<option></option>", {value: nacionalidades[i].nome, text: nacionalidades[i].nome}).appendTo('.select-nacionalidade');
+                	select.options[select.options.length] = new Option(nacionalidades[i].nome, nacionalidades[i].nome);
                 };
             }
             AddNacionalidades();
@@ -525,7 +526,7 @@
 				<input class="input-field" id="input-idade" type="number" name="idade" required="true">
 				<div>
 					<div id="holder-nacionalidade">
-						<select class="select-nacionalidade" name="nacionalidade" required="true">
+						<select id="select-nacionalidade" name="nacionalidade" required="true">
 							<option value="" selected>(...)</option>
 						</select>
 					</div>
