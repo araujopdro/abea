@@ -505,10 +505,15 @@
                 var select = document.createElement("select");
                 select.id = "select-nacionalidade";
 
+                var option = document.createElement("option");
+                	option.value = "";
+    				option.text = "(...)";
+				select.appendChild(option);
+
                 for(var i = 0; i < nacionalidades.length; i++){
                 	var option = document.createElement("option");
-                	option.value = nacionalidades[i].nome;
-    				option.text = nacionalidades[i].nome;
+	                	option.value = nacionalidades[i].nome;
+	    				option.text = nacionalidades[i].nome;
     				select.appendChild(option);
                 }
 
