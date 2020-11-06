@@ -274,12 +274,12 @@
 				{"nome":"Volúvel", "flavor": "muda de ideia facilmente."}
 				]
 			var etnia = [
-				Branco,
-				Negro,
-				Indígena,
-				Mulato,
-				Mameluco,
-				Cafuzo];
+				"Branco",
+				"Negro",
+				"Indígena",
+				"Mulato",
+				"Mameluco",
+				"Cafuzo"];
 			var habilidades = [
 				{
 					"name":"Habilidades Gerais",
