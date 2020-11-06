@@ -610,7 +610,7 @@
 
 	            var limit = 3;
 				$('input.input-caracteristicas').on('change', function(evt) {
-				   if($("input[name='caracteristicas']:checked").length >= limit) {
+				   if($("input[name='caracteristicas']:checked").length > limit) {
 				       this.checked = false;
 				   }
 				});
