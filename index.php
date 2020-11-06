@@ -618,7 +618,9 @@
 
      //        "nome":"Habilidades Gerais",
 					// "habilidades":[
-					// 	{"nome":"Acrobacia","niveis":["rolamentos básicos e estrelinhas","saltos mortais e piruetas","andar na corda bamba e fazer rotações e saltos entre barras"]}
+					// 	{
+					//	"nome":"Acrobacia",
+					//	"niveis":["rolamentos básicos e estrelinhas","saltos mortais e piruetas","andar na corda bamba e fazer rotações e saltos entre barras"]}
 
 
 					// 	{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]}
@@ -639,26 +641,24 @@
 
 	                	var div_niveis_holder = document.createElement("div");
 	                		div_niveis_holder.className = "habilidades-niveis-holder";
-	                		console.log(habilidades[i].niveis)
-	                		if(habilidades[i].niveis){
-	                			console.log(habilidades[i].nome);
-	                			for(var j = 0; j < habilidades[i].niveis.length; j++){
-	                				console.log(habilidades[i].niveis[j]);
+	                		if(habilidades[i].habilidades){
+	                			for(var j = 0; j < habilidades[i].habilidades.length; j++){
+
 		                			var span_tooltip = document.createElement("span");
 					                	span_tooltip.className = "habilidades-tooltip-text";
-					                	span_tooltip.innerHTML = habilidades[i].descricao[j];
+					                	span_tooltip.innerHTML = habilidades[i].habilidades[j].descricao[j];
 
 					                var checkbox = document.createElement('input');
 				                		checkbox.className = "input-habilidades";
-			                		var _id = habilidades[i].niveis[j].replace(/ /g,'')
+			                		var _id = habilidades[i].habilidades[j].niveis[j].replace(/ /g,'')
 										checkbox.id = "input-habilidades-"+_id;
 										checkbox.name = "habilidades";
 										checkbox.type = "checkbox";
-										checkbox.value = habilidades[i].niveis[j];
+										checkbox.value = habilidades[i].habilidades[j].niveis[j];
 
 									var label = document.createElement('label')
 										label.htmlFor = "input-habilidades-"+_id;
-										label.appendChild(document.createTextNode(habilidades[i].niveis[j]));
+										label.appendChild(document.createTextNode(habilidades[i].habilidades[j].niveis[j]));
 
 									div_niveis_holder.appendChild(span_tooltip);
 									div_niveis_holder.appendChild(checkbox);
