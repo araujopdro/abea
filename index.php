@@ -273,7 +273,7 @@
 				{"nome":"Trabalhador", "flavor": "não tem nenhum problema em fazer trabalhos físicos, quando consegue ajudar."},
 				{"nome":"Volúvel", "flavor": "muda de ideia facilmente."}
 				]
-			var etnia = [
+			var etnias = [
 				"Branco",
 				"Negro",
 				"Indígena",
@@ -551,9 +551,72 @@
 				});
             };
 
+			function CreateEtnia(){
+                $('#select-etnia').remove();
+                var c = document.createDocumentFragment();
+                var select = document.createElement("select");
+                select.id = "select-etnia";
+
+                var option = document.createElement("option");
+                	option.value = "";
+    				option.text = "(...)";
+				select.appendChild(option);
+
+                for(var i = 0; i < etnias.length; i++){
+                	var option = document.createElement("option");
+	                	option.value = etnias[i].nome;
+	    				option.text = etnias[i].nome;
+    				select.appendChild(option);
+                }
+
+                c.appendChild(select);
+                $('#holder-etnia').append(c);
+
+	            $('#select-etnia').on('change', function() {
+			  		console.log(this.value);
+				});
+            };
+
+			function CreateCaracteristicas(){
+                $('#holder-caracteristicas').empty();
+                for(var i = 0; i < caracteristicas.length; i++){
+	                var c = document.createDocumentFragment();
+	                var div_holder = document.createElement("div");
+	                div_holder.className = "caracteristicas-tooltip-holder";
+
+	                var span_tooltip = document.createElement("span");
+	                	span_tooltip.className = "caracteristicas-tooltip-text";
+	                	span_tooltip.text = caracteristicas[i].flavor;
+
+                	var checkbox = document.createElement('input');
+						checkbox.id = "input-caracteristicas";
+						checkbox.name = "caracteristicas";
+						checkbox.type = "checkbox";
+						checkbox.value = caracteristicas[i].nome;
+
+					var label = document.createElement('label')
+						label.htmlFor = "id";
+						label.appendChild(document.createTextNode('text for label after checkbox'));
+
+					div_holder.appendChild(span_tooltip);
+					div_holder.appendChild(checkbox);
+					div_holder.appendChild(label);
+                	c.appendChild(div_holder);
+                	
+                	$('#holder-caracteristicas').append(c);
+                }
+
+
+	            $('#select-nacionalidade').on('change', function() {
+			  		console.log(this.value);
+				});
+            };
+
             $(document).ready(function() {
+            	CreateCaracteristicas();
             	CreateNacionalidade();
             	CreateIdade();
+            	CreateEtnia();
             });
 
 
@@ -570,12 +633,6 @@
 	<body> 
 		<div>
 			<form id="form">
-				<input class="input-field" id="input-nome" type="text" name="nome" required="true">
-				<div>
-					<div id="holder-idade">
-
-					</div>
-				</div>
 				<div>
 					<div id="holder-nacionalidade">
 
@@ -585,16 +642,30 @@
 					</div>
 				</div>
 
+				<div>
+					<div id="holder-etnia">
+						
+					</div>
+				</div>
 
-				<div id="holder-etnia">
-					
+				<input class="input-field" id="input-nome" type="text" name="nome" required="true">
+				
+				<div>
+					<div id="holder-idade">
+
+					</div>
 				</div>
-				<div id="holder-caracteristicas">
-					
+				<div>
+					<div id="holder-caracteristicas">
+						
+					</div>
 				</div>
-				<div id="holder-habilidades">
-					
+				<div>
+					<div id="holder-habilidades">
+						
+					</div>
 				</div>
+
 				<input class="input-field" id="input-historia" type="text" name="historia" required="true">
 				<input class="submit" type="submit" name="submit" value="ENTRAR">
 			</form>
