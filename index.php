@@ -564,8 +564,8 @@
 
                 for(var i = 0; i < etnias.length; i++){
                 	var option = document.createElement("option");
-	                	option.value = etnias[i].nome;
-	    				option.text = etnias[i].nome;
+	                	option.value = etnias[i];
+	    				option.text = etnias[i];
     				select.appendChild(option);
                 }
 
@@ -586,7 +586,7 @@
 
 	                var span_tooltip = document.createElement("span");
 	                	span_tooltip.className = "caracteristicas-tooltip-text";
-	                	span_tooltip.text = caracteristicas[i].flavor;
+	                	span_tooltip.innerHTML = caracteristicas[i].flavor;
 
                 	var checkbox = document.createElement('input');
 						checkbox.id = "input-caracteristicas-"+caracteristicas[i].nome;
