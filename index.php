@@ -633,11 +633,13 @@
 	                	var span_name = document.createElement("span");
 	                		span_name.className = "habilidades-categoria-name";
 	                		span_name.innerHTML = habilidades[i].nome;
+						
+						div_holder.appendChild(span_name);
 
 
 	                	var div_niveis_holder = document.createElement("div");
 	                		div_niveis_holder.className = "habilidades-niveis-holder";
-	                		if(habilidades[i].niveis != null){
+	                		if(habilidades[i].niveis){
 	                			console.log(habilidades[i].nome);
 	                			for(var j = 0; j < habilidades[i].niveis.length; j++){
 	                				console.log(habilidades[i].niveis[j]);
@@ -664,7 +666,8 @@
 	                		}
 	                		
 
-                	c.appendChild(div_niveis_holder);
+                	div_holder.appendChild(div_niveis_holder);
+                	c.appendChild(div_holder);
 
                 	$('#holder-habilidades').append(c);
                 }
