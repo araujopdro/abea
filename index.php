@@ -639,6 +639,7 @@
 
 	                	var div_niveis_holder = document.createElement("div");
 	                		div_niveis_holder.className = "habilidades-niveis-holder";
+	                		console.log(habilidades[i].niveis)
 	                		if(habilidades[i].niveis){
 	                			console.log(habilidades[i].nome);
 	                			for(var j = 0; j < habilidades[i].niveis.length; j++){
