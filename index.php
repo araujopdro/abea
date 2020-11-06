@@ -626,7 +626,7 @@
 				width: 100%;
 				height: 100%;
 				margin: 0;
-			    background-color: black;
+			    background-color: white;
 			}
 		</style>
 	</head>
