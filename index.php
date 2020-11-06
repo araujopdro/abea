@@ -589,20 +589,20 @@
 	                	span_tooltip.text = caracteristicas[i].flavor;
 
                 	var checkbox = document.createElement('input');
-						checkbox.id = "input-caracteristicas";
+						checkbox.id = "input-caracteristicas-"+caracteristicas[i].nome;
 						checkbox.name = "caracteristicas";
 						checkbox.type = "checkbox";
 						checkbox.value = caracteristicas[i].nome;
 
 					var label = document.createElement('label')
-						label.htmlFor = "id";
-						label.appendChild(document.createTextNode('text for label after checkbox'));
+						label.htmlFor = "input-caracteristicas-"+caracteristicas[i].nome;
+						label.appendChild(document.createTextNode(caracteristicas[i].nome));
 
 					div_holder.appendChild(span_tooltip);
 					div_holder.appendChild(checkbox);
 					div_holder.appendChild(label);
                 	c.appendChild(div_holder);
-                	
+
                 	$('#holder-caracteristicas').append(c);
                 }
 
