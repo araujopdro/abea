@@ -518,12 +518,12 @@
 	            $('#select-nacionalidade').on('change', function() {
 			  		console.log(this.value);
 				});
-            }
+            };
 
 
-            $( document ).ready(function() {
+            $(document).ready(function() {
             	CreateNacionalidade();
-            }
+            });
 
 
 		</script>
