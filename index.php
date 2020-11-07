@@ -694,32 +694,33 @@
                 				var span_name_habilidade = document.createElement("span");
 			                		span_name_habilidade.className = "habilidades-habilidade-name";
 			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
+									div_niveis_holder.appendChild(span_name_habilidade);
                 					
-			                	if(habilidades[i].habilidades[j].niveis != undefined){
-	                				console.log(habilidades[i].habilidades[j].niveis);
-	                				for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
-						                var checkbox = document.createElement('input');
-					                		checkbox.className = "input-habilidades";
-				                		var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'')
-											checkbox.id = "input-habilidades-"+_id+k;
-											checkbox.name = "habilidades";
-											checkbox.type = "checkbox";
-											checkbox.value = k;
+				                	if(habilidades[i].habilidades[j].niveis != undefined){
+		                				console.log(habilidades[i].habilidades[j].niveis);
+		                				for(var k = 1; k < 3; k++){
+							                var checkbox = document.createElement('input');
+						                		checkbox.className = "input-habilidades";
+					                		var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'')
+												checkbox.id = "input-habilidades-"+_id+k;
+												checkbox.name = "habilidades";
+												checkbox.type = "checkbox";
+												checkbox.value = k;
 
-										var label = document.createElement('label')
-											label.htmlFor = "input-habilidades-"+_id+k+"-label";
-											label.appendChild(document.createTextNode(habilidades[i].habilidades[j].niveis[k]));
+											var label = document.createElement('label')
+												label.htmlFor = "input-habilidades-"+_id+k+"-label";
+												label.appendChild(document.createTextNode("Nível "+k);
 
-										div_niveis_holder.appendChild(checkbox);
-										div_niveis_holder.appendChild(label);
-	                				}
-			                	}else if(habilidades[i].habilidades[j].descricao != undefined){
-	                				console.log(habilidades[i].habilidades[j].descricao);
+											div_niveis_holder.appendChild(checkbox);
+											div_niveis_holder.appendChild(label);
+		                				}
+				                	}else if(habilidades[i].habilidades[j].descricao != undefined){
+		                				console.log(habilidades[i].habilidades[j].descricao);
 
-			                	}else if(habilidades[i].habilidades[j].requisitos != undefined){
-	                				console.log(habilidades[i].habilidades[j].requisitos);
-			                		
-			                	}
+				                	}else if(habilidades[i].habilidades[j].requisitos != undefined){
+		                				console.log(habilidades[i].habilidades[j].requisitos);
+				                		
+				                	}
             					//for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
 
 	        //         				var span_tooltip = document.createElement("span");
@@ -742,7 +743,6 @@
 									// div_niveis_holder.appendChild(checkbox);
 									// div_niveis_holder.appendChild(label);
                 				//}
-								div_niveis_holder.appendChild(span_name_habilidade);
 	                		}
                 	div_holder.appendChild(div_niveis_holder);
                 	c.appendChild(div_holder);
