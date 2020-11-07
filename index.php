@@ -699,9 +699,9 @@
 				                	if(habilidades[i].habilidades[j].niveis != undefined){
 		                				console.log(habilidades[i].habilidades[j].niveis);
 		                				for(var k = 1; k < 3; k++){
+					                		var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'');
 							                var checkbox = document.createElement('input');
 						                		checkbox.className = "input-habilidades";
-					                		var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'')
 												checkbox.id = "input-habilidades-"+_id+k;
 												checkbox.name = "habilidades";
 												checkbox.type = "checkbox";
