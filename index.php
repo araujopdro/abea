@@ -665,14 +665,14 @@
 				});
             };
 
-     //        "nome":"Habilidades Gerais",
-					// "habilidades":[
-					// 	{
-					//	"nome":"Acrobacia",
-					//	"niveis":["rolamentos básicos e estrelinhas","saltos mortais e piruetas","andar na corda bamba e fazer rotações e saltos entre barras"]}
-
-
-					// 	{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]}
+     		//niveis
+     		//niveis
+     		//niveis
+     		//niveis
+     		//niveis
+     		//niveis
+     		//descricao
+     		//descricao
 
 			function CreateHabilidades(){
                 $('#holder-habilidades').empty();
@@ -694,11 +694,13 @@
                 				var span_name_habilidade = document.createElement("span");
 			                		span_name_habilidade.className = "habilidades-habilidade-name";
 			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
-                				//for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
+                					
+
+            					//for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
 	                				// console.log(habilidades[i].habilidades[j].nome[k]);
-	                				// console.log(habilidades[i].habilidades[j].niveis[k]);
-	                				// console.log(habilidades[i].habilidades[j].descricao[k]);
-	                				// console.log(habilidades[i].habilidades[j].requisitos[k]);
+	                				console.log(habilidades[i].habilidades[j].niveis);
+	                				console.log(habilidades[i].habilidades[j].descricao);
+	                				console.log(habilidades[i].habilidades[j].requisitos);
 
 	        //         				var span_tooltip = document.createElement("span");
 					    //             	span_tooltip.className = "habilidades-tooltip-text";
