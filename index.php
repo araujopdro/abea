@@ -690,17 +690,37 @@
 	                	var div_niveis_holder = document.createElement("div");
 	                		div_niveis_holder.className = "habilidades-niveis-holder";
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
-                				console.log(habilidades[i].habilidades[j]);
+	                			console.log(habilidades[i].habilidades[j].nome[k]);
                 				var span_name_habilidade = document.createElement("span");
 			                		span_name_habilidade.className = "habilidades-habilidade-name";
 			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
                 					
-
-            					//for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
-	                				// console.log(habilidades[i].habilidades[j].nome[k]);
+			                	if(habilidades[i].habilidades[j].niveis != undefined){
 	                				console.log(habilidades[i].habilidades[j].niveis);
+	                				for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
+						                var checkbox = document.createElement('input');
+					                		checkbox.className = "input-habilidades";
+				                		var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'')
+											checkbox.id = "input-habilidades-"+_id+k;
+											checkbox.name = "habilidades";
+											checkbox.type = "checkbox";
+											checkbox.value = k;
+
+										var label = document.createElement('label')
+											label.htmlFor = "input-habilidades-"+_id+k+"-label";
+											label.appendChild(document.createTextNode(habilidades[i].habilidades[j].niveis[k]));
+
+										div_niveis_holder.appendChild(checkbox);
+										div_niveis_holder.appendChild(label);
+	                				}
+			                	}else if(habilidades[i].habilidades[j].descricao != undefined){
 	                				console.log(habilidades[i].habilidades[j].descricao);
+
+			                	}else if(habilidades[i].habilidades[j].requisitos != undefined){
 	                				console.log(habilidades[i].habilidades[j].requisitos);
+			                		
+			                	}
+            					//for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
 
 	        //         				var span_tooltip = document.createElement("span");
 					    //             	span_tooltip.className = "habilidades-tooltip-text";
