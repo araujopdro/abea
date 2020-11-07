@@ -733,12 +733,16 @@
 
 	   //          var limit = 3;
 				$('input.input-habilidades').on('change', function(evt) {
+					console.log("change");
 					var r = /\d+/;
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
 					number--;
 				   	for(var i = number; number > 0; number--){
-				   		$("input#input-habilidades-"+id+i).prop("checked",true);
+				   		console.log(i);
+				   		console.log(id);
+				   		console.log(id);
+				   		$("#input-habilidades-"+id+i).prop("checked",true);
 				   	}
 
 				   // if($("input[name='caracteristicas']:checked").length > limit) {
