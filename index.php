@@ -38,27 +38,6 @@
 			        });
 			    });
 			});
-			var linguas = {
-				"nome":"Línguas",
-				"habilidades":[
-					"Português",
-					"Latim",
-					"Espanhol",
-					"Francês",
-					"Árabe",
-					"Tupi",
-					"Guarani",
-					"Aimoré",
-					"Goitacá",
-					"Maracá",
-					"Tremembé",
-					"Evê",
-					"Fon",
-					"Ioruba",
-					"Quicongo",
-					"Quimbundo",
-					"Umbundo"
-				]}
 			var nacionalidades = [
 				{
 					"nome":"Português",
@@ -546,7 +525,27 @@
 
 						{"nome":"Influência","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Fôlego2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]}
 					]
-				}];
+				},{
+				"nome":"Línguas",
+				"habilidades":[
+					{"nome":"Português","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Latim","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Espanhol","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Francês","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Árabe","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Tupi","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Guarani","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Aimoré","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Goitacá","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Maracá","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Tremembé","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Evê","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Fon","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Ioruba","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Quicongo","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Quimbundo","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Umbundo","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},	
+				]}];
 			
 			function CreateNacionalidade(){
                 $('#select-nacionalidade').remove();
@@ -733,11 +732,19 @@
 
 
 	   //          var limit = 3;
-				// $('input.input-caracteristicas').on('change', function(evt) {
-				//    if($("input[name='caracteristicas']:checked").length > limit) {
-				//        this.checked = false;
-				//    }
-				// });
+				$('input.input-habilidades').on('change', function(evt) {
+					var r = /\d+/;
+					var number = parseInt(this.id.match(r));
+					var id = this.id.replace(/[0-9]/g, '');
+					number--;
+				   	for(var i = number; number > 0; number--){
+				   		$("input#input-habilidades-"+id+i).prop("checked",true);
+				   	}
+
+				   // if($("input[name='caracteristicas']:checked").length > limit) {
+				   //     this.checked = false;
+				   // }
+				});
             };
 
             $(document).ready(function() {
