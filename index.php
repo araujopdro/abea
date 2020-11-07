@@ -785,6 +785,12 @@
 			.caracteristicas-tooltip-holder:hover .caracteristicas-tooltip-text {
 				visibility: visible;
 			}
+
+			.habilidades-niveis-holder{
+			    display: flex;
+    			flex-direction: column;
+			}
+
 		</style>
 	</head>
 	<body> 
