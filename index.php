@@ -59,30 +59,6 @@
 					"Quimbundo",
 					"Umbundo"
 				]}
-			var armas = {
-				"nome":"Armas",
-				"habilidades":[
-					{"nome":"Armas de arremesso","niveis":["","",""],"descricao":[" pede a graça de sentir os efeitos de poderes ao redor dele", "ganha proteção pessoal contra poderes mágicos", "consegue anular algum efeito mágico"]},
-
-					{"nome":"Armas de corte","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
-
-					{"nome":"Armas de fogo","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
-
-					{"nome":"Armas de golpe","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
-
-					{"nome":"Armas de haste","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
-
-					{"nome":"Armas de sopro","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
-
-					{"nome":"Armas mecânicas","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
-
-					{"nome":"Arquearia","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
-
-					{"nome":"Esgrima","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
-
-					{"nome":"Armas exóticas","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]}
-				]}
-			
 			var nacionalidades = [
 				{
 					"nome":"Português",
@@ -349,6 +325,30 @@
 						{"nome":"Herbalismo","niveis":["curar 1 ponto de dano em qualquer pessoa","consegue tratar febres, doenças e venenos comuns","doenças e venenos incomuns"]},
 						{"nome":"Navegação terrestre","niveis":["reconhecer os pontos cardeais","encontrar um caminho quando perdido na selva","reencontrar um lugar previamente visitado"]},
 						{"nome":"Rastreamento","niveis":["identificar vestígios mais óbvios de pessoas e animais"," rastrear algum animal ou pessoa sob condições ideais","rastrear pessoas e animais sob condições mais difíceis"]}]
+				},
+				{
+					"nome":"Armas",
+					"habilidades":[
+						{"nome":"Armas de arremesso","descricao":["estas armas são balanceadas para o arremesso, mas também podem ser utilizadas no corpo a corpo, se o personagem tiver a habilidade certa","Lança, Faca de Arremesso, Machado de arremesso"]},
+
+						{"nome":"Armas de corte","descricao":["armas utilizadas para golpes cortantes ou para esfaquear o oponente", "Adaga, Alfanje, Espada de Lâmina Larga*, Faca, Machete"]},
+
+						{"nome":"Armas de fogo","descricao":["ao longo do século XVI, as armas de fogo começaram a se tornar as armas dominantes", "Arcabuz, Mosquete, Pistola"]},
+
+						{"nome":"Armas de golpe","descricao":["armas que dependem da força física do combatente para causar dano de impacto", "Machado de guerra, Martelo de guerra, Porrete"]},
+
+						{"nome":"Armas de haste","descricao":["armas de haste comprida", "Alabarda, Martelo de Lucerne, Pique"]},
+
+						{"nome":"Armas de sopro","descricao":["existem vários tipos e tamanhos de zarabatanas", "Zarabatana"]},
+
+						{"nome":"Armas mecânicas","descricao":["a besta, mesmo com sua popularidade diminuída, continuava sendo uma opção nas batalhas ao longo do século XVI", "Besta"]},
+
+						{"nome":"Arquearia","descricao":["O arco é arma tradicional do mundo inteiro. Enquanto o século XVI viu seu uso diminuir na Europa, o arco e flecha continuou sendo a arma mais usada nas Américas, devido ao seu uso pelos povos nativos", "Arco e flecha"]},
+
+						{"nome":"Esgrima","descricao":["estudo de luta com as espadas compridas de origem europeia", "Rapieira"]},
+
+						{"nome":"Armas exóticas","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]}
+					]
 				},
 				{
 					"nome":"Artes Marciais",
@@ -696,56 +696,34 @@
 			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
 									div_niveis_holder.appendChild(span_name_habilidade);
                 					
+									for(var k = 1; k <= 3; k++){
+				                		var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'');
+				                		var span_holder = document.createElement("span");
+		                					span_holder.className = "habilidades-habilidade-nivel-holder";
+							                var checkbox = document.createElement('input');
+						                		checkbox.className = "input-habilidades";
+												checkbox.id = "input-habilidades-"+_id+k;
+												checkbox.name = "habilidades";
+												checkbox.type = "checkbox";
+												checkbox.value = k;
+
+											var label = document.createElement('label')
+												label.htmlFor = "input-habilidades-"+_id+k+"-label";
+												label.appendChild(document.createTextNode("Nível "+k));
+
+											span_holder.appendChild(checkbox);
+											span_holder.appendChild(label);
+										div_niveis_holder.appendChild(span_holder);
+	                				}
+
+
 				                	if(habilidades[i].habilidades[j].niveis != undefined){
 		                				console.log(habilidades[i].habilidades[j].niveis);
-		                				for(var k = 1; k <= 3; k++){
-					                		var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'');
-					                		var span_holder = document.createElement("span");
-			                					span_holder.className = "habilidades-habilidade-nivel-holder";
-								                var checkbox = document.createElement('input');
-							                		checkbox.className = "input-habilidades";
-													checkbox.id = "input-habilidades-"+_id+k;
-													checkbox.name = "habilidades";
-													checkbox.type = "checkbox";
-													checkbox.value = k;
-
-												var label = document.createElement('label')
-													label.htmlFor = "input-habilidades-"+_id+k+"-label";
-													label.appendChild(document.createTextNode("Nível "+k));
-
-												span_holder.appendChild(checkbox);
-												span_holder.appendChild(label);
-											div_niveis_holder.appendChild(span_holder);
-		                				}
 				                	}else if(habilidades[i].habilidades[j].descricao != undefined){
 		                				console.log(habilidades[i].habilidades[j].descricao);
-
 				                	}else if(habilidades[i].habilidades[j].requisitos != undefined){
 		                				console.log(habilidades[i].habilidades[j].requisitos);
-				                		
 				                	}
-            					//for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
-
-	        //         				var span_tooltip = document.createElement("span");
-					    //             	span_tooltip.className = "habilidades-tooltip-text";
-					    //             	span_tooltip.innerHTML = habilidades[i].habilidades[j].descricao[k];
-
-					    //             var checkbox = document.createElement('input');
-				     //            		checkbox.className = "input-habilidades";
-			      //           		var _id = habilidades[i].habilidades[j].niveis[k].replace(/ /g,'')
-									// 	checkbox.id = "input-habilidades-"+_id;
-									// 	checkbox.name = "habilidades";
-									// 	checkbox.type = "checkbox";
-									// 	checkbox.value = habilidades[i].habilidades[j].niveis[k];
-
-									// var label = document.createElement('label')
-									// 	label.htmlFor = "input-habilidades-"+_id;
-									// 	label.appendChild(document.createTextNode(habilidades[i].habilidades[j].niveis[k]));
-
-									// div_niveis_holder.appendChild(span_tooltip);
-									// div_niveis_holder.appendChild(checkbox);
-									// div_niveis_holder.appendChild(label);
-                				//}
 	                		}
                 	div_holder.appendChild(div_niveis_holder);
                 	c.appendChild(div_holder);
