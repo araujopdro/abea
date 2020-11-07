@@ -691,6 +691,9 @@
 	                		div_niveis_holder.className = "habilidades-niveis-holder";
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
                 				console.log(habilidades[i].habilidades[j]);
+                				var span_name_habilidade = document.createElement("span");
+			                		span_name_habilidade.className = "habilidades-habilidade-name";
+			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
                 				//for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
 	                				// console.log(habilidades[i].habilidades[j].nome[k]);
 	                				// console.log(habilidades[i].habilidades[j].niveis[k]);
@@ -717,6 +720,7 @@
 									// div_niveis_holder.appendChild(checkbox);
 									// div_niveis_holder.appendChild(label);
                 				//}
+								div_niveis_holder.appendChild(span_name_habilidade);
 	                		}
                 	div_holder.appendChild(div_niveis_holder);
                 	c.appendChild(div_holder);
