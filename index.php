@@ -736,16 +736,21 @@
 				 //       this.checked = false;
 				 //   	}
 				 	console.log(this.checked);
-
 					var r = /\d+/;
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
-					number--;
-				   	for(var i = 1; i <= number; i++){
-				   		$("#"+id+i).prop("checked",true);
-				   	}
-
-				   
+				 	if(this.checked){
+						number--;
+					   	for(var i = 1; i <= number; i++){
+					   		$("#"+id+i).prop("checked",true);
+					   	}
+				 	}else{
+						number++;
+					   	for(var i = number; i <= 3; i++){
+					   		$("#"+id+i).prop("checked",false);
+					   	}
+						
+				 	};
 				});
             };
 
