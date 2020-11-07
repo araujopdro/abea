@@ -38,7 +38,27 @@
 			        });
 			    });
 			});
-
+			var linguas = {
+				"nome":"Línguas",
+				"habilidades":[
+					"Português",
+					"Latim",
+					"Espanhol",
+					"Francês",
+					"Árabe",
+					"Tupi",
+					"Guarani",
+					"Aimoré",
+					"Goitacá",
+					"Maracá",
+					"Tremembé",
+					"Evê",
+					"Fon",
+					"Ioruba",
+					"Quicongo",
+					"Quimbundo",
+					"Umbundo"
+				]}
 			var armas = {
 				"nome":"Armas",
 				"habilidades":[
@@ -62,6 +82,7 @@
 
 					{"nome":"Armas exóticas","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]}
 				]}
+			
 			var nacionalidades = [
 				{
 					"nome":"Português",
@@ -395,73 +416,75 @@
 				{
 					"nome":"Instrumentos Musicais",
 					"habilidades":[
-						"Instrumentos de corda",
-						"Instrumentos de corda e arco",
-						"Instrumentos de embocadura",
-						"Instrumentos de palheta",
-						"Instrumentos de percussão",
-						"Instrumentos de tecla"
-					]
+
+						{"nome":"Instrumentos de corda","descricao":["alaúde, cistre"]},
+
+						{"nome":"Instrumentos de corda e arco","descricao":["viola, viola da gamba"]},
+
+						{"nome":"Instrumentos de embocadura","descricao":[" flauta, flauta doce, corneta, corneto, trombeta"]},
+
+						{"nome":"Instrumentos de palheta","descricao":["baixão, charamela, fagote"]},
+
+						{"nome":"Instrumentos de percussão","descricao":["atabaque, pandeiro, tambor"]},
+
+						{"nome":"Instrumentos de tecla","descricao":["cravo, clavicórdio"]}]
 				},
 				{
 					"nome":"Outros Ofícios",
 					"habilidades":[
-						"Adestramento de cães",
-						"Administração",
-						"Agricultura",
-						"Arquitetura",
-						"Barbearia-cirurgia",
-						"Carpintaria",
-						"Cartografia",
-						"Comércio",
-						"Condução de gado",
-						"Contabilidade",
-						"Engenharia",
-						"Escriba",
-						"Fabricação de flechas",
-						"Mineração",
-						"Pedraria"
-					]
+						{"nome":"Adestramento de cães","descricao":["é especialista em treinar cachorros. Nas suas viagens, pode levar um ou dois cachorros comuns"]},
+
+						{"nome":"Administração","descricao":["administração pode lidar com cargos envolvendo organização e burocracia, e pode servir em certos cargos governamentais. Os que também adquirem a habilidade acadêmica de Direito podem trabalhar como juízes, promotores e outros cargos"]},
+
+						{"nome":"Agricultura","descricao":["Quem estuda agricultura é o lavrador ou trabalhador rural. Esta pessoa entende as técnicas do campo: quando e como plantar e colher produtos agrícolas"]},
+
+						{"nome":"Arquitetura","descricao":["arquitetos lidam com planejamento e supervisão de construção de prédios"]},
+
+						{"nome":"Barbearia-cirurgia","descricao":["Além de cortar barbas e cabelo, os barbeiros-cirurgiões podiam praticar pequenas cirurgias, como lancetar, arrancar dentes, ou amputar membros. Infelizmente, um dos seus tratamentos mais comum da época, sangria com sanguessugas ou flebotomia, era pouco eficaz na cura de doenças"]},
+
+						{"nome":"Carpintaria","descricao":["carpinteiros trabalham com construção em madeira"]},
+
+						{"nome":"Cartografia","descricao":["cartógrafos trabalham na confecção de mapas"]},
+
+						{"nome":"Comércio","descricao":["comerciante lida com venda e compra de bens, precisa entender de logística de transporte e armazenagem, preço com base em oferta e demanda, avaliação da qualidade dos produtos e outros assuntos relacionados"]},
+
+						{"nome":"Condução de gado","descricao":["boieiros (antigo nome para os vaqueiros/boiadeiros) trabalham com criação, proteção e controle de gado"]},
+
+						{"nome":"Contabilidade","descricao":[" pessoas que trabalham com contabilidade ocupam o cargo de tesoureiro"]},
+
+						{"nome":"Engenharia","descricao":["engenheiros trabalham na projeção e supervisão na construção de projetos de engenharia civil (estradas, pontes) e mecânica (moinhos, engenhos de açúcar)"]},
+
+						{"nome":"Escriba","descricao":["escrivães trabalham com a escrita e o arquivamento de documentos"]},
+
+						{"nome":"Fabricação de flechas","niveis":["personagem pode gastar um dia na confecção de flechas, criando 5 flechas","personagem pode gastar um dia na confecção de flechas, criando 10 flechas","personagem pode gastar um dia na confecção de flechas, criando 20 flechas"]},
+
+						{"nome":"Mineração","descricao":["este personagem é especialista em reconhecer depósitos de minerais e em técnicas de extração"]},
+
+						{"nome":"Pedraria","descricao":["os pedreiros trabalham com o uso de pedra em construção"]}]
 				},
 				{
 					"nome":"Estudos Acadêmicos",
 					"habilidades":[
-						"Astronomia",
-						"Direito",
-						"Filosofia",
-						"Física",
-						"Humanidades",
-						"Matemática",
-						"Medicina",
-						"Teologia"
-					]
-				},
-				{
-					"nome":"Línguas",
-					"habilidades":[
-						"Português",
-						"Latim",
-						"Espanhol",
-						"Francês",
-						"Árabe",
-						"Tupi",
-						"Guarani",
-						"Aimoré",
-						"Goitacá",
-						"Maracá",
-						"Tremembé",
-						"Evê",
-						"Fon",
-						"Ioruba",
-						"Quicongo",
-						"Quimbundo",
-						"Umbundo"
-					]
+						{"nome":"Astronomia","descricao":["estudo dos movimentos das estrelas e planetas dentro da 'esfera celestial'"]},
+
+						{"nome":"Direito","descricao":["estudo da filosofia e prática de lei"]},
+
+						{"nome":"Filosofia","descricao":["estudo de lógica, razão e metafísica, a essência dos seres"]},
+
+						{"nome":"Física","descricao":["estudo dos fenômenos naturais"]},
+
+						{"nome":"Humanidades","descricao":["inclui as áreas de gramática, o estudo de palavras e expressão linguística, nas formas de oração e poesia, e retórica, o estudo teórico de oratória e formação de argumentos para persuasão"]},
+
+						{"nome":"Matemática","descricao":["inclui as áreas de aritmética, o estudo de números e seus relacionamentos, e geometria, o estudo de medidas."]},
+
+						{"nome":"Medicina","descricao":["os médicos (chamados de “físicos”) podem recomendar remédios e tratamentos para doenças e condições comuns"]},
+
+						{"nome":"Teologia","descricao":["estudo da Bíblia e as doutrinas da Igreja"],"requisitos":["Latim2","Latim2","Latim2"]}]
 				},
 				{
 					"nome":"Graças Divinas",
 					"habilidades":[
-						{"nome":"Fé","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+						{"nome":"Fé","requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 
 						{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]},
 
@@ -486,7 +509,7 @@
 				{
 					"nome":"Poderes de Fôlego",
 					"habilidades":[
-						{"nome":"Fôlego","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+						{"nome":"Fôlego","requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 
 						{"nome":"Cura","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Fôlego1","Fôlego2","Fôlego3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
 
@@ -505,14 +528,23 @@
 				{
 					"nome":"Poderes de Ifá",
 					"habilidades":[
-						"Ifá",
-						"Saúde",
-						"Detecção",
-						"Proteção ",
-						"Energia negativa",
-						"Influência",
-						"Manuseio espiritual",
-						"Influência",
+						{"nome":"Ifá","requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego","!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego","!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+
+
+						{"nome":"Cura","niveis":["Curar danos","Curar maldades","Afastar morte"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["o uso deste poder cura dois pontos de dano do alvo. Não pode ser utilizado no mesmo alvo mais de uma vez por dia", "este poder cura os efeitos de qualquer veneno, paralisia ou doença (comum ou incomum). Também pode remover energias negativas do corpo causadas por Enfraquecer inimigo ou os poderes de Fôlego Indefeso ou Remover força","preserva o corpo de um recém-morto (menos de um minuto) por 24 horas, sendo assim possível reverter os efeitos que causaram a morte e devolver a vida. Se a causa de morte não for anulada dentro deste período, a vida do alvo torna-se irrecuperável"]},
+
+
+						{"nome":"Saúde","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+						{"nome":"Detecção","niveis":["Detectar veneno","Detectar magia","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+						{"nome":"Energia negativa","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+						{"nome":"Influência","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+						{"nome":"Manuseio espiritual","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+						{"nome":"Influência","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Fôlego2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]}
 					]
 				}];
 			
@@ -659,31 +691,32 @@
 	                		div_niveis_holder.className = "habilidades-niveis-holder";
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
                 				console.log(habilidades[i].habilidades[j]);
-                				for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
-	                				console.log(habilidades[i].habilidades[j].nome[k]);
-	                				console.log(habilidades[i].habilidades[j].descricao[k]);
-	                				console.log(habilidades[i].habilidades[j].requisitos[k]);
+                				//for(var k = 0; k < habilidades[i].habilidades[j].niveis.length; k++){
+	                				// console.log(habilidades[i].habilidades[j].nome[k]);
+	                				// console.log(habilidades[i].habilidades[j].niveis[k]);
+	                				// console.log(habilidades[i].habilidades[j].descricao[k]);
+	                				// console.log(habilidades[i].habilidades[j].requisitos[k]);
 
-	                				var span_tooltip = document.createElement("span");
-					                	span_tooltip.className = "habilidades-tooltip-text";
-					                	span_tooltip.innerHTML = habilidades[i].habilidades[j].descricao[k];
+	        //         				var span_tooltip = document.createElement("span");
+					    //             	span_tooltip.className = "habilidades-tooltip-text";
+					    //             	span_tooltip.innerHTML = habilidades[i].habilidades[j].descricao[k];
 
-					                var checkbox = document.createElement('input');
-				                		checkbox.className = "input-habilidades";
-			                		var _id = habilidades[i].habilidades[j].niveis[k].replace(/ /g,'')
-										checkbox.id = "input-habilidades-"+_id;
-										checkbox.name = "habilidades";
-										checkbox.type = "checkbox";
-										checkbox.value = habilidades[i].habilidades[j].niveis[k];
+					    //             var checkbox = document.createElement('input');
+				     //            		checkbox.className = "input-habilidades";
+			      //           		var _id = habilidades[i].habilidades[j].niveis[k].replace(/ /g,'')
+									// 	checkbox.id = "input-habilidades-"+_id;
+									// 	checkbox.name = "habilidades";
+									// 	checkbox.type = "checkbox";
+									// 	checkbox.value = habilidades[i].habilidades[j].niveis[k];
 
-									var label = document.createElement('label')
-										label.htmlFor = "input-habilidades-"+_id;
-										label.appendChild(document.createTextNode(habilidades[i].habilidades[j].niveis[k]));
+									// var label = document.createElement('label')
+									// 	label.htmlFor = "input-habilidades-"+_id;
+									// 	label.appendChild(document.createTextNode(habilidades[i].habilidades[j].niveis[k]));
 
-									div_niveis_holder.appendChild(span_tooltip);
-									div_niveis_holder.appendChild(checkbox);
-									div_niveis_holder.appendChild(label);
-                				}
+									// div_niveis_holder.appendChild(span_tooltip);
+									// div_niveis_holder.appendChild(checkbox);
+									// div_niveis_holder.appendChild(label);
+                				//}
 	                		}
                 	div_holder.appendChild(div_niveis_holder);
                 	c.appendChild(div_holder);
