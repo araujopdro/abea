@@ -689,7 +689,6 @@
 	                	var div_niveis_holder = document.createElement("div");
 	                		div_niveis_holder.className = "habilidades-niveis-holder";
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
-	                			console.log(habilidades[i].habilidades[j].nome[k]);
                 				var span_name_habilidade = document.createElement("span");
 			                		span_name_habilidade.className = "habilidades-habilidade-name";
 			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
@@ -733,16 +732,12 @@
 
 	   //          var limit = 3;
 				$('input.input-habilidades').on('change', function(evt) {
-					console.log("change");
 					var r = /\d+/;
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
 					number--;
 				   	for(var i = 1; i <= number; i++){
-				   		console.log(i);
-				   		console.log(id);
-				   		console.log("#input-habilidades-"+id+i);
-				   		$("#input-habilidades-"+id+i).prop("checked",true);
+				   		$("#"+id+i).prop("checked",true);
 				   	}
 
 				   // if($("input[name='caracteristicas']:checked").length > limit) {
