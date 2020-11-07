@@ -738,7 +738,10 @@
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
 					number--;
-				   	for(var i = number; number > 0; i--){
+				   	for(var i = 1; i <= number; i++){
+				   		console.log(i);
+				   		console.log(id);
+				   		console.log("#input-habilidades-"+id+i);
 				   		$("#input-habilidades-"+id+i).prop("checked",true);
 				   	}
 
