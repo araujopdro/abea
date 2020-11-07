@@ -6,10 +6,13 @@
 	<head>
 		<title>ABEA - Criador de Pesonagem</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta charset="UTF-8" /> 
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<script src="https://kit.fontawesome.com/3f043c6910.js" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 		<link rel="shortcut icon" type="image/png" href="imgs/favicon.png"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 		<script type="text/javascript">
 			$( document ).ready(function() {
@@ -551,6 +554,7 @@
                 $('#select-nacionalidade').remove();
                 var c = document.createDocumentFragment();
                 var select = document.createElement("select");
+                select.className = "form-control"
                 select.id = "select-nacionalidade";
 
                 var option = document.createElement("option");
@@ -570,9 +574,7 @@
 
 	            $('#select-nacionalidade').on('change', function() {
 			  		console.log(this.value);
-				});
-            };
-
+				});};
 			function CreateIdade(){
                 $('#select-idade').remove();
                 var c = document.createDocumentFragment();
@@ -596,9 +598,7 @@
 
 	            $('#select-idade').on('change', function() {
 			  		console.log(this.value);
-				});
-            };
-
+				});};
 			function CreateEtnia(){
                 $('#select-etnia').remove();
                 var c = document.createDocumentFragment();
@@ -622,9 +622,7 @@
 
 	            $('#select-etnia').on('change', function() {
 			  		console.log(this.value);
-				});
-            };
-
+				});};
 			function CreateCaracteristicas(){
                 $('#holder-caracteristicas').empty();
                 for(var i = 0; i < caracteristicas.length; i++){
@@ -661,18 +659,7 @@
 				   if($("input[name='caracteristicas']:checked").length > limit) {
 				       this.checked = false;
 				   }
-				});
-            };
-
-     		//niveis
-     		//niveis
-     		//niveis
-     		//niveis
-     		//niveis
-     		//niveis
-     		//descricao
-     		//descricao
-
+				});};
 			function CreateHabilidades(){
                 $('#holder-habilidades').empty();
                 for(var i = 0; i < habilidades.length; i++){
@@ -735,7 +722,7 @@
 					// if($("input[name='caracteristicas']:checked").length > limit) {
 				 //       this.checked = false;
 				 //   	}
-				 	console.log(this.checked);
+
 					var r = /\d+/;
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
@@ -751,8 +738,7 @@
 					   	}
 						
 				 	};
-				});
-            };
+				});};
 
             $(document).ready(function() {
             	CreateCaracteristicas();
@@ -770,6 +756,11 @@
 				height: 100%;
 				margin: 0;
 			    background-color: white;
+			}
+
+			#form{
+				width: 45vw;
+    			margin: auto;
 			}
 
 			#holder-caracteristicas, #holder-habilidades{
@@ -813,14 +804,10 @@
 	<body> 
 		<div>
 			<form id="form">
-				<div>
-					<div id="holder-nacionalidade">
-
-					</div>
-					<div id="flavor-nacionalidade">
-						<span></span>
-					</div>
-				</div>
+				<div class="form-group" id="holder-nacionalidade">
+				    <!-- <label for="exampleInputEmail1">Email address</label> -->
+				    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+			  	</div>
 
 				<div>
 					<div id="holder-etnia">
