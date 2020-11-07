@@ -709,7 +709,7 @@
 
 											var label = document.createElement('label')
 												label.htmlFor = "input-habilidades-"+_id+k+"-label";
-												label.appendChild(document.createTextNode("Nível "+k);
+												label.appendChild(document.createTextNode("Nível "+k));
 
 											div_niveis_holder.appendChild(checkbox);
 											div_niveis_holder.appendChild(label);
