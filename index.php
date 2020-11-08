@@ -727,7 +727,6 @@
 
 
 				   	if($("input[name='caracteristicas']:checked").length == limit){
-				   		console.log(car_selecionadas[0]+" "+car_selecionadas[1]+" "+car_selecionadas[2])
 				   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
 				   	}else if($("input[name='caracteristicas']:checked").length < limit){
 				   		$(".caracteristicas-holder").slideDown('fast');
@@ -745,16 +744,17 @@
 	                		span_name.innerHTML = habilidades[i].nome;
 						div_holder.appendChild(span_name);
 
-						console.log(habilidades[i].length);
-
 		                var small = document.createElement("small");
 		                	small.className = "habilidades-descricao";
 
 						if(habilidades[i].length == 1){
 	                		small.innerHTML = caracteristicas[i].descricao[0];
+							span_name.appendChild(small);
 						}else if(habilidades[i].length == 2){
 	                		small.innerHTML = caracteristicas[i].descricao[0]+" <small>"+caracteristicas[i].descricao[1]+"</small>";
+							span_name.appendChild(small);
 						}
+
 
 
 	                	var div_habilidade_holder = document.createElement("div");
@@ -800,15 +800,14 @@
 
 
 				                	if(habilidades[i].habilidades[j].niveis != undefined){
-		                				console.log(habilidades[i].habilidades[j].niveis);
+		                				//console.log(habilidades[i].habilidades[j].niveis);
 				                	}else if(habilidades[i].habilidades[j].descricao != undefined){
-		                				console.log(habilidades[i].habilidades[j].descricao);
+		                				//console.log(habilidades[i].habilidades[j].descricao);
 				                	}else if(habilidades[i].habilidades[j].requisitos != undefined){
-		                				console.log(habilidades[i].habilidades[j].requisitos);
+		                				//console.log(habilidades[i].habilidades[j].requisitos);
 				                	}
 	                		}
 
-					div_holder.appendChild(small);
                 	div_holder.appendChild(div_habilidade_holder);
                 	c.appendChild(div_holder);
                 	$('#holder-habilidades').append(c);
@@ -834,7 +833,6 @@
 					   	}
 					   	$("#"+id).addClass("bold");
 				 	}else{
-				   		console.log("st "+number);
 				 		if(number == 1){
 					   		$("#"+id).removeClass("bold");
 						   	$("#"+id).removeClass("after1");
@@ -852,9 +850,7 @@
 						   	$("#"+id).addClass("after2");
 				 		}
 						number++;
-				   		console.log("nd "+number);
 					   	for(var i = number; i <= 3; i++){
-					   		console.log(i);
 					   		$("#"+id+i).prop("checked",false);
 					   	}
 				 	};
@@ -869,7 +865,6 @@
             });
 
             function ToggleNiveis(el){
-            	console.log(el);
             	$("#"+el.id+"-niveis").slideToggle('fast', function() {
 				    if ($(this).is(':visible'))
 				        $(this).css('display','flex');
