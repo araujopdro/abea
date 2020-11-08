@@ -1040,7 +1040,7 @@
   								$(this).prop("disabled", true);
 							}
 						});
-					   	console.log(number)
+					   	console.log("number: "+number);
 					   	$("#"+id).addClass("bold");
 				 	}else{
 				 		if(number == 1){
