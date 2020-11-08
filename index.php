@@ -672,7 +672,7 @@
 			  		console.log(this.value);
 				});};
 			
-			var = car_selecionadas = [];
+			var car_selecionadas = [];
 
 			function CreateCaracteristicas(){
                 $('#holder-caracteristicas').empty();
