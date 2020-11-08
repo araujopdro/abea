@@ -728,13 +728,14 @@
 
                 				var span_name_habilidade = document.createElement("span");
 			                		span_name_habilidade.className = "habilidades-habilidade-name";
+									span_name_habilidade.id = _id;
 			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
 			                		span_name_habilidade.onclick = function(){ToggleNiveis(this)};
 									div_habilidade_holder.appendChild(span_name_habilidade);
 
                 					var div_niveis_holder = document.createElement("div");
 	                					div_niveis_holder.className = "habilidades-niveis-holder";
-										div_niveis_holder.id = _id;
+										div_niveis_holder.id = _id+"-niveis";
 									for(var k = 1; k <= 3; k++){
 				                		var span_holder = document.createElement("span");
 		                					span_holder.className = "habilidades-habilidade-nivel-holder";
@@ -804,6 +805,7 @@
 
             function ToggleNiveis(el){
             	console.log(el);
+            	$("#"+el.id+"-niveis").slideToggle();
             }
 		</script>
 		<style type="text/css">
