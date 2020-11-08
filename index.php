@@ -671,20 +671,24 @@
 	            $('#select-etnia').on('change', function() {
 			  		console.log(this.value);
 				});};
+			
+			var = car_selecionadas = [];
+
 			function CreateCaracteristicas(){
                 $('#holder-caracteristicas').empty();
                 for(var i = 0; i < caracteristicas.length; i++){
 	                var c = document.createDocumentFragment();
 	                var div_holder = document.createElement("div");
-	                div_holder.className = "caracteristicas-tooltip-holder";
+	                div_holder.className = "caracteristicas-holder";
+	                div_holder.id = "caracteristicas-"+caracteristicas[i].nome;
 
-	                var span_tooltip = document.createElement("span");
-	                	span_tooltip.className = "caracteristicas-tooltip-text";
-	                	span_tooltip.innerHTML = caracteristicas[i].flavor;
+	                var small = document.createElement("small");
+	                	small.className = "caracteristicas-text";
+	                	small.innerHTML = caracteristicas[i].flavor;
 
                 	var checkbox = document.createElement('input');
                 		checkbox.className = "input-caracteristicas";
-						checkbox.id = "input-caracteristicas-"+caracteristicas[i].nome;
+						checkbox.id = caracteristicas[i].nome;
 						checkbox.name = "caracteristicas";
 						checkbox.type = "checkbox";
 						checkbox.value = caracteristicas[i].nome;
@@ -693,9 +697,9 @@
 						label.htmlFor = "input-caracteristicas-"+caracteristicas[i].nome;
 						label.appendChild(document.createTextNode(caracteristicas[i].nome));
 
-					div_holder.appendChild(span_tooltip);
 					div_holder.appendChild(checkbox);
 					div_holder.appendChild(label);
+					div_holder.appendChild(small);
                 	c.appendChild(div_holder);
 
                 	$('#holder-caracteristicas').append(c);
@@ -704,9 +708,20 @@
 
 	            var limit = 3;
 				$('input.input-caracteristicas').on('change', function(evt) {
-				   if($("input[name='caracteristicas']:checked").length > limit) {
-				       this.checked = false;
-				   }
+					for(var i = 0; i < car_selecionadas.length; i++){
+						if(this.id == car_selecionadas[i]){
+  							car_selecionadas.splice(i, 1);
+						}
+					}
+				   	if($("input[name='caracteristicas']:checked").length > limit) {
+			       		this.checked = false;
+				   	}else if($("input[name='caracteristicas']:checked").length == limit){
+				   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
+				   	}else if($("input[name='caracteristicas']:checked").length < limit){
+				   		$(".caracteristicas-holder").slideDown('fast');
+				   	}else{
+				   		car_selecionadas.push(this.id);
+				   	}
 				});};
 			function CreateHabilidades(){
                 $('#holder-habilidades').empty();
@@ -805,7 +820,7 @@
 
             function ToggleNiveis(el){
             	console.log(el);
-            	$("#"+el.id+"-niveis").slideToggle('medium', function() {
+            	$("#"+el.id+"-niveis").slideToggle('fast', function() {
 				    if ($(this).is(':visible'))
 				        $(this).css('display','flex');
 				});
@@ -844,30 +859,8 @@
 			    content: " » ";
 			}*/
 
-			.caracteristicas-tooltip-holder{
-			    position: relative;
-			    display: block;
-			    border-bottom: 1px dotted black;
-			    cursor: pointer;
-			}
+			.caracteristicas-holder{
 
-			.caracteristicas-tooltip-holder label{
-			    cursor: pointer;
-			}
-
-			.caracteristicas-tooltip-holder .caracteristicas-tooltip-text {
-			    visibility: hidden;
-			    background-color: black;
-			    color: #fff;
-			    text-align: center;
-			    padding: 5px 0;
-			    border-radius: 6px;
-			    position: absolute;
-			    transform: translateY(24px);
-			    z-index: 1;
-			}
-			.caracteristicas-tooltip-holder:hover .caracteristicas-tooltip-text {
-				visibility: visible;
 			}
 
 			.clickable{
