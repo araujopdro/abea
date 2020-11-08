@@ -892,13 +892,13 @@
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
 	  							$(".requisito-"+id+2).prop("checked", false);
-	  							$(".requisito-"+id+2).prop("disabled", false);
+	  							$(".requisito-"+id+2).prop("disabled", true);
 	  							hab_selecionadas.splice(b, 1);
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
-	  							$(".requisito-"+id+3).prop("disabled", false);
+	  							$(".requisito-"+id+3).prop("disabled", true);
 	  							hab_selecionadas.splice(c, 1);
 	  						}
 				 		}else if(number == 3){
@@ -910,7 +910,7 @@
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
-	  							$(".requisito-"+id+3).prop("disabled", false);
+	  							$(".requisito-"+id+3).prop("disabled", true);
 	  							hab_selecionadas.splice(c, 1);
 	  						}
 				 		}
