@@ -429,50 +429,180 @@
 				{
 					"nome":"Habilidades Gerais",
 					"habilidades":[
-						{"nome":"Acrobacia","niveis":["rolamentos básicos e estrelinhas","saltos mortais e piruetas","andar na corda bamba e fazer rotações e saltos entre barras"]},
-						{"nome":"Corrida","niveis":["correr com uma velocidade acima da média","correr distâncias maiores e em terrenos mais difíceis","correr grandes distâncias em terrenos difíceis"]},
-						{"nome":"Equitação","niveis":["cavalgar animais treinados e aplicar cuidados básicos aos cavalos","cavalgar em maior velocidade ou controlar animais mais temperamentais","pular, correr e domar cavalos"]},
-						{"nome":"Força Física","niveis":["carregar armas pesadas","levantar e carregar pesos acima do normal ou realizar feitos de força além do comum","realizar atos de força nos limites do corpo humano é uma façanha difícil ou lendária"]},
-						{"nome":"Furtividade","niveis":["esconder-se em condições ideais","esconder-se em situações adversas","esconder-se e locomover-se de forma despercebida ao disfarçar seu som, aparência e cheiro"]},
-						{"nome":"Medicina de campo","niveis":["tratar feridas básicas e remover um ponto de dano","remover dois pontos de dano","remover três pontos de dano"]},
-						{"nome":"Natação","niveis":["nadar em águas calmas","nadar em águas agitadas, fazer mergulho livre e socorrer outros em perigo","nadar grandes distâncias, socorrer pessoas em circunstâncias extremas e segurar o fôlego durante vários minutos debaixo da água"]},
-						{"nome":"Prestidigitação","niveis":["enganar os olhos de um espectador com ilusionismo","enganar múltiplos espectadores"," furtar objetos dos bolsos ou fazer outros feitos notáveis com as mãos, sem ninguém perceber"]}]
+						{"nome":"Acrobacia","niveis":["rolamentos básicos e estrelinhas","saltos mortais e piruetas","andar na corda bamba e fazer rotações e saltos entre barras"],
+							"requisitos":[
+								null,
+								"Acrobacia1",
+								"Acrobacia1;Acrobacia2"
+							]},
+						{"nome":"Corrida","niveis":["correr com uma velocidade acima da média","correr distâncias maiores e em terrenos mais difíceis","correr grandes distâncias em terrenos difíceis"],
+							"requisitos":[
+								null,
+								"Corrida1",
+								"Corrida1;Corrida2"
+							]},
+						{"nome":"Equitação","niveis":["cavalgar animais treinados e aplicar cuidados básicos aos cavalos","cavalgar em maior velocidade ou controlar animais mais temperamentais","pular, correr e domar cavalos"],
+							"requisitos":[
+								null,
+								"Equitação1",
+								"Equitação1;Equitação2"
+							]},
+						{"nome":"Força Física","niveis":["carregar armas pesadas","levantar e carregar pesos acima do normal ou realizar feitos de força além do comum","realizar atos de força nos limites do corpo humano é uma façanha difícil ou lendária"],
+							"requisitos":[
+								null,
+								"ForçaFísica1",
+								"ForçaFísica1;ForçaFísica2"
+							]},
+						{"nome":"Furtividade","niveis":["esconder-se em condições ideais","esconder-se em situações adversas","esconder-se e locomover-se de forma despercebida ao disfarçar seu som, aparência e cheiro"],
+							"requisitos":[
+								null,
+								"Furtividade1",
+								"Furtividade1;Furtividade2"
+							]},
+						{"nome":"Medicina de campo","niveis":["tratar feridas básicas e remover um ponto de dano","remover dois pontos de dano","remover três pontos de dano"],
+							"requisitos":[
+								null,
+								"Medicinadecampo1",
+								"Medicinadecampo1;Medicinadecampo2"
+							]},
+						{"nome":"Natação","niveis":["nadar em águas calmas","nadar em águas agitadas, fazer mergulho livre e socorrer outros em perigo","nadar grandes distâncias, socorrer pessoas em circunstâncias extremas e segurar o fôlego durante vários minutos debaixo da água"],
+							"requisitos":[
+								null,
+								"Natação1",
+								"Natação1;Natação2"
+							]},
+						{"nome":"Prestidigitação","niveis":["enganar os olhos de um espectador com ilusionismo","enganar múltiplos espectadores"," furtar objetos dos bolsos ou fazer outros feitos notáveis com as mãos, sem ninguém perceber"],
+							"requisitos":[
+								null,
+								"Prestidigitação1",
+								"Prestidigitação1;Prestidigitação2"
+							]}]
 				},
 				{
 					"nome":"Habilidades Silvestres",
 					"habilidades":[
-						{"nome":"Armadilhas","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"]},
-						{"nome":"Canoagem","niveis":["remar e navegar uma canoa","navegar águas mais difíceis com correnteza","navegar corredeiras"]},
-						{"nome":"Comida silvestre","niveis":["alimentar uma pessoa","alimentar um grupo","alimentar uma pessoa em circunstâncias adversas (como neve ou deserto) ou para alimentar um grupo sob condições diversas"]},
-						{"nome":"Escalada","niveis":["escalar uma superfície fácil de pedra, uma corda ou uma árvore","escaladas maiores ou mais difíceis","escaladas em situações mais difíceis (superfícies molhadas, retas), ou, com o equipamento certo, escalar montanhas"]},
-						{"nome":"Fauna silvestre","niveis":[" indicar hábitos básicos de animais comuns, como sua alimentação ou período de atividade","reconhecer um animal pelas pegadas, ou identificar um pássaro incomum por seu canto","representar um conhecimento profundo, como descobrir a última refeição e condição física de um animal pelo esterco, ou reconhecer a hierarquia entre um grupo de animais"]},
+						{"nome":"Armadilhas","niveis":["capturar animais pequenos","armadilhas mais complexas e escondê-las","montar armadilhas capazes de prender grandes animais ou até mesmo seres humanos"],
+							"requisitos":[
+								null,
+								"Armadilhas1",
+								"Armadilhas1;Armadilhas2"
+							]},
+						{"nome":"Canoagem","niveis":["remar e navegar uma canoa","navegar águas mais difíceis com correnteza","navegar corredeiras"],
+							"requisitos":[
+								null,
+								"Canoagem1",
+								"Canoagem1;Canoagem2"
+							]},
+						{"nome":"Comida silvestre","niveis":["alimentar uma pessoa","alimentar um grupo","alimentar uma pessoa em circunstâncias adversas (como neve ou deserto) ou para alimentar um grupo sob condições diversas"],
+							"requisitos":[
+								null,
+								"Comidasilvestre1",
+								"Comidasilvestre1;Comidasilvestre2"
+							]},
+						{"nome":"Escalada","niveis":["escalar uma superfície fácil de pedra, uma corda ou uma árvore","escaladas maiores ou mais difíceis","escaladas em situações mais difíceis (superfícies molhadas, retas), ou, com o equipamento certo, escalar montanhas"],
+							"requisitos":[
+								null,
+								"Escalada1",
+								"Escalada1;Escalada2"
+							]},
+						{"nome":"Fauna silvestre","niveis":[" indicar hábitos básicos de animais comuns, como sua alimentação ou período de atividade","reconhecer um animal pelas pegadas, ou identificar um pássaro incomum por seu canto","representar um conhecimento profundo, como descobrir a última refeição e condição física de um animal pelo esterco, ou reconhecer a hierarquia entre um grupo de animais"],
+							"requisitos":[
+								null,
+								"Faunasilvestre1",
+								"Faunasilvestre1;Faunasilvestre2"
+							]},
 						{"nome":"Folclore","niveis":["o personagem adquire conhecimento de lendas e costumes"]},
-						{"nome":"Herbalismo","niveis":["curar 1 ponto de dano em qualquer pessoa","consegue tratar febres, doenças e venenos comuns","doenças e venenos incomuns"]},
-						{"nome":"Navegação terrestre","niveis":["reconhecer os pontos cardeais","encontrar um caminho quando perdido na selva","reencontrar um lugar previamente visitado"]},
-						{"nome":"Rastreamento","niveis":["identificar vestígios mais óbvios de pessoas e animais"," rastrear algum animal ou pessoa sob condições ideais","rastrear pessoas e animais sob condições mais difíceis"]}]
+						{"nome":"Herbalismo","niveis":["curar 1 ponto de dano em qualquer pessoa","consegue tratar febres, doenças e venenos comuns","doenças e venenos incomuns"],
+							"requisitos":[
+								null,
+								"Folclore1",
+								"Folclore1;Folclore2"
+							]},
+						{"nome":"Navegação terrestre","niveis":["reconhecer os pontos cardeais","encontrar um caminho quando perdido na selva","reencontrar um lugar previamente visitado"],
+							"requisitos":[
+								null,
+								"Navegaçãoterrestre1",
+								"Navegaçãoterrestre1;Navegaçãoterrestre2"
+							]},
+						{"nome":"Rastreamento","niveis":["identificar vestígios mais óbvios de pessoas e animais"," rastrear algum animal ou pessoa sob condições ideais","rastrear pessoas e animais sob condições mais difíceis"],
+							"requisitos":[
+								null,
+								"Rastreamento1",
+								"Rastreamento1;Rastreamento2"
+							]}]
 				},
 				{
 					"nome":"Armas",
 					"habilidades":[
-						{"nome":"Armas de arremesso","descricao":["estas armas são balanceadas para o arremesso, mas também podem ser utilizadas no corpo a corpo, se o personagem tiver a habilidade certa","Lança, Faca de Arremesso, Machado de arremesso"]},
+						{"nome":"Armas de arremesso","descricao":["estas armas são balanceadas para o arremesso, mas também podem ser utilizadas no corpo a corpo, se o personagem tiver a habilidade certa","Lança, Faca de Arremesso, Machado de arremesso"],
+							"requisitos":[
+								null,
+								"Armasdearremesso1",
+								"Armasdearremesso1;Armasdearremesso2"
+							]},
 
-						{"nome":"Armas de corte","descricao":["armas utilizadas para golpes cortantes ou para esfaquear o oponente", "Adaga, Alfanje, Espada de Lâmina Larga*, Faca, Machete"]},
+						{"nome":"Armas de corte","descricao":["armas utilizadas para golpes cortantes ou para esfaquear o oponente", "Adaga, Alfanje, Espada de Lâmina Larga*, Faca, Machete"],
+							"requisitos":[
+								null,
+								"Armasdecorte1",
+								"Armasdecorte1;Armasdecorte2"
+							]},
 
-						{"nome":"Armas de fogo","descricao":["ao longo do século XVI, as armas de fogo começaram a se tornar as armas dominantes", "Arcabuz, Mosquete, Pistola"]},
+						{"nome":"Armas de fogo","descricao":["ao longo do século XVI, as armas de fogo começaram a se tornar as armas dominantes", "Arcabuz, Mosquete, Pistola"],
+							"requisitos":[
+								null,
+								"Armasdefogo1",
+								"Armasdefogo1;Armasdefogo2"
+							]},
 
-						{"nome":"Armas de golpe","descricao":["armas que dependem da força física do combatente para causar dano de impacto", "Machado de guerra, Martelo de guerra, Porrete"]},
+						{"nome":"Armas de golpe","descricao":["armas que dependem da força física do combatente para causar dano de impacto", "Machado de guerra, Martelo de guerra, Porrete"],
+							"requisitos":[
+								null,
+								"Armasdegolpe1",
+								"Armasdegolpe1;Armasdegolpe2"
+							]},
 
-						{"nome":"Armas de haste","descricao":["armas de haste comprida", "Alabarda, Martelo de Lucerne, Pique"]},
+						{"nome":"Armas de haste","descricao":["armas de haste comprida", "Alabarda, Martelo de Lucerne, Pique"],
+							"requisitos":[
+								null,
+								"Armasdehaste1",
+								"Armasdehaste1;Armasdehaste2"
+							]},
 
-						{"nome":"Armas de sopro","descricao":["existem vários tipos e tamanhos de zarabatanas", "Zarabatana"]},
+						{"nome":"Armas de sopro","descricao":["existem vários tipos e tamanhos de zarabatanas", "Zarabatana"],
+							"requisitos":[
+								null,
+								"Armasdesopro1",
+								"Armasdesopro1;Armasdesopro2"
+							]},
 
-						{"nome":"Armas mecânicas","descricao":["a besta, mesmo com sua popularidade diminuída, continuava sendo uma opção nas batalhas ao longo do século XVI", "Besta"]},
+						{"nome":"Armas mecânicas","descricao":["a besta, mesmo com sua popularidade diminuída, continuava sendo uma opção nas batalhas ao longo do século XVI", "Besta"],
+							"requisitos":[
+								null,
+								"Armasmecânica1",
+								"Armasmecânica1;Armasmecânica2"
+							]},
 
-						{"nome":"Arquearia","descricao":["O arco é arma tradicional do mundo inteiro. Enquanto o século XVI viu seu uso diminuir na Europa, o arco e flecha continuou sendo a arma mais usada nas Américas, devido ao seu uso pelos povos nativos", "Arco e flecha"]},
+						{"nome":"Arquearia","descricao":["O arco é arma tradicional do mundo inteiro. Enquanto o século XVI viu seu uso diminuir na Europa, o arco e flecha continuou sendo a arma mais usada nas Américas, devido ao seu uso pelos povos nativos", "Arco e flecha"],
+							"requisitos":[
+								null,
+								"Arquearia1",
+								"Arquearia1;Arquearia2"
+							]},
 
-						{"nome":"Esgrima","descricao":["estudo de luta com as espadas compridas de origem europeia", "Rapieira"]},
+						{"nome":"Esgrima","descricao":["estudo de luta com as espadas compridas de origem europeia", "Rapieira"],
+							"requisitos":[
+								null,
+								"Esgrima1",
+								"Esgrima1;Esgrima2"
+							]},
 
-						{"nome":"Armas exóticas","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]}
+						{"nome":"Armas exóticas","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"],
+							"requisitos":[
+								null,
+								"Armasexóticas1",
+								"Armasexóticas1;Armasexóticas2"
+							]}
 					]
 				},
 				{
@@ -482,134 +612,394 @@
 							"requisitos":[
 								null,
 								"Boxe1",
-								"Boxe11;Boxe2"
+								"Boxe1;Boxe2"
 							]},
-						{"nome":"Capoeira","descricao":["pode usar esta habilidade para atacar com os pés (dano 1) ou para esquivas durante o combate"]},
-						{"nome":"Luta livre","descricao":["pode usar esta habilidade para tentar imobilizar oponentes de tamanho e força humanas"]},]
+						{"nome":"Capoeira","descricao":["pode usar esta habilidade para atacar com os pés (dano 1) ou para esquivas durante o combate"],
+							"requisitos":[
+								null,
+								"Capoeira1",
+								"Capoeira1;Capoeira2"
+							]},
+						{"nome":"Luta livre","descricao":["pode usar esta habilidade para tentar imobilizar oponentes de tamanho e força humanas"],
+							"requisitos":[
+								null,
+								"Lutalivre1",
+								"Lutalivre1;Lutalivre2"
+							]},]
 				},
 				{
 					"nome":"Habilidades Sociais",
 					"habilidades":[
-						{"nome":"Barganha","niveis":["negociar o custo de bens e serviços","negociar o custo de bens e serviços com mais facilidade","pode ser utilizada para convencer um vendedor mais “duro” ou conseguir um desconto maior"]},
-						{"nome":"Oratória","descricao":["desenvolvimento do poder da voz para persuadir um grupo"]},
-						{"nome":"Persuasão","descricao":["habilidade de persuadir outros, de levá-los para seu lado da discussão"]}]
+						{"nome":"Barganha","niveis":["negociar o custo de bens e serviços","negociar o custo de bens e serviços com mais facilidade","pode ser utilizada para convencer um vendedor mais “duro” ou conseguir um desconto maior"],
+							"requisitos":[
+								null,
+								"Barganha",
+								"Barganha1;Barganha2"
+							]},
+						{"nome":"Oratória","descricao":["desenvolvimento do poder da voz para persuadir um grupo"],
+							"requisitos":[
+								null,
+								"Oratória1",
+								"Oratória1;Oratória2"
+							]},
+						{"nome":"Persuasão","descricao":["habilidade de persuadir outros, de levá-los para seu lado da discussão"],
+							"requisitos":[
+								null,
+								"Persuasão1",
+								"Persuasão1;Persuasão2"
+							]}]
 				},
 				{
 					"nome":"Habilidades Militares e Navais",
 					"habilidades":[
-						{"nome":"Artilharia","descricao":["a artilharia só pode ser utilizada de pontos fixos, como fortalezas e navios. Artilharia não tem precisão para ser utilizada em pequenas batalhas. Estas peças servem para atacar grandes alvos, como navios e edifícios, ou para atirar no meio de exércitos."]},
+						{"nome":"Artilharia","descricao":["a artilharia só pode ser utilizada de pontos fixos, como fortalezas e navios. Artilharia não tem precisão para ser utilizada em pequenas batalhas. Estas peças servem para atacar grandes alvos, como navios e edifícios, ou para atirar no meio de exércitos."],
+							"requisitos":[
+								null,
+								"Artilharia1",
+								"Artilharia1;Artilharia2"
+							]},
 
-						{"nome":"Militar","niveis":["uma habilidade básica para quem participa de guerras, como soldados e guerreiros nativos. Inclui aprendizagem de combate em grupo, cuidado de higiene e equipamento durante campanhas, nervos para enfrentar a batalha","começa a aprender táticas militares, podendo organizar pequenos grupos em batalha","aprende estratégia: como equipar grupos, preparar linhas de suprimento e escolher terrenos para travar batalhas"]},
+						{"nome":"Militar","niveis":["uma habilidade básica para quem participa de guerras, como soldados e guerreiros nativos. Inclui aprendizagem de combate em grupo, cuidado de higiene e equipamento durante campanhas, nervos para enfrentar a batalha","começa a aprender táticas militares, podendo organizar pequenos grupos em batalha","aprende estratégia: como equipar grupos, preparar linhas de suprimento e escolher terrenos para travar batalhas"],
+							"requisitos":[
+								null,
+								"Militar1",
+								"Militar1;Militar2"
+							]},
 
-						{"nome":"Náutica","niveis":[" aprende a trabalhar com o vento, atar nós, limpar e cuidar de embarcações. Também consegue navegar barcos a vela pequenos","navegar rotas conhecidas, lidar com mares perigosos e enfrentar situações táticas","melhora as habilidades de navegação"]}]
+						{"nome":"Náutica","niveis":[" aprende a trabalhar com o vento, atar nós, limpar e cuidar de embarcações. Também consegue navegar barcos a vela pequenos","navegar rotas conhecidas, lidar com mares perigosos e enfrentar situações táticas","melhora as habilidades de navegação"],
+							"requisitos":[
+								null,
+								"Náutica1",
+								"Náutica1;Náutica2"
+							]}]
 				},
 				{
 					"nome":"Artesanatos",
 					"habilidades":[
 
-						{"nome":"Alfaiataria","descricao":["alfaiates trabalham com a confecção de roupas. Pode-se demorar um dia para criar uma roupa simples, ou um mês para as mais difíceis (após obter todos os materiais necessários)"]},
+						{"nome":"Alfaiataria","descricao":["alfaiates trabalham com a confecção de roupas. Pode-se demorar um dia para criar uma roupa simples, ou um mês para as mais difíceis (após obter todos os materiais necessários)"],
+							"requisitos":[
+								null,
+								"Alfaiataria1",
+								"Alfaiataria1;Alfaiataria2"
+							]},
 
-						{"nome":"Armaria","descricao":["Através do manuseio de madeira e metal, os armeiros são especialistas no reparo e fabricação de armas de fogo. Uma encomenda mais simples, como um arcabuz com fecho de mecha, pode ser fabricada em duas semanas. Uma arma com fecho de roda é um trabalho mais complexo, que deve levar dois ou três meses. Trabalhos de qualidade excepcional podem levar seis meses"]},
+						{"nome":"Armaria","descricao":["Através do manuseio de madeira e metal, os armeiros são especialistas no reparo e fabricação de armas de fogo. Uma encomenda mais simples, como um arcabuz com fecho de mecha, pode ser fabricada em duas semanas. Uma arma com fecho de roda é um trabalho mais complexo, que deve levar dois ou três meses. Trabalhos de qualidade excepcional podem levar seis meses"],
+							"requisitos":[
+								null,
+								"Armaria1",
+								"Armaria1;Armaria2"
+							]},
 
-						{"nome":"Ferraria","descricao":["ferreiros trabalham com objetos de ferro. Um objeto simples pode ser criado em questão de horas, uma arma básica em uma semana e um objeto excepcional pode levar meses"]},
+						{"nome":"Ferraria","descricao":["ferreiros trabalham com objetos de ferro. Um objeto simples pode ser criado em questão de horas, uma arma básica em uma semana e um objeto excepcional pode levar meses"],
+							"requisitos":[
+								null,
+								"Ferraria1",
+								"Ferraria1;Ferraria2"
+							]},
 
-						{"nome":"Marcenaria","descricao":["marceneiros trabalham com criação de móveis e outros objetos de madeira. Peças básicas podem levar um dia para fazer, já peças decorativas, de madeiras especiais, podem levar meses"]},
+						{"nome":"Marcenaria","descricao":["marceneiros trabalham com criação de móveis e outros objetos de madeira. Peças básicas podem levar um dia para fazer, já peças decorativas, de madeiras especiais, podem levar meses"],
+							"requisitos":[
+								null,
+								"Marcenaria1",
+								"Marcenaria1;Marcenaria2"
+							]},
 
-						{"nome":"Ourivesaria","descricao":["o ourives faz trabalhos em prata e ouro. Trabalhos simples levam dias, e trabalhos grandes e complexos podem levar seis meses ou mais"]},
+						{"nome":"Ourivesaria","descricao":["o ourives faz trabalhos em prata e ouro. Trabalhos simples levam dias, e trabalhos grandes e complexos podem levar seis meses ou mais"],
+							"requisitos":[
+								null,
+								"Ourivesaria1",
+								"Ourivesaria1;Ourivesaria2"
+							]},
 
-						{"nome":"Sapataria","descricao":["o sapateiro monta calçados de couro. Um par básico de calçados pode levar um dia para ser feito, um par mais elaborado pode levar semanas"]},
+						{"nome":"Sapataria","descricao":["o sapateiro monta calçados de couro. Um par básico de calçados pode levar um dia para ser feito, um par mais elaborado pode levar semanas"],
+							"requisitos":[
+								null,
+								"Sapataria1",
+								"Sapataria1;Sapataria2"
+							]},
 
-						{"nome":"Tanoaria","descricao":["tanoeiros confeccionam barris. A montagem de um barril leva um dia. Tanoeiros de níveis maiores são especialistas na seleção e formação da madeira, criando barris de melhor qualidade e maior durabilidade"]}]
+						{"nome":"Tanoaria","descricao":["tanoeiros confeccionam barris. A montagem de um barril leva um dia. Tanoeiros de níveis maiores são especialistas na seleção e formação da madeira, criando barris de melhor qualidade e maior durabilidade"],
+							"requisitos":[
+								null,
+								"Tanoaria1",
+								"Tanoaria1;Tanoaria2"
+							]}]
 				},
 				{
 					"nome":"Artes",
 					"habilidades":[
 
-						{"nome":"Culinária","descricao":["tendo os ingredientes certos, é capaz de criar pratos saborosos e até inéditos"]},
+						{"nome":"Culinária","descricao":["tendo os ingredientes certos, é capaz de criar pratos saborosos e até inéditos"],
+							"requisitos":[
+								null,
+								"Culinária1",
+								"Culinária1;Culinária2"
+							]},
 
-						{"nome":"Dança","descricao":["estuda as técnicas de dança"]},
+						{"nome":"Dança","descricao":["estuda as técnicas de dança"],
+							"requisitos":[
+								null,
+								"Dança1",
+								"Dança1;Dança2"
+							]},
 
-						{"nome":"Desenho","descricao":["desenhista trabalha com carvão, lápis, xilogravura ou outras formas de desenho"]},
+						{"nome":"Desenho","descricao":["desenhista trabalha com carvão, lápis, xilogravura ou outras formas de desenho"],
+							"requisitos":[
+								null,
+								"Desenho1",
+								"Desenho1;Desenho2"
+							]},
 
-						{"nome":"Entalhe","descricao":["consegue entalhar desenhos ou esculturas de madeira"]},
+						{"nome":"Entalhe","descricao":["consegue entalhar desenhos ou esculturas de madeira"],
+							"requisitos":[
+								null,
+								"Entalhe1",
+								"Entalhe1;Entalhe2"
+							]},
 
-						{"nome":"Escultura","descricao":["apreende esculpir obras de argila ou mármore"]},
+						{"nome":"Escultura","descricao":["apreende esculpir obras de argila ou mármore"],
+							"requisitos":[
+								null,
+								"Escultura1",
+								"Escultura1;Escultura2"
+							]},
 
-						{"nome":"Pintura","descricao":["trabalha com pintura em aquarela ou tinta a óleo"]},
+						{"nome":"Pintura","descricao":["trabalha com pintura em aquarela ou tinta a óleo"],
+							"requisitos":[
+								null,
+								"Pintura1",
+								"Pintura1;Pintura2"
+							]},
 
-						{"nome":"Poesia","descricao":["pode trabalhar com poesia, letras ou peças"]},
+						{"nome":"Poesia","descricao":["pode trabalhar com poesia, letras ou peças"],
+							"requisitos":[
+								null,
+								"Poesia1",
+								"Poesia1;Poesia2"
+							]},
 
-						{"nome":"Teatro","descricao":["tem habilidade nas artes cênicas, ou como ator/atriz de peças ou em outras áreas, como marionetes"]},
+						{"nome":"Teatro","descricao":["tem habilidade nas artes cênicas, ou como ator/atriz de peças ou em outras áreas, como marionetes"],
+							"requisitos":[
+								null,
+								"Teatro1",
+								"Teatro1;Teatro2"
+							]},
 
-						{"nome":"Vocal","descricao":["faz treinamento da voz para cantar"]}]
+						{"nome":"Vocal","descricao":["faz treinamento da voz para cantar"],
+							"requisitos":[
+								null,
+								"Vocal1",
+								"Vocal1;Vocal2"
+							]}]
 				},
 				{
 					"nome":"Instrumentos Musicais",
 					"habilidades":[
 
-						{"nome":"Instrumentos de corda","descricao":["alaúde, cistre"]},
+						{"nome":"Instrumentos de corda","descricao":["alaúde, cistre"],
+							"requisitos":[
+								null,
+								"Instrumentosdecorda1",
+								"Instrumentosdecorda1;Instrumentosdecorda2"
+							]},
 
-						{"nome":"Instrumentos de corda e arco","descricao":["viola, viola da gamba"]},
+						{"nome":"Instrumentos de corda e arco","descricao":["viola, viola da gamba"],
+							"requisitos":[
+								null,
+								"Instrumentosdecordaearco1",
+								"Instrumentosdecordaearco1;Instrumentosdecordaearco2"
+							]},
 
-						{"nome":"Instrumentos de embocadura","descricao":["flauta, flauta doce, corneta, corneto, trombeta"]},
+						{"nome":"Instrumentos de embocadura","descricao":["flauta, flauta doce, corneta, corneto, trombeta"],
+							"requisitos":[
+								null,
+								"Instrumentosdeembocadura1",
+								"Instrumentosdeembocadura1;Instrumentosdeembocadura2"
+							]},
 
-						{"nome":"Instrumentos de palheta","descricao":["baixão, charamela, fagote"]},
+						{"nome":"Instrumentos de palheta","descricao":["baixão, charamela, fagote"],
+							"requisitos":[
+								null,
+								"Instrumentosdepalheta1",
+								"Instrumentosdepalheta1;Instrumentosdepalheta2"
+							]},
 
-						{"nome":"Instrumentos de percussão","descricao":["atabaque, pandeiro, tambor"]},
+						{"nome":"Instrumentos de percussão","descricao":["atabaque, pandeiro, tambor"],
+							"requisitos":[
+								null,
+								"Instrumentosdepercussão1",
+								"Instrumentosdepercussão1;Instrumentosdepercussão2"
+							]},
 
-						{"nome":"Instrumentos de tecla","descricao":["cravo, clavicórdio"]}]
+						{"nome":"Instrumentos de tecla","descricao":["cravo, clavicórdio"],
+							"requisitos":[
+								null,
+								"Instrumentosdetecla1",
+								"Instrumentosdetecla1;Instrumentosdetecla2"
+							]}]
 				},
 				{
 					"nome":"Outros Ofícios",
 					"habilidades":[
-						{"nome":"Adestramento de cães","descricao":["é especialista em treinar cachorros. Nas suas viagens, pode levar um ou dois cachorros comuns"]},
+						{"nome":"Adestramento de cães","descricao":["é especialista em treinar cachorros. Nas suas viagens, pode levar um ou dois cachorros comuns"],
+							"requisitos":[
+								null,
+								"Adestramentodecães1",
+								"Adestramentodecães1;Adestramentodecães2"
+							]},
 
-						{"nome":"Administração","descricao":["administração pode lidar com cargos envolvendo organização e burocracia, e pode servir em certos cargos governamentais. Os que também adquirem a habilidade acadêmica de Direito podem trabalhar como juízes, promotores e outros cargos"]},
+						{"nome":"Administração","descricao":["administração pode lidar com cargos envolvendo organização e burocracia, e pode servir em certos cargos governamentais. Os que também adquirem a habilidade acadêmica de Direito podem trabalhar como juízes, promotores e outros cargos"],
+							"requisitos":[
+								null,
+								"Administração1",
+								"Administração1;Administração2"
+							]},
 
-						{"nome":"Agricultura","descricao":["Quem estuda agricultura é o lavrador ou trabalhador rural. Esta pessoa entende as técnicas do campo: quando e como plantar e colher produtos agrícolas"]},
+						{"nome":"Agricultura","descricao":["Quem estuda agricultura é o lavrador ou trabalhador rural. Esta pessoa entende as técnicas do campo: quando e como plantar e colher produtos agrícolas"],
+							"requisitos":[
+								null,
+								"Agricultura1",
+								"Agricultura1;Agricultura2"
+							]},
 
-						{"nome":"Arquitetura","descricao":["arquitetos lidam com planejamento e supervisão de construção de prédios"]},
+						{"nome":"Arquitetura","descricao":["arquitetos lidam com planejamento e supervisão de construção de prédios"],
+							"requisitos":[
+								null,
+								"Arquitetura1",
+								"Arquitetura1;Arquitetura2"
+							]},
 
-						{"nome":"Barbearia-cirurgia","descricao":["Além de cortar barbas e cabelo, os barbeiros-cirurgiões podiam praticar pequenas cirurgias, como lancetar, arrancar dentes, ou amputar membros. Infelizmente, um dos seus tratamentos mais comum da época, sangria com sanguessugas ou flebotomia, era pouco eficaz na cura de doenças"]},
+						{"nome":"Barbearia-cirurgia","descricao":["Além de cortar barbas e cabelo, os barbeiros-cirurgiões podiam praticar pequenas cirurgias, como lancetar, arrancar dentes, ou amputar membros. Infelizmente, um dos seus tratamentos mais comum da época, sangria com sanguessugas ou flebotomia, era pouco eficaz na cura de doenças"],
+							"requisitos":[
+								null,
+								"Barbearia-cirurgia1",
+								"Barbearia-cirurgia1;Barbearia-cirurgia2"
+							]},
 
-						{"nome":"Carpintaria","descricao":["carpinteiros trabalham com construção em madeira"]},
+						{"nome":"Carpintaria","descricao":["carpinteiros trabalham com construção em madeira"],
+							"requisitos":[
+								null,
+								"Carpintaria1",
+								"Carpintaria1;Carpintaria2"
+							]},
 
-						{"nome":"Cartografia","descricao":["cartógrafos trabalham na confecção de mapas"]},
+						{"nome":"Cartografia","descricao":["cartógrafos trabalham na confecção de mapas"],
+							"requisitos":[
+								null,
+								"Cartografia1",
+								"Cartografia1;Cartografia2"
+							]},
 
-						{"nome":"Comércio","descricao":["comerciante lida com venda e compra de bens, precisa entender de logística de transporte e armazenagem, preço com base em oferta e demanda, avaliação da qualidade dos produtos e outros assuntos relacionados"]},
+						{"nome":"Comércio","descricao":["comerciante lida com venda e compra de bens, precisa entender de logística de transporte e armazenagem, preço com base em oferta e demanda, avaliação da qualidade dos produtos e outros assuntos relacionados"],
+							"requisitos":[
+								null,
+								"Comércio1",
+								"Comércio1;Comércio2"
+							]},
 
-						{"nome":"Condução de gado","descricao":["boieiros (antigo nome para os vaqueiros/boiadeiros) trabalham com criação, proteção e controle de gado"]},
+						{"nome":"Condução de gado","descricao":["boieiros (antigo nome para os vaqueiros/boiadeiros) trabalham com criação, proteção e controle de gado"],
+							"requisitos":[
+								null,
+								"Conduçãodegado1",
+								"Conduçãodegado1;Conduçãodegado2"
+							]},
 
-						{"nome":"Contabilidade","descricao":[" pessoas que trabalham com contabilidade ocupam o cargo de tesoureiro"]},
+						{"nome":"Contabilidade","descricao":[" pessoas que trabalham com contabilidade ocupam o cargo de tesoureiro"],
+							"requisitos":[
+								null,
+								"Contabilidade1",
+								"Contabilidade1;Contabilidade2"
+							]},
 
-						{"nome":"Engenharia","descricao":["engenheiros trabalham na projeção e supervisão na construção de projetos de engenharia civil (estradas, pontes) e mecânica (moinhos, engenhos de açúcar)"]},
+						{"nome":"Engenharia","descricao":["engenheiros trabalham na projeção e supervisão na construção de projetos de engenharia civil (estradas, pontes) e mecânica (moinhos, engenhos de açúcar)"],
+							"requisitos":[
+								null,
+								"Engenharia1",
+								"Engenharia1;Engenharia2"
+							]},
 
-						{"nome":"Escriba","descricao":["escrivães trabalham com a escrita e o arquivamento de documentos"]},
+						{"nome":"Escriba","descricao":["escrivães trabalham com a escrita e o arquivamento de documentos"],
+							"requisitos":[
+								null,
+								"Escriba1",
+								"Escriba1;Escriba2"
+							]},
 
-						{"nome":"Fabricação de flechas","niveis":["personagem pode gastar um dia na confecção de flechas, criando 5 flechas","personagem pode gastar um dia na confecção de flechas, criando 10 flechas","personagem pode gastar um dia na confecção de flechas, criando 20 flechas"]},
+						{"nome":"Fabricação de flechas","niveis":["personagem pode gastar um dia na confecção de flechas, criando 5 flechas","personagem pode gastar um dia na confecção de flechas, criando 10 flechas","personagem pode gastar um dia na confecção de flechas, criando 20 flechas"],
+							"requisitos":[
+								null,
+								"Fabricaçãodeflechas1",
+								"Fabricaçãodeflechas1;Fabricaçãodeflechas2"
+							]},
 
-						{"nome":"Mineração","descricao":["este personagem é especialista em reconhecer depósitos de minerais e em técnicas de extração"]},
+						{"nome":"Mineração","descricao":["este personagem é especialista em reconhecer depósitos de minerais e em técnicas de extração"],
+							"requisitos":[
+								null,
+								"Mineração1",
+								"Mineração1;Mineração2"
+							]},
 
-						{"nome":"Pedraria","descricao":["os pedreiros trabalham com o uso de pedra em construção"]}]
+						{"nome":"Pedraria","descricao":["os pedreiros trabalham com o uso de pedra em construção"],
+							"requisitos":[
+								null,
+								"Pedraria1",
+								"Pedraria1;Pedraria2"
+							]}]
 				},
 				{
 					"nome":"Estudos Acadêmicos",
 					"habilidades":[
-						{"nome":"Astronomia","descricao":["estudo dos movimentos das estrelas e planetas dentro da 'esfera celestial'"]},
+						{"nome":"Astronomia","descricao":["estudo dos movimentos das estrelas e planetas dentro da 'esfera celestial'"],
+							"requisitos":[
+								null,
+								"Astronomia1",
+								"Astronomia1;Astronomia2"
+							]},
 
-						{"nome":"Direito","descricao":["estudo da filosofia e prática de lei"]},
+						{"nome":"Direito","descricao":["estudo da filosofia e prática de lei"],
+							"requisitos":[
+								null,
+								"Direito1",
+								"Direito1;Direito2"
+							]},
 
-						{"nome":"Filosofia","descricao":["estudo de lógica, razão e metafísica, a essência dos seres"]},
+						{"nome":"Filosofia","descricao":["estudo de lógica, razão e metafísica, a essência dos seres"],
+							"requisitos":[
+								null,
+								"Filosofia1",
+								"Filosofia1;Filosofia2"
+							]},
 
-						{"nome":"Física","descricao":["estudo dos fenômenos naturais"]},
+						{"nome":"Física","descricao":["estudo dos fenômenos naturais"],
+							"requisitos":[
+								null,
+								"Física1",
+								"Física1;Física2"
+							]},
 
-						{"nome":"Humanidades","descricao":["inclui as áreas de gramática, o estudo de palavras e expressão linguística, nas formas de oração e poesia, e retórica, o estudo teórico de oratória e formação de argumentos para persuasão"]},
+						{"nome":"Humanidades","descricao":["inclui as áreas de gramática, o estudo de palavras e expressão linguística, nas formas de oração e poesia, e retórica, o estudo teórico de oratória e formação de argumentos para persuasão"],
+							"requisitos":[
+								null,
+								"Humanidades1",
+								"Humanidades1;Humanidades2"
+							]},
 
-						{"nome":"Matemática","descricao":["inclui as áreas de aritmética, o estudo de números e seus relacionamentos, e geometria, o estudo de medidas."]},
+						{"nome":"Matemática","descricao":["inclui as áreas de aritmética, o estudo de números e seus relacionamentos, e geometria, o estudo de medidas."],
+							"requisitos":[
+								null,
+								"Matemática1",
+								"Matemática1;Matemática2"
+							]},
 
-						{"nome":"Medicina","descricao":["os médicos (chamados de “físicos”) podem recomendar remédios e tratamentos para doenças e condições comuns"]},
+						{"nome":"Medicina","descricao":["os médicos (chamados de “físicos”) podem recomendar remédios e tratamentos para doenças e condições comuns"],
+							"requisitos":[
+								null,
+								"Medicina1",
+								"Medicina1;Medicina2"
+							]},
 
-						{"nome":"Teologia","descricao":["estudo da Bíblia e as doutrinas da Igreja"],"requisitos":["Latim2","Latim2","Latim2"]}]
+						{"nome":"Teologia","descricao":["estudo da Bíblia e as doutrinas da Igreja"],"requisitos":["Latim2","Teologia1;Latim2","Teologia2;Latim2"]}]
 				},
 				{
 					"nome":"Graças Divinas",
@@ -626,22 +1016,29 @@
 							],
 							"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]},
 
-						{"nome":"Defesa contra magia","niveis":["Sentir magia","Proteção contra magia","Dissipar magia"],"requisitos":["Fé1","Fé1;Fé2;Defesacontramagia1","Fé1;Fé2;Fé3;Defesacontramagia2"],"descricao":["pede a graça de sentir os efeitos de poderes ao redor dele", "ganha proteção pessoal contra poderes mágicos", "consegue anular algum efeito mágico"]},
+						{"nome":"Defesa contra magia","niveis":["Sentir magia","Proteção contra magia","Dissipar magia"],
+						"requisitos":[
+						"Fé1",
+						"Fé1;Fé2;Defesacontramagia1",
+						"Fé1;Fé2;Fé3;Defesacontramagia1;Defesacontramagia2"]
+						,"descricao":["pede a graça de sentir os efeitos de poderes ao redor dele", "ganha proteção pessoal contra poderes mágicos", "consegue anular algum efeito mágico"]},
 
 
-						{"nome":"Profecia","niveis":["Visão divina","Sentir vida","Busca da verdade"],"requisitos":["Fé1","Fé1;Fé2;Profecia1","Fé1;Fé2;Fé3;Profecia2"],"descricao":["para receber uma visão, o personagem tem de estar em algum momento de paz e oração, relaxado e preparado para receber esta bênção. Uma visão pode ou não aparecer, pode ter ou não ter utilidade e pode até confundir mais que ajudar", "esta graça alerta o personagem sobre o estado de uma pessoa conhecida, mesmo que aquela pessoa esteja a milhares de quilômetros de distância", "quando usada com sucesso, deixa o personagem saber sem sombra de dúvida se outra pessoa está mentindo ou não. Em casos de grande sucesso, o personagem pode até receber uma visão que mostra o que é a verdade"]},
+						{"nome":"Profecia","niveis":["Visão divina","Sentir vida","Busca da verdade"],
+						"requisitos":["Fé1","Fé1;Fé2;Profecia1","Fé1;Fé2;Fé3;Profecia1;Profecia2"],
+						"descricao":["para receber uma visão, o personagem tem de estar em algum momento de paz e oração, relaxado e preparado para receber esta bênção. Uma visão pode ou não aparecer, pode ter ou não ter utilidade e pode até confundir mais que ajudar", "esta graça alerta o personagem sobre o estado de uma pessoa conhecida, mesmo que aquela pessoa esteja a milhares de quilômetros de distância", "quando usada com sucesso, deixa o personagem saber sem sombra de dúvida se outra pessoa está mentindo ou não. Em casos de grande sucesso, o personagem pode até receber uma visão que mostra o que é a verdade"]},
 
 
-						{"nome":"Recuperação","niveis":["Aliviar dor","Remover febre","Expulsar males"],"requisitos":["Fé1","Fé1;Fé2;Recuperação1","Fé1;Fé2;Fé3;Recuperação2"],"descricao":["recupera danos em uma parte do corpo e alivia a dor das outras, deixando aquela pessoa agir de forma normal. O personagem recupera imediatamente dois pontos de dano e, se continuar com menos de quatro pontos de resistência, não sofre a perda de um nível nos seus testes de habilidade durante as próximas 24 horas","esta graça pode remover doenças e venenos listados como “comum” (como, por exemplo, o veneno da Armadeira gigante), e qualquer doença acompanhada de febre (varíola, peste, gripe e outras parecidas). Em caso de sucesso, o alvo começa a melhorar imediatamente, mas em caso de fracasso, o personagem nunca mais poderá fazer outro teste para remover aquela doença ou veneno da pessoa","Este é o maior nível de cura, e pode aliviar enfermidades gravíssimas, como tuberculose, gota, diabetes e outras. É efetivo contra doenças e venenos listados como “incomum”, enlouquecimento sobrenatural, paralisia e os poderes de fôlego Enviar doença e Passar veneno. Também funciona em situações extraordinárias de saúde, por exemplo, quando alguém engole um anzol. Em caso de sucesso, o alvo começa a melhorar imediatamente, mas em caso de fracasso, o personagem nunca mais pode fazer outro teste para curar a mesma condição daquela pessoa"]},
+						{"nome":"Recuperação","niveis":["Aliviar dor","Remover febre","Expulsar males"],"requisitos":["Fé1","Fé1;Fé2;Recuperação1","Fé1;Fé2;Fé3;Recuperação1;Recuperação2"],"descricao":["recupera danos em uma parte do corpo e alivia a dor das outras, deixando aquela pessoa agir de forma normal. O personagem recupera imediatamente dois pontos de dano e, se continuar com menos de quatro pontos de resistência, não sofre a perda de um nível nos seus testes de habilidade durante as próximas 24 horas","esta graça pode remover doenças e venenos listados como “comum” (como, por exemplo, o veneno da Armadeira gigante), e qualquer doença acompanhada de febre (varíola, peste, gripe e outras parecidas). Em caso de sucesso, o alvo começa a melhorar imediatamente, mas em caso de fracasso, o personagem nunca mais poderá fazer outro teste para remover aquela doença ou veneno da pessoa","Este é o maior nível de cura, e pode aliviar enfermidades gravíssimas, como tuberculose, gota, diabetes e outras. É efetivo contra doenças e venenos listados como “incomum”, enlouquecimento sobrenatural, paralisia e os poderes de fôlego Enviar doença e Passar veneno. Também funciona em situações extraordinárias de saúde, por exemplo, quando alguém engole um anzol. Em caso de sucesso, o alvo começa a melhorar imediatamente, mas em caso de fracasso, o personagem nunca mais pode fazer outro teste para curar a mesma condição daquela pessoa"]},
 
 
-						{"nome":"Acontecimentos milagrosos","niveis":["Estender o clima","Estender o dia","Divina coincidência"],"requisitos":["Fé1","Fé1;Fé2;Acontecimentosmilagrosos1","Fé1;Fé2;Fé3;Acontecimentosmilagrosos2"],"descricao":["esta graça segura uma chuva ou outro fenômeno natural durante até quatro horas, dando tempo para o personagem buscar abrigo","esta graça pode ser invocada durante viagens terrestres ou marinhas, fazendo que as horas do dia pareçam estender-se além do normal para o personagem e seu grupo. Assim, eles conseguem andar o dobro da distância que andariam normalmente durante aquele dia. Este poder não afeta batalhas ou interações com outros personagens, apenas deslocamentos entre lugares","em momentos de grande necessidade, o personagem pode pedir uma ajuda divina, que acaba aparecendo como uma coincidência inesperada"]},
+						{"nome":"Acontecimentos milagrosos","niveis":["Estender o clima","Estender o dia","Divina coincidência"],"requisitos":["Fé1","Fé1;Fé2;Acontecimentosmilagrosos1","Fé1;Fé2;Fé3;Acontecimentosmilagrosos1;Acontecimentosmilagrosos2"],"descricao":["esta graça segura uma chuva ou outro fenômeno natural durante até quatro horas, dando tempo para o personagem buscar abrigo","esta graça pode ser invocada durante viagens terrestres ou marinhas, fazendo que as horas do dia pareçam estender-se além do normal para o personagem e seu grupo. Assim, eles conseguem andar o dobro da distância que andariam normalmente durante aquele dia. Este poder não afeta batalhas ou interações com outros personagens, apenas deslocamentos entre lugares","em momentos de grande necessidade, o personagem pode pedir uma ajuda divina, que acaba aparecendo como uma coincidência inesperada"]},
 
 
-						{"nome":"Pão de cada dia","niveis":["Restaurar alimentação","Encontrar alimentação","Multiplicar alimentação"],"requisitos":["Fé1","Fé1;Fé2;Pãodecadadia1","Fé1;Fé2;Fé3;Pãodecadadia2"],"descricao":["pede que alguma comida ou bebida estragada volte a ser comestível","em situações de necessidade, esta graça ajuda o personagem a encontrar comida e água","em tempos de necessidade, esta graça permite que pouca comida alimente um número de pessoas além do normal"]},
+						{"nome":"Pão de cada dia","niveis":["Restaurar alimentação","Encontrar alimentação","Multiplicar alimentação"],"requisitos":["Fé1","Fé1;Fé2;Pãodecadadia1","Fé1;Fé2;Fé3;Pãodecadadia1;Pãodecadadia2"],"descricao":["pede que alguma comida ou bebida estragada volte a ser comestível","em situações de necessidade, esta graça ajuda o personagem a encontrar comida e água","em tempos de necessidade, esta graça permite que pouca comida alimente um número de pessoas além do normal"]},
 
 
-						{"nome":"Benção","niveis":["Abençoar +1","Abençoar +2","Abençoar +3"],"requisitos":["Fé1","Fé1;Fé2;Benção1","Fé1;Fé2;Fé3;Benção2"],"descricao":["oferece bônus de +1 nos testes do ser ou objeto abençoado","oferece bônus de +2 nos testes do ser ou objeto abençoado","oferece bônus de +3 nos testes do ser ou objeto abençoado"]}]
+						{"nome":"Benção","niveis":["Abençoar +1","Abençoar +2","Abençoar +3"],"requisitos":["Fé1","Fé1;Fé2;Benção1","Fé1;Fé2;Fé3;Benção1;Benção2"],"descricao":["oferece bônus de +1 nos testes do ser ou objeto abençoado","oferece bônus de +2 nos testes do ser ou objeto abençoado","oferece bônus de +3 nos testes do ser ou objeto abençoado"]}]
 				},{
 				"nome":"Línguas",
 				"habilidades":[
