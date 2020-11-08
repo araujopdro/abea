@@ -1009,10 +1009,10 @@
 						    console.log(rqlist);
 						    console.log(class_arr);
 						    //if(checker(rqlist, class_arr)){
-  								$(".requisito-"+id+number).prop("disabled", false);
 						    //}
 						    if(class_arr.every(r => rqlist.includes(r))){
 							  console.log('Found all of', class_arr, 'in', rqlist);
+  								$(".requisito-"+id+number).prop("disabled", false);
 							}else{
 							  console.log('Did not find all of', class_arr, 'in', rqlist);
 							}
