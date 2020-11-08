@@ -757,7 +757,7 @@
 									div_habilidade_holder.appendChild(span_name_habilidade);
 
 									var small = document.createElement("small");
-				                	small.className = "habilidades-descricao";
+				                		small.className = "habilidades-descricao";
 
 					                if(habilidades[i].habilidades[j].descricao != undefined){
 										if(habilidades[i].habilidades[j].descricao.length == 1){
@@ -929,6 +929,10 @@
 			.caracteristicas-text{
 			    display: block;
    				margin-bottom: 15px;
+			}
+
+			.habilidades-descricao{
+				display: block;
 			}
 
 			.clickable{
