@@ -754,10 +754,11 @@
 
 				                if(habilidades[i].habilidades[j].descricao != undefined){
 				                	console.log(habilidades[i].habilidades[j].descricao);
-									// if(habilidades[i].habilidades[j].descricao.length == 1){
-				     //            		small.innerHTML = caracteristicas[i].habilidades[j].descricao[0];
-									// 	span_name.appendChild(small);
-									// }else if(habilidades[i].habilidades[j].descricao.length == 2){
+									if(habilidades[i].habilidades[j].descricao.length == 1){
+				                		small.innerHTML = caracteristicas[i].habilidades[j].descricao[0];
+										span_name.appendChild(small);
+									}
+									//else if(habilidades[i].habilidades[j].descricao.length == 2){
 				     //            		small.innerHTML = caracteristicas[i].habilidades[j].descricao[0]+" <small>"+caracteristicas[i].habilidades[j].descricao[1]+"</small>";
 									// 	span_name.appendChild(small);
 									// }
