@@ -696,6 +696,7 @@
 					var label = document.createElement('label')
 						label.htmlFor = "input-caracteristicas-"+caracteristicas[i].nome;
 						label.appendChild(document.createTextNode(caracteristicas[i].nome));
+						label.className = "label-caracteristicas";
 
 					div_holder.appendChild(checkbox);
 					div_holder.appendChild(label);
@@ -875,6 +876,10 @@
 
 			.bold{
 				font-weight: bolder;
+			}
+
+			.label-caracteristicas{
+				margin-left: 10px;
 			}
 
 			.caracteristicas-holder{
