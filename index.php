@@ -478,7 +478,12 @@
 				{
 					"nome":"Artes Marciais",
 					"habilidades":[
-						{"nome":"Boxe","niveis":["dar golpes fortes com os punhos (dano 1)","ganha um ponto a mais de resistência","ganha outro ponto de resistência"]},
+						{"nome":"Boxe","niveis":["dar golpes fortes com os punhos (dano 1)","ganha um ponto a mais de resistência","ganha outro ponto de resistência"]
+							"requisitos":[
+								null,
+								"Boxe1",
+								"Boxe11;Boxe2"
+							],},
 						{"nome":"Capoeira","descricao":["pode usar esta habilidade para atacar com os pés (dano 1) ou para esquivas durante o combate"]},
 						{"nome":"Luta livre","descricao":["pode usar esta habilidade para tentar imobilizar oponentes de tamanho e força humanas"]},]
 				},
@@ -1025,12 +1030,6 @@
 						    if(class_arr.every(r => rqlist.includes(r))){
 							    console.log('Found all of', class_arr, 'in', rqlist);
   								$(this).prop("disabled", false);
-  								number--;
-					   			console.log("number: "+number);
-							   	for(var i = 1; i <= number; i++){
-			  						$(".requisito-"+id+i).prop("disabled", false);
-							   		$("#"+id+i).prop("checked",true);
-							   	}
 							}else{
 							    console.log('Did not find all of', class_arr, 'in', rqlist);
   								$(this).prop("disabled", true);
@@ -1049,19 +1048,16 @@
 							if(a >= 0){
 	  							$(".requisito-"+id+1).prop("checked", false);
 	  							$(".requisito-"+id+1).prop("disabled", true);
-	  							//hab_selecionadas.splice(a, 1);
   							}
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
 	  							$(".requisito-"+id+2).prop("checked", false);
 	  							$(".requisito-"+id+2).prop("disabled", true);
-	  							//hab_selecionadas.splice(b, 1);
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
-	  							//hab_selecionadas.splice(c, 1);
 	  						}
 	  						var _hab = [];
 					   		$.each($("input[name='habilidades']:checked"), function(){
@@ -1078,13 +1074,11 @@
 							if(b >= 0){
 	  							$(".requisito-"+id+2).prop("checked", false);
 	  							$(".requisito-"+id+2).prop("disabled", true);
-	  							//hab_selecionadas.splice(b, 1);
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
-	  							//hab_selecionadas.splice(c, 1);
 	  						}
 
 	  						var _hab = [];
@@ -1102,7 +1096,6 @@
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
-	  							//hab_selecionadas.splice(c, 1);
 	  						}
 
 	  						var _hab = [];
