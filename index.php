@@ -755,6 +755,12 @@
 			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
 			                		span_name_habilidade.onclick = function(){ToggleNiveis(this)};
 									div_habilidade_holder.appendChild(span_name_habilidade);
+									
+
+                					var div_niveis_holder = document.createElement("div");
+	                					div_niveis_holder.className = "habilidades-niveis-holder";
+										div_niveis_holder.id = _id+"-niveis";
+
 
 									var small = document.createElement("small");
 				                		small.className = "habilidades-descricao";
@@ -762,17 +768,13 @@
 					                if(habilidades[i].habilidades[j].descricao != undefined){
 										if(habilidades[i].habilidades[j].descricao.length == 1){
 					                		small.innerHTML = habilidades[i].habilidades[j].descricao[0];
-											span_name_habilidade.appendChild(small);
+											div_niveis_holder.appendChild(small);
 										}
 										else if(habilidades[i].habilidades[j].descricao.length == 2){
 					                		small.innerHTML = habilidades[i].habilidades[j].descricao[0]+" <small>"+habilidades[i].habilidades[j].descricao[1]+"</small>";
-											span_name_habilidade.appendChild(small);
+											div_niveis_holder.appendChild(small);
 										}
 					                }
-
-                					var div_niveis_holder = document.createElement("div");
-	                					div_niveis_holder.className = "habilidades-niveis-holder";
-										div_niveis_holder.id = _id+"-niveis";
 									for(var k = 1; k <= 3; k++){
 				                		var span_holder = document.createElement("span");
 		                					span_holder.className = "habilidades-habilidade-nivel-holder";
