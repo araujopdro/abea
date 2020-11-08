@@ -403,7 +403,7 @@
 
 						{"nome":"Instrumentos de corda e arco","descricao":["viola, viola da gamba"]},
 
-						{"nome":"Instrumentos de embocadura","descricao":[" flauta, flauta doce, corneta, corneto, trombeta"]},
+						{"nome":"Instrumentos de embocadura","descricao":["flauta, flauta doce, corneta, corneto, trombeta"]},
 
 						{"nome":"Instrumentos de palheta","descricao":["baixão, charamela, fagote"]},
 
@@ -531,23 +531,23 @@
 				},{
 				"nome":"Línguas",
 				"habilidades":[
-					{"nome":"Português","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Latim","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Espanhol","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Francês","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Árabe","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Tupi","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Guarani","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Aimoré","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Goitacá","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Maracá","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Tremembé","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Evê","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Fon","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Ioruba","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Quicongo","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Quimbundo","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Umbundo","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},	
+					{"nome":"Português","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Latim","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Espanhol","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Francês","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Árabe","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Tupi","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Guarani","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Aimoré","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Goitacá","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Maracá","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Tremembé","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Evê","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Fon","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Ioruba","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Quicongo","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Quimbundo","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
+					{"nome":"Umbundo","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},	
 				]}];
 			
 			function CreateNacionalidade(){
@@ -747,6 +747,15 @@
 
 						console.log(habilidades[i].length);
 
+		                var small = document.createElement("small");
+		                	small.className = "habilidades-descricao";
+
+						if(habilidades[i].length == 1){
+	                		small.innerHTML = caracteristicas[i].descricao[0];
+						}else if(habilidades[i].length == 2){
+	                		small.innerHTML = caracteristicas[i].descricao[0]+"<small>"+small.innerHTML = caracteristicas[i].descricao[1]+"</small>";
+						}
+
 
 	                	var div_habilidade_holder = document.createElement("div");
 	                		div_habilidade_holder.className = "habilidades-habilidade-holder";
@@ -798,6 +807,8 @@
 		                				console.log(habilidades[i].habilidades[j].requisitos);
 				                	}
 	                		}
+	                		
+					div_holder.appendChild(small);
                 	div_holder.appendChild(div_habilidade_holder);
                 	c.appendChild(div_holder);
                 	$('#holder-habilidades').append(c);
