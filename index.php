@@ -1003,7 +1003,8 @@
 						    var class_arr = class_list.split(/\s+/);
 
 						    let checker = (arr, target) => target.every(v => arr.includes(v));
-
+						    console.log(hab_selecionadas)
+						    console.log(class_arr)
 						    if(checker(hab_selecionadas,class_arr)){
   								$(".requisito-"+id+number).prop("disabled", false);
 						    }
