@@ -1019,22 +1019,22 @@
 						    if(class_arr.every(r => rqlist.includes(r))){
 							    console.log('Found all of', class_arr, 'in', rqlist);
   								$(this).prop("disabled", false);
+  								number--;
+							   	for(var i = 1; i <= number; i++){
+							   		$("#"+id+i).prop("checked",true);
+							   		var l = hab_selecionadas.indexOf(id+i);
+							   		console.log(i)
+			  						$(".requisito-"+id+i).prop("disabled", false);
+							   		if(l < 0){
+						   				hab_selecionadas.push(id+i);
+							   		}
+							   	}
 							}else{
 							    console.log('Did not find all of', class_arr, 'in', rqlist);
   								$(this).prop("disabled", true);
 							}
 						});
-					   		console.log(number)
-						// number--;
-					 //   	for(var i = 1; i <= number; i++){
-					 //   		$("#"+id+i).prop("checked",true);
-					 //   		var l = hab_selecionadas.indexOf(id+i);
-					 //   		console.log(i)
-	  			// 			$(".requisito-"+id+i).prop("disabled", false);
-					 //   		if(l < 0){
-				  //  				hab_selecionadas.push(id+i);
-					 //   		}
-					 //   	}
+					   	console.log(number)
 					   	$("#"+id).addClass("bold");
 				 	}else{
 				 		if(number == 1){
