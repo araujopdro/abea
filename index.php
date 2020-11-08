@@ -749,26 +749,26 @@
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
             					var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'');
 
-            					var small = document.createElement("small");
-				                	small.className = "habilidades-descricao";
-
-				                if(habilidades[i].habilidades[j].descricao != undefined){
-				                	console.log(habilidades[i].habilidades[j].descricao);
-									if(habilidades[i].habilidades[j].descricao.length == 1){
-				                		small.innerHTML = habilidades[i].habilidades[j].descricao[0];
-										span_name.appendChild(small);
-									}else if(habilidades[i].habilidades[j].descricao.length == 2){
-				                		small.innerHTML = habilidades[i].habilidades[j].descricao[0]+" <small>"+habilidades[i].habilidades[j].descricao[1]+"</small>";
-										span_name.appendChild(small);
-									}
-				                }
-
                 				var span_name_habilidade = document.createElement("span");
 			                		span_name_habilidade.className = "habilidades-habilidade-name";
 									span_name_habilidade.id = _id;
 			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
 			                		span_name_habilidade.onclick = function(){ToggleNiveis(this)};
 									div_habilidade_holder.appendChild(span_name_habilidade);
+
+									var small = document.createElement("small");
+				                	small.className = "habilidades-descricao";
+
+					                if(habilidades[i].habilidades[j].descricao != undefined){
+										if(habilidades[i].habilidades[j].descricao.length == 1){
+					                		small.innerHTML = habilidades[i].habilidades[j].descricao[0];
+											span_name_habilidade.appendChild(small);
+										}
+										else if(habilidades[i].habilidades[j].descricao.length == 2){
+					                		small.innerHTML = habilidades[i].habilidades[j].descricao[0]+" <small>"+habilidades[i].habilidades[j].descricao[1]+"</small>";
+											span_name_habilidade.appendChild(small);
+										}
+					                }
 
                 					var div_niveis_holder = document.createElement("div");
 	                					div_niveis_holder.className = "habilidades-niveis-holder";
