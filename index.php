@@ -603,19 +603,19 @@
 	                	option.value = i;
 	                	var ph;
 	                	if(i<=17){
-	                		ph = "15";
+	                		ph = "ph: 15";
 	                	}else if(i > 17 && i <= 22){
-	                		ph = "20 - Recomendado";
+	                		ph = "ph: 20 - Recomendado";
 	                	}else if(i > 22 && i <= 27){
-	                		ph = "25";
+	                		ph = "ph: 25";
 	                	}else if(i > 27 && i <= 32){
-	                		ph = "30";
+	                		ph = "ph: 30";
 	                	}else if(i > 32 && i <= 37){
-	                		ph = "35";
+	                		ph = "ph: 35";
 	                	}else if(i > 38){
-	                		ph = "40";
+	                		ph = "ph: 40";
 	                	}
-	    				option.text = i+" PH: "+ph;
+	    				option.text = i+"  "+ph.small();
     				select.appendChild(option);
                 }
 
@@ -847,29 +847,35 @@
     			flex-direction: column;
 			}
 
+			.clickable{
+				text-decoration: underline;
+				font-style: italic;
+				cursor: pointer;
+			}
+
 		</style>
 	</head>
 	<body> 
 		<div>
 			<form id="form">
-				<div class="form-group" id="holder-nacionalidade">
+				<div class="form-group" id="holder-nacionalidade"></div>
+				<div class="form-group" id="holder-etnia"></div>
 
-				    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-			  	</div>
-
-				<div>
-					<div id="holder-etnia">
-						
-					</div>
+				<div class="form-group" id="holder-nome">
+					<label for="exampleInputEmail1">Escreva o seu nome.</label>
+				    <input type="text" class="form-control" id="input-nome">
+				    <small class="form-text text-muted"><span class="clickable">Clique aqui</span> para gerar um nome aleatório.</small>
 				</div>
 
 				<input class="input-field" id="input-nome" type="text" name="nome" required="true">
 				
 				<div>
-					<div id="holder-idade">
+					<div class="form-group" id="holder-idade">
 
 					</div>
 				</div>
+
+
 				<div>
 					<div id="holder-caracteristicas">
 						
