@@ -708,11 +708,14 @@
 
 	            var limit = 3;
 				$('input.input-caracteristicas').on('change', function(evt) {
-					for(var i = 0; i < car_selecionadas.length; i++){
-						if(this.id == car_selecionadas[i]){
-  							car_selecionadas.splice(i, 1);
+					if(!this.checked){
+						for(var i = 0; i < car_selecionadas.length; i++){
+							if(this.id == car_selecionadas[i]){
+	  							car_selecionadas.splice(i, 1);
+							}
 						}
 					}
+
 				   	if($("input[name='caracteristicas']:checked").length > limit) {
 			       		this.checked = false;
 				   	}else if($("input[name='caracteristicas']:checked").length == limit){
@@ -720,9 +723,13 @@
 				   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
 				   	}else if($("input[name='caracteristicas']:checked").length < limit){
 				   		$(".caracteristicas-holder").slideDown('fast');
-				   	}else{
+				   	}
+
+
+				   	if(this.checked){
 				   		car_selecionadas.push(this.id);
 				   	}
+				   	
 				});};
 			function CreateHabilidades(){
                 $('#holder-habilidades').empty();
