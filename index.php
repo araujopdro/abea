@@ -1005,16 +1005,15 @@
 						    for(var i = 0; i < hab_selecionadas.length; i++){
 						    	rqlist.push("requisito-"+hab_selecionadas[i]);
 						    }
-						    //let checker = (arr, target) => target.every(v => arr.includes(v));
+
 						    console.log(rqlist);
 						    console.log(class_arr);
-						    //if(checker(rqlist, class_arr)){
-						    //}
+						    
 						    if(class_arr.every(r => rqlist.includes(r))){
-							  console.log('Found all of', class_arr, 'in', rqlist);
-  								$(".requisito-"+id+number).prop("disabled", false);
+							    console.log('Found all of', class_arr, 'in', rqlist);
+  								$(this).prop("disabled", false);
 							}else{
-							  console.log('Did not find all of', class_arr, 'in', rqlist);
+							    console.log('Did not find all of', class_arr, 'in', rqlist);
 							}
 						});
 					   		console.log(number)
