@@ -771,7 +771,7 @@
 											div_niveis_holder.appendChild(small);
 										}
 										else if(habilidades[i].habilidades[j].descricao.length == 2){
-					                		small.innerHTML = habilidades[i].habilidades[j].descricao[0]+" <small>"+habilidades[i].habilidades[j].descricao[1]+"</small>";
+					                		small.innerHTML = habilidades[i].habilidades[j].descricao[0]+" <small><i><strong>"+habilidades[i].habilidades[j].descricao[1]+"</i></strong></small>";
 											div_niveis_holder.appendChild(small);
 										}
 					                }
@@ -799,12 +799,11 @@
 						                		small_nivel.className = "habilidades-nivel";
 							                if(habilidades[i].habilidades[j].niveis != undefined){
 						                		small_nivel.innerHTML = habilidades[i].habilidades[j].niveis[k-1];
-												span_holder.appendChild(small_nivel);
 							                }
-
 
 											span_holder.appendChild(checkbox);
 											span_holder.appendChild(label);
+											span_holder.appendChild(small_nivel);
 										div_niveis_holder.appendChild(span_holder);
 	                				}
 									div_habilidade_holder.appendChild(div_niveis_holder);
