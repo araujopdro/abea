@@ -934,7 +934,7 @@
 							                	}
 
 							                	if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
-						                			checkbox.classList.add("proibicoes-"+habilidades[i].habilidades[j].requisitos[k-1]);
+						                			checkbox.classList.add("proibicoes-"+habilidades[i].habilidades[j].proibicoes[k-1]);
 							                	}
 
 												checkbox.id = _id+k;
