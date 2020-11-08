@@ -575,6 +575,7 @@
 
                 var small = document.createElement("small");
 					small.appendChild(document.createTextNode("Sua nacionalidade não afeta suas habilidades diretamente."));
+					small.className = "form-text text-muted";
 
 
                 c.appendChild(label);
@@ -589,6 +590,7 @@
                 $('#select-idade').remove();
                 var c = document.createDocumentFragment();
                 var select = document.createElement("select");
+                select.className = "form-control";
                 select.id = "select-idade";
 
                 var option = document.createElement("option");
@@ -599,11 +601,35 @@
                 for(var i = 16; i < 61; i++){
                 	var option = document.createElement("option");
 	                	option.value = i;
-	    				option.text = i;
+	                	var ph;
+	                	if(i<=17){
+	                		ph = "15";
+	                	}else if(i > 17 && i <= 22){
+	                		ph = "20 - Recomendado";
+	                	}else if(i > 22 && i <= 27){
+	                		ph = "25";
+	                	}else if(i > 27 && i <= 32){
+	                		ph = "30";
+	                	}else if(i > 32 && i <= 37){
+	                		ph = "35";
+	                	}else if(i > 38){
+	                		ph = "40";
+	                	}
+	    				option.text = i+" PH: "+ph;
     				select.appendChild(option);
                 }
 
+                var label = document.createElement("label");
+					label.htmlFor = "select-idade";
+					label.appendChild(document.createTextNode("Escolha a sua idade."));
+
+                var small = document.createElement("small");
+					small.appendChild(document.createTextNode("Sua idade determina o número pontos de habilidade que você receberá."));
+					small.className = "form-text text-muted";
+
+                c.appendChild(label);
                 c.appendChild(select);
+                c.appendChild(small);
                 $('#holder-idade').append(c);
 
 	            $('#select-idade').on('change', function() {
@@ -613,6 +639,7 @@
                 $('#select-etnia').remove();
                 var c = document.createDocumentFragment();
                 var select = document.createElement("select");
+                select.className = "form-control";
                 select.id = "select-etnia";
 
                 var option = document.createElement("option");
@@ -627,7 +654,18 @@
     				select.appendChild(option);
                 }
 
+                var label = document.createElement("label");
+					label.htmlFor = "select-etnia";
+					label.appendChild(document.createTextNode("Escolha a sua etnia."));
+
+                var small = document.createElement("small");
+					small.appendChild(document.createTextNode("Sua etnia não afeta suas habilidades diretamente."));
+					small.className = "form-text text-muted";
+
+
+                c.appendChild(label);
                 c.appendChild(select);
+                c.appendChild(small);
                 $('#holder-etnia').append(c);
 
 	            $('#select-etnia').on('change', function() {
