@@ -991,10 +991,6 @@
 
 	            //var limit = 20;
 				$('input.input-habilidades').on('change', function(evt) {
-					// if($("input[name='caracteristicas']:checked").length > limit) {
-				 //       this.checked = false;
-				 //   	}
-
 					var r = /\d+/;
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
