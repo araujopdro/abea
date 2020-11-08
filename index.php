@@ -680,7 +680,7 @@
 	                var c = document.createDocumentFragment();
 	                var div_holder = document.createElement("div");
 	                div_holder.className = "caracteristicas-holder";
-	                div_holder.id = "caracteristicas-"+caracteristicas[i].nome;
+	                div_holder.id = "caracteristicas-"+caracteristicas[i].nome.replace(/ /g,'');
 
 	                var small = document.createElement("small");
 	                	small.className = "caracteristicas-text";
@@ -688,7 +688,7 @@
 
                 	var checkbox = document.createElement('input');
                 		checkbox.className = "input-caracteristicas";
-						checkbox.id = caracteristicas[i].nome;
+						checkbox.id = caracteristicas[i].nome.replace(/ /g,'');
 						checkbox.name = "caracteristicas";
 						checkbox.type = "checkbox";
 						checkbox.value = caracteristicas[i].nome;
