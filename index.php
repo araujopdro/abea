@@ -609,7 +609,7 @@
 				{
 					"nome":"Graças Divinas",
 					"habilidades":[
-						{"nome":"Fé","requisitos":[null,"Fé1","Fé2"],"proibicoes":["Armas;Arquearia;Esgrima;Fôlego;Ifá","Armas;Arquearia;Esgrima;Fôlego;Ifá","Armas;Arquearia;Esgrima;Fôlego;Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+						{"nome":"Fé","requisitos":[null,"Fé1","Fé2"],"proibicoes":["Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá","Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá","Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 
 						{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]},
 
@@ -694,6 +694,7 @@
 				// 		{"nome":"Influência","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Fôlego2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]}
 				// 	]
 				// }
+
 
 			var car_selecionadas = [];
 			var hab_selecionadas = [];
@@ -934,7 +935,10 @@
 							                	}
 
 							                	if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
-						                			checkbox.classList.add("proibicoes-"+habilidades[i].habilidades[j].proibicoes[k-1]);
+							                		var proibicoes_list = habilidades[i].habilidades[j].proibicoes[k-1].split(";");
+							                		for(var z = 0; z < proibicoes_list.length; z++){
+						                				checkbox.classList.add("proibicoes-"+proibicoes_list[z]);
+							                		}
 							                	}
 
 												checkbox.id = _id+k;
