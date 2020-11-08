@@ -1086,7 +1086,7 @@
             			var a = randomInteger(0, nacionalidades[i].nomes.length);
             			var b = randomInteger(0, nacionalidades[i].sobrenomes.length);
             			console.log(a +" "+ b);
-            			$('#input-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenome[b]);
+            			$('#input-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
             		}
             	}
             }
