@@ -805,7 +805,10 @@
 
             function ToggleNiveis(el){
             	console.log(el);
-            	$("#"+el.id+"-niveis").slideToggle();
+            	$("#"+el.id+"-niveis").slideToggle('medium', function() {
+				    if ($(this).is(':visible'))
+				        $(this).css('display','flex');
+				});
             }
 		</script>
 		<style type="text/css">
@@ -833,11 +836,13 @@
 
 			.habilidades-niveis-holder{
 			    display: none;
+			    flex-direction: column;
+			    margin-left: 15px;
 			}
 
-			.habilidades-habilidade-name:before {
+			/*.habilidades-habilidade-closed:before {
 			    content: " » ";
-			}
+			}*/
 
 			.caracteristicas-tooltip-holder{
 			    position: relative;
