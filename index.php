@@ -854,7 +854,13 @@
 						   	$("#"+id).removeClass("after3");
 
 							for(var i = 0; i < hab_selecionadas.length; i++){
-								if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
+								if(id+1 == hab_selecionadas[i]){
+		  							hab_selecionadas.splice(i, 1);
+								}
+								if(id+2 == hab_selecionadas[i]){
+		  							hab_selecionadas.splice(i, 1);
+								}
+								if(id+3 == hab_selecionadas[i]){
 		  							hab_selecionadas.splice(i, 1);
 								}
 							}
@@ -865,7 +871,10 @@
 						   	$("#"+id).addClass("after1");
 
 							for(var i = 0; i < hab_selecionadas.length; i++){
-								if(id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
+								if(id+2 == hab_selecionadas[i]){
+		  							hab_selecionadas.splice(i, 1);
+								}
+								if(id+3 == hab_selecionadas[i]){
 		  							hab_selecionadas.splice(i, 1);
 								}
 							}
