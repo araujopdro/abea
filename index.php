@@ -569,7 +569,17 @@
     				select.appendChild(option);
                 }
 
+                var label = document.createElement("label");
+					label.htmlFor = "select-nacionalidade";
+					label.appendChild(document.createTextNode("Escolha a sua nacionalidade."));
+
+                var small = document.createElement("small");
+					small.appendChild(document.createTextNode("Sua nacionalidade não afeta suas habilidades diretamente."));
+
+
+                c.appendChild(label);
                 c.appendChild(select);
+                c.appendChild(small);
                 $('#holder-nacionalidade').append(c);
 
 	            $('#select-nacionalidade').on('change', function() {
@@ -805,7 +815,7 @@
 		<div>
 			<form id="form">
 				<div class="form-group" id="holder-nacionalidade">
-				    <!-- <label for="exampleInputEmail1">Email address</label> -->
+
 				    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 			  	</div>
 
