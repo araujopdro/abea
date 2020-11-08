@@ -1025,16 +1025,16 @@
 							}
 						});
 					   		console.log(number)
-						number--;
-					   	for(var i = 1; i <= number; i++){
-					   		$("#"+id+i).prop("checked",true);
-					   		var l = hab_selecionadas.indexOf(id+i);
-					   		console.log(i)
-	  						$(".requisito-"+id+i).prop("disabled", false);
-					   		if(l < 0){
-				   				hab_selecionadas.push(id+i);
-					   		}
-					   	}
+						// number--;
+					 //   	for(var i = 1; i <= number; i++){
+					 //   		$("#"+id+i).prop("checked",true);
+					 //   		var l = hab_selecionadas.indexOf(id+i);
+					 //   		console.log(i)
+	  			// 			$(".requisito-"+id+i).prop("disabled", false);
+					 //   		if(l < 0){
+				  //  				hab_selecionadas.push(id+i);
+					 //   		}
+					 //   	}
 					   	$("#"+id).addClass("bold");
 				 	}else{
 				 		if(number == 1){
