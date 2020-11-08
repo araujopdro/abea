@@ -744,23 +744,21 @@
 	                		span_name.innerHTML = habilidades[i].nome;
 						div_holder.appendChild(span_name);
 
-		                var small = document.createElement("small");
-		                	small.className = "habilidades-descricao";
-		                console.log(habilidades[i].descricao);
-						if(habilidades[i].descricao != undefined && habilidades[i].descricao.length == 1){
-	                		small.innerHTML = caracteristicas[i].descricao[0];
-							span_name.appendChild(small);
-						}else if(habilidades[i].descricao != undefined && habilidades[i].descricao.length == 2){
-	                		small.innerHTML = caracteristicas[i].descricao[0]+" <small>"+caracteristicas[i].descricao[1]+"</small>";
-							span_name.appendChild(small);
-						}
-
-
-
 	                	var div_habilidade_holder = document.createElement("div");
 	                		div_habilidade_holder.className = "habilidades-habilidade-holder";
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
             					var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'');
+
+            					var small = document.createElement("small");
+				                	small.className = "habilidades-descricao";
+				                console.log(habilidades[i].habilidades[j].descricao);
+								if(habilidades[i].habilidades[j].descricao != undefined && habilidades[i].habilidades[j].descricao.length == 1){
+			                		small.innerHTML = caracteristicas[i].descricao[0];
+									span_name.appendChild(small);
+								}else if(habilidades[i].habilidades[j].descricao != undefined && habilidades[i].descricao.length == 2){
+			                		small.innerHTML = caracteristicas[i].habilidades[j].descricao[0]+" <small>"+caracteristicas[i].habilidades[j].descricao[1]+"</small>";
+									span_name.appendChild(small);
+								}
 
                 				var span_name_habilidade = document.createElement("span");
 			                		span_name_habilidade.className = "habilidades-habilidade-name";
@@ -918,6 +916,7 @@
 
 			.label-caracteristicas{
 				margin-left: 10px;
+				margin-bottom: 0;
 			}
 
 			.caracteristicas-holder{
