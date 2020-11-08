@@ -1083,9 +1083,9 @@
             function RandomName(){
             	for(var i = 0; i < nacionalidades.length; i++){
             		if($('#select-nacionalidade').val() == nacionalidades[i].nome){
-            			var a = randomInteger(0, nacionalidades[i].nomes);
-            			var b = randomInteger(0, nacionalidades[i].sobrenomes);
-            			
+            			var a = randomInteger(0, nacionalidades[i].nomes.length);
+            			var b = randomInteger(0, nacionalidades[i].sobrenomes.length);
+            			console.log(a +" "+ b);
             			$('#input-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenome[b]);
             		}
             	}
