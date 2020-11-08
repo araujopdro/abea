@@ -611,45 +611,45 @@
 					"habilidades":[
 						{"nome":"Fé","requisitos":[null,"Fé1","Fé2"],"proibicoes":["Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá","Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá","Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 
-						{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]},
+						{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2;Proteçãocontraomal1","Fé3;Proteçãocontraomal2"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]},
 
 
-						{"nome":"Defesa contra magia","niveis":["Sentir magia","Proteção contra magia","Dissipar magia"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["pede a graça de sentir os efeitos de poderes ao redor dele", "ganha proteção pessoal contra poderes mágicos", "consegue anular algum efeito mágico"]},
+						{"nome":"Defesa contra magia","niveis":["Sentir magia","Proteção contra magia","Dissipar magia"],"requisitos":["Fé1","Fé2;Defesacontramagia1","Fé3;Defesacontramagia2"],"descricao":["pede a graça de sentir os efeitos de poderes ao redor dele", "ganha proteção pessoal contra poderes mágicos", "consegue anular algum efeito mágico"]},
 
 
-						{"nome":"Profecia","niveis":["Visão divina","Sentir vida","Busca da verdade"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["para receber uma visão, o personagem tem de estar em algum momento de paz e oração, relaxado e preparado para receber esta bênção. Uma visão pode ou não aparecer, pode ter ou não ter utilidade e pode até confundir mais que ajudar", "esta graça alerta o personagem sobre o estado de uma pessoa conhecida, mesmo que aquela pessoa esteja a milhares de quilômetros de distância", "quando usada com sucesso, deixa o personagem saber sem sombra de dúvida se outra pessoa está mentindo ou não. Em casos de grande sucesso, o personagem pode até receber uma visão que mostra o que é a verdade"]},
+						{"nome":"Profecia","niveis":["Visão divina","Sentir vida","Busca da verdade"],"requisitos":["Fé1","Fé2;Profecia1","Fé3;Profecia2"],"descricao":["para receber uma visão, o personagem tem de estar em algum momento de paz e oração, relaxado e preparado para receber esta bênção. Uma visão pode ou não aparecer, pode ter ou não ter utilidade e pode até confundir mais que ajudar", "esta graça alerta o personagem sobre o estado de uma pessoa conhecida, mesmo que aquela pessoa esteja a milhares de quilômetros de distância", "quando usada com sucesso, deixa o personagem saber sem sombra de dúvida se outra pessoa está mentindo ou não. Em casos de grande sucesso, o personagem pode até receber uma visão que mostra o que é a verdade"]},
 
 
-						{"nome":"Recuperação","niveis":["Aliviar dor","Remover febre","Expulsar males"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["recupera danos em uma parte do corpo e alivia a dor das outras, deixando aquela pessoa agir de forma normal. O personagem recupera imediatamente dois pontos de dano e, se continuar com menos de quatro pontos de resistência, não sofre a perda de um nível nos seus testes de habilidade durante as próximas 24 horas","esta graça pode remover doenças e venenos listados como “comum” (como, por exemplo, o veneno da Armadeira gigante), e qualquer doença acompanhada de febre (varíola, peste, gripe e outras parecidas). Em caso de sucesso, o alvo começa a melhorar imediatamente, mas em caso de fracasso, o personagem nunca mais poderá fazer outro teste para remover aquela doença ou veneno da pessoa","Este é o maior nível de cura, e pode aliviar enfermidades gravíssimas, como tuberculose, gota, diabetes e outras. É efetivo contra doenças e venenos listados como “incomum”, enlouquecimento sobrenatural, paralisia e os poderes de fôlego Enviar doença e Passar veneno. Também funciona em situações extraordinárias de saúde, por exemplo, quando alguém engole um anzol. Em caso de sucesso, o alvo começa a melhorar imediatamente, mas em caso de fracasso, o personagem nunca mais pode fazer outro teste para curar a mesma condição daquela pessoa"]},
+						{"nome":"Recuperação","niveis":["Aliviar dor","Remover febre","Expulsar males"],"requisitos":["Fé1","Fé2;Recuperação1","Fé3;Recuperação2"],"descricao":["recupera danos em uma parte do corpo e alivia a dor das outras, deixando aquela pessoa agir de forma normal. O personagem recupera imediatamente dois pontos de dano e, se continuar com menos de quatro pontos de resistência, não sofre a perda de um nível nos seus testes de habilidade durante as próximas 24 horas","esta graça pode remover doenças e venenos listados como “comum” (como, por exemplo, o veneno da Armadeira gigante), e qualquer doença acompanhada de febre (varíola, peste, gripe e outras parecidas). Em caso de sucesso, o alvo começa a melhorar imediatamente, mas em caso de fracasso, o personagem nunca mais poderá fazer outro teste para remover aquela doença ou veneno da pessoa","Este é o maior nível de cura, e pode aliviar enfermidades gravíssimas, como tuberculose, gota, diabetes e outras. É efetivo contra doenças e venenos listados como “incomum”, enlouquecimento sobrenatural, paralisia e os poderes de fôlego Enviar doença e Passar veneno. Também funciona em situações extraordinárias de saúde, por exemplo, quando alguém engole um anzol. Em caso de sucesso, o alvo começa a melhorar imediatamente, mas em caso de fracasso, o personagem nunca mais pode fazer outro teste para curar a mesma condição daquela pessoa"]},
 
 
-						{"nome":"Acontecimentos milagrosos","niveis":["Estender o clima","Estender o dia","Divina coincidência"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["esta graça segura uma chuva ou outro fenômeno natural durante até quatro horas, dando tempo para o personagem buscar abrigo","esta graça pode ser invocada durante viagens terrestres ou marinhas, fazendo que as horas do dia pareçam estender-se além do normal para o personagem e seu grupo. Assim, eles conseguem andar o dobro da distância que andariam normalmente durante aquele dia. Este poder não afeta batalhas ou interações com outros personagens, apenas deslocamentos entre lugares","em momentos de grande necessidade, o personagem pode pedir uma ajuda divina, que acaba aparecendo como uma coincidência inesperada"]},
+						{"nome":"Acontecimentos milagrosos","niveis":["Estender o clima","Estender o dia","Divina coincidência"],"requisitos":["Fé1","Fé2;Acontecimentosmilagrosos1","Fé3;Acontecimentosmilagrosos2"],"descricao":["esta graça segura uma chuva ou outro fenômeno natural durante até quatro horas, dando tempo para o personagem buscar abrigo","esta graça pode ser invocada durante viagens terrestres ou marinhas, fazendo que as horas do dia pareçam estender-se além do normal para o personagem e seu grupo. Assim, eles conseguem andar o dobro da distância que andariam normalmente durante aquele dia. Este poder não afeta batalhas ou interações com outros personagens, apenas deslocamentos entre lugares","em momentos de grande necessidade, o personagem pode pedir uma ajuda divina, que acaba aparecendo como uma coincidência inesperada"]},
 
 
-						{"nome":"Pão de cada dia","niveis":["Restaurar alimentação","Encontrar alimentação","Multiplicar alimentação"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["pede que alguma comida ou bebida estragada volte a ser comestível","em situações de necessidade, esta graça ajuda o personagem a encontrar comida e água","em tempos de necessidade, esta graça permite que pouca comida alimente um número de pessoas além do normal"]},
+						{"nome":"Pão de cada dia","niveis":["Restaurar alimentação","Encontrar alimentação","Multiplicar alimentação"],"requisitos":["Fé1","Fé2;Pãodecadadia1","Fé3;Pãodecadadia2"],"descricao":["pede que alguma comida ou bebida estragada volte a ser comestível","em situações de necessidade, esta graça ajuda o personagem a encontrar comida e água","em tempos de necessidade, esta graça permite que pouca comida alimente um número de pessoas além do normal"]},
 
 
-						{"nome":"Benção","niveis":["Abençoar +1","Abençoar +2","Abençoar +3"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["oferece bônus de +1 nos testes do ser ou objeto abençoado","oferece bônus de +2 nos testes do ser ou objeto abençoado","oferece bônus de +3 nos testes do ser ou objeto abençoado"]}]
+						{"nome":"Benção","niveis":["Abençoar +1","Abençoar +2","Abençoar +3"],"requisitos":["Fé1","Fé2;Benção1","Fé3;Benção2"],"descricao":["oferece bônus de +1 nos testes do ser ou objeto abençoado","oferece bônus de +2 nos testes do ser ou objeto abençoado","oferece bônus de +3 nos testes do ser ou objeto abençoado"]}]
 				},{
 				"nome":"Línguas",
 				"habilidades":[
-					{"nome":"Português","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Latim","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Espanhol","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Francês","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Árabe","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Tupi","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Guarani","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Aimoré","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Goitacá","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Maracá","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Tremembé","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Evê","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Fon","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Ioruba","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Quicongo","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Quimbundo","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},
-					{"nome":"Umbundo","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},	
+					{"nome":"Português","descricao":[""]},
+					{"nome":"Latim","descricao":[""]},
+					{"nome":"Espanhol","descricao":[""]},
+					{"nome":"Francês","descricao":[""]},
+					{"nome":"Árabe","descricao":[""]},
+					{"nome":"Tupi","descricao":[""]},
+					{"nome":"Guarani","descricao":[""]},
+					{"nome":"Aimoré","descricao":[""]},
+					{"nome":"Goitacá","descricao":[""]},
+					{"nome":"Maracá","descricao":[""]},
+					{"nome":"Tremembé","descricao":[""]},
+					{"nome":"Evê","descricao":[""]},
+					{"nome":"Fon","descricao":[""]},
+					{"nome":"Ioruba","descricao":[""]},
+					{"nome":"Quicongo","descricao":[""]},
+					{"nome":"Quimbundo","descricao":[""]},
+					{"nome":"Umbundo","descricao":[""]}
 				]}];
 			
 				// ,
@@ -928,7 +928,11 @@
 		                					span_holder.className = "habilidades-habilidade-nivel-holder";
 							                var checkbox = document.createElement('input');
 							                	if(habilidades[i].habilidades[j].requisitos != undefined && habilidades[i].habilidades[j].requisitos[k-1] != null){
-						                			checkbox.className = "input-habilidades requisito-"+habilidades[i].habilidades[j].requisitos[k-1];
+						                			checkbox.className = "input-habilidades";
+							                		var requisitos_list = habilidades[i].habilidades[j].requisitos[k-1].split(";");
+							                		for(var z = 0; z < requisitos_list.length; z++){
+						                				checkbox.classList.add("requisito-"+requisitos_list[z]);
+							                		}
 							                		checkbox.disabled = true;
 							                	}else{
 						                			checkbox.className = "input-habilidades";
@@ -999,13 +1003,12 @@
 				   		$("#"+id).addClass("after"+number);
 				   		hab_selecionadas.push(id+number+"");
   						$(".requisito-"+id+number).prop("disabled", false);
-						$(".proibicoes-"+id).prop("checked", false);
-						$(".proibicoes-"+id).prop("disabled", true);
+					   		console.log(number)
 						number--;
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
 					   		var l = hab_selecionadas.indexOf(id+i);
-					   		//console.log("requisito-"+id+i);
+					   		console.log(i)
 	  						$(".requisito-"+id+i).prop("disabled", false);
 					   		if(l < 0){
 				   				hab_selecionadas.push(id+i);
@@ -1019,31 +1022,9 @@
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
 
-							//$(".proibicoes-"+id).prop("disabled", false);
-
-							// $(".proibicoes-"+id).each(function( index, value ) {
-						 //  		var thisid = $(this).attr('id');
-							// 	var this_id = this.thisid.replace(/[0-9]/g,'');
-
-						 //   		$("#"+this_id).removeClass("bold");
-							//    	$("#"+this_id).removeClass("after1");
-							//    	$("#"+this_id).removeClass("after2");
-							//    	$("#"+this_id).removeClass("after3");
-							// });
-
 							var a = hab_selecionadas.indexOf(id+1);
 							if(a >= 0){
-	  							//$(".requisito-"+id+1).prop("checked", false);
-	  							$(".requisito-"+id+1).each(function( index, value ) {
-							  		var thisid = $(this).attr('id');
-									var this_id = this.thisid.replace(/[0-9]/g,'');
-
-							   		$("#"+this_id).removeClass("bold");
-								   	$("#"+this_id).removeClass("after1");
-								   	$("#"+this_id).removeClass("after2");
-								   	$("#"+this_id).removeClass("after3");
-								}).prop("checked", false);
-
+	  							$(".requisito-"+id+1).prop("checked", false);
 	  							$(".requisito-"+id+1).prop("disabled", true);
 	  							hab_selecionadas.splice(a, 1);
   							}
@@ -1067,15 +1048,7 @@
 
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
-	  							$(".requisito-"+id+2).each(function( index, value ) {
-							  		var thisid = $(this).attr('id');
-									var this_id = this.thisid.replace(/[0-9]/g,'');
-
-								   	$("#"+this_id).removeClass("after1");
-								   	$("#"+this_id).removeClass("after2");
-								   	$("#"+this_id).removeClass("after3");
-						   			$("#"+id).addClass("after1");
-								}).prop("checked", false);
+	  							$(".requisito-"+id+2).prop("checked", false);
 	  							$(".requisito-"+id+2).prop("disabled", true);
 	  							hab_selecionadas.splice(b, 1);
 	  						}
@@ -1093,15 +1066,7 @@
 
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
-	  							$(".requisito-"+id+3).each(function( index, value ) {
-							  		var thisid = $(this).attr('id');
-									var this_id = this.thisid.replace(/[0-9]/g,'');
-
-								   	$("#"+this_id).removeClass("after1");
-								   	$("#"+this_id).removeClass("after2");
-								   	$("#"+this_id).removeClass("after3");
-						   			$("#"+id).addClass("after2");
-								}).prop("checked", false);
+	  							$(".requisito-"+id+3).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
 	  							hab_selecionadas.splice(c, 1);
 	  						}
