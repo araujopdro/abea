@@ -999,7 +999,7 @@
 				   		$("#"+id).addClass("after"+number);
 				   		hab_selecionadas.push(id+number+"");
 				   		$(".requisito-"+id+number).each(function() {
-						    var class_list = this.attr("class");
+						    var class_list = $(this).attr("class");
 						    var class_arr = class_list.split(/\s+/);
 
 						    let checker = (arr, target) => target.every(v => arr.includes(v));
