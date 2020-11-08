@@ -724,15 +724,18 @@
 	                	var div_habilidade_holder = document.createElement("div");
 	                		div_habilidade_holder.className = "habilidades-habilidade-holder";
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
+            					var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'');
+
                 				var span_name_habilidade = document.createElement("span");
 			                		span_name_habilidade.className = "habilidades-habilidade-name";
 			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
+			                		span_name_habilidade.onclick = function(){ToggleNiveis(_id)};
 									div_habilidade_holder.appendChild(span_name_habilidade);
-                					
+
                 					var div_niveis_holder = document.createElement("div");
 	                					div_niveis_holder.className = "habilidades-niveis-holder";
+										div_niveis_holder.id = "habilidades-niveis-holder"+_id;
 									for(var k = 1; k <= 3; k++){
-				                		var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'');
 				                		var span_holder = document.createElement("span");
 		                					span_holder.className = "habilidades-habilidade-nivel-holder";
 							                var checkbox = document.createElement('input');
@@ -799,7 +802,9 @@
             	CreateEtnia();
             });
 
-
+            function ToggleNiveis(id){
+            	console.log(id);
+            }
 		</script>
 		<style type="text/css">
 			html, body{
@@ -828,7 +833,7 @@
 			    display: none;
 			}
 
-			.habilidades-categoria-name:before {
+			.habilidades-habilidade-name:before {
 			    content: " » ";
 			}
 
