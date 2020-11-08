@@ -721,14 +721,16 @@
 						div_holder.appendChild(span_name);
 
 
-	                	var div_niveis_holder = document.createElement("div");
-	                		div_niveis_holder.className = "habilidades-niveis-holder";
+	                	var div_habilidade_holder = document.createElement("div");
+	                		div_habilidade_holder.className = "habilidades-habilidade-holder";
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
                 				var span_name_habilidade = document.createElement("span");
 			                		span_name_habilidade.className = "habilidades-habilidade-name";
 			                		span_name_habilidade.innerHTML = habilidades[i].habilidades[j].nome;
-									div_niveis_holder.appendChild(span_name_habilidade);
+									div_habilidade_holder.appendChild(span_name_habilidade);
                 					
+                					var div_niveis_holder = document.createElement("div");
+	                					div_niveis_holder.className = "habilidades-niveis-holder";
 									for(var k = 1; k <= 3; k++){
 				                		var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'');
 				                		var span_holder = document.createElement("span");
@@ -748,6 +750,7 @@
 											span_holder.appendChild(label);
 										div_niveis_holder.appendChild(span_holder);
 	                				}
+									div_habilidade_holder.appendChild(div_niveis_holder);
 
 
 				                	if(habilidades[i].habilidades[j].niveis != undefined){
@@ -758,7 +761,7 @@
 		                				console.log(habilidades[i].habilidades[j].requisitos);
 				                	}
 	                		}
-                	div_holder.appendChild(div_niveis_holder);
+                	div_holder.appendChild(div_habilidade_holder);
                 	c.appendChild(div_holder);
 
                 	$('#holder-habilidades').append(c);
@@ -811,11 +814,6 @@
     			margin: auto;
 			}
 
-			#holder-caracteristicas, #holder-habilidades{
-				display: grid;
-    			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-			}
-
 			.caracteristicas-tooltip-holder{
 			    position: relative;
 			    display: block;
@@ -862,12 +860,10 @@
 				<div class="form-group" id="holder-etnia"></div>
 
 				<div class="form-group" id="holder-nome">
-					<label for="exampleInputEmail1">Escreva o seu nome.</label>
+					<label for="input-nome">Escreva o seu nome.</label>
 				    <input type="text" class="form-control" id="input-nome">
 				    <small class="form-text text-muted"><span class="clickable">Clique aqui</span> para gerar um nome aleatório.</small>
 				</div>
-
-				<input class="input-field" id="input-nome" type="text" name="nome" required="true">
 				
 				<div>
 					<div class="form-group" id="holder-idade">
@@ -876,12 +872,13 @@
 				</div>
 
 
-				<div>
+				<div id="caracteristicas">
+					<label for="holder-caracteristicas">Escolha 3 características que melhor descrevem o seu personagem.<br><small>Estas características te ajudam a melhor interpretar o seu personagem. Tente escolher pelo menos uma característica considerada um defeito ou deficiêcia, isso tornará o seu personagem mais interresante.</small></label>
 					<div id="holder-caracteristicas">
 						
 					</div>
 				</div>
-				<div>
+				<div id="habilidades">
 					<div id="holder-habilidades">
 						
 					</div>
