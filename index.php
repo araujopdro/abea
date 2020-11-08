@@ -1011,19 +1011,19 @@
 							var a = hab_selecionadas.indexOf(id+1);
 							if(a >= 0){
 	  							$(".requisito-"+id+1).prop("checked", false);
-	  							$(".requisito-"+id+1).prop("disabled", false);
+	  							$(".requisito-"+id+1).prop("disabled", true);
 	  							hab_selecionadas.splice(a, 1);
   							}
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
 	  							$(".requisito-"+id+2).prop("checked", false);
-	  							$(".requisito-"+id+2).prop("disabled", false);
+	  							$(".requisito-"+id+2).prop("disabled", true);
 	  							hab_selecionadas.splice(b, 1);
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
-	  							$(".requisito-"+id+3).prop("disabled", false);
+	  							$(".requisito-"+id+3).prop("disabled", true);
 	  							hab_selecionadas.splice(c, 1);
 	  						}
 				 		}else if(number == 2){
@@ -1083,8 +1083,8 @@
             function RandomName(){
             	for(var i = 0; i < nacionalidades.length; i++){
             		if($('#select-nacionalidade').val() == nacionalidades[i].nome){
-            			var a = randomInteger(0, nacionalidades[i].nomes.length);
-            			var b = randomInteger(0, nacionalidades[i].sobrenomes.length);
+            			var a = randomInteger(0, nacionalidades[i].nomes.length-1);
+            			var b = randomInteger(0, nacionalidades[i].sobrenomes.length-1);
             			console.log(a +" "+ b);
             			$('#input-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
             		}
