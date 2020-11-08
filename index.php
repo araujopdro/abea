@@ -1004,7 +1004,7 @@
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
 				   		//hab_selecionadas.push(id+number+"");
-				   		var _hab
+  						var _hab = [];
 				   		$.each($("input[name='habilidades']:checked"), function(){
 			                _hab.push($(this).val());
 			            });
@@ -1067,7 +1067,7 @@
 	  							$(".requisito-"+id+3).prop("disabled", true);
 	  							//hab_selecionadas.splice(c, 1);
 	  						}
-	  						var _hab
+	  						var _hab = [];
 					   		$.each($("input[name='habilidades']:checked"), function(){
 				                _hab.push($(this).val());
 				            });
@@ -1091,7 +1091,7 @@
 	  							//hab_selecionadas.splice(c, 1);
 	  						}
 
-	  						var _hab
+	  						var _hab = [];
 					   		$.each($("input[name='habilidades']:checked"), function(){
 				                _hab.push($(this).val());
 				            });
@@ -1108,8 +1108,8 @@
 	  							$(".requisito-"+id+3).prop("disabled", true);
 	  							//hab_selecionadas.splice(c, 1);
 	  						}
-	  						
-	  						var _hab
+
+	  						var _hab = [];
 					   		$.each($("input[name='habilidades']:checked"), function(){
 				                _hab.push($(this).val());
 				            });
