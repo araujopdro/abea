@@ -478,12 +478,12 @@
 				{
 					"nome":"Artes Marciais",
 					"habilidades":[
-						{"nome":"Boxe","niveis":["dar golpes fortes com os punhos (dano 1)","ganha um ponto a mais de resistência","ganha outro ponto de resistência"]
+						{"nome":"Boxe","niveis":["dar golpes fortes com os punhos (dano 1)","ganha um ponto a mais de resistência","ganha outro ponto de resistência"],
 							"requisitos":[
 								null,
 								"Boxe1",
 								"Boxe11;Boxe2"
-							],},
+							]},
 						{"nome":"Capoeira","descricao":["pode usar esta habilidade para atacar com os pés (dano 1) ou para esquivas durante o combate"]},
 						{"nome":"Luta livre","descricao":["pode usar esta habilidade para tentar imobilizar oponentes de tamanho e força humanas"]},]
 				},
