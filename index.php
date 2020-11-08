@@ -999,6 +999,8 @@
 				   		$("#"+id).addClass("after"+number);
 				   		hab_selecionadas.push(id+number+"");
   						$(".requisito-"+id+number).prop("disabled", false);
+						$(".proibicoes-"+id).prop("checked", false);
+						$(".proibicoes-"+id).prop("disabled", true);
 						number--;
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
@@ -1016,6 +1018,13 @@
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
+
+					   		$("."+id).removeClass("bold");
+						   	$("."+id).removeClass("after1");
+						   	$("."+id).removeClass("after2");
+						   	$("."+id).removeClass("after3");
+
+							$(".proibicoes-"+id).prop("disabled", false);
 
 							var a = hab_selecionadas.indexOf(id+1);
 							if(a >= 0){
