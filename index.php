@@ -606,17 +606,17 @@
 	                	option.value = i;
 	                	var ph;
 	                	if(i<=17){
-	                		ph = "ph: 15";
+	                		ph = " | ph:15";
 	                	}else if(i > 17 && i <= 22){
-	                		ph = "ph: 20 - Recomendado";
+	                		ph = " | ph:20 - Recomendado";
 	                	}else if(i > 22 && i <= 27){
-	                		ph = "ph: 25";
+	                		ph = " | ph:25";
 	                	}else if(i > 27 && i <= 32){
-	                		ph = "ph: 30";
+	                		ph = " | ph:30";
 	                	}else if(i > 32 && i <= 37){
-	                		ph = "ph: 35";
+	                		ph = " | ph:35";
 	                	}else if(i > 38){
-	                		ph = "ph: 40";
+	                		ph = " | ph:40";
 	                	}
 	    				option.text = i+"  "+ph;
     				select.appendChild(option);
@@ -784,10 +784,11 @@
 		                					span_holder.className = "habilidades-habilidade-nivel-holder";
 							                var checkbox = document.createElement('input');
 							                	if(habilidades[i].habilidades[j].requisitos != undefined && habilidades[i].habilidades[j].requisitos[k-1] != null){
-							                		//console.log(habilidades[i].habilidades[j].requisitos[k-1]);
+						                			checkbox.className = "input-habilidades requisito-"+habilidades[i].habilidades[j].requisitos[k-1];
 							                		checkbox.disabled = true;
+							                	}else{
+						                			checkbox.className = "input-habilidades";
 							                	}
-						                		checkbox.className = "input-habilidades";
 												checkbox.id = _id+k;
 												checkbox.name = "habilidades";
 												checkbox.type = "checkbox";
@@ -849,6 +850,7 @@
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
 					   		var l = hab_selecionadas.indexOf(id+i);
+	  						$("requisito-"+id+i).prop("disabled", false);
 					   		if(l < 0){
 				   				hab_selecionadas.push(id+i);
 					   		}
@@ -863,17 +865,14 @@
 
 							var a = hab_selecionadas.indexOf(id+1);
 							if(a >= 0){
-								console.log(a)
 	  							hab_selecionadas.splice(a, 1);
   							}
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
-								console.log(b)
 	  							hab_selecionadas.splice(b, 1);
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
-								console.log(c)
 	  							hab_selecionadas.splice(c, 1);
 	  						}
 				 		}else if(number == 2){
@@ -884,12 +883,10 @@
 
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
-								console.log(b)
 	  							hab_selecionadas.splice(b, 1);
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
-								console.log(c)
 	  							hab_selecionadas.splice(c, 1);
 	  						}
 				 		}else if(number == 3){
@@ -900,7 +897,6 @@
 
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
-								console.log(c)
 	  							hab_selecionadas.splice(c, 1);
 	  						}
 				 		}
