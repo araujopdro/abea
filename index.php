@@ -716,7 +716,7 @@
 				   	if($("input[name='caracteristicas']:checked").length > limit) {
 			       		this.checked = false;
 				   	}else if($("input[name='caracteristicas']:checked").length == limit){
-				   		console.log(car_selecionadas[0]+car_selecionadas[1]+car_selecionadas[2])
+				   		console.log(car_selecionadas[0]+" "+car_selecionadas[1]+" "+car_selecionadas[2])
 				   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
 				   	}else if($("input[name='caracteristicas']:checked").length < limit){
 				   		$(".caracteristicas-holder").slideDown('fast');
