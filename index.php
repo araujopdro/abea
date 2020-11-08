@@ -840,10 +840,10 @@
 
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
+				   		hab_selecionadas.push(id+number+"");
 						number--;
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
-					   		hab_selecionadas.push(id+i+"");
 					   	}
 					   	$("#"+id).addClass("bold");
 				 	}else{
@@ -855,7 +855,7 @@
 
 							for(var i = 0; i < hab_selecionadas.length; i++){
 								if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
-		  							car_selecionadas.splice(i, 1);
+		  							hab_selecionadas.splice(i, 1);
 								}
 							}
 				 		}else if(number == 2){
@@ -866,7 +866,7 @@
 
 							for(var i = 0; i < hab_selecionadas.length; i++){
 								if(id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
-		  							car_selecionadas.splice(i, 1);
+		  							hab_selecionadas.splice(i, 1);
 								}
 							}
 				 		}else if(number == 3){
@@ -877,7 +877,7 @@
 
 							for(var i = 0; i < hab_selecionadas.length; i++){
 								if(id+3 == hab_selecionadas[i]){
-		  							car_selecionadas.splice(i, 1);
+		  							hab_selecionadas.splice(i, 1);
 								}
 							}
 				 		}
