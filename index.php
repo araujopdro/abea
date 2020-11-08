@@ -780,7 +780,7 @@
 				                		var span_holder = document.createElement("span");
 		                					span_holder.className = "habilidades-habilidade-nivel-holder";
 							                var checkbox = document.createElement('input');
-							                	if(habilidades[i].habilidades[j].requisitos != undefined){
+							                	if(habilidades[i].habilidades[j].requisitos != undefined && habilidades[i].habilidades[j].requisitos[k] != undefined){
 							                		var _requisitos = habilidades[i].habilidades[j].requisitos[k].split(";");
 							                		console.log(_requisitos);
 							                		checkbox.disabled = true;
