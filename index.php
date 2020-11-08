@@ -772,7 +772,13 @@
 
 											var label = document.createElement('label')
 												label.htmlFor = "input-habilidades-"+_id+k+"-label";
-												label.appendChild(document.createTextNode("Nível "+k));
+												if(k == 0){
+													label.appendChild(document.createTextNode("Aprendiz ("+k+")"));
+												}else if(k == 1){
+													label.appendChild(document.createTextNode("Praticante ("+k+")"));
+												}else{
+													label.appendChild(document.createTextNode("Mestre ("+k+")"));
+												}
 
 											span_holder.appendChild(checkbox);
 											span_holder.appendChild(label);
@@ -848,10 +854,6 @@
     			margin: auto;
 			}
 
-			.habilidades-categoria-holder{
-				margin-left: 15px;
-			}
-
 			.habilidades-habilidade-holder{
 				display: flex;
 				flex-direction: column;
@@ -870,6 +872,11 @@
 
 			.caracteristicas-holder{
 
+			}
+
+			.caracteristicas-text{
+			    display: block;
+   				margin-bottom: 15px;
 			}
 
 			.clickable{
@@ -906,6 +913,7 @@
 					</div>
 				</div>
 				<div id="habilidades">
+					<label for="holder-caracteristicas">Escolha as habilidades do seu personagem.<br><small>Se você está criando um personagem de maneira recomendada, escolha 1 habilidade para ser <i>Mestre</i>, 2 para ser <i>Praticante</i> e 7 para ser <i>Aprendiz</i>.</small></label>
 					<div id="holder-habilidades">
 						
 					</div>
