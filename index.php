@@ -994,7 +994,6 @@
 					var r = /\d+/;
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
-
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
 				   		hab_selecionadas.push(id+number+"");
@@ -1008,7 +1007,7 @@
 						    let checker = (arr, target) => target.every(v => arr.includes(v));
 						    console.log(rqlist);
 						    console.log(class_arr);
-						    if(checker(rqlist,class_arr)){
+						    if(checker(class_arr,rqlist)){
   								$(".requisito-"+id+number).prop("disabled", false);
 						    }
 						});
