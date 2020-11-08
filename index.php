@@ -746,7 +746,7 @@
 
 		                var small = document.createElement("small");
 		                	small.className = "habilidades-descricao";
-		                console.log(habilidades[i].descricao.length);
+		                console.log(habilidades[i].descricao);
 						if(habilidades[i].descricao != undefined && habilidades[i].descricao.length == 1){
 	                		small.innerHTML = caracteristicas[i].descricao[0];
 							span_name.appendChild(small);
