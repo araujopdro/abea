@@ -1003,7 +1003,13 @@
 					var id = this.id.replace(/[0-9]/g, '');
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
-				   		hab_selecionadas.push(id+number+"");
+				   		//hab_selecionadas.push(id+number+"");
+				   		var _hab
+				   		$.each($("input[name='habilidades']:checked"), function(){
+			                _hab.push($(this).val());
+			            });
+				        hab_selecionadas = _hab;
+
 				   		$(".requisito-"+id+number).each(function() {
 						    var class_list = $(this).attr("class");
 						    var class_arr = class_list.split(/\s+/);
@@ -1047,20 +1053,25 @@
 							if(a >= 0){
 	  							$(".requisito-"+id+1).prop("checked", false);
 	  							$(".requisito-"+id+1).prop("disabled", true);
-	  							hab_selecionadas.splice(a, 1);
+	  							//hab_selecionadas.splice(a, 1);
   							}
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
 	  							$(".requisito-"+id+2).prop("checked", false);
 	  							$(".requisito-"+id+2).prop("disabled", true);
-	  							hab_selecionadas.splice(b, 1);
+	  							//hab_selecionadas.splice(b, 1);
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
-	  							hab_selecionadas.splice(c, 1);
+	  							//hab_selecionadas.splice(c, 1);
 	  						}
+	  						var _hab
+					   		$.each($("input[name='habilidades']:checked"), function(){
+				                _hab.push($(this).val());
+				            });
+					        hab_selecionadas = _hab;
 				 		}else if(number == 2){
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
@@ -1071,14 +1082,20 @@
 							if(b >= 0){
 	  							$(".requisito-"+id+2).prop("checked", false);
 	  							$(".requisito-"+id+2).prop("disabled", true);
-	  							hab_selecionadas.splice(b, 1);
+	  							//hab_selecionadas.splice(b, 1);
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
-	  							hab_selecionadas.splice(c, 1);
+	  							//hab_selecionadas.splice(c, 1);
 	  						}
+
+	  						var _hab
+					   		$.each($("input[name='habilidades']:checked"), function(){
+				                _hab.push($(this).val());
+				            });
+					        hab_selecionadas = _hab;
 				 		}else if(number == 3){
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
@@ -1089,8 +1106,14 @@
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
-	  							hab_selecionadas.splice(c, 1);
+	  							//hab_selecionadas.splice(c, 1);
 	  						}
+	  						
+	  						var _hab
+					   		$.each($("input[name='habilidades']:checked"), function(){
+				                _hab.push($(this).val());
+				            });
+					        hab_selecionadas = _hab;
 				 		}
 						number++;
 					   	for(var i = number; i <= 3; i++){
