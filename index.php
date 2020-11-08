@@ -846,7 +846,6 @@
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
 				   		hab_selecionadas.push(id+number+"");
-				   		console.log("requisito-"+id+i);
   						$(".requisito-"+id+number).prop("disabled", false);
 						number--;
 					   	for(var i = 1; i <= number; i++){
@@ -868,14 +867,20 @@
 
 							var a = hab_selecionadas.indexOf(id+1);
 							if(a >= 0){
+	  							$(".requisito-"+id+1).prop("checked", false);
+	  							$(".requisito-"+id+1).prop("disabled", false);
 	  							hab_selecionadas.splice(a, 1);
   							}
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
+	  							$(".requisito-"+id+2).prop("checked", false);
+	  							$(".requisito-"+id+2).prop("disabled", false);
 	  							hab_selecionadas.splice(b, 1);
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
+	  							$(".requisito-"+id+3).prop("checked", false);
+	  							$(".requisito-"+id+3).prop("disabled", false);
 	  							hab_selecionadas.splice(c, 1);
 	  						}
 				 		}else if(number == 2){
@@ -886,10 +891,14 @@
 
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
+	  							$(".requisito-"+id+2).prop("checked", false);
+	  							$(".requisito-"+id+2).prop("disabled", false);
 	  							hab_selecionadas.splice(b, 1);
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
+	  							$(".requisito-"+id+3).prop("checked", false);
+	  							$(".requisito-"+id+3).prop("disabled", false);
 	  							hab_selecionadas.splice(c, 1);
 	  						}
 				 		}else if(number == 3){
@@ -900,6 +909,8 @@
 
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
+	  							$(".requisito-"+id+3).prop("checked", false);
+	  							$(".requisito-"+id+3).prop("disabled", false);
 	  							hab_selecionadas.splice(c, 1);
 	  						}
 				 		}
