@@ -336,22 +336,22 @@
 					"nome":"Artes Marciais",
 					"habilidades":[
 						{"nome":"Boxe","niveis":["dar golpes fortes com os punhos (dano 1)","ganha um ponto a mais de resistência","ganha outro ponto de resistência"]},
-						{"nome":"Capoeira","niveis":["pode usar esta habilidade para atacar com os pés (dano 1) ou para esquivas durante o combate","",""]},
-						{"nome":"Luta livre","niveis":["pode usar esta habilidade para tentar imobilizar oponentes de tamanho e força humanas","",""]},]
+						{"nome":"Capoeira","descricao":["pode usar esta habilidade para atacar com os pés (dano 1) ou para esquivas durante o combate"]},
+						{"nome":"Luta livre","descricao":["pode usar esta habilidade para tentar imobilizar oponentes de tamanho e força humanas"]},]
 				},
 				{
 					"nome":"Habilidades Sociais",
 					"habilidades":[
 						{"nome":"Barganha","niveis":["negociar o custo de bens e serviços","negociar o custo de bens e serviços com mais facilidade","pode ser utilizada para convencer um vendedor mais “duro” ou conseguir um desconto maior"]},
-						{"nome":"Oratória","niveis":["desenvolvimento do poder da voz para persuadir um grupo"]},
-						{"nome":"Persuasão","niveis":["habilidade de persuadir outros, de levá-los para seu lado da discussão"]}]
+						{"nome":"Oratória","descricao":["desenvolvimento do poder da voz para persuadir um grupo"]},
+						{"nome":"Persuasão","descricao":["habilidade de persuadir outros, de levá-los para seu lado da discussão"]}]
 				},
 				{
 					"nome":"Habilidades Militares e Navais",
 					"habilidades":[
-						{"nome":"Artilharia","niveis":["a artilharia só pode ser utilizada de pontos fixos, como fortalezas e navios. Artilharia não tem precisão para ser utilizada em pequenas batalhas. Estas peças servem para atacar grandes alvos, como navios e edifícios, ou para atirar no meio de exércitos."]},
+						{"nome":"Artilharia","descricao":["a artilharia só pode ser utilizada de pontos fixos, como fortalezas e navios. Artilharia não tem precisão para ser utilizada em pequenas batalhas. Estas peças servem para atacar grandes alvos, como navios e edifícios, ou para atirar no meio de exércitos."]},
 
-						{"nome":"Militar","niveis":["n uma habilidade básica para quem participa de guerras, como soldados e guerreiros nativos. Inclui aprendizagem de combate em grupo, cuidado de higiene e equipamento durante campanhas, nervos para enfrentar a batalha","começa a aprender táticas militares, podendo organizar pequenos grupos em batalha","aprende estratégia: como equipar grupos, preparar linhas de suprimento e escolher terrenos para travar batalhas"]},
+						{"nome":"Militar","niveis":["uma habilidade básica para quem participa de guerras, como soldados e guerreiros nativos. Inclui aprendizagem de combate em grupo, cuidado de higiene e equipamento durante campanhas, nervos para enfrentar a batalha","começa a aprender táticas militares, podendo organizar pequenos grupos em batalha","aprende estratégia: como equipar grupos, preparar linhas de suprimento e escolher terrenos para travar batalhas"]},
 
 						{"nome":"Náutica","niveis":[" aprende a trabalhar com o vento, atar nós, limpar e cuidar de embarcações. Também consegue navegar barcos a vela pequenos","navegar rotas conhecidas, lidar com mares perigosos e enfrentar situações táticas","melhora as habilidades de navegação"]}]
 				},
@@ -466,7 +466,7 @@
 				{
 					"nome":"Graças Divinas",
 					"habilidades":[
-						{"nome":"Fé","requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+						{"nome":"Fé","requisitos":["!Armas;!Arquearia;!Esgrima;!Fôlego;!Ifá","!Armas;!Arquearia;!Esgrima;Fé1;!Fôlego;!Ifá","!Armas;!Arquearia;!Esgrima;Fé2;!Fôlego;!Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 
 						{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]},
 
@@ -802,9 +802,16 @@
 						                		small_nivel.innerHTML = habilidades[i].habilidades[j].niveis[k-1];
 							                }
 
+											var small_descricao = document.createElement("small");
+						                		small_descricao.className = "habilidades-descricao3";
+							                if(habilidades[i].habilidades[j].descricao != undefined && habilidades[i].habilidades[j].descricao.length == 3){
+						                		small_descricao.innerHTML = habilidades[i].habilidades[j].descricao[k-1];
+							                }
+
 											span_holder.appendChild(checkbox);
 											span_holder.appendChild(label);
 											span_holder.appendChild(small_nivel);
+											span_holder.appendChild(small_descricao);
 										div_niveis_holder.appendChild(span_holder);
 	                				}
 									div_habilidade_holder.appendChild(div_niveis_holder);
