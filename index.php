@@ -1001,11 +1001,14 @@
 				   		$(".requisito-"+id+number).each(function() {
 						    var class_list = $(this).attr("class");
 						    var class_arr = class_list.split(/\s+/);
-
+						    var rqlist = [];
+						    for(var i = 0; i < hab_selecionadas.length; i++){
+						    	rqlist.push("requisito-"+hab_selecionadas[i]);
+						    }
 						    let checker = (arr, target) => target.every(v => arr.includes(v));
-						    console.log(hab_selecionadas)
-						    console.log(class_arr)
-						    if(checker(hab_selecionadas,class_arr)){
+						    console.log(rqlist);
+						    console.log(class_arr);
+						    if(checker(rqlist,class_arr)){
   								$(".requisito-"+id+number).prop("disabled", false);
 						    }
 						});
