@@ -844,6 +844,7 @@
 
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
+				   		hab_selecionadas.push(id+number+"");
 						number--;
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
