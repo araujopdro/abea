@@ -821,6 +821,7 @@
 					   	}
 					   	$("#"+id).addClass("bold");
 				 	}else{
+				   		console.log("st "+number);
 				 		if(number == 1){
 					   		$("#"+id).removeClass("bold");
 						   	$("#"+id).removeClass("after1");
@@ -828,7 +829,9 @@
 						   	$("#"+id).removeClass("after3");
 				 		}
 						number++;
+				   		console.log("nd "+number);
 					   	for(var i = number; i <= 3; i++){
+					   		console.log(i);
 					   		$("#"+id+i).prop("checked",false);
 					   	}
 				 	};
