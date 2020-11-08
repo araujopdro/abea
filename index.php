@@ -827,6 +827,16 @@
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
+				 		}else if(number == 2){
+						   	$("#"+id).removeClass("after1");
+						   	$("#"+id).removeClass("after2");
+						   	$("#"+id).removeClass("after3");
+						   	$("#"+id).addClass("after1");
+				 		}else if(number == 3){
+						   	$("#"+id).removeClass("after1");
+						   	$("#"+id).removeClass("after2");
+						   	$("#"+id).removeClass("after3");
+						   	$("#"+id).addClass("after2");
 				 		}
 						number++;
 				   		console.log("nd "+number);
