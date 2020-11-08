@@ -753,7 +753,7 @@
 						if(habilidades[i].length == 1){
 	                		small.innerHTML = caracteristicas[i].descricao[0];
 						}else if(habilidades[i].length == 2){
-	                		small.innerHTML = caracteristicas[i].descricao[0]+"<small>"+small.innerHTML = caracteristicas[i].descricao[1]+"</small>";
+	                		small.innerHTML = caracteristicas[i].descricao[0]+" <small>"+caracteristicas[i].descricao[1]+"</small>";
 						}
 
 
@@ -807,7 +807,7 @@
 		                				console.log(habilidades[i].habilidades[j].requisitos);
 				                	}
 	                		}
-	                		
+
 					div_holder.appendChild(small);
                 	div_holder.appendChild(div_habilidade_holder);
                 	c.appendChild(div_holder);
