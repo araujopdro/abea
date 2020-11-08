@@ -846,6 +846,8 @@
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
 				   		hab_selecionadas.push(id+number+"");
+				   		console.log("requisito-"+id+i);
+  						$(".requisito-"+id+number).prop("disabled", false);
 						number--;
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
