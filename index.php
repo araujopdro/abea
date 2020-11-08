@@ -765,7 +765,7 @@
 		                					span_holder.className = "habilidades-habilidade-nivel-holder";
 							                var checkbox = document.createElement('input');
 						                		checkbox.className = "input-habilidades";
-												checkbox.id = "input-habilidades-"+_id+k;
+												checkbox.id = _id+k;
 												checkbox.name = "habilidades";
 												checkbox.type = "checkbox";
 												checkbox.value = k;
@@ -797,8 +797,8 @@
 	                		}
                 	div_holder.appendChild(div_habilidade_holder);
                 	c.appendChild(div_holder);
-
                 	$('#holder-habilidades').append(c);
+                	$(".habilidades-niveis-holder").slideUp('fast');
                 }
 
 
@@ -816,12 +816,15 @@
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
 					   	}
+					   	$("#"+id).addClass("bold");
 				 	}else{
+				 		if(number == 1){
+					   		$("#"+id).removeClass("bold");
+				 		}
 						number++;
 					   	for(var i = number; i <= 3; i++){
 					   		$("#"+id+i).prop("checked",false);
 					   	}
-						
 				 	};
 				});};
 
@@ -861,14 +864,18 @@
 			}
 
 			.habilidades-niveis-holder{
-			    display: none;
+			    display: flex;
 			    flex-direction: column;
 			    margin-left: 15px;
 			}
 
-			/*.habilidades-habilidade-closed:before {
+			.habilidades-habilidade-name:before {
 			    content: " » ";
-			}*/
+			}
+
+			.bold{
+				font-weight: bolder;
+			}
 
 			.caracteristicas-holder{
 
