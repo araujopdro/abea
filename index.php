@@ -885,9 +885,8 @@
 					   	for(var i = number; i <= 3; i++){
 					   		$("#"+id+i).prop("checked",false);
 					   	}
-
-					   	console.log(hab_selecionadas);
 				 	};
+				   	console.log(hab_selecionadas);
 				});};
 
             $(document).ready(function() {
