@@ -746,11 +746,11 @@
 
 		                var small = document.createElement("small");
 		                	small.className = "habilidades-descricao";
-		                console.log(habilidades[i].length);
-						if(habilidades[i].length == 1){
+		                console.log(habilidades[i].descricao.length);
+						if(habilidades[i].descricao.length == 1){
 	                		small.innerHTML = caracteristicas[i].descricao[0];
 							span_name.appendChild(small);
-						}else if(habilidades[i].length == 2){
+						}else if(habilidades[i].descricao.length == 2){
 	                		small.innerHTML = caracteristicas[i].descricao[0]+" <small>"+caracteristicas[i].descricao[1]+"</small>";
 							span_name.appendChild(small);
 						}
