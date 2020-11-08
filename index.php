@@ -812,23 +812,12 @@
 					var r = /\d+/;
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
-
-				   	$("#"+id).removeClass("after1");
-				   	$("#"+id).removeClass("after2");
-				   	$("#"+id).removeClass("after3");
-
-					if(number == 1){
-					   	$("#"+id).addClass("after1");
-					}else if(number == 2){
-					   	$("#"+id).addClass("after2");
-					}else{
-					   	$("#"+id).addClass("after3");
-					}
-
+					
 				 	if(this.checked){
 						number--;
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
+					   		$("#"+id).addClass("after"+i);
 					   	}
 					   	$("#"+id).addClass("bold");
 				 	}else{
@@ -838,6 +827,7 @@
 						number++;
 					   	for(var i = number; i <= 3; i++){
 					   		$("#"+id+i).prop("checked",false);
+						   	$("#"+id).removeClass("after"+i);
 					   	}
 				 	};
 				});};
