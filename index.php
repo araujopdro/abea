@@ -65,12 +65,136 @@
 					"nome":"Português",
 					"aliados":["Temiminós","Tabajaras","Tupiniquins*","Tupinambás*"],
 					"inimigos":["Franceses","Tamoios","Potiguares","Caetés","Aimorés","Tupiniquins*","Tupinambás*"],
+					"nomes":[
+						"Álvaro",
+						"Álvares",
+						"Antão",
+						"António",
+						"Antunes",
+						"Bento",
+						"Bentes",
+						"Bermudo",
+						"Bermudes",
+						"Bernardo",
+						"Bernardes",
+						"Diogo",
+						"Dias",
+						"Diegues",
+						"Domingos",
+						"Domingues",
+						"Egas",
+						"Viegas",
+						"Henrique",
+						"Henriques",
+						"Estêvão",
+						"Esteves",
+						"Fernão",
+						"Fernandes",
+						"García",
+						"Geraldo",
+						"Godím",
+						"Gomes",
+						"Guedes",
+						"Gonçalo",
+						"Gonçalves",
+						"João ",
+						"Lopes",
+						"Marcos",
+						"Marques",
+						"Martinho",
+						"Martin",
+						"Mendes",
+						"Moninho",
+						"Moniz",
+						"Nuno",
+						"Nunes",
+						"Paes",
+						"Pero",
+						"Peres",
+						"Ramiro",
+						"Ramires",
+						"Rodrigo",
+						"Rodrigues",
+						"Sancho",
+						"Sanches",
+						"Simão",
+						"Simões",
+						"Soeiro",
+						"Soares",
+						"Telo",
+						"Teles",
+						"Vasco",
+						"Vasques",
+						"Vaz",
+						"Vímara",
+						"Vimaranes",
+						"Guimarães"],
+					"sobrenomes":[""],
 					"flavor": ""
 				},
 				{
 					"nome":"Espanhol",
 					"aliados":[],
 					"inimigos":[],
+					"nomes":[
+						"Miguel",
+						"Eduardo",
+						"Isabel",
+						"Lucia",
+						"Paloma",
+						"Rúbia",
+						"Laura",
+						"Anita",
+						"Alba",
+						"Tiago",
+						"Diego",
+						"Lorenzo",
+						"Murilo",
+						"Diogo",
+						"Pablo",
+						"Ruan",
+						"Juan",
+						"Iago",
+						"Yago",
+						"Santiago",
+						"Cristian"],
+					"sobrenomes":[
+						"García",
+						"Lopez",
+						"Perez",
+						"Gonzalez",
+						"Sánchez",
+						"Martinez",
+						"Rodriguez",
+						"Fernandez",
+						"Gomez",
+						"Martin",
+						"Hernandez",
+						"Ruiz",
+						"Diaz",
+						"Alvarez",
+						"Jimenez",
+						"Moreno",
+						"Muñoz",
+						"Alonso",
+						"Gutierrez",
+						"Romero",
+						"Sanz",
+						"Torres",
+						"Suarez",
+						"Ramirez",
+						"Vázquez",
+						"Navarro",
+						"Dominguez",
+						"Ramos",
+						"Castro",
+						"Gil",
+						"Flores",
+						"Morales",
+						"Blanco",
+						"Serrano",
+						"Molina",
+						"Ortiz"],
 					"flavor": ""
 				},
 				{
@@ -571,6 +695,11 @@
 				// 	]
 				// }
 
+			var car_selecionadas = [];
+			var hab_selecionadas = [];
+			var nomes
+
+
 			function CreateNacionalidade(){
                 $('#select-nacionalidade').remove();
                 var c = document.createDocumentFragment();
@@ -692,10 +821,6 @@
 	            $('#select-etnia').on('change', function() {
 			  		//console.log(this.value);
 				});};
-			
-			var car_selecionadas = [];
-			var hab_selecionadas = [];
-
 			function CreateCaracteristicas(){
                 $('#holder-caracteristicas').empty();
                 for(var i = 0; i < caracteristicas.length; i++){
@@ -810,7 +935,7 @@
 												checkbox.id = _id+k;
 												checkbox.name = "habilidades";
 												checkbox.type = "checkbox";
-												checkbox.value = k;
+												checkbox.value = _id+k;
 
 											var label = document.createElement('label')
 												label.className = "label-habilidade";
@@ -954,6 +1079,21 @@
 				        $(this).css('display','flex');
 				});
             }
+
+            function RandomName(){
+            	for(var i = 0; i < nacionalidades.length; i++){
+            		if($('#select-nacionalidade').val() == nacionalidades[i].nome){
+            			var a = randomInteger(0, nacionalidades[i].nomes);
+            			var b = randomInteger(0, nacionalidades[i].sobrenomes);
+            			
+            			$('#input-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenome[b]);
+            		}
+            	}
+            }
+
+            function randomInteger(min, max) {
+			  return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
 		</script>
 		<style type="text/css">
 			html, body{
@@ -1040,7 +1180,7 @@
 				<div class="form-group" id="holder-nome">
 					<label for="input-nome">Escreva o seu nome.</label>
 				    <input type="text" class="form-control" id="input-nome">
-				    <small class="form-text text-muted"><span class="clickable">Clique aqui</span> para gerar um nome aleatório.</small>
+				    <small class="form-text text-muted"><span class="clickable" onclick="RandomName();">Clique aqui</span> para gerar um nome aleatório.</small>
 				</div>
 				
 				<div>
@@ -1063,7 +1203,7 @@
 					</div>
 				</div>
 
-				<input class="form-control" id="input-historia" type="text" required="true">
+				<input class="form-control" id="input-historia" type="textarea" required="true">
 				<input class="submit" type="submit" name="submit" value="ENTRAR">
 			</form>
 		</div>
