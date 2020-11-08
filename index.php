@@ -611,8 +611,15 @@
 					"habilidades":[
 						{"nome":"Fé","requisitos":[null,"Fé1","Fé1;Fé2"],"proibicoes":["Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá","Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá","Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 
-						{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé1;Fé2;Proteçãocontraomal1","Fé1;Fé2;Fé3;Proteçãocontraomal2"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]},
-
+						{
+							"nome":"Proteção contra o mal",
+							"niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],
+							"requisitos":[
+								"Fé1",
+								"Fé1;Fé2;Proteçãocontraomal1",
+								"Fé1;Fé2;Fé3;Proteçãocontraomal1;Proteçãocontraomal2"
+							],
+							"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]},
 
 						{"nome":"Defesa contra magia","niveis":["Sentir magia","Proteção contra magia","Dissipar magia"],"requisitos":["Fé1","Fé1;Fé2;Defesacontramagia1","Fé1;Fé2;Fé3;Defesacontramagia2"],"descricao":["pede a graça de sentir os efeitos de poderes ao redor dele", "ganha proteção pessoal contra poderes mágicos", "consegue anular algum efeito mágico"]},
 
@@ -1008,7 +1015,7 @@
 
 						    console.log(rqlist);
 						    console.log(class_arr);
-						    
+
 						    if(class_arr.every(r => rqlist.includes(r))){
 							    console.log('Found all of', class_arr, 'in', rqlist);
   								$(this).prop("disabled", false);
