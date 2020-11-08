@@ -835,7 +835,7 @@
 					var r = /\d+/;
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
-
+					console.log(id);
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
 						number--;
@@ -943,7 +943,7 @@
 
 			.habilidades-descricao{
 				display: block;
-   				margin-bottom: 15px;
+   				margin-bottom: 5px;
 			}
 
 			.habilidades-nivel{
