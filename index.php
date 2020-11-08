@@ -847,8 +847,7 @@
 						number--;
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
-					   		var n = number+1;
-				   			hab_selecionadas.push(id+n+"");
+				   			hab_selecionadas.push(id+i);
 					   	}
 					   	$("#"+id).addClass("bold");
 				 	}else{
