@@ -745,6 +745,8 @@
 	                		span_name.innerHTML = habilidades[i].nome;
 						div_holder.appendChild(span_name);
 
+						console.log(habilidades[i].length);
+
 
 	                	var div_habilidade_holder = document.createElement("div");
 	                		div_habilidade_holder.className = "habilidades-habilidade-holder";
