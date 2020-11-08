@@ -784,7 +784,7 @@
 		                					span_holder.className = "habilidades-habilidade-nivel-holder";
 							                var checkbox = document.createElement('input');
 							                	if(habilidades[i].habilidades[j].requisitos != undefined && habilidades[i].habilidades[j].requisitos[k-1] != null){
-							                		console.log(habilidades[i].habilidades[j].requisitos[k-1]);
+							                		//console.log(habilidades[i].habilidades[j].requisitos[k-1]);
 							                		checkbox.disabled = true;
 							                	}
 						                		checkbox.className = "input-habilidades";
@@ -858,9 +858,9 @@
 						   	$("#"+id).removeClass("after3");
 
 							for(var i = 0; i < hab_selecionadas.length; i++){
-								// if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
-		  				// 			hab_selecionadas.splice(i, 1);
-								// }
+								if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
+		  							hab_selecionadas.splice(i, 1);
+								}
 							}
 				 		}else if(number == 2){
 						   	$("#"+id).removeClass("after1");
