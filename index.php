@@ -844,10 +844,11 @@
 
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
-				   		hab_selecionadas.push(id+number+"");
 						number--;
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
+					   		var n = number+1;
+				   			hab_selecionadas.push(id+n+"");
 					   	}
 					   	$("#"+id).addClass("bold");
 				 	}else{
@@ -857,14 +858,12 @@
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
 
-							console.log(hab_selecionadas.length);
-							for(var i = 0; i < hab_selecionadas.length; i++){
-								console.log(i);
-								if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
-		  							hab_selecionadas.splice(i, 1);
-								}
-							}
-				   			console.log(hab_selecionadas);
+							// for(var i = 0; i < hab_selecionadas.length; i++){
+							// 	console.log(i);
+							// 	if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
+		  			// 				hab_selecionadas.splice(i, 1);
+							// 	}
+							// }
 				 		}else if(number == 2){
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
