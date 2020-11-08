@@ -466,12 +466,12 @@
 				{
 					"nome":"Graças Divinas",
 					"habilidades":[
-						{"nome":"Fé","requisitos":["!Armas;!Arquearia;!Esgrima;!Fôlego;!Ifá","!Armas;!Arquearia;!Esgrima;Fé1;!Fôlego;!Ifá","!Armas;!Arquearia;!Esgrima;Fé2;!Fôlego;!Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+						{"nome":"Fé","requisitos":[null,"Fé1","Fé2"],"proibicoes":["Armas;Arquearia;Esgrima;Fôlego;Ifá","Armas;Arquearia;Esgrima;Fôlego;Ifá","Armas;Arquearia;Esgrima;Fôlego;Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 
 						{"nome":"Proteção contra o mal","niveis":["Prever o mal","Defesa contra o mal","Afastar o mal"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["sente se existe algum perigo próximo, seja por causas naturais (fogo, tempestade), animais ou intenção humana. O poder não esclarece a forma exata do perigo, mas dá uma indicação da direção e o nível de perigo", "pede proteção contra ataques à sua pessoa ou contra outra pessoa escolhida (por toque). No caso de sucesso, qualquer ser (animal ou humano) estará sujeito a uma penalidade de -2 em qualquer ataque contra aquela pessoa durante o tempo da graça", "consegue mandar embora um ser maldoso ou perigoso (que seja pessoa, animal ou monstro)"]},
 
 
-						{"nome":"Defesa contra magia","niveis":["Sentir magia","Proteção contra magia","Dissipar magia"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":[" pede a graça de sentir os efeitos de poderes ao redor dele", "ganha proteção pessoal contra poderes mágicos", "consegue anular algum efeito mágico"]},
+						{"nome":"Defesa contra magia","niveis":["Sentir magia","Proteção contra magia","Dissipar magia"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["pede a graça de sentir os efeitos de poderes ao redor dele", "ganha proteção pessoal contra poderes mágicos", "consegue anular algum efeito mágico"]},
 
 
 						{"nome":"Profecia","niveis":["Visão divina","Sentir vida","Busca da verdade"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["para receber uma visão, o personagem tem de estar em algum momento de paz e oração, relaxado e preparado para receber esta bênção. Uma visão pode ou não aparecer, pode ter ou não ter utilidade e pode até confundir mais que ajudar", "esta graça alerta o personagem sobre o estado de uma pessoa conhecida, mesmo que aquela pessoa esteja a milhares de quilômetros de distância", "quando usada com sucesso, deixa o personagem saber sem sombra de dúvida se outra pessoa está mentindo ou não. Em casos de grande sucesso, o personagem pode até receber uma visão que mostra o que é a verdade"]},
@@ -487,47 +487,6 @@
 
 
 						{"nome":"Benção","niveis":["Abençoar +1","Abençoar +2","Abençoar +3"],"requisitos":["Fé1","Fé2","Fé3"],"descricao":["oferece bônus de +1 nos testes do ser ou objeto abençoado","oferece bônus de +2 nos testes do ser ou objeto abençoado","oferece bônus de +3 nos testes do ser ou objeto abençoado"]}]
-				},
-				{
-					"nome":"Poderes de Fôlego",
-					"habilidades":[
-						{"nome":"Fôlego","requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá","!Armas;!Arquearia;!Esgrima;!Fé;!Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-
-						{"nome":"Cura","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Fôlego1","Fôlego2","Fôlego3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-						{"nome":"Defesa","niveis":["Dar sorte","Proteção","Corpo fechado"],"requisitos":["Fôlego1","Fôlego2","Fôlego3"],"descricao":["o alvo ganha +1 em todos os testes de habilidade até o próximo amanhecer. Ao contrário de outros poderes, é possível acumular mais de um bônus de Dar sorte, sob uma condição especial: o alvo pode somar até três aplicações deste poder ao mesmo tempo, contanto que receba de pajés diferentes", "O personagem ganha uma proteção que força uma penalidade de -2 ao teste de qualquer um que tente feri-lo por meio de armas, magia, doença ou veneno","no caso de sucesso, não há arma, fogo ou outro elemento que consiga ferir o personagem. Ele pode ser derrubado por um golpe, amarrado ou detido por outros meios, ou afetado por poderes mágicos, mas não sofrerá dano algum. O efeito dura três rodadas de uma batalha"]},
-
-						{"nome":"Vida","niveis":["Dar força","Curar doença","Devolver a vida"],"requisitos":["Fôlego1","Fôlego2","Fôlego3"],"descricao":["este poder recarrega as energias do alvo, tirando qualquer sinal de cansaço e fadiga. O alvo ganha o aumento de um ponto na sua resistência máxima durante 24 horas", "este poder pode curar qualquer doença (comum ou incomum). Também serve para remover enlouquecimento causado por criaturas sobrenaturais. Em caso de fracasso, o mesmo pajé nunca mais pode tentar curar a doença da mesma pessoa de novo","o pajé pode soprar a vida de volta para dentro de um recém-morto. Este poder funciona em casos como falta de ar (estrangulação, afogamento), ataque cardíaco e perda de sangue, mas não serve em nenhum caso onde a causa da morte ainda persista no corpo"]},
-
-						{"nome":"Dano","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-						{"nome":"Fraqueza","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-						{"nome":"Morte","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-						{"nome":"Mundo espiritual","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-						{"nome":"Tempo","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-						{"nome":"Controle da natureza","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-						{"nome":"Contra magia","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]}]
-				},
-				{
-					"nome":"Poderes de Ifá",
-					"habilidades":[
-						{"nome":"Ifá","requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego","!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego","!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-
-
-						{"nome":"Cura","niveis":["Curar danos","Curar maldades","Afastar morte"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["o uso deste poder cura dois pontos de dano do alvo. Não pode ser utilizado no mesmo alvo mais de uma vez por dia", "este poder cura os efeitos de qualquer veneno, paralisia ou doença (comum ou incomum). Também pode remover energias negativas do corpo causadas por Enfraquecer inimigo ou os poderes de Fôlego Indefeso ou Remover força","preserva o corpo de um recém-morto (menos de um minuto) por 24 horas, sendo assim possível reverter os efeitos que causaram a morte e devolver a vida. Se a causa de morte não for anulada dentro deste período, a vida do alvo torna-se irrecuperável"]},
-
-
-						{"nome":"Saúde","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-						{"nome":"Detecção","niveis":["Detectar veneno","Detectar magia","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-						{"nome":"Energia negativa","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-						{"nome":"Influência","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-						{"nome":"Manuseio espiritual","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-						{"nome":"Influência","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Fôlego2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]}
-					]
 				},{
 				"nome":"Línguas",
 				"habilidades":[
@@ -550,6 +509,50 @@
 					{"nome":"Umbundo","descricao":["","armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"]},	
 				]}];
 			
+				// ,
+				// {
+				// 	"nome":"Poderes de Fôlego",
+				// 	"habilidades":[
+				// 		{"nome":"Fôlego","requisitos":[null,"Fôlego1","Fôlego2"],"proibicoes":["Armas;Arquearia;Esgrima;Fé;Ifá","Armas;Arquearia;Esgrima;Fé;Ifá","Armas;Arquearia;Esgrima;Fé;Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+
+				// 		{"nome":"Cura","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Fôlego1","Fôlego2","Fôlego3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+				// 		{"nome":"Defesa","niveis":["Dar sorte","Proteção","Corpo fechado"],"requisitos":["Fôlego1","Fôlego2","Fôlego3"],"descricao":["o alvo ganha +1 em todos os testes de habilidade até o próximo amanhecer. Ao contrário de outros poderes, é possível acumular mais de um bônus de Dar sorte, sob uma condição especial: o alvo pode somar até três aplicações deste poder ao mesmo tempo, contanto que receba de pajés diferentes", "O personagem ganha uma proteção que força uma penalidade de -2 ao teste de qualquer um que tente feri-lo por meio de armas, magia, doença ou veneno","no caso de sucesso, não há arma, fogo ou outro elemento que consiga ferir o personagem. Ele pode ser derrubado por um golpe, amarrado ou detido por outros meios, ou afetado por poderes mágicos, mas não sofrerá dano algum. O efeito dura três rodadas de uma batalha"]},
+
+				// 		{"nome":"Vida","niveis":["Dar força","Curar doença","Devolver a vida"],"requisitos":["Fôlego1","Fôlego2","Fôlego3"],"descricao":["este poder recarrega as energias do alvo, tirando qualquer sinal de cansaço e fadiga. O alvo ganha o aumento de um ponto na sua resistência máxima durante 24 horas", "este poder pode curar qualquer doença (comum ou incomum). Também serve para remover enlouquecimento causado por criaturas sobrenaturais. Em caso de fracasso, o mesmo pajé nunca mais pode tentar curar a doença da mesma pessoa de novo","o pajé pode soprar a vida de volta para dentro de um recém-morto. Este poder funciona em casos como falta de ar (estrangulação, afogamento), ataque cardíaco e perda de sangue, mas não serve em nenhum caso onde a causa da morte ainda persista no corpo"]},
+
+				// 		{"nome":"Dano","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+				// 		{"nome":"Fraqueza","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+				// 		{"nome":"Morte","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+				// 		{"nome":"Mundo espiritual","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+				// 		{"nome":"Tempo","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+				// 		{"nome":"Controle da natureza","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+				// 		{"nome":"Contra magia","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]}]
+				// },
+				// {
+				// 	"nome":"Poderes de Ifá",
+				// 	"habilidades":[
+				// 		{"nome":"Ifá","requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego","!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego","!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+
+
+				// 		{"nome":"Cura","niveis":["Curar danos","Curar maldades","Afastar morte"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["o uso deste poder cura dois pontos de dano do alvo. Não pode ser utilizado no mesmo alvo mais de uma vez por dia", "este poder cura os efeitos de qualquer veneno, paralisia ou doença (comum ou incomum). Também pode remover energias negativas do corpo causadas por Enfraquecer inimigo ou os poderes de Fôlego Indefeso ou Remover força","preserva o corpo de um recém-morto (menos de um minuto) por 24 horas, sendo assim possível reverter os efeitos que causaram a morte e devolver a vida. Se a causa de morte não for anulada dentro deste período, a vida do alvo torna-se irrecuperável"]},
+
+
+				// 		{"nome":"Saúde","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+				// 		{"nome":"Detecção","niveis":["Detectar veneno","Detectar magia","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+				// 		{"nome":"Energia negativa","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+				// 		{"nome":"Influência","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+				// 		{"nome":"Manuseio espiritual","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+				// 		{"nome":"Influência","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Fôlego2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]}
+				// 	]
+				// }
+
+
 			function CreateNacionalidade(){
                 $('#select-nacionalidade').remove();
                 var c = document.createDocumentFragment();
@@ -780,9 +783,8 @@
 				                		var span_holder = document.createElement("span");
 		                					span_holder.className = "habilidades-habilidade-nivel-holder";
 							                var checkbox = document.createElement('input');
-							                	if(habilidades[i].habilidades[j].requisitos != undefined && habilidades[i].habilidades[j].requisitos[k] != undefined){
-							                		var _requisitos = habilidades[i].habilidades[j].requisitos[k].split(";");
-							                		console.log(_requisitos);
+							                	if(habilidades[i].habilidades[j].requisitos != undefined && habilidades[i].habilidades[j].requisitos[k-1] != null){
+							                		console.log(habilidades[i].habilidades[j].requisitos[k-1]);
 							                		checkbox.disabled = true;
 							                	}
 						                		checkbox.className = "input-habilidades";
