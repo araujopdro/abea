@@ -858,10 +858,15 @@
 						   	$("#"+id).removeClass("after3");
 
 							for(var i = 0; i < hab_selecionadas.length; i++){
+								console.log(id+1)
+								console.log(id+2)
+								console.log(id+3)
+								console.log(hab_selecionadas[i])
 								if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
 		  							hab_selecionadas.splice(i, 1);
 								}
 							}
+				   			console.log(hab_selecionadas);
 				 		}else if(number == 2){
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
