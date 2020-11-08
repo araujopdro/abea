@@ -786,6 +786,7 @@
 												checkbox.value = k;
 
 											var label = document.createElement('label')
+												label.className = "label-habilidade";
 												label.htmlFor = "input-habilidades-"+_id+k+"-label";
 												if(k == 1){
 													label.appendChild(document.createTextNode("Aprendiz ("+k+")"));
@@ -926,7 +927,7 @@
 			    content: " 3 ";
 			}
 
-			.label-caracteristicas{
+			.label-caracteristicas, .label-habilidade{
 				margin-left: 10px;
 				margin-bottom: 0;
 			}
