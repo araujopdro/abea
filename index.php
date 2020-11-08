@@ -1021,6 +1021,7 @@
   								$(this).prop("disabled", false);
 							}else{
 							    console.log('Did not find all of', class_arr, 'in', rqlist);
+  								$(this).prop("disabled", true);
 							}
 						});
 					   		console.log(number)
