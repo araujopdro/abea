@@ -857,6 +857,7 @@
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
 
+							console.log(hab_selecionadas.length);
 							for(var i = 0; i < hab_selecionadas.length; i++){
 								console.log(i);
 								if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
