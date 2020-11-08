@@ -787,13 +787,21 @@
 
 											var label = document.createElement('label')
 												label.htmlFor = "input-habilidades-"+_id+k+"-label";
-												if(k == 0){
+												if(k == 1){
 													label.appendChild(document.createTextNode("Aprendiz ("+k+")"));
-												}else if(k == 1){
+												}else if(k == 2){
 													label.appendChild(document.createTextNode("Praticante ("+k+")"));
 												}else{
 													label.appendChild(document.createTextNode("Mestre ("+k+")"));
 												}
+
+											var small_nivel = document.createElement("small");
+						                		small_nivel.className = "habilidades-nivel";
+							                if(habilidades[i].habilidades[j].niveis != undefined){
+						                		small_nivel.innerHTML = habilidades[i].habilidades[j].niveis[k-1];
+												span_holder.appendChild(small_nivel);
+							                }
+
 
 											span_holder.appendChild(checkbox);
 											span_holder.appendChild(label);
@@ -934,6 +942,11 @@
 			}
 
 			.habilidades-descricao{
+				display: block;
+   				margin-bottom: 15px;
+			}
+
+			.habilidades-nivel{
 				display: block;
 			}
 
