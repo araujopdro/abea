@@ -859,10 +859,13 @@
 						   	$("#"+id).removeClass("after3");
 
 							var a = hab_selecionadas.indexOf(id+1);
+							console.log(a)
   							hab_selecionadas.splice(a, 1);
 							var b = hab_selecionadas.indexOf(id+2);
+							console.log(b)
   							hab_selecionadas.splice(b, 1);
 							var c = hab_selecionadas.indexOf(id+3);
+							console.log(c)
   							hab_selecionadas.splice(c, 1);
 				 		}else if(number == 2){
 						   	$("#"+id).removeClass("after1");
@@ -871,8 +874,10 @@
 						   	$("#"+id).addClass("after1");
 
 							var b = hab_selecionadas.indexOf(id+2);
+							console.log(b)
   							hab_selecionadas.splice(b, 1);
 							var c = hab_selecionadas.indexOf(id+3);
+							console.log(c)
   							hab_selecionadas.splice(c, 1);
 				 		}else if(number == 3){
 						   	$("#"+id).removeClass("after1");
@@ -881,6 +886,7 @@
 						   	$("#"+id).addClass("after2");
 
 							var c = hab_selecionadas.indexOf(id+3);
+							console.log(c)
   							hab_selecionadas.splice(c, 1);
 				 		}
 						number++;
