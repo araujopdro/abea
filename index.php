@@ -934,12 +934,12 @@
 						                			checkbox.className = "input-habilidades";
 							                	}
 
-							                	if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
-							                		var proibicoes_list = habilidades[i].habilidades[j].proibicoes[k-1].split(";");
-							                		for(var z = 0; z < proibicoes_list.length; z++){
-						                				checkbox.classList.add("proibicoes-"+proibicoes_list[z]);
-							                		}
-							                	}
+							                	// if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
+							                	// 	var proibicoes_list = habilidades[i].habilidades[j].proibicoes[k-1].split(";");
+							                	// 	for(var z = 0; z < proibicoes_list.length; z++){
+						                		// 		checkbox.classList.add("proibicoes-"+proibicoes_list[z]);
+							                	// 	}
+							                	// }
 
 												checkbox.id = _id+k;
 												checkbox.name = "habilidades";
@@ -1019,16 +1019,31 @@
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
 
-					   		$("."+id).removeClass("bold");
-						   	$("."+id).removeClass("after1");
-						   	$("."+id).removeClass("after2");
-						   	$("."+id).removeClass("after3");
+							//$(".proibicoes-"+id).prop("disabled", false);
 
-							$(".proibicoes-"+id).prop("disabled", false);
+							// $(".proibicoes-"+id).each(function( index, value ) {
+						 //  		var thisid = $(this).attr('id');
+							// 	var this_id = this.thisid.replace(/[0-9]/g,'');
+
+						 //   		$("#"+this_id).removeClass("bold");
+							//    	$("#"+this_id).removeClass("after1");
+							//    	$("#"+this_id).removeClass("after2");
+							//    	$("#"+this_id).removeClass("after3");
+							// });
 
 							var a = hab_selecionadas.indexOf(id+1);
 							if(a >= 0){
-	  							$(".requisito-"+id+1).prop("checked", false);
+	  							//$(".requisito-"+id+1).prop("checked", false);
+	  							$(".requisito-"+id+1).each(function( index, value ) {
+							  		var thisid = $(this).attr('id');
+									var this_id = this.thisid.replace(/[0-9]/g,'');
+
+							   		$("#"+this_id).removeClass("bold");
+								   	$("#"+this_id).removeClass("after1");
+								   	$("#"+this_id).removeClass("after2");
+								   	$("#"+this_id).removeClass("after3");
+								}).prop("checked", false);
+
 	  							$(".requisito-"+id+1).prop("disabled", true);
 	  							hab_selecionadas.splice(a, 1);
   							}
@@ -1052,7 +1067,15 @@
 
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
-	  							$(".requisito-"+id+2).prop("checked", false);
+	  							$(".requisito-"+id+2).each(function( index, value ) {
+							  		var thisid = $(this).attr('id');
+									var this_id = this.thisid.replace(/[0-9]/g,'');
+
+								   	$("#"+this_id).removeClass("after1");
+								   	$("#"+this_id).removeClass("after2");
+								   	$("#"+this_id).removeClass("after3");
+						   			$("#"+id).addClass("after1");
+								}).prop("checked", false);
 	  							$(".requisito-"+id+2).prop("disabled", true);
 	  							hab_selecionadas.splice(b, 1);
 	  						}
@@ -1070,7 +1093,15 @@
 
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
-	  							$(".requisito-"+id+3).prop("checked", false);
+	  							$(".requisito-"+id+3).each(function( index, value ) {
+							  		var thisid = $(this).attr('id');
+									var this_id = this.thisid.replace(/[0-9]/g,'');
+
+								   	$("#"+this_id).removeClass("after1");
+								   	$("#"+this_id).removeClass("after2");
+								   	$("#"+this_id).removeClass("after3");
+						   			$("#"+id).addClass("after2");
+								}).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
 	  							hab_selecionadas.splice(c, 1);
 	  						}
