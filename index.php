@@ -823,6 +823,9 @@
 				 	}else{
 				 		if(number == 1){
 					   		$("#"+id).removeClass("bold");
+						   	$("#"+id).removeClass("after1");
+						   	$("#"+id).removeClass("after2");
+						   	$("#"+id).removeClass("after3");
 				 		}
 						number++;
 					   	for(var i = number; i <= 3; i++){
