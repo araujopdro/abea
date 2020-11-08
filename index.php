@@ -615,7 +615,7 @@
 	                	}else if(i > 38){
 	                		ph = "ph: 40";
 	                	}
-	    				option.text = i+"  "+ph.small();
+	    				option.text = i+"  "+ph;
     				select.appendChild(option);
                 }
 
