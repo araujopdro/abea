@@ -858,22 +858,24 @@
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
 
-							// for(var i = 0; i < hab_selecionadas.length; i++){
-							// 	console.log(i);
-							// 	if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
-		  			// 				hab_selecionadas.splice(i, 1);
-							// 	}
-							// }
+						   	var _length = hab_selecionadas.length;
+							for(var i = 0; i < _length; i++){
+								console.log(i);
+								if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
+		  							hab_selecionadas.splice(i, 1);
+								}
+							}
 				 		}else if(number == 2){
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
 						   	$("#"+id).addClass("after1");
 
-							for(var i = 0; i < hab_selecionadas.length; i++){
-								// if(id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
-		  				// 			hab_selecionadas.splice(i, 1);
-								// }
+						   	var _length = hab_selecionadas.length;
+							for(var i = 0; i < _length; i++){
+								if(id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
+		  							hab_selecionadas.splice(i, 1);
+								}
 							}
 				 		}else if(number == 3){
 						   	$("#"+id).removeClass("after1");
@@ -881,10 +883,12 @@
 						   	$("#"+id).removeClass("after3");
 						   	$("#"+id).addClass("after2");
 
-							for(var i = 0; i < hab_selecionadas.length; i++){
-								// if(id+3 == hab_selecionadas[i]){
-		  				// 			hab_selecionadas.splice(i, 1);
-								// }
+
+						   	var _length = hab_selecionadas.length;
+							for(var i = 0; i < _length; i++){
+								if(id+3 == hab_selecionadas[i]){
+		  							hab_selecionadas.splice(i, 1);
+								}
 							}
 				 		}
 						number++;
