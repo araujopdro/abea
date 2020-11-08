@@ -18,29 +18,48 @@
 			$( document ).ready(function() {
 				$( "#form" ).submit(function( e ) {
 			        e.preventDefault();
-			        $('.submit').attr("disabled","disabled");
-			        $.ajax({
-			            url: 'cadastro.php',
-			            type:'POST',
-			            contentType: "application/x-www-form-urlencoded;charset=utf-8",
-			            data:
-			            {
-			                nome: $('#input-nome').val(),
-			                idade: $('#input-idade').val(),
-			                nacionalidade: $('#input-nacionalidade').val(),
-			                etnia: $('#input-etnia').val(),
-			                caracteristicas: $('#input-caracteristicas').val(),
-			                resistencia: $('#input-resistencia').val(),
-			                habilidades: $('#input-habilidades').val(),
-			                historia: $('#input-historia').val()
-			            },
-			            success: function(msg)
-			            {	
-			        		alert("Criado");
-			            }               
-			        });
+			        //$('.submit').attr("disabled","disabled");
+			        
+			        var char_habilidades = [];
+			        $.each($("input[name='habilidades']:checked"), function(){
+		                char_habilidades.push($(this).val());
+		            });
+			        
+			        var char_caracteristicas = [];
+			        $.each($("input[name='caracteristicas']:checked"), function(){
+		                char_caracteristicas.push($(this).val());
+		            });
+
+			        console.log($('#input-nome').val());
+			        console.log($('#select-idade').val());
+			        console.log($('#select-etnia').val());
+			        console.log($('#select-nacionalidade').val());
+			        console.log(char_habilidades);
+			        console.log(char_caracteristicas);
+
+			        // $.ajax({
+			        //     url: 'cadastro.php',
+			        //     type:'POST',
+			        //     contentType: "application/x-www-form-urlencoded;charset=utf-8",
+			        //     data:
+			        //     {
+			        //         nome: $('#input-nome').val(),
+			        //         idade: $('#input-idade').val(),
+			        //         nacionalidade: $('#input-nacionalidade').val(),
+			        //         etnia: $('#input-etnia').val(),
+			        //         caracteristicas: $('#input-caracteristicas').val(),
+			        //         resistencia: $('#input-resistencia').val(),
+			        //         habilidades: $('#input-habilidades').val(),
+			        //         historia: $('#input-historia').val()
+			        //     },
+			        //     success: function(msg)
+			        //     {	
+			        // 		alert("Criado");
+			        //     }               
+			        // });
 			    });
 			});
+
 			var nacionalidades = [
 				{
 					"nome":"Português",
@@ -552,7 +571,6 @@
 				// 	]
 				// }
 
-
 			function CreateNacionalidade(){
                 $('#select-nacionalidade').remove();
                 var c = document.createDocumentFragment();
@@ -587,7 +605,7 @@
                 $('#holder-nacionalidade').append(c);
 
 	            $('#select-nacionalidade').on('change', function() {
-			  		console.log(this.value);
+			  		//console.log(this.value);
 				});};
 			function CreateIdade(){
                 $('#select-idade').remove();
@@ -636,7 +654,7 @@
                 $('#holder-idade').append(c);
 
 	            $('#select-idade').on('change', function() {
-			  		console.log(this.value);
+			  		//console.log(this.value);
 				});};
 			function CreateEtnia(){
                 $('#select-etnia').remove();
@@ -672,7 +690,7 @@
                 $('#holder-etnia').append(c);
 
 	            $('#select-etnia').on('change', function() {
-			  		console.log(this.value);
+			  		//console.log(this.value);
 				});};
 			
 			var car_selecionadas = [];
@@ -851,7 +869,7 @@
 					   	for(var i = 1; i <= number; i++){
 					   		$("#"+id+i).prop("checked",true);
 					   		var l = hab_selecionadas.indexOf(id+i);
-					   		console.log("requisito-"+id+i);
+					   		//console.log("requisito-"+id+i);
 	  						$(".requisito-"+id+i).prop("disabled", false);
 					   		if(l < 0){
 				   				hab_selecionadas.push(id+i);
@@ -919,7 +937,7 @@
 					   		$("#"+id+i).prop("checked",false);
 					   	}
 				 	};
-				   	console.log(hab_selecionadas);
+				   //	console.log(hab_selecionadas);
 				});};
 
             $(document).ready(function() {
@@ -1045,7 +1063,7 @@
 					</div>
 				</div>
 
-				<input class="input-field" id="input-historia" type="text" name="historia" required="true">
+				<input class="form-control" id="input-historia" type="text" required="true">
 				<input class="submit" type="submit" name="submit" value="ENTRAR">
 			</form>
 		</div>
