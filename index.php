@@ -858,42 +858,30 @@
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
 
-						   	var _length = hab_selecionadas.length;
-							for(var i = 0; i < _length; i++){
-								console.log(i);
-								console.log(id+1);
-								console.log(id+2);
-								console.log(id+3);
-								console.log(hab_selecionadas[i]);
-								if(id+1 == hab_selecionadas[i] || id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
-		  							hab_selecionadas.splice(i, 1);
-								}
-							}
+							var a = hab_selecionadas.indexOf(id+1);
+							var b = hab_selecionadas.indexOf(id+2);
+							var c = hab_selecionadas.indexOf(id+3);
+  							hab_selecionadas.splice(a, 1);
+  							hab_selecionadas.splice(b, 1);
+  							hab_selecionadas.splice(c, 1);
 				 		}else if(number == 2){
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
 						   	$("#"+id).addClass("after1");
 
-						   	var _length = hab_selecionadas.length;
-							for(var i = 0; i < _length; i++){
-								if(id+2 == hab_selecionadas[i] || id+3 == hab_selecionadas[i]){
-		  							hab_selecionadas.splice(i, 1);
-								}
-							}
+							var b = hab_selecionadas.indexOf(id+2);
+							var c = hab_selecionadas.indexOf(id+3);
+  							hab_selecionadas.splice(b, 1);
+  							hab_selecionadas.splice(c, 1);
 				 		}else if(number == 3){
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
 						   	$("#"+id).addClass("after2");
 
-
-						   	var _length = hab_selecionadas.length;
-							for(var i = 0; i < _length; i++){
-								if(id+3 == hab_selecionadas[i]){
-		  							hab_selecionadas.splice(i, 1);
-								}
-							}
+							var c = hab_selecionadas.indexOf(id+3);
+  							hab_selecionadas.splice(c, 1);
 				 		}
 						number++;
 					   	for(var i = number; i <= 3; i++){
