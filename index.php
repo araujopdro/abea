@@ -814,6 +814,24 @@
     			margin: auto;
 			}
 
+			.habilidades-categoria-holder{
+				margin-left: 15px;
+			}
+
+			.habilidades-habilidade-holder{
+				display: flex;
+				flex-direction: column;
+   				margin-left: 15px;
+			}
+
+			.habilidades-niveis-holder{
+			    display: none;
+			}
+
+			.habilidades-categoria-name:before {
+			    content: " » ";
+			}
+
 			.caracteristicas-tooltip-holder{
 			    position: relative;
 			    display: block;
@@ -838,11 +856,6 @@
 			}
 			.caracteristicas-tooltip-holder:hover .caracteristicas-tooltip-text {
 				visibility: visible;
-			}
-
-			.habilidades-niveis-holder{
-			    display: flex;
-    			flex-direction: column;
 			}
 
 			.clickable{
