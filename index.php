@@ -1334,17 +1334,23 @@
 	                	option.value = i;
 	                	var ph;
 	                	if(i<=17){
-	                		ph = " | ph:15";
+	                		//ph = " | ph:15";
+	                		ph = "";
 	                	}else if(i > 17 && i <= 22){
-	                		ph = " | ph:20 - Recomendado";
+	                		//ph = " | ph:20 - Recomendado";
+	                		ph = "";
 	                	}else if(i > 22 && i <= 27){
-	                		ph = " | ph:25";
+	                		//ph = " | ph:25";
+	                		ph = " - Recomendado";
 	                	}else if(i > 27 && i <= 32){
-	                		ph = " | ph:30";
+	                		//ph = " | ph:30";
+	                		ph = "";
 	                	}else if(i > 32 && i <= 37){
-	                		ph = " | ph:35";
+	                		//ph = " | ph:35";
+	                		ph = "";
 	                	}else if(i > 38){
-	                		ph = " | ph:40";
+	                		//ph = " | ph:40";
+	                		ph = "";
 	                	}
 	    				option.text = i+"  "+ph;
     				select.appendChild(option);
@@ -1629,7 +1635,9 @@
 						var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
 	                		span.className = "preview-habilidade-"+id;
-	                		span.innerHTML = id.replace('-',' ')+" "+number-1;
+	                		console.log(number)
+	                		var a = number - 1;
+	                		span.innerHTML = id.replace('-',' ')+" "+a;
 							c.appendChild(span);
 
 				 		if(number == 1){
@@ -1892,15 +1900,15 @@
 		    display: flex;
     		flex-direction: column;
 		">
-			<h3>Nome:</h3>
+			<h5>Nome:</h5>
 			<span id="preview-nome"></span>
-			<h3>Idade:</h3>
+			<h5>Idade:</h5>
 			<span id="preview-idade"></span>
-			<h3>Nacionalidade:</h3>
+			<h5>Nacionalidade:</h5>
 			<span id="preview-nacionalidade"></span>
-			<h3>Características:</h3>
+			<h5>Características:</h5>
 			<span id="preview-caracteristicas"></span>
-			<h3>Habilidades:</h3>
+			<h5>Habilidades:</h5>
 			<span id="preview-habilidades"></span>
 		</div>
 		<div>
