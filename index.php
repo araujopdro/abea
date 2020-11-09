@@ -128,8 +128,56 @@
 						"Vaz",
 						"Vímara",
 						"Vimaranes",
-						"Guimarães"],
-					"sobrenomes":[""],
+						"Guimarães",
+						"Maria",
+						"Leonor",
+						"Matilde",
+						"Beatriz",
+						"Ana",
+						"Mariana",
+						"Madalena",
+						"Catarina",
+						"Carolina",
+						"Francisca"
+						],
+					"sobrenomes":[
+						"da Gama,"
+						"Vaz,"
+						"de Caminha,"
+						"Álvares,"
+						"Guimarães,"
+						"Bragança,"
+						"Braga,"
+						"Coimbra,"
+						"Sampaio,"
+						"Albuquerque,"
+						"Castro,"
+						"da Veiga,"
+						"Silva,"
+						"Santos,"
+						"Ferreira,"
+						"Pereira,"
+						"Oliveira,"
+						"Costa,"
+						"Rodrigues,"
+						"Martins,"
+						"Jesus,"
+						"Sousa,"
+						"Fernandes,"
+						"Gonçalves,"
+						"Gomes,"
+						"Lopes,"
+						"Marques,"
+						"Alves,"
+						"Almeida,"
+						"Ribeiro,"
+						"Pinto,"
+						"Carvalho,"
+						"Teixeira,"
+						"Moreira,"
+						"Correia,"
+						"Mendes,"
+						"Nunes,"],
 					"flavor": ""
 				},
 				{
@@ -201,12 +249,17 @@
 					"nome":"Francês",
 					"aliados":["Tamoios","Potiguares"],
 					"inimigos":["Portugueses","Temiminós","Tabajaras"],
+					"nomes":["Ames", "Aramis", "Arkansas", "Artois", "Astin", "Aubergine", "Aure", "Avignon", "Bardot", "Beaumont", "Bellamy", "Bern", "Berne", "Bijou", "Bijoux", "Blaise", "Blanchard", "Bouvier", "Burgundy", "Cabernet", "Cabriole", "Calloway", "Candide", "Cartier", "Chambray", "Chamonix", "Chandelier", "Chapin", "Charnell", "Chaucer", "Chevis", "Chiffon", "Ciel", "Clef", "Coeur", "Coligny", "Corbeau", "Corneille", "Coty", "Cress", "Currier", "Dandelion", "Danon", "Darcy", "Davignon", "Delaine", "Delaware", "De", "Leon", "Demi", "Denim", "Dessert", "Deveraux", "Devereaux", "Dior", "Dominique", "Elie", "Erté", "Harlequin", "Hilaire", "Izod", "Jacquard", "Jermaine", "Jocelin", "Jourdain", "Jules", "Jumeaux", "Juneau", "Lafayette", "Laramie", "Larue", "Lave", "Leal", "Le", "Blanc", "Levron", "Lieux", "Lisle", "Maine", "Marquette", "Marvel", "Michon", "Mirage", "Monet", "Noe", "Noel", "Noelle", "Normandy", "Nouvel", "Opaque", "Orane", "Oriel", "Orleans", "Patrice", "Pendant", "Petit", "Quincy", "Raine", "Remi", "Remy", "Renate", "Renaud", "Reverie", "Rigny", "Rousseau", "Sequin", "Severin", "Sidney", "Sigourney", "Suede", "Sy", "Sydnee", "Sydney", "Tananarive", "Tavin", "Theoren", "Toille", "Triage", "Turquoise", "Urbain", "Velour", "Vermont", "Vionnet", "Vogue", "Wisconsin"],
+					"sobrenomes":["Abadie", "Allard", "Archambeau", "Auclair", "Barbier", "Baudelaire", "Beausoleil", "Berger", "Blanchet", "Boucher", "Brun", "Carpentier", "Cartier", "Charbonnier", "Chatelain", "Chevrolet", "De", "De", "Donadieu", "Dupont", "Durand", "Farrow", "Forestier", "Fortin", "Gagneux", "Garcon", "Guillaume", "Laferriere", "Laflamme", "Lagrange", "Lambert", "Langlois", "Lavigne", "Lefebre", "Lemaitre", "Leroux", "Le", "Martel", "Moulin", "Picard", "Pomeroy", "Proulx", "Richelieu", "Sartre", "Serrurier", "Thibaut", "Travers", "Vaillancourt", "Verne", "Violette"],
+
 					"flavor": ""
 				},
 				{
 					"nome":"Holandês",
 					"aliados":[],
 					"inimigos":[],
+					"nomes":["Aechte", "Agnes", "Neese", "Alijt", "Baertge", "Baet", "Beatrijs", "Belye", "Belij", "Beverielle", "Claerkin", "Eva", "Geertruyt", "Trude", "Truyde", "Heyl", "Heiltgen", "Heyltgen", "Hilleken", "Jutte", "Katheline", "Kathrijn", "Katherijn", "Lijsbet", "Lijskin", "Lijss", "Lysken", "Machtelt", "Mechtelt", "Marij", "Mariss", "Marisse", "Margriete", "Griet", "Mergriet", "Stincken", "Wendelmoet", "Yolente", "Adam", "Adolf", "Adriaen", "Aelbert", "Aellaert", "Aerge", "Aernt", "Ambrosius81", "Amelonc", "Andries", "Ane", "Ansen", "Anthonis", "Aucker", "Barcke", "Bastyaen", "Beeck", "Berijs", "Bernt", "Bertelmeeus", "Bertout", "Block", "Boomkin", "Botghert", "Bouden", "Brantgen", "Brouwer", "Bruyn", "Bruynplas", "Bruys", "Bryn", "Calfgen", "Calis", "Kasijn", "Kerstiaen", "Charles", "Christoferus", "Kiggher", "Claes", "Clement", "Cnoep", "Coen", "Coenraet", "Colaert", "Coman", "Corijn", "Cornelis", "Craen", "Cryn", "Daem", "Dammas", "Adolf", "Danckaert", "Danel", "Delis", "Denijs", "Dirc", "Dixus", "Doede", "Doen", "Egbert", "Elaut", "Elias", "Elrick", "Elsken", "Emont", "Engbrecht", "Engel", "Ernst", "Evert", "Ewout", "Eymbert", "Garbrant", "Geen", "Geerbrant", "Geerlof", "Gelefas", "Gillis", "Genefaes", "Gheerlich", "Gherijt", "Ghijs", "Ghijsbrecht", "Giele", "Gijpken", "Gobel", "Gocken", "Godevaert", "Goedelt", "Goedert", "Goedkin", "Goedscalc", "Goerijs", "Goessel", "Goessen", "Goeswijn", "Goetgen", "Griffoen", "Gruter", "Hack", "Hairrijck", "Hamelt", "Hanssem", "Harbert", "Hartgeer", "Hase", "Hasman", "Hector", "Heynrick", "Hellinc", "Helmich", "Hemken", "Hemtgen", "Herman", "Hert", "Hertman", "Heyman", "Heynbrecht", "Hillebrant", "Hoven", "Hubert", "Huge", "Jacob", "Jacos", "Jan", "Jennin", "Joest", "Jonckhan", "Jorden", "Jortgen", "Yde", "Yewen", "Ysbrant", "Ysgerman", "Lambert", "Lambrecht", "Lanx", "Laurens", "Laussem", "Leenaert", "Lemmelroy", "Lens", "Lievin", "Lijbrecht", "Lijn", "Lob", "Lodewijck", "Lonijs", "Loy", "Louys", "Lubbert", "Lubbrecht", "Lucas", "Luytgen", "Manuel", "Maer", "Maes", "Marcelis", "Marcus", "Marten", "Matheeus", "Medaert", "Melcior", "Melis", "Messel", "Mette", "Meyner", "Michiel", "Moer", "Moes", "Mol", "Monic", "Nanne", "Nijs", "Noyken", "Noys", "Ogier", "Olivier", "Oste", "Ot", "Ouwels", "Paess", "Philip", "Pieter", "Pilgrim", "Pleskin", "Pouwels", "Querijn", "Reiner", "Reyer", "Reymbout", "Reymhout", "Reyns", "Rijc", "Rijckaert", "Rijckouts", "Robbert", "Roelof", "Roess", "Rover", "Rutger", "Sander", "Sarijs", "Scoutij", "Seyn", "Silvere", "Solin", "Spierinck", "Splinter", "Stans", "Steesken", "Steven", "Stoffel", "Stroys", "Stul", "Symon", "Tevin", "Thomas", "Thielma", "Thilmar", "Tybes", "Tyman", "Tygerma", "Tymer", "Faen", "Faes", "Valc", "Vastaer", "Veltgen", "Verbanu", "Vijncken", "Floer", "Florens", "Florijs", "Volkert", "Volpert", "Volquijn", "Vop", "Fock", "Forys", "Fraen", "Vrachtelt", "Vrederic", "Froyt", "Walraven", "Wemer", "Wensselijn", "Werbout", "Werner", "Wessel", "Wesser", "Weyncken", "Weyt", "Wiggert", "Wijck", "Wijnckel", "Wijnken", "Wijnrick", "Willeboort", "Willem", "Windermit", "Witte", "Wolf", "Wolfaert", "Wollebrant", "Wouter", "Zebert", "Zeel", "Zegher", "Zijbert", "Zijbout", "Zweer"],
+					"sobrenomes":["Adolf", "Adriaen", "Aelbert", "Aelbertssoen", "Aelbrechtsz", "Alairtsz", "Aernt", "Aerntssoen", "Aerntsz", "Aerts", "Aertsz", "Airntsz", "Aellert", "Allertssoen", "Andriessoen", "Driesz", "Thuenisz", "Baak", "Bakensz", "Bandcker", "Barc", "Baricxsoen", "Baerntsz", "Beerntsz", "Bernisz", "Berntsz", "Berijssoen", "Meesz", "Meeusz", "Bertoutssoen", "Berwoutssoen", "Blocx", "Borgherssoen", "Borkel", "Boud", "Boudinsz", "Bruysz", "Celensoen", "Claes", "Claessoen", "Claesz", "Clais", "Claiszoon", "Clayszoon", "Coenraetssoen", "Cornelijs", "Cornelisz", "Corvincxz", "Costensz", "Daemsz", "Dammesz", "Danckairtsz", "Daneelszoon", "Dirck", "Dirckz", "Dircxz", "Dircxzoon", "Egbert", "Emout", "Engelbrecht", "Engelbrechtsz", "Evertssoen", "Eynbrecht", "Fokke", "Fockenz", "Fockez", "Foygensz", "Truyde", "Geerijtsz", "Geretssoen", "Gerijtszoon", "Gerrijtsz", "Gheretsz", "Gherijtssoen", "Geenenz", "Gijs", "Ghijse", "Gijsbert", "Ghijsbertsz", "Ghijsbrechts", "Ghijsbrechtsz", "Gijsberts", "Gijsbertsz", "Gelis", "Gielisz", "Gills", "Gobelssoen", "Godensoen", "Godscalckszoen", "Goedscalcxz", "Goedscalxz", "Goerijs", "Goerts", "Goessen", "Goessenz", "Govert", "Govertssoen", "Harber", "Has", "Heinric", "Heinensoen", "Heinricxsoen", "Heinricxz", "Heinrixdochter", "Heyn", "Heynricx", "Heynricxzoon", "Heynrijcxz", "Heyns", "Hermanssoen", "Hessel", "Heyman", "Hubert", "Hubrechtsz", "Hugen", "Hugensz", "Hugez", "Huygenz", "Jacop", "Coppin", "Jacobsz", "Jacops", "Jacopszoon", "Jan", "Jansdochter", "Janssoen", "Jansz Dochter", "Janszoon", "Joordensz", "Jordensz", "Karijnssoen", "Karrekijn", "Knapensoen", "Koenensoen", "Corstken", "Kerstenszoon", "Korstanssoen", "Korstensz", "Korstiansz", "Korstkensz", "Lambertssoen", "Lambertsz", "Lap", "Laurens", "Lauwerijszoon", "Lenairt", "Lenairtsz", "Lensensoen", "Lonijs", "Louf", "Lowijc", "Loys", "Luydolf", "Luydolfsz", "Maessen", "Mairtinszoon", "Mertinsz", "Matheeusz", "Mathijssoen", "Matthijsz", "Melis", "Ment", "Michiel", "Miechielsz", "Moertssoen", "Molendochter", "Monic", "Odolfssoen", "Ot", "Ottensoen", "Ottez", "Pauwel", "Pouwelsz", "Peterssoen", "Pieterssoen", "Pieterszoon", "Pietersz wijf", "Pijnssoen", "Raekaertssoen", "Reinersz", "Reynkensz", "Rengersz", "Robbert", "Roelof", "Roeleofsz", "Roelofsz", "Rutgeersz", "Sarijs", "Sander", "Sandersz", "Sceelkensoen", "Scellincsz", "Schellenz", "Steefkensz", "Stevensz", "Simonsz", "Symonssoen", "Syzensoen", "Thomaesz", "Thielmansz", "Tielmanssoen", "Torf", "Vastaert", "Vastairts", "Voppensoen", "Vranck", "Vredericxz", "Walich", "Wessel", "Wesselssoen", "Weymbert", "Weymbertsz", "Wiersicxsoen", "Willems", "Willemsz", "Willemszoons", "Wll", "Wouter", "Wouterssoen", "Woutersz", "Wyaertssoen", "Wiersz", "Yewen", "Yewensz", "Ysbrant", "Ysbrantsz", "van Afferden", "van Altvorst", "van Andels", "van Ass", "van Bairy", "van Baten", "van Beest", "van Befoert", "van Bellefelt", "van den Berge", "van Bergen", "van Blitterswijck", "van der Bochorst", "van Boemel", "van Boven", "van den broeck", "van Camer", "van Campen", "van Coeme", "van Cuyck", "van Dam", "van Dereinne", "van Dijck", "van Doern", "van Doren", "van Driele", "van Dunen", "van Eer", "van Eeuwijck", "van Elven", "van Eyck", "van Gedoe", "van Gent", "van Goch", "van Goer ende", "van den Grave", "van den Gruythuyse", "van Ham", "van Hemert", "van Harsem", "van Heer", "van Herp", "van der Heyck", "van Hoekelem", "van Hoemborch", "van Hoevel", "van Holc", "van Horter", "van Huesden", "van Huyns", "van Huyssen", "van Huysen", "van Ingen", "van Kempen", "van den Keerchove", "van der Kerken", "van Kuswijck", "van Cuuck", "van Cuyk", "van Licht", "van der Linden", "van Lippenhoven", "van Lyt", "van Loeven", "van Loon", "van Lynscoten", "van der Maes", "van der Mase", "van Mendich", "van Meren", "van Moeck", "van der Molen", "van Muers", "van Mulicum", "van Mulichum", "van Muylchum", "van Munster", "van Nairden", "van Nersen", "van Nuys", "van der Nypoert", "van Oesterwijck", "van Olmen", "van Orssoyen", "van den Oudenbergen", "van der Paert", "van der Poert", "van Pol", "van den Poele", "van Poll", "van Put", "van Raemsdonc", "van Remunde", "van Reyd", "van Rijn", "van Rijswijc", "van Ringe", "van Sande", "van Sautboemel", "van der Schueren", "van Seghem", "van der Spiegel", "van Stralen", "van Syberghen", "van Theese", "in den tol", "van Tryest", "van den Velde", "van der Voer", "van Vliteren", "van Vouden", "uten Waerde", "van Wamel", "van Wanen", "van Wel", "van Weric", "van Wey", "in den Wijnckel", "van Wijnderswyc", "van der Wolde", "van den Wyel", "van der Wyel", "van Zanten", "van Zoelem", "van Zwalmen", "Vrijthof", "Vrijthof"],
 					"flavor": ""
 				},
 				{
@@ -1042,23 +1095,23 @@
 				},{
 				"nome":"Línguas",
 				"habilidades":[
-					{"nome":"Português","descricao":[""]},
-					{"nome":"Latim","descricao":[""]},
-					{"nome":"Espanhol","descricao":[""]},
-					{"nome":"Francês","descricao":[""]},
-					{"nome":"Árabe","descricao":[""]},
-					{"nome":"Tupi","descricao":[""]},
-					{"nome":"Guarani","descricao":[""]},
-					{"nome":"Aimoré","descricao":[""]},
-					{"nome":"Goitacá","descricao":[""]},
-					{"nome":"Maracá","descricao":[""]},
-					{"nome":"Tremembé","descricao":[""]},
-					{"nome":"Evê","descricao":[""]},
-					{"nome":"Fon","descricao":[""]},
-					{"nome":"Ioruba","descricao":[""]},
-					{"nome":"Quicongo","descricao":[""]},
-					{"nome":"Quimbundo","descricao":[""]},
-					{"nome":"Umbundo","descricao":[""]}
+					{"nome":"Português","descricao":[""],"requisitos":[null,"Português1","Português1;Português2"]},
+					{"nome":"Latim","descricao":[""],"requisitos":[null,"Latim1","Latim1;Latim2"]},
+					{"nome":"Espanhol","descricao":[""],"requisitos":[null,"Espanhol1","Espanhol1;Espanhol2"]},
+					{"nome":"Francês","descricao":[""],"requisitos":[null,"Francês1","Francês1;Francês2"]},
+					{"nome":"Árabe","descricao":[""],"requisitos":[null,"Árabe1","Árabe1;Árabe2"]},
+					{"nome":"Tupi","descricao":[""],"requisitos":[null,"Tupi1","Tupi1;Tupi2"]},
+					{"nome":"Guarani","descricao":[""],"requisitos":[null,"Guarani1","Guarani1;Guarani2"]},
+					{"nome":"Aimoré","descricao":[""],"requisitos":[null,"Aimoré1","Aimoré1;Aimoré2"]},
+					{"nome":"Goitacá","descricao":[""],"requisitos":[null,"Goitacá1","Goitacá1;Goitacá2"]},
+					{"nome":"Maracá","descricao":[""],"requisitos":[null,"Maracá1","Maracá1;Maracá2"]},
+					{"nome":"Tremembé","descricao":[""],"requisitos":[null,"Tremembé1","Tremembé1;Tremembé2"]},
+					{"nome":"Evê","descricao":[""],"requisitos":[null,"Evê1","Evê1;Evê2"]},
+					{"nome":"Fon","descricao":[""],"requisitos":[null,"Fon1","Fon1;Fon2"]},
+					{"nome":"Ioruba","descricao":[""],"requisitos":[null,"Ioruba1","Ioruba1;Ioruba2"]},
+					{"nome":"Quicongo","descricao":[""],"requisitos":[null,"Quicongo1","Quicongo1;Quicongo2"]},
+					{"nome":"Quimbundo","descricao":[""],"requisitos":[null,"Quimbundo1","Quimbundo1;Quimbundo2"]},
+					{"nome":"Umbundo","descricao":[""],"requisitos":[null,"Umbundo1","Umbundo1;Umbundo2"]}
 				]}];
 			
 				// ,
@@ -1421,9 +1474,6 @@
 						    	rqlist.push("requisito-"+hab_selecionadas[i]);
 						    }
 
-						    console.log(rqlist);
-						    console.log(class_arr);
-
 						    if(class_arr.every(r => rqlist.includes(r))){
 							    console.log('Found all of', class_arr, 'in', rqlist);
   								$(this).prop("disabled", false);
@@ -1432,10 +1482,10 @@
   								$(this).prop("disabled", true);
 							}
 						});
-					   	console.log("number: "+number);
 					   	$("#"+id).addClass("bold");
 				 	}else{
 				 		if(number == 1){
+				 			console.log(id);
 					   		$("#"+id).removeClass("bold");
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
@@ -1523,16 +1573,29 @@
 				        $(this).css('display','flex');
 				});
             }
-
+            var sorted_names = [];
+            var cur_name = 0;
             function RandomName(){
+            	$("#previous-name").show();
             	for(var i = 0; i < nacionalidades.length; i++){
             		if($('#select-nacionalidade').val() == nacionalidades[i].nome){
             			var a = randomInteger(0, nacionalidades[i].nomes.length-1);
             			var b = randomInteger(0, nacionalidades[i].sobrenomes.length-1);
             			console.log(a +" "+ b);
+            			sorted_names.push(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
             			$('#input-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
+            			cur_name = sorted_names.length-1;
             		}
             	}
+            }
+
+            function PreviousName(){
+            	if(cur_name - 1 < 0){
+            		return;
+            	}
+            	$('#input-nome').val(sorted_names[cur_name]);
+            	cur_name--;
+
             }
 
             function randomInteger(min, max) {
@@ -1612,6 +1675,9 @@
 				font-style: italic;
 				cursor: pointer;
 			}
+			#previous-name{
+				display: none;
+			}
 
 		</style>
 	</head>
@@ -1624,7 +1690,7 @@
 				<div class="form-group" id="holder-nome">
 					<label for="input-nome">Escreva o seu nome.</label>
 				    <input type="text" class="form-control" id="input-nome">
-				    <small class="form-text text-muted"><span class="clickable" onclick="RandomName();">Clique aqui</span> para gerar um nome aleatório.</small>
+				    <small class="form-text text-muted"><span class="clickable" onclick="RandomName();">Clique aqui</span> para gerar um nome aleatório.</small><br><small id="previous-name" onclick="PreviousName()"></small>
 				</div>
 				
 				<div>
