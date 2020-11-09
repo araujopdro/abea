@@ -1471,10 +1471,12 @@
 	                var c = document.createDocumentFragment();
 	                var div_holder = document.createElement("div");
 	                	div_holder.className = "habilidades-categoria-holder";
+	                	div_holder.id = "habilidades-categoria-holder-"+habilidades[i].nome;
 
 	                	var span_name = document.createElement("span");
 	                		span_name.className = "habilidades-categoria-name";
 	                		span_name.innerHTML = habilidades[i].nome;
+	                		span_name.onclick = function(){ToggleCategoria(this)};
 						div_holder.appendChild(span_name);
 
 	                	var div_habilidade_holder = document.createElement("div");
@@ -1571,6 +1573,7 @@
                 	c.appendChild(div_holder);
                 	$('#holder-habilidades').append(c);
                 	$(".habilidades-niveis-holder").slideUp('fast');
+                	$(".habilidades-categoria-holder").slideUp('fast');
                 }
 
 
@@ -1591,7 +1594,7 @@
 	                		span.innerHTML = id.replace('-',' ')+" "+number;
 							c.appendChild(span);
 	                	$("#preview-habilidades").append(c);
-	                	
+
   						var _hab = [];
 				   		$.each($("input[name='habilidades']:checked"), function(){
 			                _hab.push($(this).val());
@@ -1699,6 +1702,13 @@
             	CreateIdade();
             	CreateEtnia();
             });
+
+            function ToggleCategoria(el){
+            	$("#habilidades-categoria-holder-"+el.id).slideToggle('fast', function() {
+				    if ($(this).is(':visible'))
+				        $(this).css('display','flex');
+				});
+            }
 
             function ToggleNiveis(el){
             	$("#"+el.id+"-niveis").slideToggle('fast', function() {
@@ -1844,10 +1854,7 @@
 				font-style: italic;
 				cursor: pointer;
 			}
-			#random-name{
-				display: none;
-			}
-			#previous-name,#previous-portrait{
+			#previous-name,#previous-portrait, #random-name{
 				display: none;
 			}
 
