@@ -1699,7 +1699,7 @@
             			cur_name = sorted_names.length-1;
             		}
             	}
-            	if(sorted_names.length == 2){
+            	if(sorted_names.length >= 2){
             		$("#previous-name").show();
             	}
             }
