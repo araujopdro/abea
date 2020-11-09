@@ -1584,7 +1584,9 @@
             var sorted_names = [];
             var cur_name = 0;
             function RandomName(){
-            	$("#previous-name").show();
+            	if(sorted_names.length == 2){
+            		$("#previous-name").show();
+            	}
             	for(var i = 0; i < nacionalidades.length; i++){
             		if($('#select-nacionalidade').val() == nacionalidades[i].nome){
             			var a = randomInteger(0, nacionalidades[i].nomes.length-1);
@@ -1597,7 +1599,7 @@
             }
 
             function PreviousName(){
-            	console.log(cur_name)
+            	console.log(cur_name);
             	if(cur_name - 1 < 0){
             		$("#previous-name").hide();
             		return;
