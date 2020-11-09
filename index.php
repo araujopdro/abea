@@ -1582,16 +1582,16 @@
 					console.log(number + " " + id)
 					
                 	$(".preview-habilidade-"+id).remove();
-					var c = document.createDocumentFragment();
-                	var span = document.createElement("span");
-                		span.className = "preview-habilidade-"+id;
-                		span.innerHTML = id.replace('-',' ')+" "+number;
-						c.appendChild(span);
-                	$("#preview-habilidades").append(c);
-
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
-				   		//hab_selecionadas.push(id+number+"");
+
+				   		var c = document.createDocumentFragment();
+	                	var span = document.createElement("span");
+	                		span.className = "preview-habilidade-"+id;
+	                		span.innerHTML = id.replace('-',' ')+" "+number;
+							c.appendChild(span);
+	                	$("#preview-habilidades").append(c);
+	                	
   						var _hab = [];
 				   		$.each($("input[name='habilidades']:checked"), function(){
 			                _hab.push($(this).val());
