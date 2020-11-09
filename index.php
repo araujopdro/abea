@@ -1161,7 +1161,88 @@
 						"Fôlego1",
 						"Fôlego1;Fôlego2;Contramagia1",
 						"Fôlego1;Fôlego2;Fôlego3;Contramagia1;Contramagia2"],"descricao":["o uso deste poder permite ao pajé saber quais são todos os itens mágicos e feitiços em efeito, sem identificar suas propriedades, dentro de um raio de trinta varas (33 metros)", "este poder, em caso de sucesso, permite ao pajé identificar as propriedades de um feitiço ou item mágico","este poder pode ser utilizado para cancelar um ritual em andamento ou pôr um fim nos efeitos de um poder com uma certa duração"]}]
-				},{
+				},
+				{
+					"nome":"Poderes de Ifá",
+					"habilidades":[
+						{
+							"nome":"Ifá",
+							"requisitos":[null,"Ifá1","Ifá2"],
+							"descricao":["Energia 5", "Energia 10","Energia 20"]
+						},
+
+						{
+							"nome":"Saúde",
+					 		"niveis":["Curar danos","Curar maldades","Afastar morte"],
+					 		"requisitos":[
+					 			"Ifá1",
+								"Ifá1;Ifá2;Saúde1",
+								"Ifá1;Ifá2;Ifá3;Saúde1;Saúde2"
+							],
+					 		"descricao":["deste poder cura dois pontos de dano do alvo. Não pode ser utilizado no mesmo alvo mais de uma vez por dia","Este poder cura os efeitos de qualquer veneno, paralisia ou doença (comum ou incomum). Também pode remover energias negativas do corpo causadas por Enfraquecer inimigo ou os poderes de Fôlego Indefeso ou Remover força","preserva o corpo de um recém-morto (menos de um minuto) por 24 horas, sendo assim possível reverter os efeitos que causaram a morte e devolver a vida. Se a causa de morte não for anulada dentro deste período, a vida do alvo torna-se irrecuperável"]
+					 	},
+						{
+							"nome":"Detecção",
+							"niveis":["Detectar veneno","Detectar magia","Detectar obstáculo"],
+					 		"requisitos":[
+					 			"Ifá1",
+								"Ifá1;Ifá2;Detecção1",
+								"Ifá1;Ifá2;Ifá3;Detecção1;Detecção2"
+							],
+							"descricao":["o sacerdote consegue detectar a presença de venenos em alimentos, bebidas ou outros lugares", "Detecta a presença de magia no ambiente, seja poderes ou objetos. Identifica, inclusive, graças divinas ativas","O uso bem-sucedido deste poder permite ao sacerdote receber uma advertência sobre um obstáculo no seu caminho. O aviso é específico, e pode se referir a uma pessoa, criatura, objeto, lugar, situação ou qualquer outra coisa que pode impedir o sucesso do sacerdote no seu empreendimento atual"]
+						},
+						{
+							"nome":"Proteção",
+							"niveis":["Proteger contra inimigos","Proteger contra armas","Proteger contra magia"],
+					 		"requisitos":[
+					 			"Ifá1",
+								"Ifá1;Ifá2;Proteção1",
+								"Ifá1;Ifá2;Ifá3;Proteção1;Proteção2"
+							],
+							"descricao":["o alvo pode escolher qualquer pessoa “inimiga” (que não precisa estar presente) para receber uma penalidade de -1 em qualquer teste contra o personagem. Também, se o personagem desejar evitar seu inimigo, torna-se mais difícil (porém não impossível) para aquele inimigo encontrá-lo. Este poder funciona até o próximo amanhecer", "este poder pode ser invocado durante combate, aplicando um bônus de +1 na defesa passiva do alvo até o final da batalha","qualquer magia maliciosa utilizada contra o alvo sofre uma penalidade de -3 na façanha. O efeito dura uma hora"]
+						},
+						{
+							"nome":"Sorte",
+							"niveis":["Sorte +1","Sorte +2","Sorte +3"],
+					 		"requisitos":[
+					 			"Ifá1",
+								"Ifá1;Ifá2;Sorte1",
+								"Ifá1;Ifá2;Ifá3;Sorte1;Sorte2"
+							],
+							"descricao":["o alvo pode escolher lançar novamente um dado em todas as suas façanhas", "o alvo pode escolher lançar novamente até dois dados em todas as suas façanhas","o alvo pode escolher lançar novamente até três dados em todas as suas façanhas"]
+						},
+						{
+							"nome":"Energia negativa",
+							"niveis":["Causar dano","Enfraquecer inimigo","Afastar inimigo"],
+					 		"requisitos":[
+					 			"Ifá1",
+								"Ifá1;Ifá2;Energianegativa1",
+								"Ifá1;Ifá2;Ifá3;Energianegativa1;Energianegativa2"
+							],
+							"descricao":["o uso deste poder causa dois pontos de dano. O contato físico é necessário", "o sacerdote consegue amaldiçoar um inimigo, causando uma penalidade de -2 em todos os testes do inimigo durante 24 horas. O ritual leva quatros horas e o inimigo não precisa estar presente","este poder permite ao sacerdote mandar embora alguém com pretensões maldosas ou hostis. O inimigo não buscará nem molestará o sacerdote de nenhuma forma durante seis horas. O inimigo precisa estar no campo de visão do sacerdote para o poder funcionar. Funciona contra pessoas e criaturas de tamanho I ou menor. Seguidores de Ifá, Fé ou Fôlego são imunes a este poder"]
+						},
+						{
+							"nome":"Influência",
+							"niveis":["Acalmar","Mudar sentimentos","Encantar"],
+					 		"requisitos":[
+					 			"Ifá1",
+								"Ifá1;Ifá2;Influência1",
+								"Ifá1;Ifá2;Ifá3;Influência1;Influência2"
+							],
+							"descricao":["acalma alguém irritado ou bravo. Também pode ser usado para remover confusão ou loucura causada por criaturas sobrenaturais, fazendo o alvo pensar de forma clara e lúcida. O efeito é imediato, mas o alvo pode ficar irritado novamente, dependendo da situação", "influencia o sentimento do alvo sobre uma pessoa específica, fazendo o alvo ter uma opinião melhor ou pior daquela pessoa. O efeito dura seis horas, a não ser que seja anulado por Dissipar magia ou Contrafeitiço","Coloca um poderoso encantamento sobre uma pessoa ou criatura, que faz com que o alvo fique disposto a obedecer qualquer comando do sacerdote que não seja machucar si mesmo. O efeito dura 24 horas, a não ser que venha a ser anulado por Dissipar magia ou Contrafeitiço, ou quebrado pelo próprio sacerdote. O sacerdote pode controlar apenas um ser encantado por vez. O alvo possui consciência de tudo que é ordenado pelo sacerdote, e muitas vezes busca vingança após o término do efeito. O alvo precisa entender o comando do sacerdote antes de agir, o que limita o que o sacerdote consegue fazer com animais e outras criaturas de inteligência limitada. Se alguém atacar o alvo, este se protege normalmente. Se o sacerdote atacar o alvo ou mandar o alvo a atacar a si mesmo, o encantamento se quebra. Quem possui Fé ou Fôlego é imune a este poder"]
+						},
+						{
+							"nome":"Manuseio espiritual",
+							"niveis":["Comunicar-se com ancestrais","Encurtar o tempo","Criar Sigidi"],
+					 		"requisitos":[
+					 			"Ifá1",
+								"Ifá1;Ifá2;Manuseioespiritual1",
+								"Ifá1;Ifá2;Ifá3;Manuseioespiritual1;Manuseioespiritual2"
+							],
+							"descricao":["através da adivinhação, o sacerdote faz contato com um dos seus antepassados falecidos. Durante 10 minutos, o invocado pode responder perguntas para as quais sabia a resposta em vida. É necessário um ritual de quatro horas para utilizar este poder", "Tendo um alvo disposto (que pode ser ele mesmo), o sacerdote coloca esta pessoa no meio do caminho entre o mundo físico e o astral, desacelerando o tempo para que aquela pessoa possa andar quatro vezes mais rápido do que o faz normalmente. A pessoa não pode fazer outra coisa senão ir até seu destino escolhido, e o efeito some no momento em que ela chega. O sacerdote só consegue manter uma pessoa por vez sob este efeito","o Sigidi é uma criação de argila, animada através de um ritual. O sacerdote precisa primeiro fabricar o Sigidi, misturando elementos apropriados ao seu propósito, um processo que leva 24 horas. O Sigidi pode ser criado para imitar a forma de um ser humano ou outro mamífero, com ¼ a 1 vara de altura (28 a 110 centímetros). Depois de animado, o Sigidi pode ser ordenado a fazer uma tarefa qualquer para o sacerdote, por exemplo: levar ou procurar um objeto, ou atacar alguém. O Sigidi não consegue falar, mas se tiver mãos, poderá manusear objetos e facas. O Sigidi pode ser destruído com ataques físicos ou pelo uso de Dissipar magia ou Contrafeitiço. De qualquer modo, o Sigidi não dura mais de 24 horas, voltando a ser uma figura inanimada de argila depois"]}
+					]
+				},
+				{
 				"nome":"Línguas",
 				"habilidades":[
 					{"nome":"Português","descricao":[""],"requisitos":[null,"Português1","Português1;Português2"]},
@@ -1182,31 +1263,6 @@
 					{"nome":"Quimbundo","descricao":[""],"requisitos":[null,"Quimbundo1","Quimbundo1;Quimbundo2"]},
 					{"nome":"Umbundo","descricao":[""],"requisitos":[null,"Umbundo1","Umbundo1;Umbundo2"]}
 				]}];
-			
-				// ,
-				// 
-				// {
-				// 	"nome":"Poderes de Ifá",
-				// 	"habilidades":[
-				// 		{"nome":"Ifá","requisitos":["!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego","!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego","!Armas;!Arquearia;!Esgrima;!Fé;!Fôlego"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-
-
-				// 		{"nome":"Cura","niveis":["Curar danos","Curar maldades","Afastar morte"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["o uso deste poder cura dois pontos de dano do alvo. Não pode ser utilizado no mesmo alvo mais de uma vez por dia", "este poder cura os efeitos de qualquer veneno, paralisia ou doença (comum ou incomum). Também pode remover energias negativas do corpo causadas por Enfraquecer inimigo ou os poderes de Fôlego Indefeso ou Remover força","preserva o corpo de um recém-morto (menos de um minuto) por 24 horas, sendo assim possível reverter os efeitos que causaram a morte e devolver a vida. Se a causa de morte não for anulada dentro deste período, a vida do alvo torna-se irrecuperável"]},
-
-
-				// 		{"nome":"Saúde","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-				// 		{"nome":"Detecção","niveis":["Detectar veneno","Detectar magia","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-				// 		{"nome":"Energia negativa","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-				// 		{"nome":"Influência","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-				// 		{"nome":"Manuseio espiritual","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Ifá2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-				// 		{"nome":"Influência","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Ifá1","Fôlego2","Ifá3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]}
-				// 	]
-				// }
 
 
 			var car_selecionadas = [];
@@ -1634,9 +1690,6 @@
             var sorted_names = [];
             var cur_name = 0;
             function RandomName(){
-            	if(sorted_names.length == 2){
-            		$("#previous-name").show();
-            	}
             	for(var i = 0; i < nacionalidades.length; i++){
             		if($('#select-nacionalidade').val() == nacionalidades[i].nome){
             			var a = randomInteger(0, nacionalidades[i].nomes.length-1);
@@ -1645,6 +1698,9 @@
             			$('#input-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
             			cur_name = sorted_names.length-1;
             		}
+            	}
+            	if(sorted_names.length == 2){
+            		$("#previous-name").show();
             	}
             }
 
