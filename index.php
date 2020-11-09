@@ -1480,7 +1480,7 @@
 
 	                	var div_habilidade_holder = document.createElement("div");
 	                		div_habilidade_holder.className = "habilidades-habilidade-holder";
-	                		div_habilidade_holder.id = "habilidades-categoria-holder-"+habilidades[i].nome;
+	                		div_habilidade_holder.id = "habilidades-categoria-holder-"+habilidades[i].nome.replace(/ /g,'-');
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
             					var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'-');
 
@@ -1704,7 +1704,9 @@
             });
 
             function ToggleCategoria(el){
-            	$("#habilidades-categoria-holder-"+el.id).slideToggle('fast', function() {
+            	console.log("toggle categoria");
+            	console.log("habilidades-categoria-holder-"+el.id);
+            	$("#habilidades-categoria-holder-"+el.id.replace(/ /g,'-')).slideToggle('fast', function() {
 				    if ($(this).is(':visible'))
 				        $(this).css('display','flex');
 				});
