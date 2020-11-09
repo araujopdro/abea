@@ -1581,6 +1581,7 @@
 					var id = this.id.replace(/[0-9]/g, '');
 					console.log(number + " " + id)
 					
+                	$(".preview-habilidade-"+id).remove();
 					var c = document.createDocumentFragment();
                 	var span = document.createElement("span");
                 		span.className = "preview-habilidade-"+id;
