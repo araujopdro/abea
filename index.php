@@ -1725,6 +1725,7 @@
         			sorted_portraits.push(a);
         			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+a+".jpg");
         			cur_portrait = sorted_portraits.length-1;
+            		console.log(sorted_portraits);
             	}
             	if(sorted_portraits.length >= 2){
             		$("#previous-portrait").show();
@@ -1732,6 +1733,7 @@
             }
 
             function PreviousPortrait(){
+            	console.log(sorted_portraits);
             	console.log(cur_portrait);
             	if(cur_portrait - 1 < 0){
             		$("#previous-portrait").hide();
