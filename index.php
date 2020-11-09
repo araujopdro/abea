@@ -1718,7 +1718,7 @@
 
             var sorted_portraits = [];
             var cur_portrait = 0;
-            function RandomName(){
+            function RandomPortrait(){
             	for(var i = 0; i < 124; i++){
             		var a = randomInteger(0, 124);
 
@@ -1731,14 +1731,14 @@
             	}
             }
 
-            function PreviousName(){
+            function PreviousPortrait(){
             	console.log(cur_portrait);
             	if(cur_portrait - 1 < 0){
             		$("#previous-portrait").hide();
             		return;
             	}
             	cur_portrait--;
-    			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+sorted_names[cur_portrait]+".jpg");
+    			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+sorted_portraits[cur_portrait]+".jpg");
 
             }
 
@@ -1839,10 +1839,10 @@
 				<div class="form-group" id="holder-nacionalidade"></div>
 				<div class="form-group" id="holder-etnia"></div>
 				<div  class="form-group">
-					<span><img id="input-portrait" style="width: 100%;" src="/imgs/portraits/portrait0.jpg"></span>
+					<span style="display: block;width: 40%;"><img id="input-portrait" style="width: 100%;" src="/imgs/portraits/portrait0.jpg"></span>
 
-				    <small class="form-text text-muted" id="random-portrait"><span class="clickable" onclick="RandomName();">Clique aqui</span> para gerar um retrato aleatório.</small>
-				    <small class="form-text text-muted" id="previous-portrait"><span class="clickable" onclick="PreviousName();"><- Retrato anterior</span></small>
+				    <small class="form-text text-muted" id="random-portrait"><span class="clickable" onclick="RandomPortrait();">Clique aqui</span> para gerar um retrato aleatório.</small>
+				    <small class="form-text text-muted" id="previous-portrait"><span class="clickable" onclick="PreviousPortrait();"><- Retrato anterior</span></small>
 				</div>
 				<div class="form-group" id="holder-nome">
 					<label for="input-nome">Escreva o seu nome.</label>
