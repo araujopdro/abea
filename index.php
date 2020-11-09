@@ -1174,6 +1174,7 @@
                 var option = document.createElement("option");
                 	option.value = "";
     				option.text = "(...)";
+    				option.selected = true;
     				option.disabled = true;
 				select.appendChild(option);
 
@@ -1212,6 +1213,7 @@
                 var option = document.createElement("option");
                 	option.value = "";
     				option.text = "(...)";
+    				option.selected = true;
     				option.disabled = true;
 				select.appendChild(option);
 
@@ -1262,6 +1264,7 @@
                 var option = document.createElement("option");
                 	option.value = "";
     				option.text = "(...)";
+    				option.selected = true;
     				option.disabled = true;
 				select.appendChild(option);
 
