@@ -1419,7 +1419,7 @@
 						checkbox.value = caracteristicas[i].nome;
 
 					var label = document.createElement('label')
-						label.htmlFor = "input-caracteristicas-"+caracteristicas[i].nome;
+						label.htmlFor = "input-caracteristicas-"+caracteristicas[i].nome.replace(/ /g,'');
 						label.appendChild(document.createTextNode(caracteristicas[i].nome));
 						label.className = "label-caracteristicas";
 
@@ -1452,7 +1452,7 @@
 				   		var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
 	                		console.log(this)
-	                		//span.innerHTML = this.value();
+	                		span.innerHTML = this.value;
 	                		span.id = "preview-caracteristica-"+this.id;
 							c.appendChild(span);
 	                	$("#preview-caracteristicas").append(c);
