@@ -1712,8 +1712,37 @@
             	}
             	cur_name--;
             	$('#input-nome').val(sorted_names[cur_name]);
+            }
+
+
+
+            var sorted_portraits = [];
+            var cur_portrait = 0;
+            function RandomName(){
+            	for(var i = 0; i < 124; i++){
+            		var a = randomInteger(0, 124);
+
+        			sorted_portraits.push(a);
+        			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+a+".jpg");
+        			cur_portrait = sorted_portraits.length-1;
+            	}
+            	if(sorted_portraits.length >= 2){
+            		$("#previous-portrait").show();
+            	}
+            }
+
+            function PreviousName(){
+            	console.log(cur_portrait);
+            	if(cur_portrait - 1 < 0){
+            		$("#previous-portrait").hide();
+            		return;
+            	}
+            	cur_portrait--;
+    			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+sorted_names[cur_portrait]+".jpg");
 
             }
+
+
 
             function randomInteger(min, max) {
 			  return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -1798,6 +1827,9 @@
 			#previous-name{
 				display: none;
 			}
+			#previous-portrait{
+				display: none;
+			}
 
 		</style>
 	</head>
@@ -1807,7 +1839,10 @@
 				<div class="form-group" id="holder-nacionalidade"></div>
 				<div class="form-group" id="holder-etnia"></div>
 				<div  class="form-group">
-					<img src="/imgs/portraits/portrait0.jpg">
+					<span><img id="input-portrait" style="width: 100%;" src="/imgs/portraits/portrait0.jpg"></span>
+
+				    <small class="form-text text-muted" id="random-portrait"><span class="clickable" onclick="RandomName();">Clique aqui</span> para gerar um retrato aleatório.</small>
+				    <small class="form-text text-muted" id="previous-portrait"><span class="clickable" onclick="PreviousName();"><- Retrato anterior</span></small>
 				</div>
 				<div class="form-group" id="holder-nome">
 					<label for="input-nome">Escreva o seu nome.</label>
