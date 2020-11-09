@@ -1626,6 +1626,12 @@
 						});
 					   	$("#"+id).addClass("bold");
 				 	}else{
+						var c = document.createDocumentFragment();
+	                	var span = document.createElement("span");
+	                		span.className = "preview-habilidade-"+id;
+	                		span.innerHTML = id.replace('-',' ')+" "+number-1;
+							c.appendChild(span);
+
 				 		if(number == 1){
 				 			console.log(id);
 					   		$("#"+id).removeClass("bold");
@@ -1654,6 +1660,7 @@
 				            });
 					        hab_selecionadas = _hab;
 				 		}else if(number == 2){
+	                		$("#preview-habilidades").append(c);
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
@@ -1676,6 +1683,7 @@
 				            });
 					        hab_selecionadas = _hab;
 				 		}else if(number == 3){
+	                		$("#preview-habilidades").append(c);
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
@@ -1865,11 +1873,17 @@
 			#previous-name,#previous-portrait, #random-name{
 				display: none;
 			}
+			.habilidades-categoria-name{
+				text-decoration: underline;
+			}
 
+			.habilidades-categoria-name:before {
+			    content: " » ";
+			}
 		</style>
 	</head>
 	<body> 
-		<div style="
+		<div class="modal" style="
 		    width: 20%;
 		    background-color: rebeccapurple;
 		    position: fixed;
@@ -1878,10 +1892,15 @@
 		    display: flex;
     		flex-direction: column;
 		">
+			<h3>Nome:</h3>
 			<span id="preview-nome"></span>
+			<h3>Idade:</h3>
 			<span id="preview-idade"></span>
+			<h3>Nacionalidade:</h3>
 			<span id="preview-nacionalidade"></span>
+			<h3>Características:</h3>
 			<span id="preview-caracteristicas"></span>
+			<h3>Habilidades:</h3>
 			<span id="preview-habilidades"></span>
 		</div>
 		<div>
