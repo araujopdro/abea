@@ -1418,7 +1418,7 @@
 
                 	var checkbox = document.createElement('input');
                 		checkbox.className = "input-caracteristicas";
-						checkbox.id = caracteristicas[i].nome.replace(/ /g,'');
+						checkbox.id = caracteristicas[i].nome.replace(/ /g,'-');
 						checkbox.name = "caracteristicas";
 						checkbox.type = "checkbox";
 						checkbox.value = caracteristicas[i].nome;
