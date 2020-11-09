@@ -1579,6 +1579,7 @@
 					var r = /\d+/;
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
+					console.log(number + " " + id)
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
 				   		//hab_selecionadas.push(id+number+"");
