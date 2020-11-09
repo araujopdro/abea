@@ -1806,10 +1806,12 @@
 			<form id="form">
 				<div class="form-group" id="holder-nacionalidade"></div>
 				<div class="form-group" id="holder-etnia"></div>
-
+				<div  class="form-group">
+					<img src="/imgs/portraits/portrait0.jpg">
+				</div>
 				<div class="form-group" id="holder-nome">
 					<label for="input-nome">Escreva o seu nome.</label>
-				    <input type="text" class="form-control" id="input-nome">
+				    <input type="text" class="form-control" id="input-nome" placeholder="(...)">
 				    <small class="form-text text-muted" id="random-name"><span class="clickable" onclick="RandomName();">Clique aqui</span> para gerar um nome aleatório.</small>
 				    <small class="form-text text-muted" id="previous-name"><span class="clickable" onclick="PreviousName();"><- Nome anterior</span></small>
 				</div>
