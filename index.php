@@ -1826,19 +1826,36 @@
 			#random-name{
 				display: none;
 			}
-			#previous-name{
-				display: none;
-			}
-			#previous-portrait{
+			#previous-name,#previous-portrait{
 				display: none;
 			}
 
 		</style>
 	</head>
 	<body> 
+		<div style="
+		    width: 20%;
+		    height: 200px;
+		    background-color: rebeccapurple;
+		    position: fixed;
+		    top: 5%;
+		    left: 2.5%;
+		">
+			<span id="preview-name"></span>
+			<span id="preview-nacionalidade"></span>
+			<span id="preview-caracteristicas"></span>
+			<span id="preview-habilidades"></span>
+		</div>
 		<div>
+			<h2 style="margin-top: 5%;">Criar Personagem</h2>
 			<form id="form">
-				<div class="form-group" id="holder-nacionalidade"></div>
+				<div class="form-group" id="holder-nacionalidade">
+					
+					<div>
+						<img src="">
+
+					</div>
+				</div>
 				<div class="form-group" id="holder-etnia"></div>
 				<div  class="form-group">
 					<span style="display: block;width: 40%;"><img id="input-portrait" style="width: 100%;" src="/imgs/portraits/portrait0.jpg"></span>
