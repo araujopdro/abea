@@ -1174,6 +1174,7 @@
                 var option = document.createElement("option");
                 	option.value = "";
     				option.text = "(...)";
+    				option.disabled = true;
 				select.appendChild(option);
 
                 for(var i = 0; i < nacionalidades.length; i++){
@@ -1198,6 +1199,7 @@
                 $('#holder-nacionalidade').append(c);
 
 	            $('#select-nacionalidade').on('change', function() {
+	            	$("#random-name").show();
 			  		//console.log(this.value);
 				});};
 			function CreateIdade(){
@@ -1210,6 +1212,7 @@
                 var option = document.createElement("option");
                 	option.value = "";
     				option.text = "(...)";
+    				option.disabled = true;
 				select.appendChild(option);
 
                 for(var i = 16; i < 61; i++){
@@ -1259,6 +1262,7 @@
                 var option = document.createElement("option");
                 	option.value = "";
     				option.text = "(...)";
+    				option.disabled = true;
 				select.appendChild(option);
 
                 for(var i = 0; i < etnias.length; i++){
@@ -1592,6 +1596,7 @@
             function PreviousName(){
             	console.log(cur_name)
             	if(cur_name - 1 < 0){
+            		$("#previous-name").hide();
             		return;
             	}
             	cur_name--;
@@ -1676,6 +1681,9 @@
 				font-style: italic;
 				cursor: pointer;
 			}
+			#random-name{
+				display: none;
+			}
 			#previous-name{
 				display: none;
 			}
@@ -1691,7 +1699,7 @@
 				<div class="form-group" id="holder-nome">
 					<label for="input-nome">Escreva o seu nome.</label>
 				    <input type="text" class="form-control" id="input-nome">
-				    <small class="form-text text-muted"><span class="clickable" onclick="RandomName();">Clique aqui</span> para gerar um nome aleatório.</small>
+				    <small class="form-text text-muted" id="random-name"><span class="clickable" onclick="RandomName();">Clique aqui</span> para gerar um nome aleatório.</small>
 				    <small class="form-text text-muted" id="previous-name"><span class="clickable" onclick="PreviousName();"><- Nome anterior</span></small>
 				</div>
 				
