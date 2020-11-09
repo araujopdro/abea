@@ -1093,6 +1093,74 @@
 
 
 						{"nome":"Benção","niveis":["Abençoar +1","Abençoar +2","Abençoar +3"],"requisitos":["Fé1","Fé1;Fé2;Benção1","Fé1;Fé2;Fé3;Benção1;Benção2"],"descricao":["oferece bônus de +1 nos testes do ser ou objeto abençoado","oferece bônus de +2 nos testes do ser ou objeto abençoado","oferece bônus de +3 nos testes do ser ou objeto abençoado"]}]
+				},
+				{
+					"nome":"Poderes de Fôlego",
+					"habilidades":[
+						{"nome":"Fôlego","requisitos":[null,"Fôlego1","Fôlego2"],"proibicoes":["Armas;Arquearia;Esgrima;Fé;Ifá","Armas;Arquearia;Esgrima;Fé;Ifá","Armas;Arquearia;Esgrima;Fé;Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+
+						{"nome":"Cura","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Fôlego1","Fôlego1;Fôlego2;Cura1","Fôlego1;Fôlego2;Fôlego3;Cura1;Cura2"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
+
+						{"nome":"Defesa","niveis":["Dar sorte","Proteção","Corpo fechado"],"requisitos":
+						["Fôlego1",
+						"Fôlego1;Fôlego2;Defesa1",
+						"Fôlego1;Fôlego2;Fôlego3;Defesa1;Defesa2"]
+						,"descricao":["o alvo ganha +1 em todos os testes de habilidade até o próximo amanhecer. Ao contrário de outros poderes, é possível acumular mais de um bônus de Dar sorte, sob uma condição especial: o alvo pode somar até três aplicações deste poder ao mesmo tempo, contanto que receba de pajés diferentes", "O personagem ganha uma proteção que força uma penalidade de -2 ao teste de qualquer um que tente feri-lo por meio de armas, magia, doença ou veneno","no caso de sucesso, não há arma, fogo ou outro elemento que consiga ferir o personagem. Ele pode ser derrubado por um golpe, amarrado ou detido por outros meios, ou afetado por poderes mágicos, mas não sofrerá dano algum. O efeito dura três rodadas de uma batalha"]},
+
+						{"nome":"Vida","niveis":["Dar força","Curar doença","Devolver a vida"],"requisitos":[
+						"Fôlego1",
+						"Fôlego1;Fôlego2;Vida1",
+						"Fôlego1;Fôlego2;Fôlego3;Vida1;Vida2"
+						],"descricao":["este poder recarrega as energias do alvo, tirando qualquer sinal de cansaço e fadiga. O alvo ganha o aumento de um ponto na sua resistência máxima durante 24 horas", "este poder pode curar qualquer doença (comum ou incomum). Também serve para remover enlouquecimento causado por criaturas sobrenaturais. Em caso de fracasso, o mesmo pajé nunca mais pode tentar curar a doença da mesma pessoa de novo","o pajé pode soprar a vida de volta para dentro de um recém-morto. Este poder funciona em casos como falta de ar (estrangulação, afogamento), ataque cardíaco e perda de sangue, mas não serve em nenhum caso onde a causa da morte ainda persista no corpo"]},
+
+
+						{"nome":"Dano","niveis":["Causar feridas","Passar veneno","Ferir à distância"],
+						"requisitos":[
+						"Fôlego1",
+						"Fôlego1;Fôlego2;Dano1",
+						"Fôlego1;Fôlego2;Fôlego3;Dano1;Dano2"
+						],"descricao":[" causa um machucado físico em outra pessoa, parecido com um golpe fortíssimo de uma arma (dano 3)", " introduz um veneno comum no sangue do alvo. Este veneno causa uma fraqueza, reduzindo todos os ataques do alvo para 1 de dano e reduzindo em um nível a sua movimentação. Se o veneno não for curado dentro de um dia, a pessoa morre","produz o mesmo efeito que Causar feridas, porém o pajé pode aplicar este poder a qualquer um que se encontre dentro da sua linha de visão, sem necessidade de tocar o alvo"]},
+						
+
+
+						{"nome":"Fraqueza","niveis":["Dar azar","Indefeso","Corpo aberto"],
+						"requisitos":[
+						"Fôlego1",
+						"Fôlego1;Fôlego2;Fraqueza1",
+						"Fôlego1;Fôlego2;Fôlego3;Fraqueza1;Fraqueza2"
+						],"descricao":["o alvo atingido leva uma penalidade igual a -1 em todos seus testes de habilidade durante as próximas vinte e quatro horas", "O personagem torna-se suscetível aos ataques de armas, magia, doença e veneno, dando um bônus de +2 a qualquer um que o ataque. Uma pessoa só pode ser amaldiçoada por um uso de Indefeso por vez. O efeito dura doze horas","durante três rodadas, o personagem torna-se altamente suscetível a qualquer dano. Qualquer golpe de arma causa o triplo do dano normal"]},
+
+
+
+						{"nome":"Morte","niveis":["Remover força","Enviar doença"," Enviar morte"],"requisitos":[
+						"Fôlego1",
+						"Fôlego1;Fôlego2;Morte1",
+						"Fôlego1;Fôlego2;Fôlego3;Morte1;Morte2"],"descricao":["o alvo fica exausto de repente, e tem que descansar uma rodada (perde a próxima ação) antes de fazer qualquer outra atividade", "aflige o alvo com uma doença comum. A doença impõe uma penalidade de -3 em todas as façanhas e baixa em um nível o movimento do alvo. Estes efeitos continuam até o alvo ser curado","o alvo sofre um ataque cardíaco e morre dentro de três rodadas. Uma graça de Dissipar magia ou Curar males ou o poder de Contrafeitiço, usado antes do sujeito morrer, pode salvá-lo. O poder Devolver a vida, usado logo depois da morte da pessoa, pode revivê-la. Caso contrário, não existe outra maneira de salvar a pessoa. Este poder requer grande força e o pajé que o invoca fica exausto física e espiritualmente. Após seu uso, o pajé precisa descansar durante um dia antes de fazer qualquer esforço físico maior ou usar outro poder."]},
+						
+
+
+						{"nome":"Mundo espiritual","niveis":["Comunicar-se com espíritos","Viagem espiritual","Transportar-se"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["o pajé conjura um espírito em busca de informação. Em caso de sucesso, consegue conjurar um espírito. Em caso de grande sucesso, consegue conjurar um espírito específico. Pode conjurar mortos que conhece, buscando informações que eles detinham em vida, ou falar com espíritos antigos, que podem saber de coisas históricas ou sobrenaturais. Mas, é importante lembrar que os espíritos podem mentir, como qualquer pessoa. Os espíritos que desejam mal ao pajé ou seus companheiros podem tentar enganá-lo. Este poder requer quatro horas de cerimônia para chamar o espírito", " o espírito do pajé sai de seu corpo e viaja pelo mundo paralelo dos espíritos. Pode conversar com qualquer espírito encontrado ao longo desta viagem. Também consegue espiar lugares físicos, porém precisa levar seu espírito para o lugar, flutuando a uma velocidade quatro vezes maior que o caminhar. Por exemplo, um pajé pode usar este poder para espiar o que está acontecendo em um acampamento rival a quatro horas de distância, gastando apenas uma hora para ir. Independente da distância percorrida, o pajé pode quebrar a conexão a qualquer momento e levar o espírito de volta ao corpo instantaneamente. Espíritos hostis ao personagem também podem atacá-lo, forçando-o a voltar ao seu corpo. Espíritos muito poderosos podem ter meios de prender o espírito do pajé e não permitir que ele volte para seu corpo. A cerimônia leva quatro horas para entrar no mundo espiritual, mais o tempo que o pajé passa nesta dimensão. É importante notar que o corpo físico do pajé torna-se altamente suscetível a ataques físicos enquanto seu espírito está fora, deixando-o sem defesa nenhuma. O corpo também começa a desidratar, e morrerá após três dias se o espírito não voltar para ele. Em caso de morte, o espírito do pajé permanece no mundo espiritual","Com este poder, o personagem consegue levar seu próprio corpo para o astral. O pajé é capaz de flutuar pelo mundo astral com sua velocidade normal de caminhar, e depois sair em outro lugar físico. Este ritual leva apenas uma hora para completar. O pajé pode passar até três dias no plano astral"]},
+
+
+
+						{"nome":"Tempo","niveis":["Prever o tempo","Fenômenos naturais","Tempestade"],"requisitos":[
+						"Fôlego1",
+						"Fôlego1;Fôlego2;Tempo1",
+						"Fôlego1;Fôlego2;Fôlego3;Tempo1;Tempo2"],"descricao":["permite ao pajé prever o tempo das próximas doze horas", "o pajé bondoso pode criar chuva, o elemento que dá vida às plantas. O pajé maldoso pode criar uma seca fortíssima, tirando a vida das plantas. O ritual leva quatro horas a completar e o efeito dura de um a seis dias","Com este poder, o pajé maldoso pode criar uma tempestade direcionada, lançando-a contra quem ele quiser. Esta tempestade terá chuva, vento e relâmpagos além do normal. O pajé bondoso pode usar este poder para acalmar uma tempestade (natural ou mágica), deixando uma chuva leve em seu lugar. Nos dois casos, o ritual leva apenas meia hora para completar"]},
+						
+
+
+						{"nome":"Controle da natureza","niveis":["Controle sobre plantas","Criar alimentos","Transformação"],"requisitos":[
+						"Fôlego1",
+						"Fôlego1;Fôlego2;Controledanatureza1",
+						"Fôlego1;Fôlego2;Fôlego3;Controledanatureza1;Controledanatureza2"],"descricao":["o pajé bondoso pode fazer nascer uma planta nova, indo da semente até o broto em questão de meia hora. Para plantas menores (flores, ervas) a planta inteira cresce. No caso de uma árvore, ela cresce até um metro de altura. Uma árvore já madura ganha um ano de crescimento. O pajé maligno pode matar uma planta, fazendo até mesmo uma árvore grande decair. Nos dois casos, o ritual leva meia hora", "Com este poder, o pajé faz crescer uma pequena refeição vegetal, como um melão ou algumas cenouras, suficiente para alimentar uma pessoa. O ritual leva uma hora para completar","este poder permite ao pajé transformar-se em animal. No caso do pajé bondoso, o animal pode ser um pássaro ou peixe. No caso do pajé maldoso, pode se tornar uma onça ou uma jararaca. O efeito é instantâneo  e o pajé pode ficar até oito horas na forma animal"]},
+						
+
+
+						{"nome":"Contra magia","niveis":["Localizar magia","Identificar magia","Contrafeitiço"],"requisitos":[
+						"Fôlego1",
+						"Fôlego1;Fôlego2;Contramagia1",
+						"Fôlego1;Fôlego2;Fôlego3;Contramagia1;Contramagia2"],"descricao":["o uso deste poder permite ao pajé saber quais são todos os itens mágicos e feitiços em efeito, sem identificar suas propriedades, dentro de um raio de trinta varas (33 metros)", "este poder, em caso de sucesso, permite ao pajé identificar as propriedades de um feitiço ou item mágico","este poder pode ser utilizado para cancelar um ritual em andamento ou pôr um fim nos efeitos de um poder com uma certa duração"]}]
 				},{
 				"nome":"Línguas",
 				"habilidades":[
@@ -1116,25 +1184,7 @@
 				]}];
 			
 				// ,
-				// {
-				// 	"nome":"Poderes de Fôlego",
-				// 	"habilidades":[
-				// 		{"nome":"Fôlego","requisitos":[null,"Fôlego1","Fôlego2"],"proibicoes":["Armas;Arquearia;Esgrima;Fé;Ifá","Armas;Arquearia;Esgrima;Fé;Ifá","Armas;Arquearia;Esgrima;Fé;Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-
-				// 		{"nome":"Cura","niveis":["Curar feridas","Curar veneno","Curar à distância"],"requisitos":["Fôlego1","Fôlego2","Fôlego3"],"descricao":["poder de curar feridas, quando usado com sucesso, inicia uma cura extraordinária da ferida. Quando o personagem toca o alvo, cura imediatamente dois pontos de dano", "poder cura os efeitos de qualquer veneno (comum ou incomum). A pessoa começa a melhorar na hora, e todo o veneno e seus efeitos somem do corpo do afetado dentro de uma hora","O pajé, sabendo que alguém está ferido, pode lançar uma cura à distância. O participante deve escolher entre Curar feridas ou Curar veneno. Não há limite de distância, mas uma penalidade pode ser aplicada ao teste em casos de distâncias muito grandes ou quando há desconhecimento do problema exato"]},
-
-				// 		{"nome":"Defesa","niveis":["Dar sorte","Proteção","Corpo fechado"],"requisitos":["Fôlego1","Fôlego2","Fôlego3"],"descricao":["o alvo ganha +1 em todos os testes de habilidade até o próximo amanhecer. Ao contrário de outros poderes, é possível acumular mais de um bônus de Dar sorte, sob uma condição especial: o alvo pode somar até três aplicações deste poder ao mesmo tempo, contanto que receba de pajés diferentes", "O personagem ganha uma proteção que força uma penalidade de -2 ao teste de qualquer um que tente feri-lo por meio de armas, magia, doença ou veneno","no caso de sucesso, não há arma, fogo ou outro elemento que consiga ferir o personagem. Ele pode ser derrubado por um golpe, amarrado ou detido por outros meios, ou afetado por poderes mágicos, mas não sofrerá dano algum. O efeito dura três rodadas de uma batalha"]},
-
-				// 		{"nome":"Vida","niveis":["Dar força","Curar doença","Devolver a vida"],"requisitos":["Fôlego1","Fôlego2","Fôlego3"],"descricao":["este poder recarrega as energias do alvo, tirando qualquer sinal de cansaço e fadiga. O alvo ganha o aumento de um ponto na sua resistência máxima durante 24 horas", "este poder pode curar qualquer doença (comum ou incomum). Também serve para remover enlouquecimento causado por criaturas sobrenaturais. Em caso de fracasso, o mesmo pajé nunca mais pode tentar curar a doença da mesma pessoa de novo","o pajé pode soprar a vida de volta para dentro de um recém-morto. Este poder funciona em casos como falta de ar (estrangulação, afogamento), ataque cardíaco e perda de sangue, mas não serve em nenhum caso onde a causa da morte ainda persista no corpo"]},
-
-				// 		{"nome":"Dano","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-				// 		{"nome":"Fraqueza","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-				// 		{"nome":"Morte","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-				// 		{"nome":"Mundo espiritual","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-				// 		{"nome":"Tempo","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-				// 		{"nome":"Controle da natureza","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
-				// 		{"nome":"Contra magia","niveis":["Aprendiz","Praticante","Mestre"],"requisitos":["!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima","!Armas;!Arquearia;!Esgrima"],"descricao":["Energia 5", "Energia 10","Energia 20"]}]
-				// },
+				// 
 				// {
 				// 	"nome":"Poderes de Ifá",
 				// 	"habilidades":[
