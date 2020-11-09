@@ -1719,14 +1719,14 @@
             var sorted_portraits = [];
             var cur_portrait = 0;
             function RandomPortrait(){
-            	for(var i = 0; i < 124; i++){
-            		var a = randomInteger(0, 124);
 
-        			sorted_portraits.push(a);
-        			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+a+".jpg");
-        			cur_portrait = sorted_portraits.length-1;
-            		console.log(sorted_portraits);
-            	}
+        		var a = randomInteger(0, 124);
+        		
+    			sorted_portraits.push(a);
+    			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+a+".jpg");
+    			cur_portrait = sorted_portraits.length-1;
+        		console.log(sorted_portraits);
+
             	if(sorted_portraits.length >= 2){
             		$("#previous-portrait").show();
             	}
