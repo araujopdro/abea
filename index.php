@@ -569,12 +569,17 @@
 								"Faunasilvestre1",
 								"Faunasilvestre1;Faunasilvestre2"
 							]},
-						{"nome":"Folclore","niveis":["o personagem adquire conhecimento de lendas e costumes"]},
-						{"nome":"Herbalismo","niveis":["curar 1 ponto de dano em qualquer pessoa","consegue tratar febres, doenças e venenos comuns","doenças e venenos incomuns"],
+						{"nome":"Folclore","niveis":["o personagem adquire conhecimento de lendas e costumes"],
 							"requisitos":[
 								null,
 								"Folclore1",
 								"Folclore1;Folclore2"
+							]},
+						{"nome":"Herbalismo","niveis":["curar 1 ponto de dano em qualquer pessoa","consegue tratar febres, doenças e venenos comuns","doenças e venenos incomuns"],
+							"requisitos":[
+								null,
+								"Herbalismo1",
+								"Herbalismo1;Herbalismo2"
 							]},
 						{"nome":"Navegação terrestre","niveis":["reconhecer os pontos cardeais","encontrar um caminho quando perdido na selva","reencontrar um lugar previamente visitado"],
 							"requisitos":[
