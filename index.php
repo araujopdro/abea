@@ -1471,7 +1471,6 @@
 	                var c = document.createDocumentFragment();
 	                var div_holder = document.createElement("div");
 	                	div_holder.className = "habilidades-categoria-holder";
-	                	div_holder.id = "habilidades-categoria-holder-"+habilidades[i].nome;
 
 	                	var span_name = document.createElement("span");
 	                		span_name.className = "habilidades-categoria-name";
@@ -1481,6 +1480,7 @@
 
 	                	var div_habilidade_holder = document.createElement("div");
 	                		div_habilidade_holder.className = "habilidades-habilidade-holder";
+	                		div_habilidade_holder.id = "habilidades-categoria-holder-"+habilidades[i].nome;
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
             					var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'-');
 
@@ -1573,7 +1573,7 @@
                 	c.appendChild(div_holder);
                 	$('#holder-habilidades').append(c);
                 	$(".habilidades-niveis-holder").slideUp('fast');
-                	$(".habilidades-categoria-holder").slideUp('fast');
+                	$(".habilidades-habilidade-holder").slideUp('fast');
                 }
 
 
