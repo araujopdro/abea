@@ -141,43 +141,44 @@
 						"Francisca"
 						],
 					"sobrenomes":[
-						"da Gama,"
-						"Vaz,"
-						"de Caminha,"
-						"Álvares,"
-						"Guimarães,"
-						"Bragança,"
-						"Braga,"
-						"Coimbra,"
-						"Sampaio,"
-						"Albuquerque,"
-						"Castro,"
-						"da Veiga,"
-						"Silva,"
-						"Santos,"
-						"Ferreira,"
-						"Pereira,"
-						"Oliveira,"
-						"Costa,"
-						"Rodrigues,"
-						"Martins,"
-						"Jesus,"
-						"Sousa,"
-						"Fernandes,"
-						"Gonçalves,"
-						"Gomes,"
-						"Lopes,"
-						"Marques,"
-						"Alves,"
-						"Almeida,"
-						"Ribeiro,"
-						"Pinto,"
-						"Carvalho,"
-						"Teixeira,"
-						"Moreira,"
-						"Correia,"
-						"Mendes,"
-						"Nunes,"],
+						"da Gama",
+						"Vaz",
+						"de Caminha",
+						"Álvares",
+						"Guimarães",
+						"Bragança",
+						"Braga",
+						"Coimbra",
+						"Sampaio",
+						"Albuquerque",
+						"Castro",
+						"da Veiga",
+						"Silva",
+						"Santos",
+						"Ferreira",
+						"Pereira",
+						"Oliveira",
+						"Costa",
+						"Rodrigues",
+						"Martins",
+						"Jesus",
+						"Sousa",
+						"Fernandes",
+						"Gonçalves",
+						"Gomes",
+						"Lopes",
+						"Marques",
+						"Alves",
+						"Almeida",
+						"Ribeiro",
+						"Pinto",
+						"Carvalho",
+						"Teixeira",
+						"Moreira",
+						"Correia",
+						"Mendes",
+						"Nunes",
+						],
 					"flavor": ""
 				},
 				{
