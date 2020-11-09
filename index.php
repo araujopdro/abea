@@ -1591,7 +1591,7 @@
             }
 
             function PreviousName(){
-            	if(cur_name - 1 < 0){
+            	if(cur_name.length - 1 < 0){
             		return;
             	}
             	$('#input-nome').val(sorted_names[cur_name]);
@@ -1692,7 +1692,7 @@
 					<label for="input-nome">Escreva o seu nome.</label>
 				    <input type="text" class="form-control" id="input-nome">
 				    <small class="form-text text-muted"><span class="clickable" onclick="RandomName();">Clique aqui</span> para gerar um nome aleatório.</small>
-				    <small class="form-text text-muted"><span class="clickable" onclick="PreviousName();"><- Nome anterior</span></small>
+				    <small class="form-text text-muted" id="previous-name"><span class="clickable" onclick="PreviousName();"><- Nome anterior</span></small>
 				</div>
 				
 				<div>
