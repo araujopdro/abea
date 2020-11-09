@@ -1359,7 +1359,7 @@
                 $('#holder-idade').append(c);
 
 	            $('#select-idade').on('change', function() {
-				  	$("#preview-idade").text(this.val());
+				  	$("#preview-idade").text($(this).val());
 				});};
 			function CreateEtnia(){
                 $('#select-etnia').remove();
@@ -1435,6 +1435,7 @@
 	            var limit = 3;
 				$('input.input-caracteristicas').on('change', function(evt) {
 					if(!this.checked){
+				   		$("#preview-caracteristica-"+this.id).remove();
 						for(var i = 0; i < car_selecionadas.length; i++){
 							if(this.id == car_selecionadas[i]){
 	  							car_selecionadas.splice(i, 1);
@@ -1448,6 +1449,12 @@
 
 				   	if(this.checked){
 				   		car_selecionadas.push(this.id);
+				   		var c = document.createDocumentFragment();
+	                	var span = document.createElement("span");
+	                		span.innerHTML = this.id;
+	                		span.id = "preview-caracteristica-"+this.id;
+							c.appendChild(span);
+	                	$("#preview-caracteristicas").append(c);
 				   	}
 
 
@@ -1697,7 +1704,7 @@
             			var b = randomInteger(0, nacionalidades[i].sobrenomes.length-1);
             			sorted_names.push(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
             			$('#input-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
-            			$('#preview-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
+            			$('#preview-nome').text(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
             			cur_name = sorted_names.length-1;
             		}
             	}
@@ -1714,7 +1721,7 @@
             	}
             	cur_name--;
             	$('#input-nome').val(sorted_names[cur_name]);
-            	$('#preview-nome').val(sorted_names[cur_name]);
+            	$('#preview-nome').text(sorted_names[cur_name]);
             }
 
 
