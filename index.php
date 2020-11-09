@@ -1474,6 +1474,7 @@
 
 	                	var span_name = document.createElement("span");
 	                		span_name.className = "habilidades-categoria-name";
+	                		span_name.id = habilidades[i].nome.replace(/ /g,'-');
 	                		span_name.innerHTML = habilidades[i].nome;
 	                		span_name.onclick = function(){ToggleCategoria(this)};
 						div_holder.appendChild(span_name);
