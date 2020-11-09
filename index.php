@@ -1891,7 +1891,7 @@
 		</style>
 	</head>
 	<body> 
-		<div class="modal" style="
+		<div style="
 		    width: 20%;
 		    background-color: rebeccapurple;
 		    position: fixed;
