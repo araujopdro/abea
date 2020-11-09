@@ -1451,7 +1451,7 @@
 				   		car_selecionadas.push(this.id);
 				   		var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
-	                		span.innerHTML = this.id;
+	                		span.innerHTML = this.val();
 	                		span.id = "preview-caracteristica-"+this.id;
 							c.appendChild(span);
 	                	$("#preview-caracteristicas").append(c);
@@ -1858,8 +1858,8 @@
 			<span id="preview-habilidades"></span>
 		</div>
 		<div>
-			<h2 style="margin-top: 5%;">Criar Personagem</h2>
 			<form id="form">
+				<h2 style="margin-top: 5%;">Criar Personagem</h2>
 				<div class="form-group" id="holder-nacionalidade">
 					
 					<div>
