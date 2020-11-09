@@ -1594,9 +1594,8 @@
             	if(cur_name - 1 < 0){
             		return;
             	}
-            	console.log("get previous")
-            	$('#input-nome').val(sorted_names[cur_name]);
             	cur_name--;
+            	$('#input-nome').val(sorted_names[cur_name]);
 
             }
 
