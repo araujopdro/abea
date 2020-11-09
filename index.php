@@ -1405,7 +1405,7 @@
 	                var c = document.createDocumentFragment();
 	                var div_holder = document.createElement("div");
 	                div_holder.className = "caracteristicas-holder";
-	                div_holder.id = "caracteristicas-"+caracteristicas[i].nome.replace(/ /g,'');
+	                div_holder.id = "caracteristicas-"+caracteristicas[i].nome.replace(/ /g,'-');
 
 	                var small = document.createElement("small");
 	                	small.className = "caracteristicas-text";
@@ -1419,7 +1419,7 @@
 						checkbox.value = caracteristicas[i].nome;
 
 					var label = document.createElement('label')
-						label.htmlFor = "input-caracteristicas-"+caracteristicas[i].nome.replace(/ /g,'');
+						label.htmlFor = "input-caracteristicas-"+caracteristicas[i].nome.replace(/ /g,'-');
 						label.appendChild(document.createTextNode(caracteristicas[i].nome));
 						label.className = "label-caracteristicas";
 
@@ -1480,7 +1480,7 @@
 	                	var div_habilidade_holder = document.createElement("div");
 	                		div_habilidade_holder.className = "habilidades-habilidade-holder";
                 			for(var j = 0; j < habilidades[i].habilidades.length; j++){
-            					var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'');
+            					var _id = habilidades[i].habilidades[j].nome.replace(/ /g,'-');
 
                 				var span_name_habilidade = document.createElement("span");
 			                		span_name_habilidade.className = "habilidades-habilidade-name";
@@ -1580,6 +1580,14 @@
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
 					console.log(number + " " + id)
+					
+					var c = document.createDocumentFragment();
+                	var span = document.createElement("span");
+                		span.className = "preview-habilidade-"+id;
+                		span.innerHTML = id.replace('-',' ')+" "+number;
+						c.appendChild(span);
+                	$("#preview-habilidades").append(c);
+
 				 	if(this.checked){
 				   		$("#"+id).addClass("after"+number);
 				   		//hab_selecionadas.push(id+number+"");
