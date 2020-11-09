@@ -1871,11 +1871,12 @@
 	<body> 
 		<div style="
 		    width: 20%;
-		    height: 200px;
 		    background-color: rebeccapurple;
 		    position: fixed;
 		    top: 5%;
-		    left: 2.5%;
+		    left: 2.5%;    
+		    display: flex;
+    		flex-direction: column;
 		">
 			<span id="preview-nome"></span>
 			<span id="preview-idade"></span>
@@ -1926,8 +1927,8 @@
 						
 					</div>
 				</div>
+				<textarea class="form-control" id="input-historia" name="historia" required="true"></textarea>
 
-				<input class="form-control" id="input-historia" type="textarea" required="true">
 				<input class="submit" type="submit" name="submit" value="ENTRAR">
 			</form>
 		</div>
