@@ -1451,7 +1451,8 @@
 				   		car_selecionadas.push(this.id);
 				   		var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
-	                		span.innerHTML = this.val();
+	                		console.log(this)
+	                		//span.innerHTML = this.value();
 	                		span.id = "preview-caracteristica-"+this.id;
 							c.appendChild(span);
 	                	$("#preview-caracteristicas").append(c);
