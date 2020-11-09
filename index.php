@@ -58,6 +58,10 @@
 			        //     }               
 			        // });
 			    });
+
+			    $("#input-nome").on("change paste keyup", function() {
+				   $("#preview-nome").text($("#input-nome").val());
+				});
 			});
 
 			var nacionalidades = [
@@ -1264,11 +1268,8 @@
 					{"nome":"Umbundo","descricao":[""],"requisitos":[null,"Umbundo1","Umbundo1;Umbundo2"]}
 				]}];
 
-
 			var car_selecionadas = [];
 			var hab_selecionadas = [];
-			var nomes
-
 
 			function CreateNacionalidade(){
                 $('#select-nacionalidade').remove();
@@ -1307,7 +1308,7 @@
 
 	            $('#select-nacionalidade').on('change', function() {
 	            	$("#random-name").show();
-			  		//console.log(this.value);
+				  	$("#preview-nacionalidade").text($(this).val());
 				});};
 			function CreateIdade(){
                 $('#select-idade').remove();
@@ -1358,7 +1359,7 @@
                 $('#holder-idade').append(c);
 
 	            $('#select-idade').on('change', function() {
-			  		//console.log(this.value);
+				  	$("#preview-idade").text(this.val());
 				});};
 			function CreateEtnia(){
                 $('#select-etnia').remove();
@@ -1696,6 +1697,7 @@
             			var b = randomInteger(0, nacionalidades[i].sobrenomes.length-1);
             			sorted_names.push(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
             			$('#input-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
+            			$('#preview-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
             			cur_name = sorted_names.length-1;
             		}
             	}
@@ -1712,6 +1714,7 @@
             	}
             	cur_name--;
             	$('#input-nome').val(sorted_names[cur_name]);
+            	$('#preview-nome').val(sorted_names[cur_name]);
             }
 
 
@@ -1841,7 +1844,8 @@
 		    top: 5%;
 		    left: 2.5%;
 		">
-			<span id="preview-name"></span>
+			<span id="preview-nome"></span>
+			<span id="preview-idade"></span>
 			<span id="preview-nacionalidade"></span>
 			<span id="preview-caracteristicas"></span>
 			<span id="preview-habilidades"></span>
