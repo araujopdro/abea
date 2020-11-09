@@ -1582,7 +1582,6 @@
             		if($('#select-nacionalidade').val() == nacionalidades[i].nome){
             			var a = randomInteger(0, nacionalidades[i].nomes.length-1);
             			var b = randomInteger(0, nacionalidades[i].sobrenomes.length-1);
-            			console.log(a +" "+ b);
             			sorted_names.push(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
             			$('#input-nome').val(nacionalidades[i].nomes[a]+" "+nacionalidades[i].sobrenomes[b]);
             			cur_name = sorted_names.length-1;
@@ -1591,9 +1590,11 @@
             }
 
             function PreviousName(){
-            	if(cur_name.length - 1 < 0){
+            	console.log(cur_name)
+            	if(cur_name - 1 < 0){
             		return;
             	}
+            	console.log("get previous")
             	$('#input-nome').val(sorted_names[cur_name]);
             	cur_name--;
 
