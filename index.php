@@ -1531,7 +1531,7 @@
 							                		var requisitos_list = habilidades[i].habilidades[j].requisitos[k-1].split(";");
 							                		for(var z = 0; z < requisitos_list.length; z++){
 						                				checkbox.classList.add("requisito-"+requisitos_list[z]);
-						                				span_name_habilidade.classList.add("requisito-"+requisitos_list[z]+"-title");
+						                				//span_name_habilidade.classList.add("requisito-"+requisitos_list[z]+"-title");
 							                		}
 							                		checkbox.disabled = true;
 							                	}else{
@@ -1647,13 +1647,6 @@
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
-
-						   	
-						   	$(".requisito-"+id+"-title").removeClass("bold");
-  							$(".requisito-"+id+"-title").removeClass("after1");
-						   	$(".requisito-"+id+"-title").removeClass("after2");
-						   	$(".requisito-"+id+"-title").removeClass("after3");
-
 
 							var a = hab_selecionadas.indexOf(id+1);
 							if(a >= 0){
