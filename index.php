@@ -1599,7 +1599,7 @@
 					
                 	$(".preview-habilidade-"+id).remove();
 				 	if(this.checked){
-				   		$("#"+id).addClass("after"+number);
+				   		//$("#"+id).addClass("after"+number);
 
 				   		var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
@@ -1644,9 +1644,9 @@
 				 		if(number == 1){
 				 			console.log(id);
 					   		$("#"+id).removeClass("bold");
-						   	$("#"+id).removeClass("after1");
-						   	$("#"+id).removeClass("after2");
-						   	$("#"+id).removeClass("after3");
+						   	// $("#"+id).removeClass("after1");
+						   	// $("#"+id).removeClass("after2");
+						   	// $("#"+id).removeClass("after3");
 
 							var a = hab_selecionadas.indexOf(id+1);
 							if(a >= 0){
@@ -1670,10 +1670,10 @@
 					        hab_selecionadas = _hab;
 				 		}else if(number == 2){
 	                		$("#preview-habilidades").append(c);
-						   	$("#"+id).removeClass("after1");
-						   	$("#"+id).removeClass("after2");
-						   	$("#"+id).removeClass("after3");
-						   	$("#"+id).addClass("after1");
+						   	// $("#"+id).removeClass("after1");
+						   	// $("#"+id).removeClass("after2");
+						   	// $("#"+id).removeClass("after3");
+						   	// $("#"+id).addClass("after1");
 
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
@@ -1693,10 +1693,10 @@
 					        hab_selecionadas = _hab;
 				 		}else if(number == 3){
 	                		$("#preview-habilidades").append(c);
-						   	$("#"+id).removeClass("after1");
-						   	$("#"+id).removeClass("after2");
-						   	$("#"+id).removeClass("after3");
-						   	$("#"+id).addClass("after2");
+						   	// $("#"+id).removeClass("after1");
+						   	// $("#"+id).removeClass("after2");
+						   	// $("#"+id).removeClass("after3");
+						   	// $("#"+id).addClass("after2");
 
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
