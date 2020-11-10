@@ -1656,6 +1656,7 @@
 									var _r = /\d+/;
 									var _number = parseInt(this.id.match(_r));
 									var _id = this.id.replace(/[0-9]/g, '');
+					   				$("#"+id).removeClass("bold");
 
 									console.log(_id);
 								});
