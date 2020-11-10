@@ -1531,6 +1531,7 @@
 							                		var requisitos_list = habilidades[i].habilidades[j].requisitos[k-1].split(";");
 							                		for(var z = 0; z < requisitos_list.length; z++){
 						                				checkbox.classList.add("requisito-"+requisitos_list[z]);
+						                				span_name_habilidade.classList.add("requisito-"+requisitos_list[z]+"-title");
 							                		}
 							                		checkbox.disabled = true;
 							                	}else{
@@ -1646,6 +1647,13 @@
 						   	$("#"+id).removeClass("after1");
 						   	$("#"+id).removeClass("after2");
 						   	$("#"+id).removeClass("after3");
+
+						   	
+						   	$(".requisito-"+id+"-title").removeClass("bold");
+  							$(".requisito-"+id+"-title").removeClass("after1");
+						   	$(".requisito-"+id+"-title").removeClass("after2");
+						   	$(".requisito-"+id+"-title").removeClass("after3");
+
 
 							var a = hab_selecionadas.indexOf(id+1);
 							if(a >= 0){
@@ -1900,15 +1908,15 @@
 		    display: flex;
     		flex-direction: column;
 		">
-			<h5>Nome:</h5>
+			<h6>Nome:</h6>
 			<span id="preview-nome"></span>
-			<h5>Idade:</h5>
+			<h6>Idade:</h6>
 			<span id="preview-idade"></span>
-			<h5>Nacionalidade:</h5>
+			<h6>Nacionalidade:</h6>
 			<span id="preview-nacionalidade"></span>
-			<h5>Características:</h5>
+			<h6>Características:</h6>
 			<span id="preview-caracteristicas"></span>
-			<h5>Habilidades:</h5>
+			<h6>Habilidades:</h6>
 			<span id="preview-habilidades"></span>
 		</div>
 		<div>
