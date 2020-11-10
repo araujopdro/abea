@@ -1652,16 +1652,37 @@
 							if(a >= 0){
 	  							$(".requisito-"+id+1).prop("checked", false);
 	  							$(".requisito-"+id+1).prop("disabled", true);
+  								$(".requisito-"+id+1).each(function() {
+									var _r = /\d+/;
+									var _number = parseInt(this.id.match(_r));
+									var _id = this.id.replace(/[0-9]/g, '');
+
+									console.log(_id);
+								});
   							}
 							var b = hab_selecionadas.indexOf(id+2);
 							if(b >= 0){
 	  							$(".requisito-"+id+2).prop("checked", false);
 	  							$(".requisito-"+id+2).prop("disabled", true);
+  								$(".requisito-"+id+2).each(function() {
+									var _r = /\d+/;
+									var _number = parseInt(this.id.match(_r));
+									var _id = this.id.replace(/[0-9]/g, '');
+
+									console.log(_id);
+								});
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
+  								$(".requisito-"+id+3).each(function() {
+									var _r = /\d+/;
+									var _number = parseInt(this.id.match(_r));
+									var _id = this.id.replace(/[0-9]/g, '');
+
+									console.log(_id);
+								});
 	  						}
 	  						var _hab = [];
 					   		$.each($("input[name='habilidades']:checked"), function(){
@@ -1679,11 +1700,25 @@
 							if(b >= 0){
 	  							$(".requisito-"+id+2).prop("checked", false);
 	  							$(".requisito-"+id+2).prop("disabled", true);
+  								$(".requisito-"+id+2).each(function() {
+									var _r = /\d+/;
+									var _number = parseInt(this.id.match(_r));
+									var _id = this.id.replace(/[0-9]/g, '');
+
+									console.log(_id);
+								});
 	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
+  								$(".requisito-"+id+3).each(function() {
+									var _r = /\d+/;
+									var _number = parseInt(this.id.match(_r));
+									var _id = this.id.replace(/[0-9]/g, '');
+
+									console.log(_id);
+								});
 	  						}
 
 	  						var _hab = [];
