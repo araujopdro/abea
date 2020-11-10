@@ -1702,6 +1702,13 @@
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
 	  							$(".requisito-"+id+3).prop("disabled", true);
+  								$(".requisito-"+id+3).each(function() {
+									var _r = /\d+/;
+									var _number = parseInt(this.id.match(_r));
+									var _id = this.id.replace(/[0-9]/g, '');
+
+									console.log(_id);
+								});
 	  						}
 
 	  						var _hab = [];
