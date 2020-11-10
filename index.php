@@ -1659,6 +1659,7 @@
 						   			$("#"+_id).removeClass("after3");
 
 									console.log(_id);
+									console.log(_id + "after3");
 								});
 	  						}
 							var b = hab_selecionadas.indexOf(id+2);
@@ -1672,6 +1673,7 @@
 						   			$("#"+_id).removeClass("after2");
 
 									console.log(_id);
+									console.log(_id + "after2");
 								});
 	  						}
 							var a = hab_selecionadas.indexOf(id+1);
@@ -1686,6 +1688,7 @@
 					   				$("#"+_id).removeClass("bold");
 
 									console.log(_id);
+									console.log(_id + "after1");
 								});
   							}
 	  						var _hab = [];
@@ -1710,7 +1713,7 @@
 									var _id = this.id.replace(/[0-9]/g, '');
 						   			$("#"+_id).removeClass("after3");
 
-									console.log(_id);
+									console.log(_id + "after3");
 								});
 	  						}
 							var b = hab_selecionadas.indexOf(id+2);
@@ -1723,7 +1726,7 @@
 									var _id = this.id.replace(/[0-9]/g, '');
 						   			$("#"+_id).removeClass("after2");
 
-									console.log(_id);
+									console.log(_id + "after2");
 								});
 	  						}
 
@@ -1750,6 +1753,7 @@
 						   			$("#"+_id).removeClass("after3");
 
 									console.log(_id);
+									console.log(_id + "after3");
 								});
 	  						}
 
