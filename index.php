@@ -1599,7 +1599,7 @@
 					
                 	$(".preview-habilidade-"+id).remove();
 				 	if(this.checked){
-				   		//$("#"+id).addClass("after"+number);
+				   		$("#"+id).addClass("after"+number);
 
 				   		var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
@@ -1644,10 +1644,36 @@
 				 		if(number == 1){
 				 			console.log(id);
 					   		$("#"+id).removeClass("bold");
-						   	// $("#"+id).removeClass("after1");
-						   	// $("#"+id).removeClass("after2");
-						   	// $("#"+id).removeClass("after3");
+						   	$("#"+id).removeClass("after1");
+						   	$("#"+id).removeClass("after2");
+						   	$("#"+id).removeClass("after3");
 
+							var c = hab_selecionadas.indexOf(id+3);
+							if(c >= 0){
+	  							$(".requisito-"+id+3).prop("checked", false);
+	  							$(".requisito-"+id+3).prop("disabled", true);
+  								$(".requisito-"+id+3).each(function() {
+									var _r = /\d+/;
+									var _number = parseInt(this.id.match(_r));
+									var _id = this.id.replace(/[0-9]/g, '');
+						   			$("#"+_id).removeClass("after3");
+
+									console.log(_id);
+								});
+	  						}
+							var b = hab_selecionadas.indexOf(id+2);
+							if(b >= 0){
+	  							$(".requisito-"+id+2).prop("checked", false);
+	  							$(".requisito-"+id+2).prop("disabled", true);
+  								$(".requisito-"+id+2).each(function() {
+									var _r = /\d+/;
+									var _number = parseInt(this.id.match(_r));
+									var _id = this.id.replace(/[0-9]/g, '');
+						   			$("#"+_id).removeClass("after2");
+
+									console.log(_id);
+								});
+	  						}
 							var a = hab_selecionadas.indexOf(id+1);
 							if(a >= 0){
 	  							$(".requisito-"+id+1).prop("checked", false);
@@ -1656,35 +1682,12 @@
 									var _r = /\d+/;
 									var _number = parseInt(this.id.match(_r));
 									var _id = this.id.replace(/[0-9]/g, '');
-					   				$("#"+id).removeClass("bold");
+						   			$("#"+_id).removeClass("after1");
+					   				$("#"+_id).removeClass("bold");
 
 									console.log(_id);
 								});
   							}
-							var b = hab_selecionadas.indexOf(id+2);
-							if(b >= 0){
-	  							$(".requisito-"+id+2).prop("checked", false);
-	  							$(".requisito-"+id+2).prop("disabled", true);
-  								$(".requisito-"+id+2).each(function() {
-									var _r = /\d+/;
-									var _number = parseInt(this.id.match(_r));
-									var _id = this.id.replace(/[0-9]/g, '');
-
-									console.log(_id);
-								});
-	  						}
-							var c = hab_selecionadas.indexOf(id+3);
-							if(c >= 0){
-	  							$(".requisito-"+id+3).prop("checked", false);
-	  							$(".requisito-"+id+3).prop("disabled", true);
-  								$(".requisito-"+id+3).each(function() {
-									var _r = /\d+/;
-									var _number = parseInt(this.id.match(_r));
-									var _id = this.id.replace(/[0-9]/g, '');
-
-									console.log(_id);
-								});
-	  						}
 	  						var _hab = [];
 					   		$.each($("input[name='habilidades']:checked"), function(){
 				                _hab.push($(this).val());
@@ -1692,23 +1695,11 @@
 					        hab_selecionadas = _hab;
 				 		}else if(number == 2){
 	                		$("#preview-habilidades").append(c);
-						   	// $("#"+id).removeClass("after1");
-						   	// $("#"+id).removeClass("after2");
-						   	// $("#"+id).removeClass("after3");
-						   	// $("#"+id).addClass("after1");
+						   	$("#"+id).removeClass("after1");
+						   	$("#"+id).removeClass("after2");
+						   	$("#"+id).removeClass("after3");
+						   	$("#"+id).addClass("after1");
 
-							var b = hab_selecionadas.indexOf(id+2);
-							if(b >= 0){
-	  							$(".requisito-"+id+2).prop("checked", false);
-	  							$(".requisito-"+id+2).prop("disabled", true);
-  								$(".requisito-"+id+2).each(function() {
-									var _r = /\d+/;
-									var _number = parseInt(this.id.match(_r));
-									var _id = this.id.replace(/[0-9]/g, '');
-
-									console.log(_id);
-								});
-	  						}
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
 	  							$(".requisito-"+id+3).prop("checked", false);
@@ -1717,6 +1708,20 @@
 									var _r = /\d+/;
 									var _number = parseInt(this.id.match(_r));
 									var _id = this.id.replace(/[0-9]/g, '');
+						   			$("#"+_id).removeClass("after3");
+
+									console.log(_id);
+								});
+	  						}
+							var b = hab_selecionadas.indexOf(id+2);
+							if(b >= 0){
+	  							$(".requisito-"+id+2).prop("checked", false);
+	  							$(".requisito-"+id+2).prop("disabled", true);
+  								$(".requisito-"+id+2).each(function() {
+									var _r = /\d+/;
+									var _number = parseInt(this.id.match(_r));
+									var _id = this.id.replace(/[0-9]/g, '');
+						   			$("#"+_id).removeClass("after2");
 
 									console.log(_id);
 								});
@@ -1729,10 +1734,10 @@
 					        hab_selecionadas = _hab;
 				 		}else if(number == 3){
 	                		$("#preview-habilidades").append(c);
-						   	// $("#"+id).removeClass("after1");
-						   	// $("#"+id).removeClass("after2");
-						   	// $("#"+id).removeClass("after3");
-						   	// $("#"+id).addClass("after2");
+						   	$("#"+id).removeClass("after1");
+						   	$("#"+id).removeClass("after2");
+						   	$("#"+id).removeClass("after3");
+						   	$("#"+id).addClass("after2");
 
 							var c = hab_selecionadas.indexOf(id+3);
 							if(c >= 0){
@@ -1742,6 +1747,7 @@
 									var _r = /\d+/;
 									var _number = parseInt(this.id.match(_r));
 									var _id = this.id.replace(/[0-9]/g, '');
+						   			$("#"+_id).removeClass("after3");
 
 									console.log(_id);
 								});
