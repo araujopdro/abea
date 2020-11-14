@@ -1309,7 +1309,7 @@
                 c.appendChild(label);
                 c.appendChild(select);
                 c.appendChild(small);
-                $('#holder-nacionalidade').append(c);
+                $('#holder-nacionalidade').prepend(c);
 
 	            $('#select-nacionalidade').on('change', function() {
 	            	$("#random-name").show();
@@ -2001,18 +2001,29 @@
 			<form id="form">
 				<h2 style="margin-top: 5%;">Criar Personagem</h2>
 				<div class="form-group" id="holder-nacionalidade">
-					
 					<div>
-						<div>
-							<img id="holder-naci-icon" src="">
-							<div id="holder-naci-flavor"></div>
+						<div style="display: flex;">
+							<img style="flex: 0 0 25%" id="holder-naci-icon" src="">
+							<div style="flex: 1" id="holder-naci-flavor"></div>
 						</div>
-						<span id="holder-aliados">
-							
-						</span>
-						<span id="holder-inimigos">
-							
-						</span>
+						<div style="display: flex;">
+							<span style="    
+									display: flex;
+								    flex-direction: column;
+								    padding: 0.6em;
+								    background-color: rgba(60,100,50,0.6);
+								    border-radius: 0.3em;" id="holder-aliados">
+								
+							</span>
+							<span style="    
+									display: flex;
+								    flex-direction: column;
+								    padding: 0.6em;
+								    background-color: rgba(100,60,50,0.6);
+								    border-radius: 0.3em;" id="holder-inimigos">
+								
+							</span>
+						</div>
 					</div>
 				</div>
 				<div class="form-group" id="holder-etnia"></div>
