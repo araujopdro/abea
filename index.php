@@ -1301,6 +1301,10 @@
 
 			function CreateNacionalidade(){
                 $('#select-nacionalidade').remove();
+				
+				$('#holder-inimigos').hide();
+            	$('#holder-aliados').hide();
+
                 var c = document.createDocumentFragment();
                 var select = document.createElement("select");
                 select.className = "form-control"
@@ -2050,7 +2054,6 @@
 								    padding: 0.6em;
 								    flex: 1;
 								    background-color: rgba(60,180,50,0.6);
-								    color: green;
 								    font-weight: bold;
 								    border-radius: 0.3em;
 								    margin: 0 0.5em 0 0;" id="holder-aliados">
@@ -2062,7 +2065,6 @@
 								    flex: 1;
 								    padding: 0.6em;
 								    background-color: rgba(180,60,50,0.6);
-								    color: red;
 								    font-weight: bold;
 								    border-radius: 0.3em;
 									margin: 0 0 0 0.5em;" id="holder-inimigos">
