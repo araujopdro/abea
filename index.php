@@ -1350,12 +1350,15 @@
                 	$('#holder-inimigos').empty();
                 	$('#holder-aliados').empty();
 
-				  	for(var j = 0; j < nacionalidades[selected_nacionalidade_id].aliados.length; j++){
+                	$('#holder-inimigos').hide();
+                	$('#holder-aliados').hide();
 
+				  	for(var j = 0; j < nacionalidades[selected_nacionalidade_id].aliados.length; j++){
 				  		var span = document.createElement("span");
 		                	span.className = "nacionalidade-aliados";
 		                	span.innerHTML = nacionalidades[selected_nacionalidade_id].aliados[j];
 	                	$('#holder-aliados').append(span);
+                		$('#holder-aliados').slideDown();
 				  	}
 				  	for(var j = 0; j < nacionalidades[selected_nacionalidade_id].inimigos.length; j++){
 
@@ -1363,11 +1366,16 @@
 		                	span.className = "nacionalidade-inimigos";
 		                	span.innerHTML = nacionalidades[selected_nacionalidade_id].inimigos[j];
 	                	$('#holder-inimigos').append(span);
+                		$('#holder-inimigos').slideDown();
 				  	}
+			  		var span_title = document.createElement("span");
+	                	span_title.className = "nacionalidade-flavor-title";
+	                	span_title.innerHTML = nacionalidades[selected_nacionalidade_id].nome;
 
 			  		var span = document.createElement("span");
 	                	span.className = "nacionalidade-flavor";
 	                	span.innerHTML = nacionalidades[selected_nacionalidade_id].flavor;
+                	$('#holder-naci-flavor').append(span_title);
                 	$('#holder-naci-flavor').append(span);
     				$('#holder-naci-icon').attr("src", nacionalidades[selected_nacionalidade_id].icon);
 
@@ -1999,6 +2007,10 @@
 			.habilidades-categoria-name:before {
 			    content: " » ";
 			}
+
+			.nacionalidade-flavor-title{
+				font-weight: bold;
+			}
 		</style>
 	</head>
 	<body> 
@@ -2038,6 +2050,7 @@
 								    padding: 0.6em;
 								    flex: 1;
 								    background-color: rgba(60,180,50,0.6);
+								    color: green;
 								    font-weight: bold;
 								    border-radius: 0.3em;
 								    margin: 0 0.5em 0 0;" id="holder-aliados">
@@ -2049,6 +2062,8 @@
 								    flex: 1;
 								    padding: 0.6em;
 								    background-color: rgba(180,60,50,0.6);
+								    color: red;
+								    font-weight: bold;
 								    border-radius: 0.3em;
 									margin: 0 0 0 0.5em;" id="holder-inimigos">
 								
