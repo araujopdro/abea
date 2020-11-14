@@ -1316,8 +1316,9 @@
 				  	$("#preview-nacionalidade").text();
 	            	var selected_nacionalidade = $(this).val();
 	            	var selected_nacionalidade_id = -1;
-
+	            	console.log(selected_nacionalidade);
 				  	for(var i = 0; i < nacionalidades.length; i++){
+	            		console.log(nacionalidades[i].nome);
 				  		if(selected_nacionalidade = nacionalidades[i].nome){
 				  			selected_nacionalidade_id = i;
 				  		}
