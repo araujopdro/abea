@@ -1316,21 +1316,17 @@
 				  	$("#preview-nacionalidade").text();
 	            	var selected_nacionalidade = $(this).val();
 	            	var selected_nacionalidade_id = -1;
-	            	console.log(selected_nacionalidade);
 				  	for(var i = 0; i < nacionalidades.length; i++){
-	            		console.log(nacionalidades[i].nome);
-				  		if(selected_nacionalidade = nacionalidades[i].nome){
+				  		if(selected_nacionalidade == nacionalidades[i].nome){
 				  			selected_nacionalidade_id = i;
+				  			break;
 				  		}
 				  	}
                 	
                 	$('#holder-naci-flavor').empty();
                 	$('#holder-inimigos').empty();
                 	$('#holder-aliados').empty();
-                	console.log(selected_nacionalidade_id);
-                	console.log(nacionalidades[selected_nacionalidade_id].aliados);
-                	console.log(nacionalidades[selected_nacionalidade_id].inimigos);
-                	console.log(nacionalidades[selected_nacionalidade_id].flavor);
+
 				  	for(var j = 0; j < nacionalidades[selected_nacionalidade_id].aliados.length; j++){
 
 				  		var span = document.createElement("span");
@@ -1350,8 +1346,6 @@
 	                	span.className = "nacionalidade-flavor";
 	                	span.innerHTML = nacionalidades[selected_nacionalidade_id].flavor;
                 	$('#holder-naci-flavor').append(span);
-	                
-
 				});};
 			function CreateIdade(){
                 $('#select-idade').remove();
