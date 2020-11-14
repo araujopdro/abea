@@ -1322,25 +1322,30 @@
 				  			selected_nacionalidade_id = i;
 				  		}
 				  	}
+                	
+                	$('#holder-naci-flavor').empty();
+                	$('#holder-inimigos').empty();
+                	$('#holder-aliados').empty();
+
 				  	for(var j = 0; j < nacionalidades[selected_nacionalidade_id].aliados.length; j++){
 
 				  		var span = document.createElement("span");
 		                	span.className = "nacionalidade-aliados";
 		                	span.innerHTML = nacionalidades[selected_nacionalidade_id].aliados[j];
-	                	$('#holder-aliados').append(c);
+	                	$('#holder-aliados').append(span);
 				  	}
 				  	for(var j = 0; j < nacionalidades[selected_nacionalidade_id].inimigos.length; j++){
 
 				  		var span = document.createElement("span");
 		                	span.className = "nacionalidade-inimigos";
 		                	span.innerHTML = nacionalidades[selected_nacionalidade_id].inimigos[j];
-	                	$('#holder-inimigos').append(c);
+	                	$('#holder-inimigos').append(span);
 				  	}
 
 			  		var span = document.createElement("span");
 	                	span.className = "nacionalidade-flavor";
 	                	span.innerHTML = nacionalidades[selected_nacionalidade_id].flavor;
-                	$('#holder-naci-flavor').append(c);
+                	$('#holder-naci-flavor').append(span);
 	                
 
 				});};
