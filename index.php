@@ -183,7 +183,7 @@
 						"Mendes",
 						"Nunes",
 						],
-					"flavor": ""
+					"flavor": "De longe o povo europeu mais comum no Brasil na época, os portugueses vinham originalmente para usufruir da riqueza da terra nova e depois para colonizá-la."
 				},
 				{
 					"nome":"Espanhol",
@@ -248,7 +248,7 @@
 						"Serrano",
 						"Molina",
 						"Ortiz"],
-					"flavor": ""
+					"flavor": "Muitos espanhóis vinham para as terras brasileiras para colonizar as terras cedidas no Tratado de Tordesilhas."
 				},
 				{
 					"nome":"Francês",
@@ -257,7 +257,7 @@
 					"nomes":["Ames", "Aramis", "Arkansas", "Artois", "Astin", "Aubergine", "Aure", "Avignon", "Bardot", "Beaumont", "Bellamy", "Bern", "Berne", "Bijou", "Bijoux", "Blaise", "Blanchard", "Bouvier", "Burgundy", "Cabernet", "Cabriole", "Calloway", "Candide", "Cartier", "Chambray", "Chamonix", "Chandelier", "Chapin", "Charnell", "Chaucer", "Chevis", "Chiffon", "Ciel", "Clef", "Coeur", "Coligny", "Corbeau", "Corneille", "Coty", "Cress", "Currier", "Dandelion", "Danon", "Darcy", "Davignon", "Delaine", "Delaware", "De", "Leon", "Demi", "Denim", "Dessert", "Deveraux", "Devereaux", "Dior", "Dominique", "Elie", "Erté", "Harlequin", "Hilaire", "Izod", "Jacquard", "Jermaine", "Jocelin", "Jourdain", "Jules", "Jumeaux", "Juneau", "Lafayette", "Laramie", "Larue", "Lave", "Leal", "Le", "Blanc", "Levron", "Lieux", "Lisle", "Maine", "Marquette", "Marvel", "Michon", "Mirage", "Monet", "Noe", "Noel", "Noelle", "Normandy", "Nouvel", "Opaque", "Orane", "Oriel", "Orleans", "Patrice", "Pendant", "Petit", "Quincy", "Raine", "Remi", "Remy", "Renate", "Renaud", "Reverie", "Rigny", "Rousseau", "Sequin", "Severin", "Sidney", "Sigourney", "Suede", "Sy", "Sydnee", "Sydney", "Tananarive", "Tavin", "Theoren", "Toille", "Triage", "Turquoise", "Urbain", "Velour", "Vermont", "Vionnet", "Vogue", "Wisconsin"],
 					"sobrenomes":["Abadie", "Allard", "Archambeau", "Auclair", "Barbier", "Baudelaire", "Beausoleil", "Berger", "Blanchet", "Boucher", "Brun", "Carpentier", "Cartier", "Charbonnier", "Chatelain", "Chevrolet", "De", "De", "Donadieu", "Dupont", "Durand", "Farrow", "Forestier", "Fortin", "Gagneux", "Garcon", "Guillaume", "Laferriere", "Laflamme", "Lagrange", "Lambert", "Langlois", "Lavigne", "Lefebre", "Lemaitre", "Leroux", "Le", "Martel", "Moulin", "Picard", "Pomeroy", "Proulx", "Richelieu", "Sartre", "Serrurier", "Thibaut", "Travers", "Vaillancourt", "Verne", "Violette"],
 
-					"flavor": ""
+					"flavor": "Os franceses vinham para o Brasil em busca de pau-brasil e outras riquezas e eram uma presença quase constante na costa durante o século XVII. Eles formavam alianças com vários povos do litoral e travavam batalhas com os ortugueses em águas e terras brasileiras."
 				},
 				{
 					"nome":"Holandês",
@@ -265,7 +265,7 @@
 					"inimigos":[],
 					"nomes":["Aechte", "Agnes", "Neese", "Alijt", "Baertge", "Baet", "Beatrijs", "Belye", "Belij", "Beverielle", "Claerkin", "Eva", "Geertruyt", "Trude", "Truyde", "Heyl", "Heiltgen", "Heyltgen", "Hilleken", "Jutte", "Katheline", "Kathrijn", "Katherijn", "Lijsbet", "Lijskin", "Lijss", "Lysken", "Machtelt", "Mechtelt", "Marij", "Mariss", "Marisse", "Margriete", "Griet", "Mergriet", "Stincken", "Wendelmoet", "Yolente", "Adam", "Adolf", "Adriaen", "Aelbert", "Aellaert", "Aerge", "Aernt", "Ambrosius81", "Amelonc", "Andries", "Ane", "Ansen", "Anthonis", "Aucker", "Barcke", "Bastyaen", "Beeck", "Berijs", "Bernt", "Bertelmeeus", "Bertout", "Block", "Boomkin", "Botghert", "Bouden", "Brantgen", "Brouwer", "Bruyn", "Bruynplas", "Bruys", "Bryn", "Calfgen", "Calis", "Kasijn", "Kerstiaen", "Charles", "Christoferus", "Kiggher", "Claes", "Clement", "Cnoep", "Coen", "Coenraet", "Colaert", "Coman", "Corijn", "Cornelis", "Craen", "Cryn", "Daem", "Dammas", "Adolf", "Danckaert", "Danel", "Delis", "Denijs", "Dirc", "Dixus", "Doede", "Doen", "Egbert", "Elaut", "Elias", "Elrick", "Elsken", "Emont", "Engbrecht", "Engel", "Ernst", "Evert", "Ewout", "Eymbert", "Garbrant", "Geen", "Geerbrant", "Geerlof", "Gelefas", "Gillis", "Genefaes", "Gheerlich", "Gherijt", "Ghijs", "Ghijsbrecht", "Giele", "Gijpken", "Gobel", "Gocken", "Godevaert", "Goedelt", "Goedert", "Goedkin", "Goedscalc", "Goerijs", "Goessel", "Goessen", "Goeswijn", "Goetgen", "Griffoen", "Gruter", "Hack", "Hairrijck", "Hamelt", "Hanssem", "Harbert", "Hartgeer", "Hase", "Hasman", "Hector", "Heynrick", "Hellinc", "Helmich", "Hemken", "Hemtgen", "Herman", "Hert", "Hertman", "Heyman", "Heynbrecht", "Hillebrant", "Hoven", "Hubert", "Huge", "Jacob", "Jacos", "Jan", "Jennin", "Joest", "Jonckhan", "Jorden", "Jortgen", "Yde", "Yewen", "Ysbrant", "Ysgerman", "Lambert", "Lambrecht", "Lanx", "Laurens", "Laussem", "Leenaert", "Lemmelroy", "Lens", "Lievin", "Lijbrecht", "Lijn", "Lob", "Lodewijck", "Lonijs", "Loy", "Louys", "Lubbert", "Lubbrecht", "Lucas", "Luytgen", "Manuel", "Maer", "Maes", "Marcelis", "Marcus", "Marten", "Matheeus", "Medaert", "Melcior", "Melis", "Messel", "Mette", "Meyner", "Michiel", "Moer", "Moes", "Mol", "Monic", "Nanne", "Nijs", "Noyken", "Noys", "Ogier", "Olivier", "Oste", "Ot", "Ouwels", "Paess", "Philip", "Pieter", "Pilgrim", "Pleskin", "Pouwels", "Querijn", "Reiner", "Reyer", "Reymbout", "Reymhout", "Reyns", "Rijc", "Rijckaert", "Rijckouts", "Robbert", "Roelof", "Roess", "Rover", "Rutger", "Sander", "Sarijs", "Scoutij", "Seyn", "Silvere", "Solin", "Spierinck", "Splinter", "Stans", "Steesken", "Steven", "Stoffel", "Stroys", "Stul", "Symon", "Tevin", "Thomas", "Thielma", "Thilmar", "Tybes", "Tyman", "Tygerma", "Tymer", "Faen", "Faes", "Valc", "Vastaer", "Veltgen", "Verbanu", "Vijncken", "Floer", "Florens", "Florijs", "Volkert", "Volpert", "Volquijn", "Vop", "Fock", "Forys", "Fraen", "Vrachtelt", "Vrederic", "Froyt", "Walraven", "Wemer", "Wensselijn", "Werbout", "Werner", "Wessel", "Wesser", "Weyncken", "Weyt", "Wiggert", "Wijck", "Wijnckel", "Wijnken", "Wijnrick", "Willeboort", "Willem", "Windermit", "Witte", "Wolf", "Wolfaert", "Wollebrant", "Wouter", "Zebert", "Zeel", "Zegher", "Zijbert", "Zijbout", "Zweer"],
 					"sobrenomes":["Adolf", "Adriaen", "Aelbert", "Aelbertssoen", "Aelbrechtsz", "Alairtsz", "Aernt", "Aerntssoen", "Aerntsz", "Aerts", "Aertsz", "Airntsz", "Aellert", "Allertssoen", "Andriessoen", "Driesz", "Thuenisz", "Baak", "Bakensz", "Bandcker", "Barc", "Baricxsoen", "Baerntsz", "Beerntsz", "Bernisz", "Berntsz", "Berijssoen", "Meesz", "Meeusz", "Bertoutssoen", "Berwoutssoen", "Blocx", "Borgherssoen", "Borkel", "Boud", "Boudinsz", "Bruysz", "Celensoen", "Claes", "Claessoen", "Claesz", "Clais", "Claiszoon", "Clayszoon", "Coenraetssoen", "Cornelijs", "Cornelisz", "Corvincxz", "Costensz", "Daemsz", "Dammesz", "Danckairtsz", "Daneelszoon", "Dirck", "Dirckz", "Dircxz", "Dircxzoon", "Egbert", "Emout", "Engelbrecht", "Engelbrechtsz", "Evertssoen", "Eynbrecht", "Fokke", "Fockenz", "Fockez", "Foygensz", "Truyde", "Geerijtsz", "Geretssoen", "Gerijtszoon", "Gerrijtsz", "Gheretsz", "Gherijtssoen", "Geenenz", "Gijs", "Ghijse", "Gijsbert", "Ghijsbertsz", "Ghijsbrechts", "Ghijsbrechtsz", "Gijsberts", "Gijsbertsz", "Gelis", "Gielisz", "Gills", "Gobelssoen", "Godensoen", "Godscalckszoen", "Goedscalcxz", "Goedscalxz", "Goerijs", "Goerts", "Goessen", "Goessenz", "Govert", "Govertssoen", "Harber", "Has", "Heinric", "Heinensoen", "Heinricxsoen", "Heinricxz", "Heinrixdochter", "Heyn", "Heynricx", "Heynricxzoon", "Heynrijcxz", "Heyns", "Hermanssoen", "Hessel", "Heyman", "Hubert", "Hubrechtsz", "Hugen", "Hugensz", "Hugez", "Huygenz", "Jacop", "Coppin", "Jacobsz", "Jacops", "Jacopszoon", "Jan", "Jansdochter", "Janssoen", "Jansz Dochter", "Janszoon", "Joordensz", "Jordensz", "Karijnssoen", "Karrekijn", "Knapensoen", "Koenensoen", "Corstken", "Kerstenszoon", "Korstanssoen", "Korstensz", "Korstiansz", "Korstkensz", "Lambertssoen", "Lambertsz", "Lap", "Laurens", "Lauwerijszoon", "Lenairt", "Lenairtsz", "Lensensoen", "Lonijs", "Louf", "Lowijc", "Loys", "Luydolf", "Luydolfsz", "Maessen", "Mairtinszoon", "Mertinsz", "Matheeusz", "Mathijssoen", "Matthijsz", "Melis", "Ment", "Michiel", "Miechielsz", "Moertssoen", "Molendochter", "Monic", "Odolfssoen", "Ot", "Ottensoen", "Ottez", "Pauwel", "Pouwelsz", "Peterssoen", "Pieterssoen", "Pieterszoon", "Pietersz wijf", "Pijnssoen", "Raekaertssoen", "Reinersz", "Reynkensz", "Rengersz", "Robbert", "Roelof", "Roeleofsz", "Roelofsz", "Rutgeersz", "Sarijs", "Sander", "Sandersz", "Sceelkensoen", "Scellincsz", "Schellenz", "Steefkensz", "Stevensz", "Simonsz", "Symonssoen", "Syzensoen", "Thomaesz", "Thielmansz", "Tielmanssoen", "Torf", "Vastaert", "Vastairts", "Voppensoen", "Vranck", "Vredericxz", "Walich", "Wessel", "Wesselssoen", "Weymbert", "Weymbertsz", "Wiersicxsoen", "Willems", "Willemsz", "Willemszoons", "Wll", "Wouter", "Wouterssoen", "Woutersz", "Wyaertssoen", "Wiersz", "Yewen", "Yewensz", "Ysbrant", "Ysbrantsz", "van Afferden", "van Altvorst", "van Andels", "van Ass", "van Bairy", "van Baten", "van Beest", "van Befoert", "van Bellefelt", "van den Berge", "van Bergen", "van Blitterswijck", "van der Bochorst", "van Boemel", "van Boven", "van den broeck", "van Camer", "van Campen", "van Coeme", "van Cuyck", "van Dam", "van Dereinne", "van Dijck", "van Doern", "van Doren", "van Driele", "van Dunen", "van Eer", "van Eeuwijck", "van Elven", "van Eyck", "van Gedoe", "van Gent", "van Goch", "van Goer ende", "van den Grave", "van den Gruythuyse", "van Ham", "van Hemert", "van Harsem", "van Heer", "van Herp", "van der Heyck", "van Hoekelem", "van Hoemborch", "van Hoevel", "van Holc", "van Horter", "van Huesden", "van Huyns", "van Huyssen", "van Huysen", "van Ingen", "van Kempen", "van den Keerchove", "van der Kerken", "van Kuswijck", "van Cuuck", "van Cuyk", "van Licht", "van der Linden", "van Lippenhoven", "van Lyt", "van Loeven", "van Loon", "van Lynscoten", "van der Maes", "van der Mase", "van Mendich", "van Meren", "van Moeck", "van der Molen", "van Muers", "van Mulicum", "van Mulichum", "van Muylchum", "van Munster", "van Nairden", "van Nersen", "van Nuys", "van der Nypoert", "van Oesterwijck", "van Olmen", "van Orssoyen", "van den Oudenbergen", "van der Paert", "van der Poert", "van Pol", "van den Poele", "van Poll", "van Put", "van Raemsdonc", "van Remunde", "van Reyd", "van Rijn", "van Rijswijc", "van Ringe", "van Sande", "van Sautboemel", "van der Schueren", "van Seghem", "van der Spiegel", "van Stralen", "van Syberghen", "van Theese", "in den tol", "van Tryest", "van den Velde", "van der Voer", "van Vliteren", "van Vouden", "uten Waerde", "van Wamel", "van Wanen", "van Wel", "van Weric", "van Wey", "in den Wijnckel", "van Wijnderswyc", "van der Wolde", "van den Wyel", "van der Wyel", "van Zanten", "van Zoelem", "van Zwalmen", "Vrijthof", "Vrijthof"],
-					"flavor": ""
+					"flavor": "Os holandeses vinahm originalmente ao Brasil para trabahar com produção de açúcar ou por simples curiosidade, mas na época que o Brasil caiu sob o controle dos inimigos deles, os espanhóis, os holandeses passaram a vir para colonizar."
 				},
 				{
 					"nome":"Tremembé",
@@ -1313,7 +1313,36 @@
 
 	            $('#select-nacionalidade').on('change', function() {
 	            	$("#random-name").show();
-				  	$("#preview-nacionalidade").text($(this).val());
+				  	$("#preview-nacionalidade").text();
+	            	var selected_nacionalidade = $(this).val();
+	            	var selected_nacionalidade_id = -1;
+
+				  	for(var i = 0; i < nacionalidades.length; i++){
+				  		if(selected_nacionalidade = nacionalidades[i].nome){
+				  			selected_nacionalidade_id = i;
+				  		}
+				  	}
+				  	for(var j = 0; j < nacionalidades[selected_nacionalidade_id].aliados.length; j++){
+
+				  		var span = document.createElement("span");
+		                	span.className = "nacionalidade-aliados";
+		                	span.innerHTML = nacionalidades[selected_nacionalidade_id].aliados[j];
+	                	$('#holder-aliados').append(c);
+				  	}
+				  	for(var j = 0; j < nacionalidades[selected_nacionalidade_id].inimigos.length; j++){
+
+				  		var span = document.createElement("span");
+		                	span.className = "nacionalidade-inimigos";
+		                	span.innerHTML = nacionalidades[selected_nacionalidade_id].inimigos[j];
+	                	$('#holder-inimigos').append(c);
+				  	}
+
+			  		var span = document.createElement("span");
+	                	span.className = "nacionalidade-flavor";
+	                	span.innerHTML = nacionalidades[selected_nacionalidade_id].flavor;
+                	$('#holder-naci-flavor').append(c);
+	                
+
 				});};
 			function CreateIdade(){
                 $('#select-idade').remove();
@@ -1338,10 +1367,10 @@
 	                		ph = "";
 	                	}else if(i > 17 && i <= 22){
 	                		//ph = " | ph:20 - Recomendado";
-	                		ph = "";
+	                		ph = " - Recomendado";
 	                	}else if(i > 22 && i <= 27){
 	                		//ph = " | ph:25";
-	                		ph = " - Recomendado";
+	                		ph = "";
 	                	}else if(i > 27 && i <= 32){
 	                		//ph = " | ph:30";
 	                		ph = "";
@@ -1971,8 +2000,16 @@
 				<div class="form-group" id="holder-nacionalidade">
 					
 					<div>
-						<img src="">
-
+						<div>
+							<img id="holder-naci-icon" src="">
+							<div id="holder-naci-flavor"></div>
+						</div>
+						<span id="holder-aliados">
+							
+						</span>
+						<span id="holder-inimigos">
+							
+						</span>
 					</div>
 				</div>
 				<div class="form-group" id="holder-etnia"></div>
