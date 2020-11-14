@@ -1369,7 +1369,7 @@
 	                	span.className = "nacionalidade-flavor";
 	                	span.innerHTML = nacionalidades[selected_nacionalidade_id].flavor;
                 	$('#holder-naci-flavor').append(span);
-    				$('#holder-naci-icon').attr("src", "/imgs/nacionalidades/"+nacionalidades[selected_nacionalidade_id].icon);
+    				$('#holder-naci-icon').attr("src", nacionalidades[selected_nacionalidade_id].icon);
 
 				});};
 			function CreateIdade(){
@@ -2031,7 +2031,7 @@
 							<img style="flex: 0 0 25%" id="holder-naci-icon" src="">
 							<div style="flex: 1;margin: 1em;margin-left: 1.5em;" id="holder-naci-flavor"></div>
 						</div>
-						<div style="display: flex; height: 5em;">
+						<div style="display: flex;">
 							<span style=" 
 									display: flex;
 								    flex-direction: column;
