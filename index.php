@@ -1372,11 +1372,11 @@
 	                	$('#holder-inimigos').append(span);
                 		$('#holder-inimigos').slideDown();
 				  	}
-			  		var span_title = document.createElement("span");
+			  		var span_title = document.createElement("div");
 	                	span_title.className = "nacionalidade-flavor-title";
 	                	span_title.innerHTML = nacionalidades[selected_nacionalidade_id].nome;
 
-			  		var span = document.createElement("span");
+			  		var span = document.createElement("div");
 	                	span.className = "nacionalidade-flavor";
 	                	span.innerHTML = nacionalidades[selected_nacionalidade_id].flavor;
                 	$('#holder-naci-flavor').append(span_title);
@@ -2041,7 +2041,7 @@
 		<div>
 			<form id="form">
 				<h2 style="margin-top: 5%;">Criar Personagem</h2>
-				<div class="form-group" id="holder-nacionalidade">
+				<div style="margin: 0.75em 0" class="form-group" id="holder-nacionalidade">
 					<div>
 						<div style="display: flex;">
 							<img style="flex: 0 0 25%" id="holder-naci-icon" src="">
@@ -2073,41 +2073,41 @@
 						</div>
 					</div>
 				</div>
-				<div class="form-group" id="holder-etnia"></div>
+				<div style="margin: 0.75em 0" class="form-group" id="holder-etnia"></div>
 				<div  class="form-group">
 					<span style="display: block;width: 40%;"><img id="input-portrait" style="width: 100%;" src="/imgs/portraits/portrait0.jpg"></span>
 
 				    <small class="form-text text-muted" id="random-portrait"><span class="clickable" onclick="RandomPortrait();">Clique aqui</span> para gerar um retrato aleatório.</small>
 				    <small class="form-text text-muted" id="previous-portrait"><span class="clickable" onclick="PreviousPortrait();"><- Retrato anterior</span></small>
 				</div>
-				<div class="form-group" id="holder-nome">
+				<div style="margin: 0.75em 0" class="form-group" id="holder-nome">
 					<label for="input-nome">Escreva o seu nome.</label>
 				    <input type="text" class="form-control" id="input-nome" placeholder="(...)">
 				    <small class="form-text text-muted" id="random-name"><span class="clickable" onclick="RandomName();">Clique aqui</span> para gerar um nome aleatório.</small>
 				    <small class="form-text text-muted" id="previous-name"><span class="clickable" onclick="PreviousName();"><- Nome anterior</span></small>
 				</div>
 				
-				<div>
-					<div class="form-group" id="holder-idade">
+				<div style="margin: 0.75em 0" class="form-group" id="holder-idade">
 
-					</div>
 				</div>
 
 
-				<div id="caracteristicas">
+				<div style="margin: 0.75em 0" id="caracteristicas">
 					<label for="holder-caracteristicas">Escolha 3 características que melhor descrevem o seu personagem.<br><small>Estas características te ajudam a melhor interpretar o seu personagem. Tente escolher pelo menos uma característica considerada um defeito ou deficiêcia, isso tornará o seu personagem mais interresante.</small></label>
 					<div id="holder-caracteristicas">
 						
 					</div>
 				</div>
-				<div id="habilidades">
+				<div style="margin: 0.75em 0" id="habilidades">
 					<label for="holder-caracteristicas">Escolha as habilidades do seu personagem.<br><small>Se você está criando um personagem de maneira recomendada, escolha 1 habilidade para ser <i>Mestre</i>, 2 para ser <i>Praticante</i> e 7 para ser <i>Aprendiz</i>.</small></label>
 					<div id="holder-habilidades">
 						
 					</div>
 				</div>
-				<textarea class="form-control" id="input-historia" name="historia" required="true"></textarea>
-
+				<div style="margin: 0.75em 0" id="bio">
+					<label for="input-nome">Escreva um pouco sobre a sua história.<br><small>Use sua nacionalidade, etnia, características e habilidades para te ajudar a pensar na história do seu personagem.</small></label>
+					<textarea class="form-control" id="input-historia" name="historia" required="true"></textarea>
+				</div>
 				<input class="submit" type="submit" name="submit" value="ENTRAR">
 			</form>
 		</div>
