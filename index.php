@@ -1326,7 +1326,10 @@
                 	$('#holder-naci-flavor').empty();
                 	$('#holder-inimigos').empty();
                 	$('#holder-aliados').empty();
-
+                	console.log(selected_nacionalidade_id);
+                	console.log(nacionalidades[selected_nacionalidade_id].aliados);
+                	console.log(nacionalidades[selected_nacionalidade_id].inimigos);
+                	console.log(nacionalidades[selected_nacionalidade_id].flavor);
 				  	for(var j = 0; j < nacionalidades[selected_nacionalidade_id].aliados.length; j++){
 
 				  		var span = document.createElement("span");
