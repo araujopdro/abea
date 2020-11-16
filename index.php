@@ -536,8 +536,8 @@
 						{"nome":"Força Física","niveis":["carregar armas pesadas","levantar e carregar pesos acima do normal ou realizar feitos de força além do comum","realizar atos de força nos limites do corpo humano é uma façanha difícil ou lendária"],
 							"requisitos":[
 								null,
-								"ForçaFísica1",
-								"ForçaFísica1;ForçaFísica2"
+								"Força-Física1",
+								"Força-Física1;Força-Física2"
 							]},
 						{"nome":"Furtividade","niveis":["esconder-se em condições ideais","esconder-se em situações adversas","esconder-se e locomover-se de forma despercebida ao disfarçar seu som, aparência e cheiro"],
 							"requisitos":[
@@ -548,8 +548,8 @@
 						{"nome":"Medicina de campo","niveis":["tratar feridas básicas e remover um ponto de dano","remover dois pontos de dano","remover três pontos de dano"],
 							"requisitos":[
 								null,
-								"Medicinadecampo1",
-								"Medicinadecampo1;Medicinadecampo2"
+								"Medicina-de-campo1",
+								"Medicina-de-campo1;Medicina-de-campo2"
 							]},
 						{"nome":"Natação","niveis":["nadar em águas calmas","nadar em águas agitadas, fazer mergulho livre e socorrer outros em perigo","nadar grandes distâncias, socorrer pessoas em circunstâncias extremas e segurar o fôlego durante vários minutos debaixo da água"],
 							"requisitos":[
@@ -582,8 +582,8 @@
 						{"nome":"Comida silvestre","niveis":["alimentar uma pessoa","alimentar um grupo","alimentar uma pessoa em circunstâncias adversas (como neve ou deserto) ou para alimentar um grupo sob condições diversas"],
 							"requisitos":[
 								null,
-								"Comidasilvestre1",
-								"Comidasilvestre1;Comidasilvestre2"
+								"Comida-silvestre1",
+								"Comida-silvestre1;Comida-silvestre2"
 							]},
 						{"nome":"Escalada","niveis":["escalar uma superfície fácil de pedra, uma corda ou uma árvore","escaladas maiores ou mais difíceis","escaladas em situações mais difíceis (superfícies molhadas, retas), ou, com o equipamento certo, escalar montanhas"],
 							"requisitos":[
@@ -594,8 +594,8 @@
 						{"nome":"Fauna silvestre","niveis":[" indicar hábitos básicos de animais comuns, como sua alimentação ou período de atividade","reconhecer um animal pelas pegadas, ou identificar um pássaro incomum por seu canto","representar um conhecimento profundo, como descobrir a última refeição e condição física de um animal pelo esterco, ou reconhecer a hierarquia entre um grupo de animais"],
 							"requisitos":[
 								null,
-								"Faunasilvestre1",
-								"Faunasilvestre1;Faunasilvestre2"
+								"Fauna-silvestre1",
+								"Fauna-silvestre1;Fauna-silvestre2"
 							]},
 						{"nome":"Folclore","niveis":["o personagem adquire conhecimento de lendas e costumes"],
 							"requisitos":[
@@ -612,8 +612,8 @@
 						{"nome":"Navegação terrestre","niveis":["reconhecer os pontos cardeais","encontrar um caminho quando perdido na selva","reencontrar um lugar previamente visitado"],
 							"requisitos":[
 								null,
-								"Navegaçãoterrestre1",
-								"Navegaçãoterrestre1;Navegaçãoterrestre2"
+								"Navegação-terrestre1",
+								"Navegação-terrestre1;Navegação-terrestre2"
 							]},
 						{"nome":"Rastreamento","niveis":["identificar vestígios mais óbvios de pessoas e animais"," rastrear algum animal ou pessoa sob condições ideais","rastrear pessoas e animais sob condições mais difíceis"],
 							"requisitos":[
@@ -628,50 +628,50 @@
 						{"nome":"Armas de arremesso","descricao":["estas armas são balanceadas para o arremesso, mas também podem ser utilizadas no corpo a corpo, se o personagem tiver a habilidade certa","Lança, Faca de Arremesso, Machado de arremesso"],
 							"requisitos":[
 								null,
-								"Armasdearremesso1",
-								"Armasdearremesso1;Armasdearremesso2"
+								"Armas-de-arremesso1",
+								"Armas-de-arremesso1;Armas-de-arremesso2"
 							]},
 
 						{"nome":"Armas de corte","descricao":["armas utilizadas para golpes cortantes ou para esfaquear o oponente", "Adaga, Alfanje, Espada de Lâmina Larga*, Faca, Machete"],
 							"requisitos":[
 								null,
-								"Armasdecorte1",
-								"Armasdecorte1;Armasdecorte2"
+								"Armas-de-corte1",
+								"Armas-de-corte1;Armas-de-corte2"
 							]},
 
 						{"nome":"Armas de fogo","descricao":["ao longo do século XVI, as armas de fogo começaram a se tornar as armas dominantes", "Arcabuz, Mosquete, Pistola"],
 							"requisitos":[
 								null,
-								"Armasdefogo1",
-								"Armasdefogo1;Armasdefogo2"
+								"Armas-de-fogo1",
+								"Armas-de-fogo1;Armas-de-fogo2"
 							]},
 
 						{"nome":"Armas de golpe","descricao":["armas que dependem da força física do combatente para causar dano de impacto", "Machado de guerra, Martelo de guerra, Porrete"],
 							"requisitos":[
 								null,
-								"Armasdegolpe1",
-								"Armasdegolpe1;Armasdegolpe2"
+								"Armas-de-golpe1",
+								"Armas-de-golpe1;Armas-de-golpe2"
 							]},
 
 						{"nome":"Armas de haste","descricao":["armas de haste comprida", "Alabarda, Martelo de Lucerne, Pique"],
 							"requisitos":[
 								null,
-								"Armasdehaste1",
-								"Armasdehaste1;Armasdehaste2"
+								"Armas-de-haste1",
+								"Armas-de-haste1;Armas-de-haste2"
 							]},
 
 						{"nome":"Armas de sopro","descricao":["existem vários tipos e tamanhos de zarabatanas", "Zarabatana"],
 							"requisitos":[
 								null,
-								"Armasdesopro1",
-								"Armasdesopro1;Armasdesopro2"
+								"Armas-de-sopro1",
+								"Armas-de-sopro1;Armas-de-sopro2"
 							]},
 
 						{"nome":"Armas mecânicas","descricao":["a besta, mesmo com sua popularidade diminuída, continuava sendo uma opção nas batalhas ao longo do século XVI", "Besta"],
 							"requisitos":[
 								null,
-								"Armasmecânica1",
-								"Armasmecânica1;Armasmecânica2"
+								"Armas-mecânica1",
+								"Armas-mecânica1;Armas-mecânica2"
 							]},
 
 						{"nome":"Arquearia","descricao":["O arco é arma tradicional do mundo inteiro. Enquanto o século XVI viu seu uso diminuir na Europa, o arco e flecha continuou sendo a arma mais usada nas Américas, devido ao seu uso pelos povos nativos", "Arco e flecha"],
@@ -691,8 +691,8 @@
 						{"nome":"Armas exóticas","descricao":["armas que dificilmente teriam chegado ao Brasil Colonial", "ex: Cimitara, Catana, Zweihänder"],
 							"requisitos":[
 								null,
-								"Armasexóticas1",
-								"Armasexóticas1;Armasexóticas2"
+								"Armas-exóticas1",
+								"Armas-exóticas1;Armas-exóticas2"
 							]}
 					]
 				},
@@ -714,8 +714,8 @@
 						{"nome":"Luta livre","descricao":["pode usar esta habilidade para tentar imobilizar oponentes de tamanho e força humanas"],
 							"requisitos":[
 								null,
-								"Lutalivre1",
-								"Lutalivre1;Lutalivre2"
+								"Luta-livre1",
+								"Luta-livre1;Luta-livre2"
 							]},]
 				},
 				{
@@ -891,43 +891,43 @@
 						{"nome":"Instrumentos de corda","descricao":["alaúde, cistre"],
 							"requisitos":[
 								null,
-								"Instrumentosdecorda1",
-								"Instrumentosdecorda1;Instrumentosdecorda2"
+								"Instrumentos-de-corda1",
+								"Instrumentos-de-corda1;Instrumentos-de-corda2"
 							]},
 
 						{"nome":"Instrumentos de corda e arco","descricao":["viola, viola da gamba"],
 							"requisitos":[
 								null,
-								"Instrumentosdecordaearco1",
-								"Instrumentosdecordaearco1;Instrumentosdecordaearco2"
+								"Instrumentos-de-cordaearco1",
+								"Instrumentos-de-cordaearco1;Instrumentos-de-cordaearco2"
 							]},
 
 						{"nome":"Instrumentos de embocadura","descricao":["flauta, flauta doce, corneta, corneto, trombeta"],
 							"requisitos":[
 								null,
-								"Instrumentosdeembocadura1",
-								"Instrumentosdeembocadura1;Instrumentosdeembocadura2"
+								"Instrumentos-de-embocadura1",
+								"Instrumentos-de-embocadura1;Instrumentos-de-embocadura2"
 							]},
 
 						{"nome":"Instrumentos de palheta","descricao":["baixão, charamela, fagote"],
 							"requisitos":[
 								null,
-								"Instrumentosdepalheta1",
-								"Instrumentosdepalheta1;Instrumentosdepalheta2"
+								"Instrumentos-de-palheta1",
+								"Instrumentos-de-palheta1;Instrumentos-de-palheta2"
 							]},
 
 						{"nome":"Instrumentos de percussão","descricao":["atabaque, pandeiro, tambor"],
 							"requisitos":[
 								null,
-								"Instrumentosdepercussão1",
-								"Instrumentosdepercussão1;Instrumentosdepercussão2"
+								"Instrumentos-de-percussão1",
+								"Instrumentos-de-percussão1;Instrumentos-de-percussão2"
 							]},
 
 						{"nome":"Instrumentos de tecla","descricao":["cravo, clavicórdio"],
 							"requisitos":[
 								null,
-								"Instrumentosdetecla1",
-								"Instrumentosdetecla1;Instrumentosdetecla2"
+								"Instrumentos-de-tecla1",
+								"Instrumentos-de-tecla1;Instrumentos-de-tecla2"
 							]}]
 				},
 				{
@@ -936,8 +936,8 @@
 						{"nome":"Adestramento de cães","descricao":["é especialista em treinar cachorros. Nas suas viagens, pode levar um ou dois cachorros comuns"],
 							"requisitos":[
 								null,
-								"Adestramentodecães1",
-								"Adestramentodecães1;Adestramentodecães2"
+								"Adestramento-de-cães1",
+								"Adestramento-de-cães1;Adestramento-de-cães2"
 							]},
 
 						{"nome":"Administração","descricao":["administração pode lidar com cargos envolvendo organização e burocracia, e pode servir em certos cargos governamentais. Os que também adquirem a habilidade acadêmica de Direito podem trabalhar como juízes, promotores e outros cargos"],
@@ -992,8 +992,8 @@
 						{"nome":"Condução de gado","descricao":["boieiros (antigo nome para os vaqueiros/boiadeiros) trabalham com criação, proteção e controle de gado"],
 							"requisitos":[
 								null,
-								"Conduçãodegado1",
-								"Conduçãodegado1;Conduçãodegado2"
+								"Condução-de-gado1",
+								"Condução-de-gado1;Condução-de-gado2"
 							]},
 
 						{"nome":"Contabilidade","descricao":[" pessoas que trabalham com contabilidade ocupam o cargo de tesoureiro"],
@@ -1020,8 +1020,8 @@
 						{"nome":"Fabricação de flechas","niveis":["personagem pode gastar um dia na confecção de flechas, criando 5 flechas","personagem pode gastar um dia na confecção de flechas, criando 10 flechas","personagem pode gastar um dia na confecção de flechas, criando 20 flechas"],
 							"requisitos":[
 								null,
-								"Fabricaçãodeflechas1",
-								"Fabricaçãodeflechas1;Fabricaçãodeflechas2"
+								"Fabricação-de-flechas1",
+								"Fabricação-de-flechas1;Fabricação-de-flechas2"
 							]},
 
 						{"nome":"Mineração","descricao":["este personagem é especialista em reconhecer depósitos de minerais e em técnicas de extração"],
@@ -1095,7 +1095,7 @@
 				{
 					"nome":"Graças Divinas",
 					"habilidades":[
-						{"nome":"Fé","requisitos":[null,"Fé1","Fé1;Fé2"],"proibicoes":["Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá","Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá","Armasdearremesso;Armasdecorte;Armasdefogo;Armasdegolpe;Armasdehaste;Armasdesopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
+						{"nome":"Fé","requisitos":[null,"Fé1","Fé1;Fé2"],"proibicoes":["Armas-de-arremesso;Armas-de-corte;Armas-de-fogo;Armas-de-golpe;Armas-de-haste;Armas-de-sopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá","Armas-de-arremesso;Armas-de-corte;Armas-de-fogo;Armas-de-golpe;Armas-de-haste;Armas-de-sopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá","Armas-de-arremesso;Armas-de-corte;Armas-de-fogo;Armas-de-golpe;Armas-de-haste;Armas-de-sopro;Armasmecânicas;Arquearia;Esgrima;Armasexóticas;Fôlego;Ifá"],"descricao":["Energia 5", "Energia 10","Energia 20"]},
 
 						{
 							"nome":"Proteção contra o mal",
