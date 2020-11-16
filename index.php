@@ -2018,7 +2018,7 @@
 		</style>
 	</head>
 	<body> 
-		<div style="
+		<!-- <div style="
 		    width: 20%;
 		    background-color: rebeccapurple;
 		    position: fixed;
@@ -2037,7 +2037,7 @@
 			<span id="preview-caracteristicas"></span>
 			<h6>Habilidades:</h6>
 			<span id="preview-habilidades"></span>
-		</div>
+		</div> -->
 		<div>
 			<form id="form">
 				<h2 style="margin-top: 5%;">Criar Personagem</h2>
