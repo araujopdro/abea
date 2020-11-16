@@ -2048,15 +2048,18 @@
 							<div style="flex: 1;margin: 1em;margin-left: 1.5em;" id="holder-naci-flavor"></div>
 						</div>
 						<div style="display: flex;">
+							<span></span>
 							<span style=" 
 									display: flex;
 								    flex-direction: column;
 								    padding: 0.6em;
 								    flex: 1;
 								    background-color: rgba(60,180,50,0.6);
-								    font-weight: bold;
 								    border-radius: 0.3em;
 								    margin: 0 0.5em 0 0;" id="holder-aliados">
+									<span style="
+								    font-weight: bold;">Aliados</span>
+
 								
 							</span>
 							<span style="    
@@ -2065,9 +2068,10 @@
 								    flex: 1;
 								    padding: 0.6em;
 								    background-color: rgba(180,60,50,0.6);
-								    font-weight: bold;
 								    border-radius: 0.3em;
 									margin: 0 0 0 0.5em;" id="holder-inimigos">
+									<span style="
+								    font-weight: bold;">Inimigos</span>
 								
 							</span>
 						</div>
