@@ -2050,7 +2050,7 @@
 					<div>
 						<div style="display: flex;">
 							<img style="flex: 0 0 25%;display: none;" id="holder-naci-icon" src="">
-							<div style="flex: 1;margin: 1em;margin-left: 1.5em;" id="holder-naci-flavor"></div>
+							<div style="flex: 1;margin: 1em 0;" id="holder-naci-flavor"></div>
 						</div>
 						<div style="display: flex;">
 							<span style=" 
