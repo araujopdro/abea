@@ -2024,7 +2024,7 @@
 		    position: fixed;
 		    top: 5%;
 		    left: 2.5%;    
-		    display: flex;
+		    display: none;
     		flex-direction: column;
 		">
 			<h6>Nome:</h6>
