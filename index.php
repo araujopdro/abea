@@ -2044,7 +2044,7 @@
 				<div style="margin: 1.25em 0" class="form-group" id="holder-nacionalidade">
 					<div>
 						<div style="display: flex;">
-							<img style="flex: 0 0 25%" id="holder-naci-icon" src="">
+							<img style="flex: 0 0 25%;display: none;" id="holder-naci-icon" src="">
 							<div style="flex: 1;margin: 1em;margin-left: 1.5em;" id="holder-naci-flavor"></div>
 						</div>
 						<div style="display: flex;">
