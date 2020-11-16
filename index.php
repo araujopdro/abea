@@ -34,29 +34,34 @@
 			        console.log($('#select-idade').val());
 			        console.log($('#select-etnia').val());
 			        console.log($('#select-nacionalidade').val());
-			        console.log(char_habilidades);
-			        console.log(char_caracteristicas);
+			        console.log($('input-historia').val());
+			        console.log(char_habilidades.toString());
+			        console.log(char_caracteristicas.toString());
 
-			        // $.ajax({
-			        //     url: 'cadastro.php',
-			        //     type:'POST',
-			        //     contentType: "application/x-www-form-urlencoded;charset=utf-8",
-			        //     data:
-			        //     {
-			        //         nome: $('#input-nome').val(),
-			        //         idade: $('#input-idade').val(),
-			        //         nacionalidade: $('#input-nacionalidade').val(),
-			        //         etnia: $('#input-etnia').val(),
-			        //         caracteristicas: $('#input-caracteristicas').val(),
-			        //         resistencia: $('#input-resistencia').val(),
-			        //         habilidades: $('#input-habilidades').val(),
-			        //         historia: $('#input-historia').val()
-			        //     },
-			        //     success: function(msg)
-			        //     {	
-			        // 		alert("Criado");
-			        //     }               
-			        // });
+			        var array_a = char_habilidades.toString();
+			        var array_b = char_caracteristicas.toString();
+
+			        $.ajax({
+			            url: 'cadastro.php',
+			            type:'POST',
+			            contentType: "application/x-www-form-urlencoded;charset=utf-8",
+			            data:
+			            {
+			                nome: $('#input-nome').val(),
+			                perfil: sorted_portraits[cur_portrait],
+			                idade: $('#input-idade').val(),
+			                nacionalidade: $('#input-nacionalidade').val(),
+			                etnia: $('#input-etnia').val(),
+			                caracteristicas: array_b,
+			                resistencia: $('#input-resistencia').val(),
+			                habilidades: array_a,
+			                historia: $('#input-historia').val()
+			            },
+			            success: function(msg)
+			            {	
+			        		alert("Criado");
+			            }               
+			        });
 			    });
 
 			    $("#input-nome").on("change paste keyup", function() {
@@ -259,7 +264,7 @@
 					"nomes":["Ames", "Aramis", "Arkansas", "Artois", "Astin", "Aubergine", "Aure", "Avignon", "Bardot", "Beaumont", "Bellamy", "Bern", "Berne", "Bijou", "Bijoux", "Blaise", "Blanchard", "Bouvier", "Burgundy", "Cabernet", "Cabriole", "Calloway", "Candide", "Cartier", "Chambray", "Chamonix", "Chandelier", "Chapin", "Charnell", "Chaucer", "Chevis", "Chiffon", "Ciel", "Clef", "Coeur", "Coligny", "Corbeau", "Corneille", "Coty", "Cress", "Currier", "Dandelion", "Danon", "Darcy", "Davignon", "Delaine", "Delaware", "De", "Leon", "Demi", "Denim", "Dessert", "Deveraux", "Devereaux", "Dior", "Dominique", "Elie", "Erté", "Harlequin", "Hilaire", "Izod", "Jacquard", "Jermaine", "Jocelin", "Jourdain", "Jules", "Jumeaux", "Juneau", "Lafayette", "Laramie", "Larue", "Lave", "Leal", "Le", "Blanc", "Levron", "Lieux", "Lisle", "Maine", "Marquette", "Marvel", "Michon", "Mirage", "Monet", "Noe", "Noel", "Noelle", "Normandy", "Nouvel", "Opaque", "Orane", "Oriel", "Orleans", "Patrice", "Pendant", "Petit", "Quincy", "Raine", "Remi", "Remy", "Renate", "Renaud", "Reverie", "Rigny", "Rousseau", "Sequin", "Severin", "Sidney", "Sigourney", "Suede", "Sy", "Sydnee", "Sydney", "Tananarive", "Tavin", "Theoren", "Toille", "Triage", "Turquoise", "Urbain", "Velour", "Vermont", "Vionnet", "Vogue", "Wisconsin"],
 					"sobrenomes":["Abadie", "Allard", "Archambeau", "Auclair", "Barbier", "Baudelaire", "Beausoleil", "Berger", "Blanchet", "Boucher", "Brun", "Carpentier", "Cartier", "Charbonnier", "Chatelain", "Chevrolet", "De", "De", "Donadieu", "Dupont", "Durand", "Farrow", "Forestier", "Fortin", "Gagneux", "Garcon", "Guillaume", "Laferriere", "Laflamme", "Lagrange", "Lambert", "Langlois", "Lavigne", "Lefebre", "Lemaitre", "Leroux", "Le", "Martel", "Moulin", "Picard", "Pomeroy", "Proulx", "Richelieu", "Sartre", "Serrurier", "Thibaut", "Travers", "Vaillancourt", "Verne", "Violette"],
 
-					"flavor": "Os franceses vinham para o Brasil em busca de pau-brasil e outras riquezas e eram uma presença quase constante na costa durante o século XVII. Eles formavam alianças com vários povos do litoral e travavam batalhas com os ortugueses em águas e terras brasileiras.",
+					"flavor": "Os franceses vinham para o Brasil em busca de pau-brasil e outras riquezas e eram uma presença quase constante na costa durante o século XVII. Eles formavam alianças com vários povos do litoral e travavam batalhas com os portugueses em águas e terras brasileiras.",
 					"icon":"/imgs/nacionalidades/escudo.png"
 				},
 				{
