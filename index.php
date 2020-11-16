@@ -2018,7 +2018,7 @@
 		</style>
 	</head>
 	<body> 
-		<!-- <div style="
+		<div style="
 		    width: 20%;
 		    background-color: rebeccapurple;
 		    position: fixed;
@@ -2037,29 +2037,26 @@
 			<span id="preview-caracteristicas"></span>
 			<h6>Habilidades:</h6>
 			<span id="preview-habilidades"></span>
-		</div> -->
+		</div>
 		<div>
 			<form id="form">
 				<h2 style="margin-top: 5%;">Criar Personagem</h2>
 				<div style="margin: 1.25em 0" class="form-group" id="holder-nacionalidade">
 					<div>
 						<div style="display: flex;">
-							<img style="flex: 0 0 25%; display: none" id="holder-naci-icon" src="">
+							<img style="flex: 0 0 25%" id="holder-naci-icon" src="">
 							<div style="flex: 1;margin: 1em;margin-left: 1.5em;" id="holder-naci-flavor"></div>
 						</div>
 						<div style="display: flex;">
-							<span></span>
 							<span style=" 
 									display: flex;
 								    flex-direction: column;
 								    padding: 0.6em;
 								    flex: 1;
 								    background-color: rgba(60,180,50,0.6);
+								    font-weight: bold;
 								    border-radius: 0.3em;
 								    margin: 0 0.5em 0 0;" id="holder-aliados">
-									<span style="
-								    font-weight: bold;">Aliados</span>
-
 								
 							</span>
 							<span style="    
@@ -2068,10 +2065,9 @@
 								    flex: 1;
 								    padding: 0.6em;
 								    background-color: rgba(180,60,50,0.6);
+								    font-weight: bold;
 								    border-radius: 0.3em;
 									margin: 0 0 0 0.5em;" id="holder-inimigos">
-									<span style="
-								    font-weight: bold;">Inimigos</span>
 								
 							</span>
 						</div>
