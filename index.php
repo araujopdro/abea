@@ -1937,7 +1937,6 @@
 					}
 				}
 			}
-
 			function AddBens(obj){
                 $('#preview-bens').empty();
 				bens_iniciais.push(obj);
@@ -1949,19 +1948,20 @@
 	            	$('#preview-bens').append(c);
 				}
 			};
-			console.log(bens_iniciais);
-			AddBens("Rede");
-			console.log(bens_iniciais);
-			AddBens("Mochila");
-			console.log(bens_iniciais);
-			AddBens("Roupas comuns");
-
             $(document).ready(function() {
             	CreateCaracteristicas();
             	CreateNacionalidade();
             	CreateHabilidades();
             	CreateIdade();
             	CreateEtnia();
+
+            	
+				console.log(bens_iniciais);
+				AddBens("Rede");
+				console.log(bens_iniciais);
+				AddBens("Mochila");
+				console.log(bens_iniciais);
+				AddBens("Roupas comuns");
             });
 
             function ToggleCategoria(el){
