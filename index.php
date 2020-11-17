@@ -1626,7 +1626,7 @@
 							                		checkbox.disabled = true;
 							                	}else if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
 							                		var proibicoes_list = habilidades[i].habilidades[j].proibicoes[k-1].split(";");
-							                		for(var z = 0; z < requisitos_list.length; z++){
+							                		for(var z = 0; z < proibicoes_list.length; z++){
 						                				checkbox.classList.add("not-requisito-"+proibicoes_list[z]);
 						                				//span_name_habilidade.classList.add("requisito-"+requisitos_list[z]+"-title");
 							                		}
@@ -1702,7 +1702,8 @@
 				   		var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
 	                		span.className = "preview-habilidade-"+id;
-	                		span.innerHTML = id+" "+number;
+	                		var s = id.replace("-"," ");
+	                		span.innerHTML = s+" "+number;
 							c.appendChild(span);
 	                	$("#preview-habilidades").append(c);
 
@@ -1739,7 +1740,8 @@
 	                		span.className = "preview-habilidade-"+id;
 	                		console.log(number)
 	                		var a = number - 1;
-	                		span.innerHTML = id.replace('-',' ')+" "+a;
+	                		var d = id.replace('-',' ');
+	                		span.innerHTML = d+" "+a;
 							c.appendChild(span);
 
 				 		if(number == 1){
@@ -2096,53 +2098,43 @@
 		</style>
 	</head>
 	<body> 
-		<div style="
-		    width: 20%;
-		    background-color: black;
-		    color: white;
-		    position: fixed;
-		    top: 5%;
-		    left: 2.5%;    
-		    display: flex;
-    		flex-direction: column;
-    padding: 1em;
-    border-radius: 0.6em;
-		">
+
+		
+		<div style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
 			<div style="display: flex">
 				<div style="flex: 1;margin-right: 1.5em;">
 					<h6>Nome:</h6>
 					<h5 id="preview-nome"></h5>
 				</div>
-				<div style="    margin-right: 2em;
-    display: flex;">	
-					<h6 style="    margin-right: 0.3em;">Idade:</h6>
+				<div style="margin-right: 2em;display: flex;">	
+					<h6 style="margin-right: 0.3em;">Idade:</h6>
 					<h5 id="preview-idade"></h5>
 				</div>
 			</div>
-			<div style="
-    margin-top: 1em;">
+			<div style="margin-top: 1em;">
 				<h6>Nacionalidade:</h6>
 				<h5 id="preview-nacionalidade"></h5>
 			</div>
-			<div style="
-    margin-top: 1em;">
+			<div style="margin-top: 1em;">
 				<h6>Características:</h6>
 				<h5 style="display: flex;flex-direction: column;" id="preview-caracteristicas"></h5>
 			</div>
-			<div style="
-    margin-top: 1em;">
+			<div style="margin-top: 1em;">
 				<div style="display: flex">
 					<h6 style="flex: 1;margin-right: 1.5em;">Habilidades:</h6>
-					<div style="    margin-right: 2em;
-    display: flex;">
-						<h6>PH:</h6>
+					<div style="margin-right: 2em;display: flex;">
+						<h6 style="margin-right: 0.3em;">PH:</h6>
 						<h5 id="preview-pts-h">20</h5>
 					</div>
 				</div>
 				<h5 style="display: flex;flex-direction: column;" id="preview-habilidades"></h5>
 			</div>
-			
 		</div>
+
+
+
+
+
 		<div>
 			<form id="form">
 				<h2 style="margin-top: 5%;">Criar Personagem</h2>
