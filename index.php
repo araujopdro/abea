@@ -1947,7 +1947,7 @@
 
             function AumentarResistencia(_id, _number){
             	var i = hab_resistencia.indexOf(_id);
-            	if(number == 3 && i > -1){
+            	if(_number == 3 && i > -1){
             		char_resistencia++;
             		console.log("resistência++")
             	}
@@ -1955,7 +1955,7 @@
 
             function DiminuirResistencia(_id, _number){
             	var i = hab_resistencia.indexOf(_id);
-            	if(number == 3 && i > -1){
+            	if(_number == 3 && i > -1){
             		char_resistencia--;
             		console.log("resistência--")
             	}
