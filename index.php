@@ -1726,7 +1726,11 @@
 							    //console.log('Found all of', class_arr, 'in', rqlist);
 							    var m = number+1;
 							    console.log(number);
+							    if(m == 3){
+							    	m = 4;
+							    }
 							    console.log(m);
+							    console.log(char_pts_h - m);
 							    
 							    if(char_pts_h - m < 0){
 							    	var f = m - char_pts_h;
