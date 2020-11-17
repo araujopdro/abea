@@ -18,6 +18,7 @@
 			$( document ).ready(function() {
 				$(function(){
 			      $("#main").load("navbar.html"); 
+			      $("#nav-home").addClass("active");
 			    });
 			});
 		</script>
@@ -32,9 +33,7 @@
 	</head>
 	<body> 
 		<div style="width: 100%;position: fixed;top: 0;" id="header">
-			<div id="main" style="width: 45vw;
-    margin: auto;
-    padding: 1.5em 0 3em 0;">
+			<div id="main" style="width: 45vw;margin: auto;">
     	
     </div>
 		</div>
