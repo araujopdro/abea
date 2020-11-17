@@ -1303,22 +1303,6 @@
 					{"nome":"Quimbundo","descricao":[""],"requisitos":[null,"Quimbundo1","Quimbundo1;Quimbundo2"]},
 					{"nome":"Umbundo","descricao":[""],"requisitos":[null,"Umbundo1","Umbundo1;Umbundo2"]}
 				]}];
-			var bens_iniciais_categorias = [
-				{"nome":"Armas-de-arremesso","tipo":"choice"},
-				{"nome":"Armas-de-corte","tipo":"choice"},
-				{"nome":"Armas-de-fogo","tipo":"choice"},
-				{"nome":"Armas-de-golpe","tipo":"choice"},
-				{"nome":"Armas-de-haste","tipo":"choice"},
-				{"nome":"Armas-de-sopro","tipo":"choice"},
-				{"nome":"Armas-me-ânicas","tipo":"choice"},
-				{"nome":"Arquearia","tipo":"choice"},
-				{"nome":"Esgrima","tipo":"choice"},
-				{"nome":"Armas exóticas","tipo":"choice"},];
-
-
-			
-
-
 
 			var bens_iniciais = [];
 
@@ -1922,19 +1906,19 @@
 				});};
 			
 			function ChecarBens(cat, state){
-				for(var i = 0; i < bens_iniciais_categorias.length; i++){
-					if(cat == bens_iniciais_categorias[i].nome && state == 0){
-						if(bens_iniciais_categorias[i].tipo == "fixed"){
-							for(var j = 0; j < bens_iniciais_categorias[i].bens_fixos[j]; j++){
-								AddBens(bens_iniciais_categorias[i].bens_fixos[j].nome);
-							}
-						}else{
-							$("#bens-cat-"+nome).show();
-						}
-					}else if(cat == bens_iniciais_categorias[i].nome && state == 1){
-						$("#bens-cat-"+nome).hide();
-					}
-				}
+				// for(var i = 0; i < bens_iniciais_categorias.length; i++){
+				// 	if(cat == bens_iniciais_categorias[i].nome && state == 0){
+				// 		if(bens_iniciais_categorias[i].tipo == "fixed"){
+				// 			for(var j = 0; j < bens_iniciais_categorias[i].bens_fixos[j]; j++){
+				// 				AddBens(bens_iniciais_categorias[i].bens_fixos[j].nome);
+				// 			}
+				// 		}else{
+				// 			$("#bens-cat-"+nome).show();
+				// 		}
+				// 	}else if(cat == bens_iniciais_categorias[i].nome && state == 1){
+				// 		$("#bens-cat-"+nome).hide();
+				// 	}
+				// }
 			}
 			function AddBens(obj){
                 $('#preview-bens').empty();
