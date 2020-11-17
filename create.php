@@ -2078,12 +2078,6 @@
 				margin: 0;
 			}
 
-			#form{
-				width: 45vw;
-    			margin: auto;
-    			padding: 1.5em 0 3em 0;
-			}
-
 			.habilidades-habilidade-holder{
 				display: flex;
 				flex-direction: column;
@@ -2218,7 +2212,9 @@
 
 
 
-		<div>
+		<div style="width: 45vw;
+    margin: auto;
+    padding: 1.5em 0 3em 0;">
 			<form id="form">
 				<h2 style="margin-top: 5%;">Criar Personagem</h2>
 				<div style="margin: 1.25em 0" class="form-group" id="holder-nacionalidade">
