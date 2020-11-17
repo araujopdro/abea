@@ -1951,13 +1951,13 @@
 
             function AumentarPtsH(_number){
         		char_pts_h += _number;
-			  	$("#preview-pts-h").text($(this).val(char_pts_h));
+			  	$("#preview-pts-h").text($(this).val(char_pts_h.toString()));
         		console.log("resistência++")
             }
 
             function DiminuirPtsH(_number){
         		char_pts_h -= _number;
-			  	$("#preview-pts-h").text($(this).val(char_pts_h));
+			  	$("#preview-pts-h").text($(this).val(char_pts_h.toString()));
         		console.log("resistência++")
             }
 
