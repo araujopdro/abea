@@ -18,7 +18,6 @@
 			$( document ).ready(function() {
 				$(function(){
 			      $("#main").load("navbar.html");
-			      console.log(window.location.href);
 			    });
 			});
 		</script>

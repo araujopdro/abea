@@ -17,11 +17,7 @@
 		<script type="text/javascript">
 			$( document ).ready(function() {
 				$(function(){
-			      $("#main").load("navbar.html"); 
-
-				    $("#main").load("navbar.html").ready(function() { 
-				      	$("#nav-create").addClass("active");
-					});;
+			      $("#main").load("navbar.html");
 			    });
 
 				$( "#form" ).submit(function( e ) {
