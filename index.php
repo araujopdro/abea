@@ -19,7 +19,7 @@
 				$(function(){
 			      $("#main").load("navbar.html"); 
 			    });
-			}
+			});
 		</script>
 		<style type="text/css">
 			html, body{
