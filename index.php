@@ -2106,7 +2106,7 @@
 		    display: flex;
     		flex-direction: column;
 		">
-			<div>
+			<div style="display: flex">
 				<div style="flex: 1;margin-right: 1.5em;">
 					<h6>Nome:</h6>
 					<h5 id="preview-nome"></h5>
