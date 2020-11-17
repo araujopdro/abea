@@ -2119,25 +2119,25 @@
 			<div style="display: flex;"><span style="width: 35%;display: block;margin-bottom: 1.5em;"><img style="width: 100%;" id="preview-portrait" src="/imgs/portraits/portrait0.jpg"></span></div>
 			<div style="display: flex">
 				<div style="flex: 1;margin-right: 1.5em;">
-					<h6>Nome:</h6>
+					<h6 style="color: lightcoral;">Nome:</h6>
 					<h5 id="preview-nome"></h5>
 				</div>
 				<div style="margin-right: 2em;display: flex;">	
-					<h6 style="margin-right: 0.3em;">Idade:</h6>
+					<h6 style="margin-right: 0.3em;color: lightcoral;">Idade:</h6>
 					<h5 id="preview-idade"></h5>
 				</div>
 			</div>
-			<div style="margin-top: 1em;">
-				<h6>Nacionalidade:</h6>
+			<div style="margin-top: 1em;color: lightcoral;">
+				<h6 style="color: lightcoral;">Nacionalidade:</h6>
 				<h5 id="preview-nacionalidade"></h5>
 			</div>
-			<div style="margin-top: 1em;">
+			<div style="margin-top: 1em;color: lightcoral;">
 				<h6>Características:</h6>
 				<h5 style="display: flex;flex-direction: column;" id="preview-caracteristicas"></h5>
 			</div>
 			<div style="margin-top: 1em;">
 				<div style="display: flex">
-					<h6 style="flex: 1;margin-right: 1.5em;">Habilidades:</h6>
+					<h6 style="flex: 1;margin-right: 1.5em;color: lightcoral;">Habilidades:</h6>
 					<div style="margin-right: 2em;display: flex;">
 						<h6 style="margin-right: 0.3em;">PH:</h6>
 						<h5 id="preview-pts-h">20</h5>
