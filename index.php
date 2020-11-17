@@ -57,6 +57,7 @@
 			                caracteristicas: array_b,
 			                resistencia: char_resistencia,
 			                habilidades: array_a,
+			                pts_h: char_pts_h,
 			                historia: $('#input-historia').val()
 			            },
 			            success: function(msg)
@@ -1306,6 +1307,7 @@
 			var car_selecionadas = [];
 			var hab_selecionadas = [];
 			var char_resistencia = 10;
+			var char_pts_h = 20;
 
 			function CreateNacionalidade(){
                 $('#select-nacionalidade').remove();
@@ -1686,6 +1688,7 @@
 					
                 	$(".preview-habilidade-"+id).remove();
 				 	if(this.checked){
+				 		AumentarPtsH(number);
 				 		AumentarResistencia(id,number);
 				   		$("#"+id).addClass("after"+number);
 
@@ -1721,6 +1724,7 @@
 						});
 					   	$("#"+id).addClass("bold");
 				 	}else{
+				 		DiminuirPtsH(number);
 				 		DiminuirResistencia(id,number);
 
 						var c = document.createDocumentFragment();
@@ -1945,11 +1949,23 @@
 
             var hab_resistencia = ["Acrobacia","Força-Física","Natação","Escalada","Boxe","Capoiera","Luta-livre"];
 
+            function AumentarPtsH(_number){
+        		char_pts_h += _number;
+			  	$("#preview-pts-h").text($(this).val(char_pts_h));
+        		console.log("resistência++")
+            }
+
+            function DiminuirPtsH(_number){
+        		char_pts_h -= _number;
+			  	$("#preview-pts-h").text($(this).val(char_pts_h));
+        		console.log("resistência++")
+            }
+
             function AumentarResistencia(_id, _number){
             	var i = hab_resistencia.indexOf(_id);
             	if(_number == 3 && i > -1){
             		char_resistencia++;
-				  	$("#preview-resistencia").text($(this).val(char_resistencia));
+				  	$("#preview-resistencia").text($(this).val(char_resistencia.toString()));
             		console.log("resistência++")
             	}
             }
@@ -1958,7 +1974,7 @@
             	var i = hab_resistencia.indexOf(_id);
             	if(_number == 3 && i > -1){
             		char_resistencia--;
-				  	$("#preview-resistencia").text($(this).val(char_resistencia));
+				  	$("#preview-resistencia").text($(this).val(char_resistencia.toString()));
             		console.log("resistência--")
             	}
             }
@@ -2079,11 +2095,13 @@
 			<h6>Nacionalidade:</h6>
 			<span id="preview-nacionalidade"></span>
 			<h6>Resistência:</h6>
-			<span id="preview-resistencia"></span>
+			<span id="preview-resistencia">10</span>
 			<h6>Características:</h6>
 			<span id="preview-caracteristicas"></span>
 			<h6>Habilidades:</h6>
 			<span id="preview-habilidades"></span>
+			<h6>Pontos de Habilidade:</h6>
+			<span id="preview-pts-h">20</span>
 		</div>
 		<div>
 			<form id="form">

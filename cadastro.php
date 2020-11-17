@@ -8,6 +8,7 @@
 	$perfil = $_POST['perfil'];
 	$nacionalidade = $_POST['nacionalidade'];
 	$etnia = $_POST['etnia'];
+	$pts_h = $_POST['pts_h'];
 	$caracteristicas = $_POST['caracteristicas'];
 	$resistencia = $_POST['resistencia'];
 	$habilidades = $_POST['habilidades'];
@@ -20,7 +21,7 @@
 	mysqli_query($bd, 'SET character_set_client=utf8');
 	mysqli_query($bd, 'SET character_set_results=utf8');
 
-	mysqli_query($bd, "INSERT INTO characters (`nome`, `perfil`, `idade`, `nacionalidade`, `etnia`, `caracteristicas`, `resistencia`, `habilidades`, `historia`) VALUES ('$nome', '$perfil', '$idade', '$nacionalidade', '$etnia', '$caracteristicas', '$resistencia', '$habilidades', '$historia')")or die(mysqli_error($bd));
+	mysqli_query($bd, "INSERT INTO characters (`nome`, `perfil`, `idade`, `nacionalidade`, `etnia`, `caracteristicas`, `resistencia`, `habilidades`, `pts_h`, `historia`) VALUES ('$nome', '$perfil', '$idade', '$nacionalidade', '$etnia', '$caracteristicas', '$resistencia', '$habilidades', '$pts_h', '$historia')")or die(mysqli_error($bd));
 
 	// if ($stmt = $bd->prepare('SELECT email FROM itaucultural WHERE email = ?')) {
 	// 	$stmt->bind_param('s', $_POST['email']);
