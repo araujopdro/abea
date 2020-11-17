@@ -2096,20 +2096,33 @@
 		    display: flex;
     		flex-direction: column;
 		">
-			<h6>Nome:</h6>
-			<span id="preview-nome"></span>
-			<h6>Idade:</h6>
-			<span id="preview-idade"></span>
+			<div>
+				<div>
+					<h6>Nome:</h6>
+					<span id="preview-nome"></span>
+				</div>
+				<div>	
+					<h6>Idade:</h6>
+					<span id="preview-idade"></span>
+				</div>
+			</div>
 			<h6>Nacionalidade:</h6>
 			<span id="preview-nacionalidade"></span>
-			<h6>Resistência:</h6>
-			<span id="preview-resistencia">10</span>
-			<h6>Características:</h6>
-			<span id="preview-caracteristicas"></span>
-			<h6>Habilidades:</h6>
-			<span id="preview-habilidades"></span>
-			<h6>Pontos de Habilidade:</h6>
-			<span id="preview-pts-h">20</span>
+			<div>
+				<h6>Características:</h6>
+				<span id="preview-caracteristicas"></span>
+			</div>
+			<div>
+				<div>
+					<h6>Habilidades:</h6>
+					<div>
+						<h6>Pontos de Habilidade:</h6>
+						<span id="preview-pts-h">20</span>
+					</div>
+				</div>
+				<span id="preview-habilidades"></span>
+			</div>
+			
 		</div>
 		<div>
 			<form id="form">
