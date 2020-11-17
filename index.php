@@ -17,8 +17,9 @@
 		<script type="text/javascript">
 			$( document ).ready(function() {
 				$(function(){
-			      $("#main").load("navbar.html"); 
-			      $("#nav-home").addClass("active");
+				    $("#main").load("navbar.html").ready(function() { 
+				      	$("#nav-home").addClass("active");
+					});;
 			    });
 			});
 		</script>

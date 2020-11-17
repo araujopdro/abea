@@ -18,7 +18,10 @@
 			$( document ).ready(function() {
 				$(function(){
 			      $("#main").load("navbar.html"); 
-			      $("#nav-create").addClass("active");
+
+				    $("#main").load("navbar.html").ready(function() { 
+				      	$("#nav-create").addClass("active");
+					});;
 			    });
 
 				$( "#form" ).submit(function( e ) {
