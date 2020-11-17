@@ -2105,24 +2105,32 @@
 		    left: 2.5%;    
 		    display: flex;
     		flex-direction: column;
+    padding: 1em;
+    border-radius: 0.6em;
 		">
 			<div style="display: flex">
 				<div style="flex: 1;margin-right: 1.5em;">
 					<h6>Nome:</h6>
 					<h5 id="preview-nome"></h5>
 				</div>
-				<div style="margin-right: 2em;">	
-					<h6>Idade:</h6>
+				<div style="    margin-right: 2em;
+    display: flex;">	
+					<h6 style="    margin-right: 0.3em;">Idade:</h6>
 					<h5 id="preview-idade"></h5>
 				</div>
 			</div>
-			<h6>Nacionalidade:</h6>
-			<h5 id="preview-nacionalidade"></h5>
-			<div>
+			<div style="
+    margin-top: 1em;">
+				<h6>Nacionalidade:</h6>
+				<h5 id="preview-nacionalidade"></h5>
+			</div>
+			<div style="
+    margin-top: 1em;">
 				<h6>Características:</h6>
 				<h5 id="preview-caracteristicas"></h5>
 			</div>
-			<div>
+			<div style="
+    margin-top: 1em;">
 				<div>
 					<h6>Habilidades:</h6>
 					<div>
