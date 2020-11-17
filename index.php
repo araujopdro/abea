@@ -1695,7 +1695,11 @@
 					
                 	$(".preview-habilidade-"+id).remove();
 				 	if(this.checked){
-				 		DiminuirPtsH(number);
+				 		var ptsh = DiminuirPtsH(number);
+				 		if(ptsh < 0){
+				 			this.checked = false;
+				 			return;
+				 		}
 				 		AumentarResistencia(id,number);
 				   		$("#"+id).addClass("after"+number);
 
@@ -1970,11 +1974,14 @@
 
             function DiminuirPtsH(_number){
             	if(_number == 3){
+            		if(char_pts_h - 4 < 0){return -1;}
         			char_pts_h -= 4;
             	}else{
+            		if(char_pts_h - _number < 0){return -1;}
         			char_pts_h -= _number;
             	}
 			  	$("#preview-pts-h").text(char_pts_h.toString());
+			  	return char_pts_h;
         		console.log("resistência++")
             }
 
@@ -2099,7 +2106,7 @@
 	</head>
 	<body> 
 
-		
+
 		<div style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
 			<div style="display: flex">
 				<div style="flex: 1;margin-right: 1.5em;">
