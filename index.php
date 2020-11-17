@@ -19,6 +19,7 @@
 		      	$.get("navbar.html", function (data) {
                     $("#main").append(data);
                     var nav_active = $("#nav-home");
+                    console.log(nav_active);
                 });
 			});
 		</script>

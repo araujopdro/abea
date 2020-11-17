@@ -20,6 +20,7 @@
 		      	$.get("navbar.html", function (data) {
                     $("#main").append(data);
                     var nav_active = $("#nav-create");
+                    console.log(nav_active);
                 });
 
 				$( "#form" ).submit(function( e ) {
