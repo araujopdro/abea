@@ -1622,6 +1622,12 @@
 						                				checkbox.classList.add("requisito-"+requisitos_list[z]);
 						                				//span_name_habilidade.classList.add("requisito-"+requisitos_list[z]+"-title");
 							                		}
+
+							                		var proibicoes_list = habilidades[i].habilidades[j].proibicoes[k-1].split(";");
+							                		for(var z = 0; z < requisitos_list.length; z++){
+						                				checkbox.classList.add("not-requisito-"+proibicoes_list[z]);
+						                				//span_name_habilidade.classList.add("requisito-"+requisitos_list[z]+"-title");
+							                		}
 							                		checkbox.disabled = true;
 							                	}else{
 						                			checkbox.className = "input-habilidades";
@@ -1998,6 +2004,9 @@
 				margin: 0;
 			    background-color: white;
 			}
+			h4, h5, h6{
+				margin: 0;
+			}
 
 			#form{
 				width: 45vw;
@@ -2097,30 +2106,30 @@
     		flex-direction: column;
 		">
 			<div>
-				<div>
-					<h6>Nome:</h6>
-					<span id="preview-nome"></span>
+				<div style="flex: 1;margin-right: 1.5em;">
+					<h4>Nome:</h4>
+					<h5 id="preview-nome"></h5>
 				</div>
-				<div>	
-					<h6>Idade:</h6>
-					<span id="preview-idade"></span>
+				<div style="margin-right: 2em;">	
+					<h4>Idade:</h4>
+					<h5 id="preview-idade"></h5>
 				</div>
 			</div>
-			<h6>Nacionalidade:</h6>
-			<span id="preview-nacionalidade"></span>
+			<h4>Nacionalidade:</h4>
+			<h5 id="preview-nacionalidade"></h5>
 			<div>
-				<h6>Características:</h6>
-				<span id="preview-caracteristicas"></span>
+				<h4>Características:</h4>
+				<h5 id="preview-caracteristicas"></h5>
 			</div>
 			<div>
 				<div>
-					<h6>Habilidades:</h6>
+					<h4>Habilidades:</h4>
 					<div>
-						<h6>Pontos de Habilidade:</h6>
-						<span id="preview-pts-h">20</span>
+						<h4>PH:</h4>
+						<h5 id="preview-pts-h">20</h5>
 					</div>
 				</div>
-				<span id="preview-habilidades"></span>
+				<h5 id="preview-habilidades"></h5>
 			</div>
 			
 		</div>
