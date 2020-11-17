@@ -2004,7 +2004,7 @@
 				margin: 0;
 			    background-color: white;
 			}
-			h4, h5, h6{
+			h6, h5, h6{
 				margin: 0;
 			}
 
@@ -2107,25 +2107,25 @@
 		">
 			<div>
 				<div style="flex: 1;margin-right: 1.5em;">
-					<h4>Nome:</h4>
+					<h6>Nome:</h6>
 					<h5 id="preview-nome"></h5>
 				</div>
 				<div style="margin-right: 2em;">	
-					<h4>Idade:</h4>
+					<h6>Idade:</h6>
 					<h5 id="preview-idade"></h5>
 				</div>
 			</div>
-			<h4>Nacionalidade:</h4>
+			<h6>Nacionalidade:</h6>
 			<h5 id="preview-nacionalidade"></h5>
 			<div>
-				<h4>Características:</h4>
+				<h6>Características:</h6>
 				<h5 id="preview-caracteristicas"></h5>
 			</div>
 			<div>
 				<div>
-					<h4>Habilidades:</h4>
+					<h6>Habilidades:</h6>
 					<div>
-						<h4>PH:</h4>
+						<h6>PH:</h6>
 						<h5 id="preview-pts-h">20</h5>
 					</div>
 				</div>
