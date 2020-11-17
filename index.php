@@ -1651,10 +1651,22 @@
 												label.htmlFor = "input-habilidades-"+_id+k+"-label";
 												if(k == 1){
 													label.appendChild(document.createTextNode("Aprendiz ("+k+")"));
+													var small_custo = document.createElement("small");
+						                				small_custo.innerHTML = " - custo: 1 - bônus em testes: +3";
+						                				small_custo.className = "small-custo";
+													label.appendChild(small_custo);
 												}else if(k == 2){
 													label.appendChild(document.createTextNode("Praticante ("+k+")"));
+													var small_custo = document.createElement("small");
+						                				small_custo.innerHTML = " - custo: 2 - bônus em testes: +6";
+						                				small_custo.className = "small-custo";
+													label.appendChild(small_custo);
 												}else{
 													label.appendChild(document.createTextNode("Mestre ("+k+")"));
+													var small_custo = document.createElement("small");
+						                				small_custo.innerHTML = " - custo: 4 - bônus em testes: +9";
+						                				small_custo.className = "small-custo";
+													label.appendChild(small_custo);
 												}
 
 											var small_nivel = document.createElement("small");
@@ -2048,6 +2060,10 @@
 			    content: " » ";
 			}
 
+			.small-custo{
+				font-weight: normal !important;
+			}
+
 			.bold{
 				font-weight: bolder;
 			}
@@ -2132,7 +2148,7 @@
 				<h6 style="color: lightcoral;">Nacionalidade:</h6>
 				<h5 id="preview-nacionalidade"></h5>
 			</div>
-			<div style="margin-top: 1em;color: lightcoral;">
+			<div style="margin-top: 1em;">
 				<h6 style="color: lightcoral;">Características:</h6>
 				<h5 style="display: flex;flex-direction: column;" id="preview-caracteristicas"></h5>
 			</div>
