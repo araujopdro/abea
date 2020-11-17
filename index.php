@@ -1949,9 +1949,11 @@
 	            	$('#preview-bens').append(c);
 				}
 			};
-
+			console.log(bens_iniciais);
 			AddBens("Rede");
+			console.log(bens_iniciais);
 			AddBens("Mochila");
+			console.log(bens_iniciais);
 			AddBens("Roupas comuns");
 
             $(document).ready(function() {
