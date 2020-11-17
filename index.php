@@ -1303,7 +1303,23 @@
 					{"nome":"Quimbundo","descricao":[""],"requisitos":[null,"Quimbundo1","Quimbundo1;Quimbundo2"]},
 					{"nome":"Umbundo","descricao":[""],"requisitos":[null,"Umbundo1","Umbundo1;Umbundo2"]}
 				]}];
-			var bens_iniciais_categorias = [{}];
+			var bens_iniciais_categorias = [
+				{"nome":"Armas-de-arremesso","tipo":"choice"},
+				{"nome":"Armas-de-corte","tipo":"choice"},
+				{"nome":"Armas-de-fogo","tipo":"choice"},
+				{"nome":"Armas-de-golpe","tipo":"choice"},
+				{"nome":"Armas-de-haste","tipo":"choice"},
+				{"nome":"Armas-de-sopro","tipo":"choice"},
+				{"nome":"Armas-me-ânicas","tipo":"choice"},
+				{"nome":"Arquearia","tipo":"choice"},
+				{"nome":"Esgrima","tipo":"choice"},
+				{"nome":"Armas exóticas","tipo":"choice"},];
+
+
+			
+
+
+
 			var bens_iniciais = [];
 
 			var car_selecionadas = [];
@@ -1627,14 +1643,16 @@
 							                		}
 
 							                		checkbox.disabled = true;
-							                	}else if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
+							                	}else{
+						                			checkbox.className = "input-habilidades";
+							                	}
+
+							                	if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
 							                		var proibicoes_list = habilidades[i].habilidades[j].proibicoes[k-1].split(";");
 							                		for(var z = 0; z < proibicoes_list.length; z++){
 						                				checkbox.classList.add("not-requisito-"+proibicoes_list[z]);
 						                				//span_name_habilidade.classList.add("requisito-"+requisitos_list[z]+"-title");
 							                		}
-							                	}else{
-						                			checkbox.className = "input-habilidades";
 							                	}
 
 							                	// if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
@@ -1905,20 +1923,19 @@
 				});};
 			
 			function ChecarBens(cat, state){
-				console.log(cat)
-				// for(var i = 0; i < bens_iniciais_categorias.length; i++){
-				// 	if(cat == bens_iniciais_categorias[i].nome && state == 0){
-				// 		if(bens_iniciais_categorias[i].tipo == "fixed"){
-				// 			for(var j = 0; j < bens_iniciais_categorias[i].bens_fixos[j]; j++){
-				// 				AddBens(bens_iniciais_categorias[i].bens_fixos[j].nome);
-				// 			}
-				// 		}else{
-				// 			$("#bens-cat-"+nome).show();
-				// 		}
-				// 	}else if(cat == bens_iniciais_categorias[i].nome && state == 1){
-				// 		$("#bens-cat-"+nome).hide();
-				// 	}
-				// }
+				for(var i = 0; i < bens_iniciais_categorias.length; i++){
+					if(cat == bens_iniciais_categorias[i].nome && state == 0){
+						if(bens_iniciais_categorias[i].tipo == "fixed"){
+							for(var j = 0; j < bens_iniciais_categorias[i].bens_fixos[j]; j++){
+								AddBens(bens_iniciais_categorias[i].bens_fixos[j].nome);
+							}
+						}else{
+							$("#bens-cat-"+nome).show();
+						}
+					}else if(cat == bens_iniciais_categorias[i].nome && state == 1){
+						$("#bens-cat-"+nome).hide();
+					}
+				}
 			}
 
 			function AddBens(obj){
@@ -2205,7 +2222,7 @@
 					<h6 style="flex: 1;margin-right: 1.5em;color: lightcoral;">Bens:</h6>
 					<div style="margin-right: 2em;display: flex;">
 						<h6 style="margin-right: 0.3em;color: lightcoral;">$:</h6>
-						<h5 id="preview-dinheiro">20</h5>
+						<h5 id="preview-dinheiro">1000</h5>
 					</div>
 				</div>
 				<h5 style="display: flex;flex-direction: column;" id="preview-bens"></h5>
