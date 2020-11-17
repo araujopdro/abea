@@ -1303,7 +1303,7 @@
 					{"nome":"Quimbundo","descricao":[""],"requisitos":[null,"Quimbundo1","Quimbundo1;Quimbundo2"]},
 					{"nome":"Umbundo","descricao":[""],"requisitos":[null,"Umbundo1","Umbundo1;Umbundo2"]}
 				]}];
-			var bens = [];
+			var bens_iniciais_categorias = [{}];
 			var bens_iniciais = [];
 
 			var car_selecionadas = [];
@@ -1907,9 +1907,15 @@
 			function ChecarBens(cat, state){
 				console.log(cat)
 				// for(var i = 0; i < bens_iniciais_categorias.length; i++){
-				// 	if(cat == bens_iniciais_categorias.nome && state == 0){
-				// 		$("#bens-cat-"+nome).show();
-				// 	}else if(cat == bens_iniciais_categorias.nome && state == 1){
+				// 	if(cat == bens_iniciais_categorias[i].nome && state == 0){
+				// 		if(bens_iniciais_categorias[i].tipo == "fixed"){
+				// 			for(var j = 0; j < bens_iniciais_categorias[i].bens_fixos[j]; j++){
+				// 				AddBens(bens_iniciais_categorias[i].bens_fixos[j].nome);
+				// 			}
+				// 		}else{
+				// 			$("#bens-cat-"+nome).show();
+				// 		}
+				// 	}else if(cat == bens_iniciais_categorias[i].nome && state == 1){
 				// 		$("#bens-cat-"+nome).hide();
 				// 	}
 				// }
