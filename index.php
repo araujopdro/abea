@@ -1303,11 +1303,14 @@
 					{"nome":"Quimbundo","descricao":[""],"requisitos":[null,"Quimbundo1","Quimbundo1;Quimbundo2"]},
 					{"nome":"Umbundo","descricao":[""],"requisitos":[null,"Umbundo1","Umbundo1;Umbundo2"]}
 				]}];
+			var bens = [];
+			var bens_iniciais = [];
 
 			var car_selecionadas = [];
 			var hab_selecionadas = [];
 			var char_resistencia = 10;
 			var char_pts_h = 20;
+			var char_din = 1000;
 
 			function CreateNacionalidade(){
                 $('#select-nacionalidade').remove();
@@ -1652,19 +1655,19 @@
 												if(k == 1){
 													label.appendChild(document.createTextNode("Aprendiz ("+k+")"));
 													var small_custo = document.createElement("small");
-						                				small_custo.innerHTML = " - custo: 1 - bônus em testes: +3";
+						                				small_custo.innerHTML = " - custo PH: 1 - bônus em testes: +3";
 						                				small_custo.className = "small-custo";
 													label.appendChild(small_custo);
 												}else if(k == 2){
 													label.appendChild(document.createTextNode("Praticante ("+k+")"));
 													var small_custo = document.createElement("small");
-						                				small_custo.innerHTML = " - custo: 2 - bônus em testes: +6";
+						                				small_custo.innerHTML = " - custo PH: 2 - bônus em testes: +6";
 						                				small_custo.className = "small-custo";
 													label.appendChild(small_custo);
 												}else{
 													label.appendChild(document.createTextNode("Mestre ("+k+")"));
 													var small_custo = document.createElement("small");
-						                				small_custo.innerHTML = " - custo: 4 - bônus em testes: +9";
+						                				small_custo.innerHTML = " - custo PH: 4 - bônus em testes: +9";
 						                				small_custo.className = "small-custo";
 													label.appendChild(small_custo);
 												}
@@ -1703,12 +1706,12 @@
 					var r = /\d+/;
 					var number = parseInt(this.id.match(r));
 					var id = this.id.replace(/[0-9]/g, '');
-					console.log(number + " " + id)
 					
                 	$(".preview-habilidade-"+id).remove();
 				 	if(this.checked){
 				 		DiminuirPtsH(number);
 				 		AumentarResistencia(id,number);
+				 		ChecarBens(id, 0);
 				   		$("#"+id).addClass("after"+number);
 
 				   		var c = document.createDocumentFragment();
@@ -1760,6 +1763,7 @@
 				 		AumentarPtsH(number);
 				 		//$(".ptsh"+number).each(function(){$(this).prop("disabled", false);$(this).removeClass("ptsh"+number)});
 				 		DiminuirResistencia(id,number);
+				 		ChecarBens(id, 1);
 
 						var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
@@ -1899,6 +1903,33 @@
 				 	};
 				   //	console.log(hab_selecionadas);
 				});};
+			
+			function ChecarBens(cat, state){
+				console.log(cat)
+				// for(var i = 0; i < bens_iniciais_categorias.length; i++){
+				// 	if(cat == bens_iniciais_categorias.nome && state == 0){
+				// 		$("#bens-cat-"+nome).show();
+				// 	}else if(cat == bens_iniciais_categorias.nome && state == 1){
+				// 		$("#bens-cat-"+nome).hide();
+				// 	}
+				// }
+			}
+
+			function AddBens(obj){
+                $('#preview-bens').empty();
+				bens_iniciais.push(obj);
+				for(var i = 0; i < bens_iniciais.length; i++){
+					var c = document.createDocumentFragment();
+	            	var span = document.createElement("span");
+	            		span.innerHTML = bens_iniciais[i];
+						c.appendChild(span);
+	            	$('#preview-bens').append(c);
+				}
+			};
+
+			AddBens("Rede");
+			AddBens("Mochila");
+			AddBens("Roupas comuns");
 
             $(document).ready(function() {
             	CreateCaracteristicas();
@@ -1980,7 +2011,7 @@
             	}
             	cur_portrait--;
     			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+sorted_portraits[cur_portrait]+".jpg");
-    			$('#preview-portrait').attr("src", "/imgs/portraits/portrait"+a+".jpg");
+    			$('#preview-portrait').attr("src", "/imgs/portraits/portrait"+sorted_portraits[cur_portrait]+".jpg");
 
             }
 
@@ -2042,6 +2073,7 @@
 			#form{
 				width: 45vw;
     			margin: auto;
+    			padding: 1.5em 0 3em 0;
 			}
 
 			.habilidades-habilidade-holder{
@@ -2162,6 +2194,16 @@
 				</div>
 				<h5 style="display: flex;flex-direction: column;" id="preview-habilidades"></h5>
 			</div>
+			<div style="margin-top: 1em;">
+				<div style="display: flex">
+					<h6 style="flex: 1;margin-right: 1.5em;color: lightcoral;">Bens:</h6>
+					<div style="margin-right: 2em;display: flex;">
+						<h6 style="margin-right: 0.3em;color: lightcoral;">$:</h6>
+						<h5 id="preview-dinheiro">20</h5>
+					</div>
+				</div>
+				<h5 style="display: flex;flex-direction: column;" id="preview-bens"></h5>
+			</div>
 		</div>
 
 
@@ -2235,6 +2277,10 @@
 				<div style="margin: 1.25em 0" id="bio">
 					<label for="input-nome">Escreva um pouco sobre a sua história.<br><small>Use sua nacionalidade, etnia, características e habilidades para te ajudar a pensar na história do seu personagem.</small></label>
 					<textarea class="form-control" id="input-historia" name="historia" required="true"></textarea>
+				</div>
+				<div id="bens-lists">
+					
+
 				</div>
 				<input class="submit" type="submit" name="submit" value="ENTRAR">
 			</form>
