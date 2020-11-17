@@ -1946,6 +1946,7 @@
         		
     			sorted_portraits.push(a);
     			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+a+".jpg");
+    			$('#preview-portrait').attr("src", "/imgs/portraits/portrait"+a+".jpg");
     			cur_portrait = sorted_portraits.length-1;
         		console.log(sorted_portraits);
 
@@ -2111,6 +2112,7 @@
 
 
 		<div style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
+			<div><span><img id="preview-portrait" src="/imgs/portraits/portrait0.jpg"></span></div>
 			<div style="display: flex">
 				<div style="flex: 1;margin-right: 1.5em;">
 					<h6>Nome:</h6>
