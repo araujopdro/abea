@@ -1686,7 +1686,7 @@
 					
                 	$(".preview-habilidade-"+id).remove();
 				 	if(this.checked){
-				 		AumentarResistência(id,number);
+				 		AumentarResistencia(id,number);
 				   		$("#"+id).addClass("after"+number);
 
 				   		var c = document.createDocumentFragment();
@@ -1721,7 +1721,7 @@
 						});
 					   	$("#"+id).addClass("bold");
 				 	}else{
-				 		DiminuirResistência(id,number);
+				 		DiminuirResistencia(id,number);
 
 						var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
