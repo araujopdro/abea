@@ -1723,11 +1723,11 @@
 						    }
 
 						    if(class_arr.every(r => rqlist.includes(r))){
-							    console.log('Found all of', class_arr, 'in', rqlist);
+							    //console.log('Found all of', class_arr, 'in', rqlist);
 							    var m = number+1;
-							    if(number == 3){
-							    	m = 4;
-							    }
+							    console.log(number);
+							    console.log(m);
+							    
 							    if(char_pts_h - m < 0){
 							    	var f = m - char_pts_h;
 						 			$(this).addClass("ptsh"+f);
@@ -1735,14 +1735,14 @@
   									$(this).prop("disabled", false);
 						 		}
 							}else{
-							    console.log('Did not find all of', class_arr, 'in', rqlist);
+							    //console.log('Did not find all of', class_arr, 'in', rqlist);
   								$(this).prop("disabled", true);
 							}
 						});
 					   	$("#"+id).addClass("bold");
 				 	}else{
 				 		AumentarPtsH(number);
-				 		$(".ptsh"+number).removeClass("ptsh"+number);
+				 		$(".ptsh"+number).each(function(){$(this).prop("disabled", false);$(this).removeClass("ptsh"+number)});
 				 		DiminuirResistencia(id,number);
 
 						var c = document.createDocumentFragment();
@@ -2112,7 +2112,7 @@
 
 
 		<div style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
-			<div><span><img id="preview-portrait" src="/imgs/portraits/portrait0.jpg"></span></div>
+			<div style="display: flex;"><span style="width: 35%;display: block;margin-bottom: 1.5em;"><img style="width: 100%;" id="preview-portrait" src="/imgs/portraits/portrait0.jpg"></span></div>
 			<div style="display: flex">
 				<div style="flex: 1;margin-right: 1.5em;">
 					<h6>Nome:</h6>
