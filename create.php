@@ -16,9 +16,11 @@
 
 		<script type="text/javascript">
 			$( document ).ready(function() {
-				$(function(){
-			      $("#main").load("navbar.html");
-			    });
+				
+		      	$.get("navbar.html", function (data) {
+                    $("#main").append(data);
+                    var nav_active = $("#nav-create");
+                });
 
 				$( "#form" ).submit(function( e ) {
 			        e.preventDefault();
