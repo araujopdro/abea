@@ -1350,8 +1350,8 @@
 
 	            $('#select-nacionalidade').on('change', function() {
 	            	$("#random-name").show();
-				  	$("#preview-nacionalidade").text();
 	            	var selected_nacionalidade = $(this).val();
+				  	$("#preview-nacionalidade").text(selected_nacionalidade);
 	            	var selected_nacionalidade_id = -1;
 				  	for(var i = 0; i < nacionalidades.length; i++){
 				  		if(selected_nacionalidade == nacionalidades[i].nome){
@@ -1623,12 +1623,13 @@
 						                				//span_name_habilidade.classList.add("requisito-"+requisitos_list[z]+"-title");
 							                		}
 
+							                		checkbox.disabled = true;
+							                	}else if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
 							                		var proibicoes_list = habilidades[i].habilidades[j].proibicoes[k-1].split(";");
 							                		for(var z = 0; z < requisitos_list.length; z++){
 						                				checkbox.classList.add("not-requisito-"+proibicoes_list[z]);
 						                				//span_name_habilidade.classList.add("requisito-"+requisitos_list[z]+"-title");
 							                		}
-							                		checkbox.disabled = true;
 							                	}else{
 						                			checkbox.className = "input-habilidades";
 							                	}
