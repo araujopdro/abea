@@ -726,7 +726,7 @@
 						{"nome":"Barganha","niveis":["negociar o custo de bens e serviços","negociar o custo de bens e serviços com mais facilidade","pode ser utilizada para convencer um vendedor mais “duro” ou conseguir um desconto maior"],
 							"requisitos":[
 								null,
-								"Barganha",
+								"Barganha1",
 								"Barganha1;Barganha2"
 							]},
 						{"nome":"Oratória","descricao":["desenvolvimento do poder da voz para persuadir um grupo"],
