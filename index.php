@@ -1695,11 +1695,7 @@
 					
                 	$(".preview-habilidade-"+id).remove();
 				 	if(this.checked){
-				 		var ptsh = DiminuirPtsH(number);
-				 		if(ptsh < 0){
-				 			this.checked = false;
-				 			return;
-				 		}
+				 		DiminuirPtsH(number);
 				 		AumentarResistencia(id,number);
 				   		$("#"+id).addClass("after"+number);
 
@@ -1728,7 +1724,16 @@
 
 						    if(class_arr.every(r => rqlist.includes(r))){
 							    console.log('Found all of', class_arr, 'in', rqlist);
-  								$(this).prop("disabled", false);
+							    var m = number+1;
+							    if(number == 3){
+							    	m = 4;
+							    }
+							    if(char_pts_h - m < 0){
+							    	var f = m - char_pts_h;
+						 			$(this).addClass("ptsh"+f);
+						 		}else{
+  									$(this).prop("disabled", false);
+						 		}
 							}else{
 							    console.log('Did not find all of', class_arr, 'in', rqlist);
   								$(this).prop("disabled", true);
@@ -1737,6 +1742,7 @@
 					   	$("#"+id).addClass("bold");
 				 	}else{
 				 		AumentarPtsH(number);
+				 		$(".ptsh"+number).removeClass("ptsh"+number);
 				 		DiminuirResistencia(id,number);
 
 						var c = document.createDocumentFragment();
@@ -1974,14 +1980,11 @@
 
             function DiminuirPtsH(_number){
             	if(_number == 3){
-            		if(char_pts_h - 4 < 0){return -1;}
         			char_pts_h -= 4;
             	}else{
-            		if(char_pts_h - _number < 0){return -1;}
         			char_pts_h -= _number;
             	}
 			  	$("#preview-pts-h").text(char_pts_h.toString());
-			  	return char_pts_h;
         		console.log("resistência++")
             }
 
