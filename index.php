@@ -1724,20 +1724,20 @@
 
 						    if(class_arr.every(r => rqlist.includes(r))){
 							    //console.log('Found all of', class_arr, 'in', rqlist);
-							    var m = number+1;
-							    console.log(number);
-							    if(m == 3){
-							    	m = 4;
-							    }
-							    console.log(m);
-							    console.log(char_pts_h - m);
+							  //   var m = number+1;
+							  //   console.log(number);
+							  //   if(m == 3){
+							  //   	m = 4;
+							  //   }
+							  //   console.log(m);
+							  //   console.log(char_pts_h - m);
 							    
-							    if(char_pts_h - m < 0){
-							    	var f = m - char_pts_h;
-						 			$(this).addClass("ptsh"+f);
-						 		}else{
-  									$(this).prop("disabled", false);
-						 		}
+							  //   if(char_pts_h - m < 0){
+							  //   	var f = m - char_pts_h;
+						 		// 	$(this).addClass("ptsh"+f);
+						 		// }else{
+								$(this).prop("disabled", false);
+						 		//}
 							}else{
 							    //console.log('Did not find all of', class_arr, 'in', rqlist);
   								$(this).prop("disabled", true);
@@ -1746,7 +1746,7 @@
 					   	$("#"+id).addClass("bold");
 				 	}else{
 				 		AumentarPtsH(number);
-				 		$(".ptsh"+number).each(function(){$(this).prop("disabled", false);$(this).removeClass("ptsh"+number)});
+				 		//$(".ptsh"+number).each(function(){$(this).prop("disabled", false);$(this).removeClass("ptsh"+number)});
 				 		DiminuirResistencia(id,number);
 
 						var c = document.createDocumentFragment();
@@ -1968,6 +1968,7 @@
             	}
             	cur_portrait--;
     			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+sorted_portraits[cur_portrait]+".jpg");
+    			$('#preview-portrait').attr("src", "/imgs/portraits/portrait"+a+".jpg");
 
             }
 
@@ -2127,19 +2128,19 @@
 					<h5 id="preview-idade"></h5>
 				</div>
 			</div>
-			<div style="margin-top: 1em;color: lightcoral;">
+			<div style="margin-top: 1em;">
 				<h6 style="color: lightcoral;">Nacionalidade:</h6>
 				<h5 id="preview-nacionalidade"></h5>
 			</div>
 			<div style="margin-top: 1em;color: lightcoral;">
-				<h6>Características:</h6>
+				<h6 style="color: lightcoral;">Características:</h6>
 				<h5 style="display: flex;flex-direction: column;" id="preview-caracteristicas"></h5>
 			</div>
 			<div style="margin-top: 1em;">
 				<div style="display: flex">
 					<h6 style="flex: 1;margin-right: 1.5em;color: lightcoral;">Habilidades:</h6>
 					<div style="margin-right: 2em;display: flex;">
-						<h6 style="margin-right: 0.3em;">PH:</h6>
+						<h6 style="margin-right: 0.3em;color: lightcoral;">PH:</h6>
 						<h5 id="preview-pts-h">20</h5>
 					</div>
 				</div>
