@@ -1361,6 +1361,16 @@
 
                 	$('#holder-inimigos').hide();
                 	$('#holder-aliados').hide();
+                	
+                	var spant = document.createElement("span");
+	                	spant.className = "nacionalidade-aliados-title";
+	                	spant.innerHTML = "Aliados";
+	                	$('#holder-aliados').append(spant);
+
+					var spantb = document.createElement("span");
+	                	spantb.className = "nacionalidade-inimigos-title";
+	                	spantb.innerHTML = "Inimigos";
+	                	$('#holder-inimigos').append(spantb);
 
 				  	for(var j = 0; j < nacionalidades[selected_nacionalidade_id].aliados.length; j++){
 				  		var span = document.createElement("span");
