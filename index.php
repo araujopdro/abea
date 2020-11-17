@@ -1951,13 +1951,13 @@
 
             function AumentarPtsH(_number){
         		char_pts_h += _number;
-			  	$("#preview-pts-h").text($(this).val(char_pts_h.toString()));
+			  	$("#preview-pts-h").text(char_pts_h.toString());
         		console.log("resistência++")
             }
 
             function DiminuirPtsH(_number){
         		char_pts_h -= _number;
-			  	$("#preview-pts-h").text($(this).val(char_pts_h.toString()));
+			  	$("#preview-pts-h").text(char_pts_h.toString());
         		console.log("resistência++")
             }
 
@@ -1965,7 +1965,7 @@
             	var i = hab_resistencia.indexOf(_id);
             	if(_number == 3 && i > -1){
             		char_resistencia++;
-				  	$("#preview-resistencia").text($(this).val(char_resistencia.toString()));
+				  	$("#preview-resistencia").text(char_resistencia.toString());
             		console.log("resistência++")
             	}
             }
@@ -1974,7 +1974,7 @@
             	var i = hab_resistencia.indexOf(_id);
             	if(_number == 3 && i > -1){
             		char_resistencia--;
-				  	$("#preview-resistencia").text($(this).val(char_resistencia.toString()));
+				  	$("#preview-resistencia").text(char_resistencia.toString());
             		console.log("resistência--")
             	}
             }
