@@ -1688,7 +1688,7 @@
 					
                 	$(".preview-habilidade-"+id).remove();
 				 	if(this.checked){
-				 		AumentarPtsH(number);
+				 		DiminuirPtsH(number);
 				 		AumentarResistencia(id,number);
 				   		$("#"+id).addClass("after"+number);
 
@@ -1724,7 +1724,7 @@
 						});
 					   	$("#"+id).addClass("bold");
 				 	}else{
-				 		DiminuirPtsH(number);
+				 		AumentarPtsH(number);
 				 		DiminuirResistencia(id,number);
 
 						var c = document.createDocumentFragment();
@@ -1950,13 +1950,21 @@
             var hab_resistencia = ["Acrobacia","Força-Física","Natação","Escalada","Boxe","Capoiera","Luta-livre"];
 
             function AumentarPtsH(_number){
-        		char_pts_h += _number;
+            	if(_number == 3){
+        			char_pts_h += 4;
+            	}else{
+        			char_pts_h += _number;
+            	}
 			  	$("#preview-pts-h").text(char_pts_h.toString());
         		console.log("resistência++")
             }
 
             function DiminuirPtsH(_number){
-        		char_pts_h -= _number;
+            	if(_number == 3){
+        			char_pts_h -= 4;
+            	}else{
+        			char_pts_h -= _number;
+            	}
 			  	$("#preview-pts-h").text(char_pts_h.toString());
         		console.log("resistência++")
             }
