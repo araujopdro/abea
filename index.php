@@ -1949,6 +1949,7 @@
             	var i = hab_resistencia.indexOf(_id);
             	if(_number == 3 && i > -1){
             		char_resistencia++;
+				  	$("#preview-resistencia").text($(this).val(char_resistencia));
             		console.log("resistência++")
             	}
             }
@@ -1957,6 +1958,7 @@
             	var i = hab_resistencia.indexOf(_id);
             	if(_number == 3 && i > -1){
             		char_resistencia--;
+				  	$("#preview-resistencia").text($(this).val(char_resistencia));
             		console.log("resistência--")
             	}
             }
@@ -2052,16 +2054,22 @@
 			.nacionalidade-flavor-title{
 				font-weight: bold;
 			}
+
+			.nacionalidade-aliados-title,.nacionalidade-inimigos-title{
+				font-size: 1.2em;
+				font-weight: bold;
+			}
 		</style>
 	</head>
 	<body> 
 		<div style="
 		    width: 20%;
-		    background-color: rebeccapurple;
+		    background-color: black;
+		    color: white;
 		    position: fixed;
 		    top: 5%;
 		    left: 2.5%;    
-		    display: none;
+		    display: flex;
     		flex-direction: column;
 		">
 			<h6>Nome:</h6>
@@ -2070,6 +2078,8 @@
 			<span id="preview-idade"></span>
 			<h6>Nacionalidade:</h6>
 			<span id="preview-nacionalidade"></span>
+			<h6>Resistência:</h6>
+			<span id="preview-resistencia"></span>
 			<h6>Características:</h6>
 			<span id="preview-caracteristicas"></span>
 			<h6>Habilidades:</h6>
@@ -2091,7 +2101,6 @@
 								    padding: 0.6em;
 								    flex: 1;
 								    background-color: rgba(60,180,50,0.6);
-								    font-weight: bold;
 								    border-radius: 0.3em;
 								    margin: 0 0.5em 0 0;" id="holder-aliados">
 								
@@ -2102,7 +2111,6 @@
 								    flex: 1;
 								    padding: 0.6em;
 								    background-color: rgba(180,60,50,0.6);
-								    font-weight: bold;
 								    border-radius: 0.3em;
 									margin: 0 0 0 0.5em;" id="holder-inimigos">
 								
