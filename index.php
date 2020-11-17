@@ -1702,7 +1702,7 @@
 				   		var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
 	                		span.className = "preview-habilidade-"+id;
-	                		span.innerHTML = id.replace('-',' ')+" "+number;
+	                		span.innerHTML = id+" "+number;
 							c.appendChild(span);
 	                	$("#preview-habilidades").append(c);
 
@@ -2127,18 +2127,19 @@
 			<div style="
     margin-top: 1em;">
 				<h6>Características:</h6>
-				<h5 id="preview-caracteristicas"></h5>
+				<h5 style="display: flex;flex-direction: column;" id="preview-caracteristicas"></h5>
 			</div>
 			<div style="
     margin-top: 1em;">
-				<div>
-					<h6>Habilidades:</h6>
-					<div>
+				<div style="display: flex">
+					<h6 style="flex: 1;margin-right: 1.5em;">Habilidades:</h6>
+					<div style="    margin-right: 2em;
+    display: flex;">
 						<h6>PH:</h6>
 						<h5 id="preview-pts-h">20</h5>
 					</div>
 				</div>
-				<h5 id="preview-habilidades"></h5>
+				<h5 style="display: flex;flex-direction: column;" id="preview-habilidades"></h5>
 			</div>
 			
 		</div>
