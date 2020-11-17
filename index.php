@@ -1647,13 +1647,12 @@
 						                			checkbox.className = "input-habilidades";
 							                	}
 
-							                	if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
-							                		var proibicoes_list = habilidades[i].habilidades[j].proibicoes[k-1].split(";");
-							                		for(var z = 0; z < proibicoes_list.length; z++){
-						                				checkbox.classList.add("not-requisito-"+proibicoes_list[z]);
-						                				//span_name_habilidade.classList.add("requisito-"+requisitos_list[z]+"-title");
-							                		}
-							                	}
+							                	// if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
+							                	// 	var proibicoes_list = habilidades[i].habilidades[j].proibicoes[k-1].split(";");
+							                	// 	for(var z = 0; z < proibicoes_list.length; z++){
+						                		// 		checkbox.classList.add("not-requisito-"+proibicoes_list[z]);
+							                	// 	}
+							                	// }
 
 							                	// if(habilidades[i].habilidades[j].proibicoes != undefined && habilidades[i].habilidades[j].proibicoes[k-1] != null){
 							                	// 	var proibicoes_list = habilidades[i].habilidades[j].proibicoes[k-1].split(";");
@@ -1955,7 +1954,7 @@
             	CreateIdade();
             	CreateEtnia();
 
-            	
+
 				console.log(bens_iniciais);
 				AddBens("Rede");
 				console.log(bens_iniciais);
