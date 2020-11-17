@@ -34,9 +34,11 @@
 			        console.log($('#select-idade').val());
 			        console.log($('#select-etnia').val());
 			        console.log($('#select-nacionalidade').val());
-			        console.log($('input-historia').val());
+			        console.log($('#input-historia').val());
 			        console.log(char_habilidades.toString());
 			        console.log(char_caracteristicas.toString());
+			        console.log(char_resistencia);
+			        console.log(sorted_portraits[cur_portrait]);
 
 			        var array_a = char_habilidades.toString();
 			        var array_b = char_caracteristicas.toString();
@@ -49,11 +51,11 @@
 			            {
 			                nome: $('#input-nome').val(),
 			                perfil: sorted_portraits[cur_portrait],
-			                idade: $('#input-idade').val(),
-			                nacionalidade: $('#input-nacionalidade').val(),
-			                etnia: $('#input-etnia').val(),
+			                idade: $('#select-idade').val(),
+			                nacionalidade: $('#select-nacionalidade').val(),
+			                etnia: $('#select-etnia').val(),
 			                caracteristicas: array_b,
-			                resistencia: $('#input-resistencia').val(),
+			                resistencia: char_resistencia,
 			                habilidades: array_a,
 			                historia: $('#input-historia').val()
 			            },
@@ -1303,6 +1305,7 @@
 
 			var car_selecionadas = [];
 			var hab_selecionadas = [];
+			var char_resistencia = 10;
 
 			function CreateNacionalidade(){
                 $('#select-nacionalidade').remove();
@@ -1683,6 +1686,7 @@
 					
                 	$(".preview-habilidade-"+id).remove();
 				 	if(this.checked){
+				 		AumentarResistência(id,number);
 				   		$("#"+id).addClass("after"+number);
 
 				   		var c = document.createDocumentFragment();
@@ -1717,6 +1721,8 @@
 						});
 					   	$("#"+id).addClass("bold");
 				 	}else{
+				 		DiminuirResistência(id,number);
+
 						var c = document.createDocumentFragment();
 	                	var span = document.createElement("span");
 	                		span.className = "preview-habilidade-"+id;
@@ -1937,7 +1943,23 @@
 
             }
 
+            var hab_resistencia = ["Acrobacia","Força-Física","Natação","Escalada","Boxe","Capoiera","Luta-livre"];
 
+            function AumentarResistencia(_id, _number){
+            	var i = hab_resistencia.indexOf(_id);
+            	if(number == 3 && i > -1){
+            		char_resistencia++;
+            		console.log("resistência++")
+            	}
+            }
+
+            function DiminuirResistencia(_id, _number){
+            	var i = hab_resistencia.indexOf(_id);
+            	if(number == 3 && i > -1){
+            		char_resistencia--;
+            		console.log("resistência--")
+            	}
+            }
 
             function randomInteger(min, max) {
 			  return Math.floor(Math.random() * (max - min + 1)) + min;
