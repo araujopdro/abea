@@ -20,6 +20,24 @@
                     $("#main").append(data);
                     var nav_active = $("#nav-home");
                     nav_active.addClass("active");
+
+                    $( "#form" ).submit(function( e ) {
+				        e.preventDefault();
+
+				        $.ajax({
+				            url: 'consulta.php',
+				            type:'POST',
+				            contentType: "application/x-www-form-urlencoded;charset=utf-8",
+				            data:
+				            {
+				                nome: $('#busca').val()
+				            },
+				            success: function(msg)
+				            {	
+				        		console.log(msg);
+				            }               
+				        });
+				    });
                 });
 			});
 		</script>
