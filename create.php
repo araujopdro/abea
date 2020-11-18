@@ -1883,7 +1883,6 @@
 							}
   						var _hab = [];
 				   		$.each($("input[name='habilidades']:checked"), function(){
-				   			console.log("remove "+this);
 			                _hab.push($(this).val());
 			            });
 				        hab_selecionadas = _hab;
