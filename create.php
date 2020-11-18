@@ -1812,9 +1812,9 @@
 					    }
 
 					    if(class_arr.every(r => rqlist.includes(r))){
-							this.prop("disabled", false);
+							$(this).prop("disabled", false);
 						}else{
-							this.prop("disabled", true);
+							$(this).prop("disabled", true);
 						}
 					});
 				   	$("#"+id).addClass("bold");
