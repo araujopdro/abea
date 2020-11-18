@@ -49,6 +49,7 @@
 
 			        var array_a = char_habilidades.toString();
 			        var array_b = char_caracteristicas.toString();
+			        var array_c = bens_iniciais.toString();
 
 			        $.ajax({
 			            url: 'cadastro.php',
@@ -66,7 +67,7 @@
 			                habilidades: array_a,
 			                pts_h: char_pts_h,
 			                dinheiro: char_din,
-			                bens: bens_iniciais,
+			                bens: array_c,
 			                historia: $('#input-historia').val()
 			            },
 			            success: function(msg)
