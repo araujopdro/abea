@@ -1798,8 +1798,7 @@
 					
 					var _hab = [];
 			   		$.each($("input[name='habilidades']:checked"), function(){
-			   			console.log(this);
-		                _hab.push(this.val());
+		                _hab.push($(this).val());
 		            });
 			        hab_selecionadas = _hab;
 
@@ -1884,6 +1883,7 @@
 							}
   						var _hab = [];
 				   		$.each($("input[name='habilidades']:checked"), function(){
+				   			console.log("remove "+this);
 			                _hab.push($(this).val());
 			            });
 				        hab_selecionadas = _hab;
@@ -2070,7 +2070,7 @@
         			char_pts_h -= _number;
             	}
 			  	$("#preview-pts-h").text(char_pts_h.toString());
-        		console.log("resistência++")
+        		console.log("pts_h--")
             }
 
             function AumentarResistencia(_id, _number){
