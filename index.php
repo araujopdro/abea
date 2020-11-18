@@ -23,7 +23,7 @@
 
                     $( "#form" ).submit(function( e ) {
 				        e.preventDefault();
-
+				        console.log($('#busca').val());
 				        $.ajax({
 				            url: 'consulta.php',
 				            type:'POST',
