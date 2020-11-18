@@ -1291,23 +1291,23 @@
 				                
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
-				                for(var i = 0; i < array_b.length; i++){
-				                	console.log(array_b[i]);
-				                	var j = $("#"+array_b[i]);
-				                	console.log(j);
-				                	j.checked = true;
+				                // for(var i = 0; i < array_b.length; i++){
+				                // 	console.log(array_b[i]);
+				                // 	var j = $("#"+array_b[i]);
+				                // 	console.log(j);
+				                // 	j.checked = true;
 
-				                }
+				                // }
 
 				                char_resistencia = msg.resistencia;
 				  				$("#preview-resistencia").text(char_resistencia.toString());
 
 				                var array_a = msg.habilidades.split(',');
 				                hab_selecionadas = array_a;
-				                for(var i = 0; i < array_a.length; i++){
-				                	var j = $("#"+array_a[i]);
-				                	j.checked = true;
-				                }
+				                // for(var i = 0; i < array_a.length; i++){
+				                // 	var j = $("#"+array_a[i]);
+				                // 	j.checked = true;
+				                // }
 				                
 				                char_pts_h = msg.pts_h;
 			  					$("#preview-pts-h").text(char_pts_h.toString());
@@ -1318,9 +1318,9 @@
 				                bens_iniciais = array_c;
 				                console.log(array_c)
 				                $("#preview-bens").empty();
-				                for(var i = 0; i < array_c.length; i++){
-				                	AddBens(array_c[i])
-				                }
+				                // for(var i = 0; i < array_c.length; i++){
+				                // 	AddBens(array_c[i])
+				                // }
 				                
 				                $('#input-historia').val(msg.historia);
 				            }               
