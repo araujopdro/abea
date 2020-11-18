@@ -21,22 +21,22 @@
                     var nav_active = $("#nav-home");
                     nav_active.addClass("active");
 
-                    $( "#form" ).submit(function( e ) {
+                    $( "#form-buscar" ).submit(function( e ) {
 				        e.preventDefault();
 				        console.log($('#busca').val());
-				        // $.ajax({
-				        //     url: 'consulta.php',
-				        //     type:'POST',
-				        //     contentType: "application/x-www-form-urlencoded;charset=utf-8",
-				        //     data:
-				        //     {
-				        //         nome: $('#busca').val()
-				        //     },
-				        //     success: function(msg)
-				        //     {	
-				        // 		console.log(msg);
-				        //     }               
-				        // });
+				        $.ajax({
+				            url: 'consulta.php',
+				            type:'POST',
+				            contentType: "application/x-www-form-urlencoded;charset=utf-8",
+				            data:
+				            {
+				                nome: $('#busca').val()
+				            },
+				            success: function(msg)
+				            {	
+				        		console.log(msg);
+				            }               
+				        });
 				    });
                 });
 			});
