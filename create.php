@@ -15,72 +15,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 		<script type="text/javascript">
-			$( document ).ready(function() {
-				
-		      	$.get("navbar.html", function (data) {
-                    $("#main").append(data);
-                    var nav_active = $("#nav-create");
-                    nav_active.addClass("active");
-                });
 
-				$( "#form" ).submit(function( e ) {
-			        e.preventDefault();
-			        //$('.submit').attr("disabled","disabled");
-			        
-			        var char_habilidades = [];
-			        $.each($("input[name='habilidades']:checked"), function(){
-		                char_habilidades.push($(this).val());
-		            });
-			        
-			        var char_caracteristicas = [];
-			        $.each($("input[name='caracteristicas']:checked"), function(){
-		                char_caracteristicas.push($(this).val());
-		            });
-
-			        console.log($('#input-nome').val());
-			        console.log($('#select-idade').val());
-			        console.log($('#select-etnia').val());
-			        console.log($('#select-nacionalidade').val());
-			        console.log($('#input-historia').val());
-			        console.log(char_habilidades.toString());
-			        console.log(char_caracteristicas.toString());
-			        console.log(char_resistencia);
-			        console.log(sorted_portraits[cur_portrait]);
-
-			        var array_a = char_habilidades.toString();
-			        var array_b = char_caracteristicas.toString();
-			        var array_c = bens_iniciais.toString();
-
-			        $.ajax({
-			            url: 'cadastro.php',
-			            type:'POST',
-			            contentType: "application/x-www-form-urlencoded;charset=utf-8",
-			            data:
-			            {
-			                nome: $('#input-nome').val(),
-			                perfil: sorted_portraits[cur_portrait],
-			                idade: $('#select-idade').val(),
-			                nacionalidade: $('#select-nacionalidade').val(),
-			                etnia: $('#select-etnia').val(),
-			                caracteristicas: array_b,
-			                resistencia: char_resistencia,
-			                habilidades: array_a,
-			                pts_h: char_pts_h,
-			                dinheiro: char_din,
-			                bens: array_c,
-			                historia: $('#input-historia').val()
-			            },
-			            success: function(msg)
-			            {	
-			        		alert("Criado");
-			            }               
-			        });
-			    });
-
-			    $("#input-nome").on("change paste keyup", function() {
-				   $("#preview-nome").text($("#input-nome").val());
-				});
-			});
 
 			var nacionalidades = [
 				{
@@ -1321,6 +1256,98 @@
 			var char_resistencia = 10;
 			var char_pts_h = 20;
 			var char_din = 1000;
+
+			$( document ).ready(function() {
+				
+		      	$.get("navbar.html", function (data) {
+                    $("#main").append(data);
+                    var nav_active = $("#nav-create");
+                    nav_active.addClass("active");
+
+
+                    $( "#form-buscar" ).submit(function( e ) {
+				        e.preventDefault();
+				        console.log($('#busca').val());
+				        $.ajax({
+				            url: 'consulta.php',
+				            type:'POST',
+				            contentType: "application/x-www-form-urlencoded;charset=utf-8",
+				            data:
+				            {
+				                nome: $('#busca').val()
+				            },
+				            success: function(msg)
+				            {	
+				        		$('#input-nome').val(msg.nome);
+				        		sorted_portraits = [msg.perfil];
+				    			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
+				    			$('#preview-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
+				                $('#select-idade').val(msg.idade);
+				                $('#select-nacionalidade').val(msg.nacionalidade);
+				                $('#select-etnia').val(msg.etnia);
+				                //array_b
+				                char_resistencia = msg.resistencia;
+				  				$("#preview-resistencia").text(char_resistencia.toString());
+				                //array_a
+				                char_pts_h = msg.pts_h;
+			  					$("#preview-pts-h").text(char_pts_h.toString());
+				                char_din = msg.dinheiro;
+			  					$("#preview-dinheiro").text(char_din.toString());
+				                //array_c
+				                $('#input-historia').val(msg.historia);
+				            }               
+				        });
+				    });
+                });
+
+				$( "#form" ).submit(function( e ) {
+			        e.preventDefault();
+			        //$('.submit').attr("disabled","disabled");
+			        
+			        var char_habilidades = [];
+			        $.each($("input[name='habilidades']:checked"), function(){
+		                char_habilidades.push($(this).val());
+		            });
+			        
+			        var char_caracteristicas = [];
+			        $.each($("input[name='caracteristicas']:checked"), function(){
+		                char_caracteristicas.push($(this).val());
+		            });
+
+			        var array_a = char_habilidades.toString();
+			        var array_b = char_caracteristicas.toString();
+			        var array_c = bens_iniciais.toString();
+
+			        $.ajax({
+			            url: 'cadastro.php',
+			            type:'POST',
+			            contentType: "application/x-www-form-urlencoded;charset=utf-8",
+			            data:
+			            {
+			                nome: $('#input-nome').val(),
+			                perfil: sorted_portraits[cur_portrait],
+			                idade: $('#select-idade').val(),
+			                nacionalidade: $('#select-nacionalidade').val(),
+			                etnia: $('#select-etnia').val(),
+			                caracteristicas: array_b,
+			                resistencia: char_resistencia,
+			                habilidades: array_a,
+			                pts_h: char_pts_h,
+			                dinheiro: char_din,
+			                bens: array_c,
+			                historia: $('#input-historia').val()
+			            },
+			            success: function(msg)
+			            {	
+			        		alert("Criado");
+			            }               
+			        });
+			    });
+
+			    $("#input-nome").on("change paste keyup", function() {
+				   $("#preview-nome").text($("#input-nome").val());
+				});
+			});
 
 			function CreateNacionalidade(){
                 $('#select-nacionalidade').remove();
