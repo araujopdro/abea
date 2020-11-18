@@ -1774,13 +1774,16 @@
 				var r = /\d+/;
 				var number = parseInt(hab.match(r));
 				var id = hab.replace(/[0-9]/g, '');
+				
+				console.log(number);
+				console.log(id);
 
             	$(".preview-habilidade-"+id).remove();
             	var el = $("#"+hab);
 			 	if(el.checked){
 			 		DiminuirPtsH(number);
 			 		AumentarResistencia(id,number);
-			 		ChecarBens(id, 0);
+			 		//ChecarBens(id, 0);
 			   		$("#"+id).addClass("after"+number);
 
 			   		var c = document.createDocumentFragment();
@@ -1816,7 +1819,7 @@
 			 	}else{
 			 		AumentarPtsH(number);
 			 		DiminuirResistencia(id,number);
-			 		ChecarBens(id, 1);
+			 		//ChecarBens(id, 1);
 
 					var c = document.createDocumentFragment();
                 	var span = document.createElement("span");
