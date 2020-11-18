@@ -4,24 +4,23 @@
 	
 	$nome = $_POST['nome'];
 
-	$result = mysql_query("SELECT * from characters WHERE nome = $nome") or die('Could not query');
-	if(mysql_num_rows($result)){
-	    echo '{"data":[';
+	if ($stmt = $bd->prepare('SELECT nacionalidade FROM characters WHERE nome = ?')) {
+		$stmt->bind_param('s', $_POST['nome']);
+		$stmt->execute();
+		$stmt->store_result();
 
-	    $first = true;
-	    $row=mysql_fetch_assoc($result);
-	    while($row=mysql_fetch_row($result)){
-	        if($first) {
-	            $first = false;
-	        } else {
-	            echo ',';
-	        }
-	        echo json_encode($row);
-	    }
-	    echo ']}';
-	} else {
-	    echo '[]';
+		if ($stmt->num_rows > 0) {
+			$stmt->bind_result($nacionalidade);
+			$stmt->fetch();
+
+			$value = array('response' => $nacionalidade);
+          	header('Content-Type: application/json;');
+          	echo json_encode($value);
+		} else {
+			$value = array('response' => -1);
+          	header('Content-Type: application/json;');
+          	echo json_encode($value);
+		}
+		$stmt->close();
 	}
-
-	mysql_close($db);
 ?>
