@@ -1795,9 +1795,10 @@
                 		span.innerHTML = s+" "+number;
 						c.appendChild(span);
                 	$("#preview-habilidades").append(c);
-
-						var _hab = [];
+					
+					var _hab = [];
 			   		$.each($("input[name='habilidades']:checked"), function(){
+			   			console.log(this);
 		                _hab.push(this.val());
 		            });
 			        hab_selecionadas = _hab;
