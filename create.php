@@ -1277,6 +1277,7 @@
 				            },
 				            success: function(msg)
 				            {	
+				            	console.log(msg);
 				        		$('#input-nome').val(msg.nome);
 				   				$("#preview-nome").text(msg.nome);
 				        		sorted_portraits = [msg.perfil];
