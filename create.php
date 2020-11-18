@@ -1267,7 +1267,6 @@
 
                     $( "#form-buscar" ).submit(function( e ) {
 				        e.preventDefault();
-				        console.log($('#busca').val());
 				        $.ajax({
 				            url: 'consulta.php',
 				            type:'POST',
@@ -1279,21 +1278,43 @@
 				            success: function(msg)
 				            {	
 				        		$('#input-nome').val(msg.nome);
+				   				$("#preview-nome").text(msg.nome);
 				        		sorted_portraits = [msg.perfil];
 				    			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
 				    			$('#preview-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
 				                $('#select-idade').val(msg.idade);
+				  				$("#preview-idade").text(msg.idade);
 				                $('#select-nacionalidade').val(msg.nacionalidade);
+				  				$("#preview-nacionalidade").text(msg.nacionalidade);
 				                $('#select-etnia').val(msg.etnia);
-				                //array_b
+				                
+				                var array_b = msg.caracteristicas.split(',');
+				                car_selecionadas = array_b;
+				                for(var i; i = array_b.length; i++){
+				                	$("#"+array_b[i]).prop( "checked", true );
+				                }
+
 				                char_resistencia = msg.resistencia;
 				  				$("#preview-resistencia").text(char_resistencia.toString());
-				                //array_a
+
+				                var array_a = msg.habilidades.split(',');
+				                hab_selecionadas = array_a;
+				                for(var i; i = array_a.length; i++){
+				                	$("#"+array_a[i]).prop( "checked", true );
+				                }
+				                
 				                char_pts_h = msg.pts_h;
 			  					$("#preview-pts-h").text(char_pts_h.toString());
 				                char_din = msg.dinheiro;
 			  					$("#preview-dinheiro").text(char_din.toString());
-				                //array_c
+
+				                var array_c = msg.bens.split(',');
+				                bens_iniciais = array_c;
+				                $("#preview-bens").empty();
+				                for(var i; i = array_c.length; i++){
+				                	AddBens(array_c[i])
+				                }
+				                
 				                $('#input-historia').val(msg.historia);
 				            }               
 				        });
