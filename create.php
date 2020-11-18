@@ -1291,13 +1291,10 @@
 				                
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
-				                // for(var i = 0; i < array_b.length; i++){
-				                // 	console.log(array_b[i]);
-				                // 	var j = $("#"+array_b[i]);
-				                // 	console.log(j);
-				                // 	j.checked = true;
-
-				                // }
+				                for(var i = 0; i < array_b.length; i++){
+				                	console.log(array_b[i]);
+				                	$("#"+array_b[i]).prop( "checked", true );
+				                }
 
 				                char_resistencia = msg.resistencia;
 				  				$("#preview-resistencia").text(char_resistencia.toString());
