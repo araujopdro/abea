@@ -1290,6 +1290,7 @@
 				                
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
+				                console.log(array_b)
 				                for(var i; i = array_b.length; i++){
 				                	$("#"+array_b[i]).prop( "checked", true );
 				                }
@@ -1299,6 +1300,7 @@
 
 				                var array_a = msg.habilidades.split(',');
 				                hab_selecionadas = array_a;
+				                console.log(array_a)
 				                for(var i; i = array_a.length; i++){
 				                	$("#"+array_a[i]).prop( "checked", true );
 				                }
@@ -1310,6 +1312,7 @@
 
 				                var array_c = msg.bens.split(',');
 				                bens_iniciais = array_c;
+				                console.log(array_c)
 				                $("#preview-bens").empty();
 				                for(var i; i = array_c.length; i++){
 				                	AddBens(array_c[i])
