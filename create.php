@@ -1290,10 +1290,8 @@
 				                
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
-				                console.log(array_b)
-				                for(var i; i < array_b.length; i++){
+				                for(var i = 0; i < array_b.length; i++){
 				                	var j = $("#"+array_b[i]);
-				                	console.log(j)
 				                	j.checked = true;
 
 				                }
@@ -1303,10 +1301,8 @@
 
 				                var array_a = msg.habilidades.split(',');
 				                hab_selecionadas = array_a;
-				                console.log(array_a)
-				                for(var i; i < array_a.length; i++){
+				                for(var i = 0; i < array_a.length; i++){
 				                	var j = $("#"+array_a[i]);
-				                	console.log(j)
 				                	j.checked = true;
 				                }
 				                
@@ -1319,7 +1315,7 @@
 				                bens_iniciais = array_c;
 				                console.log(array_c)
 				                $("#preview-bens").empty();
-				                for(var i; i < array_c.length; i++){
+				                for(var i = 0; i < array_c.length; i++){
 				                	AddBens(array_c[i])
 				                }
 				                
