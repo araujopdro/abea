@@ -1303,6 +1303,7 @@
 				                var array_a = msg.habilidades.split(',');
 				                hab_selecionadas = array_a;
 				                for(var i = 0; i < array_a.length; i++){
+				                	console.log(array_a[i]);
 				                	ChangeHabilidade(array_a[i]);
 				                }
 				                
