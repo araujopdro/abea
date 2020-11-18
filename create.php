@@ -1293,6 +1293,7 @@
 				                console.log(array_b)
 				                for(var i; i < array_b.length; i++){
 				                	var j = $("#"+array_b[i]);
+				                	console.log(j)
 				                	j.checked = true;
 
 				                }
@@ -1305,6 +1306,7 @@
 				                console.log(array_a)
 				                for(var i; i < array_a.length; i++){
 				                	var j = $("#"+array_a[i]);
+				                	console.log(j)
 				                	j.checked = true;
 				                }
 				                
