@@ -1295,6 +1295,7 @@
 				                	console.log(array_b[i]);
 				                	$("#"+array_b[i]).prop( "checked", true );
 				                }
+				                $(".caracteristicas-holder:not(#caracteristicas-"+array_b[0]+",#caracteristicas-"+array_b[1]+",#caracteristicas-"+array_b[2]+")").slideUp('fast');
 
 				                char_resistencia = msg.resistencia;
 				  				$("#preview-resistencia").text(char_resistencia.toString());
@@ -1766,222 +1767,187 @@
 
 	            //var limit = 20;
 				$('input.input-habilidades').on('change', function(evt) {
-					var r = /\d+/;
-					var number = parseInt(this.id.match(r));
-					var id = this.id.replace(/[0-9]/g, '');
-					
-                	$(".preview-habilidade-"+id).remove();
-				 	if(this.checked){
-				 		DiminuirPtsH(number);
-				 		AumentarResistencia(id,number);
-				 		ChecarBens(id, 0);
-				   		$("#"+id).addClass("after"+number);
+					ChangeHabilidade(this.id);
+				});
+			};
+			
+			
+			function ChangeHabilidade(hab){
+				var r = /\d+/;
+				var number = parseInt(hab.match(r));
+				var id = hab.replace(/[0-9]/g, '');
 
-				   		var c = document.createDocumentFragment();
-	                	var span = document.createElement("span");
-	                		span.className = "preview-habilidade-"+id;
-	                		var s = id.replace("-"," ");
-	                		span.innerHTML = s+" "+number;
-							c.appendChild(span);
-	                	$("#preview-habilidades").append(c);
+            	$(".preview-habilidade-"+id).remove();
+            	var el = $("#"+hab);
+			 	if(el.checked){
+			 		DiminuirPtsH(number);
+			 		AumentarResistencia(id,number);
+			 		ChecarBens(id, 0);
+			   		$("#"+id).addClass("after"+number);
+
+			   		var c = document.createDocumentFragment();
+                	var span = document.createElement("span");
+                		span.className = "preview-habilidade-"+id;
+                		var s = id.replace("-"," ");
+                		span.innerHTML = s+" "+number;
+						c.appendChild(span);
+                	$("#preview-habilidades").append(c);
+
+						var _hab = [];
+			   		$.each($("input[name='habilidades']:checked"), function(){
+		                _hab.push(el.val());
+		            });
+			        hab_selecionadas = _hab;
+
+			   		$(".requisito-"+id+number).each(function() {
+					    var class_list = el.attr("class");
+					    var class_arr = class_list.split(/\s+/);
+					    	class_arr.shift();
+					    var rqlist = [];
+					    for(var i = 0; i < hab_selecionadas.length; i++){
+					    	rqlist.push("requisito-"+hab_selecionadas[i]);
+					    }
+
+					    if(class_arr.every(r => rqlist.includes(r))){
+							el.prop("disabled", false);
+						}else{
+								el.prop("disabled", true);
+						}
+					});
+				   	$("#"+id).addClass("bold");
+			 	}else{
+			 		AumentarPtsH(number);
+			 		DiminuirResistencia(id,number);
+			 		ChecarBens(id, 1);
+
+					var c = document.createDocumentFragment();
+                	var span = document.createElement("span");
+                		span.className = "preview-habilidade-"+id;
+                		console.log(number)
+                		var a = number - 1;
+                		var d = id.replace('-',' ');
+                		span.innerHTML = d+" "+a;
+						c.appendChild(span);
+
+			 		if(number == 1){
+				   		$("#"+id).removeClass("bold");
+					   	$("#"+id).removeClass("after1");
+					   	$("#"+id).removeClass("after2");
+					   	$("#"+id).removeClass("after3");
+
+						var c = hab_selecionadas.indexOf(id+3);
+						if(c >= 0){
+  							$(".requisito-"+id+3).prop("checked", false);
+  							$(".requisito-"+id+3).prop("disabled", true);
+								$(".requisito-"+id+3).each(function() {
+								var _r = /\d+/;
+								var _number = parseInt(this.id.match(_r));
+								var _id = this.id.replace(/[0-9]/g, '');
+					   			$("#"+_id).removeClass("after3");
+
+								console.log(_id);
+								console.log(_id + "after3");
+							});
+  						}
+						var b = hab_selecionadas.indexOf(id+2);
+						if(b >= 0){
+  							$(".requisito-"+id+2).prop("checked", false);
+  							$(".requisito-"+id+2).prop("disabled", true);
+								$(".requisito-"+id+2).each(function() {
+								var _r = /\d+/;
+								var _number = parseInt(this.id.match(_r));
+								var _id = this.id.replace(/[0-9]/g, '');
+					   			$("#"+_id).removeClass("after2");
+
+								console.log(_id);
+								console.log(_id + "after2");
+							});
+  						}
+						var a = hab_selecionadas.indexOf(id+1);
+						if(a >= 0){
+  							$(".requisito-"+id+1).prop("checked", false);
+  							$(".requisito-"+id+1).prop("disabled", true);
+								$(".requisito-"+id+1).each(function() {
+								var _r = /\d+/;
+								var _number = parseInt(this.id.match(_r));
+								var _id = this.id.replace(/[0-9]/g, '');
+					   			$("#"+_id).removeClass("after1");
+				   				$("#"+_id).removeClass("bold");
+
+								console.log(_id);
+								console.log(_id + "after1");
+							});
+							}
+  						var _hab = [];
+				   		$.each($("input[name='habilidades']:checked"), function(){
+			                _hab.push($(this).val());
+			            });
+				        hab_selecionadas = _hab;
+			 		}else if(number == 2){
+                		$("#preview-habilidades").append(c);
+					   	$("#"+id).removeClass("after1");
+					   	$("#"+id).removeClass("after2");
+					   	$("#"+id).removeClass("after3");
+					   	$("#"+id).addClass("after1");
+
+						var c = hab_selecionadas.indexOf(id+3);
+						if(c >= 0){
+  							$(".requisito-"+id+3).prop("checked", false);
+  							$(".requisito-"+id+3).prop("disabled", true);
+								$(".requisito-"+id+3).each(function() {
+								var _r = /\d+/;
+								var _number = parseInt(this.id.match(_r));
+								var _id = this.id.replace(/[0-9]/g, '');
+					   			$("#"+_id).removeClass("after3");
+							});
+  						}
+						var b = hab_selecionadas.indexOf(id+2);
+						if(b >= 0){
+  							$(".requisito-"+id+2).prop("checked", false);
+  							$(".requisito-"+id+2).prop("disabled", true);
+								$(".requisito-"+id+2).each(function() {
+								var _r = /\d+/;
+								var _number = parseInt(this.id.match(_r));
+								var _id = this.id.replace(/[0-9]/g, '');
+					   			$("#"+_id).removeClass("after2");
+							});
+  						}
 
   						var _hab = [];
 				   		$.each($("input[name='habilidades']:checked"), function(){
 			                _hab.push($(this).val());
 			            });
 				        hab_selecionadas = _hab;
+			 		}else if(number == 3){
+                		$("#preview-habilidades").append(c);
+					   	$("#"+id).removeClass("after1");
+					   	$("#"+id).removeClass("after2");
+					   	$("#"+id).removeClass("after3");
+					   	$("#"+id).addClass("after2");
 
-				   		$(".requisito-"+id+number).each(function() {
-						    var class_list = $(this).attr("class");
-						    var class_arr = class_list.split(/\s+/);
-						    	class_arr.shift();
-						    var rqlist = [];
-						    for(var i = 0; i < hab_selecionadas.length; i++){
-						    	rqlist.push("requisito-"+hab_selecionadas[i]);
-						    }
+						var c = hab_selecionadas.indexOf(id+3);
+						if(c >= 0){
+  							$(".requisito-"+id+3).prop("checked", false);
+  							$(".requisito-"+id+3).prop("disabled", true);
+								$(".requisito-"+id+3).each(function() {
+								var _r = /\d+/;
+								var _number = parseInt(this.id.match(_r));
+								var _id = this.id.replace(/[0-9]/g, '');
+					   			$("#"+_id).removeClass("after3");
+							});
+  						}
 
-						    if(class_arr.every(r => rqlist.includes(r))){
-							    //console.log('Found all of', class_arr, 'in', rqlist);
-							  //   var m = number+1;
-							  //   console.log(number);
-							  //   if(m == 3){
-							  //   	m = 4;
-							  //   }
-							  //   console.log(m);
-							  //   console.log(char_pts_h - m);
-							    
-							  //   if(char_pts_h - m < 0){
-							  //   	var f = m - char_pts_h;
-						 		// 	$(this).addClass("ptsh"+f);
-						 		// }else{
-								$(this).prop("disabled", false);
-						 		//}
-							}else{
-							    //console.log('Did not find all of', class_arr, 'in', rqlist);
-  								$(this).prop("disabled", true);
-							}
-						});
-					   	$("#"+id).addClass("bold");
-				 	}else{
-				 		AumentarPtsH(number);
-				 		//$(".ptsh"+number).each(function(){$(this).prop("disabled", false);$(this).removeClass("ptsh"+number)});
-				 		DiminuirResistencia(id,number);
-				 		ChecarBens(id, 1);
-
-						var c = document.createDocumentFragment();
-	                	var span = document.createElement("span");
-	                		span.className = "preview-habilidade-"+id;
-	                		console.log(number)
-	                		var a = number - 1;
-	                		var d = id.replace('-',' ');
-	                		span.innerHTML = d+" "+a;
-							c.appendChild(span);
-
-				 		if(number == 1){
-				 			console.log(id);
-					   		$("#"+id).removeClass("bold");
-						   	$("#"+id).removeClass("after1");
-						   	$("#"+id).removeClass("after2");
-						   	$("#"+id).removeClass("after3");
-
-							var c = hab_selecionadas.indexOf(id+3);
-							if(c >= 0){
-	  							$(".requisito-"+id+3).prop("checked", false);
-	  							$(".requisito-"+id+3).prop("disabled", true);
-  								$(".requisito-"+id+3).each(function() {
-									var _r = /\d+/;
-									var _number = parseInt(this.id.match(_r));
-									var _id = this.id.replace(/[0-9]/g, '');
-						   			$("#"+_id).removeClass("after3");
-
-									console.log(_id);
-									console.log(_id + "after3");
-								});
-	  						}
-							var b = hab_selecionadas.indexOf(id+2);
-							if(b >= 0){
-	  							$(".requisito-"+id+2).prop("checked", false);
-	  							$(".requisito-"+id+2).prop("disabled", true);
-  								$(".requisito-"+id+2).each(function() {
-									var _r = /\d+/;
-									var _number = parseInt(this.id.match(_r));
-									var _id = this.id.replace(/[0-9]/g, '');
-						   			$("#"+_id).removeClass("after2");
-
-									console.log(_id);
-									console.log(_id + "after2");
-								});
-	  						}
-							var a = hab_selecionadas.indexOf(id+1);
-							if(a >= 0){
-	  							$(".requisito-"+id+1).prop("checked", false);
-	  							$(".requisito-"+id+1).prop("disabled", true);
-  								$(".requisito-"+id+1).each(function() {
-									var _r = /\d+/;
-									var _number = parseInt(this.id.match(_r));
-									var _id = this.id.replace(/[0-9]/g, '');
-						   			$("#"+_id).removeClass("after1");
-					   				$("#"+_id).removeClass("bold");
-
-									console.log(_id);
-									console.log(_id + "after1");
-								});
-  							}
-	  						var _hab = [];
-					   		$.each($("input[name='habilidades']:checked"), function(){
-				                _hab.push($(this).val());
-				            });
-					        hab_selecionadas = _hab;
-				 		}else if(number == 2){
-	                		$("#preview-habilidades").append(c);
-						   	$("#"+id).removeClass("after1");
-						   	$("#"+id).removeClass("after2");
-						   	$("#"+id).removeClass("after3");
-						   	$("#"+id).addClass("after1");
-
-							var c = hab_selecionadas.indexOf(id+3);
-							if(c >= 0){
-	  							$(".requisito-"+id+3).prop("checked", false);
-	  							$(".requisito-"+id+3).prop("disabled", true);
-  								$(".requisito-"+id+3).each(function() {
-									var _r = /\d+/;
-									var _number = parseInt(this.id.match(_r));
-									var _id = this.id.replace(/[0-9]/g, '');
-						   			$("#"+_id).removeClass("after3");
-
-									console.log(_id + "after3");
-								});
-	  						}
-							var b = hab_selecionadas.indexOf(id+2);
-							if(b >= 0){
-	  							$(".requisito-"+id+2).prop("checked", false);
-	  							$(".requisito-"+id+2).prop("disabled", true);
-  								$(".requisito-"+id+2).each(function() {
-									var _r = /\d+/;
-									var _number = parseInt(this.id.match(_r));
-									var _id = this.id.replace(/[0-9]/g, '');
-						   			$("#"+_id).removeClass("after2");
-
-									console.log(_id + "after2");
-								});
-	  						}
-
-	  						var _hab = [];
-					   		$.each($("input[name='habilidades']:checked"), function(){
-				                _hab.push($(this).val());
-				            });
-					        hab_selecionadas = _hab;
-				 		}else if(number == 3){
-	                		$("#preview-habilidades").append(c);
-						   	$("#"+id).removeClass("after1");
-						   	$("#"+id).removeClass("after2");
-						   	$("#"+id).removeClass("after3");
-						   	$("#"+id).addClass("after2");
-
-							var c = hab_selecionadas.indexOf(id+3);
-							if(c >= 0){
-	  							$(".requisito-"+id+3).prop("checked", false);
-	  							$(".requisito-"+id+3).prop("disabled", true);
-  								$(".requisito-"+id+3).each(function() {
-									var _r = /\d+/;
-									var _number = parseInt(this.id.match(_r));
-									var _id = this.id.replace(/[0-9]/g, '');
-						   			$("#"+_id).removeClass("after3");
-
-									console.log(_id);
-									console.log(_id + "after3");
-								});
-	  						}
-
-	  						var _hab = [];
-					   		$.each($("input[name='habilidades']:checked"), function(){
-				                _hab.push($(this).val());
-				            });
-					        hab_selecionadas = _hab;
-				 		}
-						number++;
-					   	for(var i = number; i <= 3; i++){
-					   		$("#"+id+i).prop("checked",false);
-					   	}
-				 	};
-				   //	console.log(hab_selecionadas);
-				});};
-			
-			function ChecarBens(cat, state){
-				// for(var i = 0; i < bens_iniciais_categorias.length; i++){
-				// 	if(cat == bens_iniciais_categorias[i].nome && state == 0){
-				// 		if(bens_iniciais_categorias[i].tipo == "fixed"){
-				// 			for(var j = 0; j < bens_iniciais_categorias[i].bens_fixos[j]; j++){
-				// 				AddBens(bens_iniciais_categorias[i].bens_fixos[j].nome);
-				// 			}
-				// 		}else{
-				// 			$("#bens-cat-"+nome).show();
-				// 		}
-				// 	}else if(cat == bens_iniciais_categorias[i].nome && state == 1){
-				// 		$("#bens-cat-"+nome).hide();
-				// 	}
-				// }
-			}
+  						var _hab = [];
+				   		$.each($("input[name='habilidades']:checked"), function(){
+			                _hab.push($(this).val());
+			            });
+				        hab_selecionadas = _hab;
+			 		}
+					number++;
+				   	for(var i = number; i <= 3; i++){
+				   		$("#"+id+i).prop("checked",false);
+				   	}
+			 	};};
 			function AddBens(obj){
                 $('#preview-bens').empty();
 				bens_iniciais.push(obj);
@@ -1991,8 +1957,8 @@
 	            		span.innerHTML = bens_iniciais[i];
 						c.appendChild(span);
 	            	$('#preview-bens').append(c);
-				}
-			};
+				}};
+
             $(document).ready(function() {
             	CreateCaracteristicas();
             	CreateNacionalidade();
@@ -2000,12 +1966,8 @@
             	CreateIdade();
             	CreateEtnia();
 
-
-				console.log(bens_iniciais);
 				AddBens("Rede");
-				console.log(bens_iniciais);
 				AddBens("Mochila");
-				console.log(bens_iniciais);
 				AddBens("Roupas comuns");
             });
 
