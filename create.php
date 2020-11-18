@@ -1781,8 +1781,8 @@
 
             	$(".preview-habilidade-"+id).remove();
             	var el = $("#"+hab);
-				console.log(el)
-			 	if(el.checked){
+				console.log(el[0])
+			 	if(el[0].checked){
 			 		DiminuirPtsH(number);
 			 		AumentarResistencia(id,number);
 			 		//ChecarBens(id, 0);
@@ -1798,12 +1798,12 @@
 
 						var _hab = [];
 			   		$.each($("input[name='habilidades']:checked"), function(){
-		                _hab.push(el.val());
+		                _hab.push(el[0].val());
 		            });
 			        hab_selecionadas = _hab;
 
 			   		$(".requisito-"+id+number).each(function() {
-					    var class_list = el.attr("class");
+					    var class_list = this.attr("class");
 					    var class_arr = class_list.split(/\s+/);
 					    	class_arr.shift();
 					    var rqlist = [];
@@ -1812,9 +1812,9 @@
 					    }
 
 					    if(class_arr.every(r => rqlist.includes(r))){
-							el.prop("disabled", false);
+							this.prop("disabled", false);
 						}else{
-								el.prop("disabled", true);
+							this.prop("disabled", true);
 						}
 					});
 				   	$("#"+id).addClass("bold");
