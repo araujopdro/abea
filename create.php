@@ -1302,10 +1302,9 @@
 
 				                var array_a = msg.habilidades.split(',');
 				                hab_selecionadas = array_a;
-				                // for(var i = 0; i < array_a.length; i++){
-				                // 	var j = $("#"+array_a[i]);
-				                // 	j.checked = true;
-				                // }
+				                for(var i = 0; i < array_a.length; i++){
+				                	ChangeHabilidade(array_a[i]);
+				                }
 				                
 				                char_pts_h = msg.pts_h;
 			  					$("#preview-pts-h").text(char_pts_h.toString());
@@ -1314,11 +1313,10 @@
 
 				                var array_c = msg.bens.split(',');
 				                bens_iniciais = array_c;
-				                console.log(array_c)
 				                $("#preview-bens").empty();
-				                // for(var i = 0; i < array_c.length; i++){
-				                // 	AddBens(array_c[i])
-				                // }
+				                for(var i = 0; i < array_c.length; i++){
+				                	AddBens(array_c[i])
+				                }
 				                
 				                $('#input-historia').val(msg.historia);
 				            }               
