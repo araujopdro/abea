@@ -1798,7 +1798,7 @@
 
 						var _hab = [];
 			   		$.each($("input[name='habilidades']:checked"), function(){
-		                _hab.push(el[0].val());
+		                _hab.push(this.val());
 		            });
 			        hab_selecionadas = _hab;
 
