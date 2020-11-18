@@ -1784,6 +1784,7 @@
             	var el = $("#"+hab);
 				console.log(el[0])
 			 	if(el[0].checked){
+			 		console.log("checked");
 			 		DiminuirPtsH(number);
 			 		AumentarResistencia(id,number);
 			 		//ChecarBens(id, 0);
@@ -1820,6 +1821,7 @@
 					});
 				   	$("#"+id).addClass("bold");
 			 	}else{
+			 		console.log("not checked");
 			 		AumentarPtsH(number);
 			 		DiminuirResistencia(id,number);
 			 		//ChecarBens(id, 1);
