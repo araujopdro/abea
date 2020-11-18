@@ -10,22 +10,20 @@
 	mysqli_query($bd, 'SET character_set_client=utf8');
 	mysqli_query($bd, 'SET character_set_results=utf8');
 
-	if ($stmt = $bd->prepare('SELECT * FROM characters WHERE nome = ?')) {
+	if ($stmt = $bd->prepare('SELECT nome,idade,nacionalidade,caracteristicas,resistencia,habilidades,pts_h,dinheiro,bens,historia FROM characters WHERE nome = ?')) {
 		$stmt->bind_param('s', $_POST['nome']);
 		$stmt->execute();
-		$result = $stmt->get_result();
-		$num_of_rows = $result->num_rows;
-		//$stmt->store_result();
+		$stmt->store_result();
 
-		if ($num_of_rows > 0) {
-			$stmt->bind_result($res);
+		if ($stmt->num_rows > 0) {
+			$stmt->bind_result($nome,$idade,$nacionalidade,$caracteristicas,$resistencia,$habilidades,$pts_h,$dinheiro,$bens,$historia);
 			$stmt->fetch();
 
-			$value = array('response' => $res);
+			$value = array('nome' => $nome,'idade' => $idade);
           	header('Content-Type: application/json;');
           	echo json_encode($value);
 		} else {
-			$value = array('response' => -1);
+			$value = array('nome' => -1);
           	header('Content-Type: application/json;');
           	echo json_encode($value);
 		}

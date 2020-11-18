@@ -65,6 +65,8 @@
 			                resistencia: char_resistencia,
 			                habilidades: array_a,
 			                pts_h: char_pts_h,
+			                dinheiro: char_din,
+			                bens: bens_iniciais,
 			                historia: $('#input-historia').val()
 			            },
 			            success: function(msg)
