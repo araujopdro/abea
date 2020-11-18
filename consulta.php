@@ -19,7 +19,7 @@
 			$stmt->bind_result($nome,$idade,$nacionalidade,$caracteristicas,$resistencia,$habilidades,$pts_h,$dinheiro,$bens,$historia);
 			$stmt->fetch();
 
-			$value = array('nome' => $nome,'idade' => $idade);
+			$value = array('nome' => $nome,'idade' => $idade,'nacionalidade' => $nacionalidade,'caracteristicas' => $caracteristicas,'resistencia' => $resistencia,'habilidades' => $habilidades,'pts_h' => $pts_h,'dinheiro' => $dinheiro,'bens' => $bens,'historia' => $historia);
           	header('Content-Type: application/json;');
           	echo json_encode($value);
 		} else {
