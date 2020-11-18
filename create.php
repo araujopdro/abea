@@ -1765,6 +1765,7 @@
 
 	            //var limit = 20;
 				$('input.input-habilidades').on('change', function(evt) {
+					console.log(this)
 					ChangeHabilidade(this.id);
 				});
 			};
@@ -1780,6 +1781,7 @@
 
             	$(".preview-habilidade-"+id).remove();
             	var el = $("#"+hab);
+				console.log(el)
 			 	if(el.checked){
 			 		DiminuirPtsH(number);
 			 		AumentarResistencia(id,number);
@@ -2057,7 +2059,7 @@
         			char_pts_h += _number;
             	}
 			  	$("#preview-pts-h").text(char_pts_h.toString());
-        		console.log("resistência++")
+        		console.log("pts_h++")
             }
 
             function DiminuirPtsH(_number){
