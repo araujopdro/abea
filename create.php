@@ -1304,7 +1304,8 @@
 				                hab_selecionadas = array_a;
 				                // for(var i = 0; i < array_a.length; i++){
 				                // 	console.log(array_a[i]);
-				                	ChangeHabilidade(array_a[0]);
+				                	//ChangeHabilidade(array_a[0]);
+				                	$('#'+array_a[0]).attr('checked',true);
 				                //}
 				                
 				                char_pts_h = msg.pts_h;
@@ -1766,7 +1767,7 @@
 
 	            //var limit = 20;
 				$('input.input-habilidades').on('change', function(evt) {
-					console.log(this)
+					console.log("on change")
 					ChangeHabilidade(this.id);
 				});
 			};
