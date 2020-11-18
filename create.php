@@ -1292,7 +1292,9 @@
 				                car_selecionadas = array_b;
 				                console.log(array_b)
 				                for(var i; i < array_b.length; i++){
-				                	$("#"+array_b[i]).prop( "checked", true );
+				                	var j = $("#"+array_b[i]);
+				                	j.checked = true;
+
 				                }
 
 				                char_resistencia = msg.resistencia;
@@ -1302,7 +1304,8 @@
 				                hab_selecionadas = array_a;
 				                console.log(array_a)
 				                for(var i; i < array_a.length; i++){
-				                	$("#"+array_a[i]).prop( "checked", true );
+				                	var j = $("#"+array_a[i]);
+				                	j.checked = true;
 				                }
 				                
 				                char_pts_h = msg.pts_h;
