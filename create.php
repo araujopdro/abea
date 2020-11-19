@@ -1291,10 +1291,8 @@
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
 				                for(var i = 0; i < array_b.length; i++){
-				                	$("#"+array_b[i]).prop("checked",true);
-				                	var _el = $("#"+array_b[i]);
-				                	console.log(_el);
-				                	console.log(_el[0]);
+				                	var el = $("#"+array_b[i]);
+				                	$(el[0]).attr("checked",true);
 				                	//ChangeCaracteristicas(_el[0]);
 				                }
 
