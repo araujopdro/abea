@@ -1312,7 +1312,6 @@
 			  					$("#preview-dinheiro").text(char_din.toString());
 
 				                var array_c = msg.bens.split(',');
-				                bens_iniciais = array_c;
 				                $("#preview-bens").empty();
 				                for(var i = 0; i < array_c.length; i++){
 				                	AddBens(array_c[i])
@@ -1601,10 +1600,8 @@
 					ChangeCaracteristicas(this);
 				});};
 			function ChangeCaracteristicas(_el){
-				console.log(_el);
 	            var limit = 3;
 				if(!_el.checked){
-					console.log("!not checked");
 			   		$("#preview-caracteristica-"+_el.id).remove();
 			   		if($("input[name='caracteristicas']:checked").length < limit){
 				   		$(".caracteristicas-holder").slideDown('fast');
@@ -1621,7 +1618,6 @@
 			   	}
 
 			   	if(_el.checked){
-			   		console.log("checked");
 			   		car_selecionadas.push(_el.id);
 			   		var c = document.createDocumentFragment();
 	            	var span = document.createElement("span");
