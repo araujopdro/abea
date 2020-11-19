@@ -1304,13 +1304,13 @@
 				                hab_selecionadas = array_a;
 				                // for(var i = 0; i < array_a.length; i++){
 				                // 	console.log(array_a[i]);
-				                	//ChangeHabilidade(array_a[0]);
-				                	var el = $('#'+array_a[0]);
-				                	console.log(array_a[0]);
-				                	console.log($('#'+array_a[0]));
-				                	console.log(el[0]);
+				                	// var el = $('#'+array_a[0]);
+				                	// console.log(array_a[0]);
+				                	// console.log($('#'+array_a[0]));
+				                	// console.log(el[0]);
 
 				                	$(el[0]).attr('checked',true);
+				                	ChangeHabilidade(array_a[0]);
 				                //}
 				                
 				                char_pts_h = msg.pts_h;
