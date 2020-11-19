@@ -48,7 +48,7 @@ h6, h5, h6{
 	margin-left: 10px;
 	margin-bottom: 0;
 }
-.holder-caracteristicas{
+#holder-caracteristicas{
 	display: flex;
     flex-wrap: wrap;
 }
