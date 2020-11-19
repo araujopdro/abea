@@ -1314,9 +1314,9 @@
 				                var array_c = msg.bens.split(',');
 				                bens_iniciais = array_c;
 				                $("#preview-bens").empty();
-				                // for(var i = 0; i < array_c.length; i++){
-				                // 	AddBens(array_c[i])
-				                // }
+				                for(var i = 0; i < array_c.length; i++){
+				                	AddBens(array_c[i])
+				                }
 				                
 				                $('#input-historia').val(msg.historia);
 				            }               
@@ -1600,7 +1600,6 @@
 				$('input.input-caracteristicas').on('change', function(evt) {
 					ChangeCaracteristicas(this);
 				});};
-
 			function ChangeCaracteristicas(_el){
 				console.log(_el);
 	            var limit = 3;
@@ -1634,8 +1633,8 @@
 				   	if($("input[name='caracteristicas']:checked").length == limit){
 				   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
 				   	}
-			   	}
-			};
+			   	}};
+
 			function CreateHabilidades(){
                 $('#holder-habilidades').empty();
                 for(var i = 0; i < habilidades.length; i++){
