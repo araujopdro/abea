@@ -1289,7 +1289,6 @@
 				                $('#select-etnia').val(msg.etnia);
 				                
 				                var array_b = msg.caracteristicas.split(',');
-				                car_selecionadas = array_b;
 				                for(var i = 0; i < array_b.length; i++){
 				                	$("#"+array_b[i]).attr('checked',true);
 				                	var mds = $("#"+array_b[i])[0];
@@ -1623,7 +1622,7 @@
 			   	}
 
 			   	if(_el.checked){
-			   		console.log("checked")
+			   		console.log("checked");
 			   		car_selecionadas.push(_el.id);
 			   		var c = document.createDocumentFragment();
 	            	var span = document.createElement("span");
@@ -1635,7 +1634,6 @@
 				   	if($("input[name='caracteristicas']:checked").length == limit){
 				   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
 				   	}
-
 			   	}
 			};
 			function CreateHabilidades(){
