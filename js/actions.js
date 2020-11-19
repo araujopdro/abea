@@ -676,3 +676,65 @@ function DiminuirResistencia(_id, _number){
 
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;}
+
+function SetPreview(msg){
+    $('#input-nome').val(msg.nome);
+    $("#preview-nome").text(msg.nome);
+    sorted_portraits = [msg.perfil];
+    $('#input-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
+    $('#preview-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
+    $('#select-idade').val(msg.idade);
+    $("#preview-idade").text(msg.idade);
+    $('#select-nacionalidade').val(msg.nacionalidade);
+    $("#preview-nacionalidade").text(msg.nacionalidade);
+    var smallet = document.createElement("small");
+        smallet.innerHTML = "  ("+msg.etnia+")";
+        smallet.id = "preview-etnia";
+    $("#preview-nacionalidade").append(smallet);
+    $('#select-etnia').val(msg.etnia);
+    
+    var array_b = msg.caracteristicas.split(',');
+    for(var i = 0; i < array_b.length; i++){
+        $("#"+array_b[i]).attr('checked',true);
+        var mds = $("#"+array_b[i])[0];
+        ChangeCaracteristicas(mds);
+    }
+
+    char_resistencia = msg.resistencia;
+    $("#preview-resistencia").text(char_resistencia.toString());
+
+    var array_a = msg.habilidades.split(',');
+    hab_selecionadas = array_a;
+    for(var i = 0; i < array_a.length; i++){
+        var el_h = $('#'+array_a[i]);
+        $(el_h[0]).attr('checked',true);
+        ChangeHabilidade(array_a[i]);
+    }
+    
+    char_pts_h = msg.pts_h;
+        $("#preview-pts-h").text(char_pts_h.toString());
+    char_din = msg.dinheiro;
+        $("#preview-dinheiro").text(char_din.toString());
+
+    var array_c = msg.bens.split(',');
+    $("#preview-bens").empty();
+    bens_iniciais = [];
+    for(var i = 0; i < array_c.length; i++){
+        AddBens(array_c[i])
+    }
+    
+    $('#input-historia').val(msg.historia);};
+
+
+function ClearCharacter(){
+    $("#preview-nome").text();
+    $("#preview-idade").text();
+    $("#preview-nacionalidade").text();
+    $("#preview-caracteristicas").text();
+    $("#preview-habilidades").text();
+    $("#preview-resistencia").text();
+    $("#preview-bens").empty();
+    $("#preview-dinheiro").text();
+
+    $("#page-title").text("Editar Personagem");
+}

@@ -70,7 +70,7 @@
     margin: auto;
     padding: 1.5em 0 3em 0;">
 			<form id="form">
-				<h2 style="margin-top: 5%;">Criar Personagem</h2>
+				<h2 id="page-title" style="margin-top: 5%;">Criar Personagem</h2>
 				<div style="margin: 1.25em 0" class="form-group" id="holder-nacionalidade">
 					<div>
 						<div style="display: flex;">
@@ -140,7 +140,8 @@
 					
 
 				</div>
-				<input class="submit" type="submit" name="submit" value="ENTRAR">
+				<input id="cancelar" class="btn btn-outline-success my-2 my-sm-0" onclick="ClearCharacter()" value="CANCELAR">
+				<input id="salvar" class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit" value="SALVAR">
 			</form>
 		</div>
 
@@ -165,15 +166,17 @@
             var sorted_portraits = [];
             var cur_portrait = 0;
 
+            var cur_selected_char = -1;
+
 			$( document ).ready(function() {
 		      	$.get("html_modules/navbar.html", function (data) {
                     $("#main").append(data);
                     var nav_active = $("#nav-create");
                     nav_active.addClass("active");
 
-
                     $( "#form-buscar" ).submit(function( e ) {
 				        e.preventDefault();
+			        	$('#buscar-submit').attr("disabled",true);
 				        $.ajax({
 				            url: 'php/consulta.php',
 				            type:'POST',
@@ -184,60 +187,18 @@
 				            },
 				            success: function(msg)
 				            {	
+			        			$('#buscar-submit').attr("disabled",false);
 				            	console.log(msg);
-				        		$('#input-nome').val(msg.nome);
-				   				$("#preview-nome").text(msg.nome);
-				        		sorted_portraits = [msg.perfil];
-				    			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
-				    			$('#preview-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
-				                $('#select-idade').val(msg.idade);
-				  				$("#preview-idade").text(msg.idade);
-				                $('#select-nacionalidade').val(msg.nacionalidade);
-				  				$("#preview-nacionalidade").text(msg.nacionalidade);
-				                var smallet = document.createElement("small");
-									smallet.innerHTML = "  ("+msg.etnia+")";
-									smallet.id = "preview-etnia";
-				  				$("#preview-nacionalidade").append(smallet);
-				                $('#select-etnia').val(msg.etnia);
-				                
-				                var array_b = msg.caracteristicas.split(',');
-				                for(var i = 0; i < array_b.length; i++){
-				                	$("#"+array_b[i]).attr('checked',true);
-				                	var mds = $("#"+array_b[i])[0];
-			                		ChangeCaracteristicas(mds);
-				                }
-
-				                char_resistencia = msg.resistencia;
-				  				$("#preview-resistencia").text(char_resistencia.toString());
-
-				                var array_a = msg.habilidades.split(',');
-				                hab_selecionadas = array_a;
-				                for(var i = 0; i < array_a.length; i++){
-				                	var el_h = $('#'+array_a[i]);
-				                	$(el_h[0]).attr('checked',true);
-				                	ChangeHabilidade(array_a[i]);
-				                }
-				                
-				                char_pts_h = msg.pts_h;
-			  					$("#preview-pts-h").text(char_pts_h.toString());
-				                char_din = msg.dinheiro;
-			  					$("#preview-dinheiro").text(char_din.toString());
-
-				                var array_c = msg.bens.split(',');
-				                $("#preview-bens").empty();
-				                bens_iniciais = [];
-				                for(var i = 0; i < array_c.length; i++){
-				                	AddBens(array_c[i])
-				                }
-				                
-				                $('#input-historia').val(msg.historia);
+				        		SetPreview(msg);
+				        		cur_selected_char = msg.id;
+				        		$("#page-title").text("Editar Personagem");
 				            }               
 				        });
 				    });});
 
 				$( "#form" ).submit(function( e ) {
 			        e.preventDefault();
-			        //$('.submit').attr("disabled","disabled");
+			        $('#salvar').attr("disabled",true);
 			        
 			        var char_habilidades = [];
 			        $.each($("input[name='habilidades']:checked"), function(){
@@ -274,7 +235,11 @@
 			            },
 			            success: function(msg)
 			            {	
+			        		$('#salvar').attr("disabled",false);
 			        		alert("Criado");
+
+			        		this.reset();
+			        		ClearCharacter();
 			            }               
 			        });});
 
