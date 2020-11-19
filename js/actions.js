@@ -695,8 +695,11 @@ function SetPreview(msg){
     
     var array_b = msg.caracteristicas.split(',');
     for(var i = 0; i < array_b.length; i++){
+        console.log(array_b[i]);
         $("#"+array_b[i]).attr('checked',true);
+        console.log($("#"+array_b[i]));
         var mds = $("#"+array_b[i])[0];
+        console.log(mds);
         ChangeCaracteristicas(mds);
     }
 
