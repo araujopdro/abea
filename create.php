@@ -175,7 +175,7 @@
                     $( "#form-buscar" ).submit(function( e ) {
 				        e.preventDefault();
 				        $.ajax({
-				            url: 'consulta.php',
+				            url: 'php/consulta.php',
 				            type:'POST',
 				            contentType: "application/x-www-form-urlencoded;charset=utf-8",
 				            data:
@@ -254,7 +254,7 @@
 			        var array_c = bens_iniciais.toString();
 
 			        $.ajax({
-			            url: 'cadastro.php',
+			            url: 'php/cadastro.php',
 			            type:'POST',
 			            contentType: "application/x-www-form-urlencoded;charset=utf-8",
 			            data:
