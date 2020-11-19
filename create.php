@@ -1310,7 +1310,7 @@
 				                	console.log($('#'+array_a[0]));
 				                	console.log(el[0]);
 
-				                	el[0].attr('checked',true);
+				                	$(el[0]).attr('checked',true);
 				                //}
 				                
 				                char_pts_h = msg.pts_h;
