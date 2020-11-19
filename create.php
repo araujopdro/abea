@@ -1286,7 +1286,10 @@
 				  				$("#preview-idade").text(msg.idade);
 				                $('#select-nacionalidade').val(msg.nacionalidade);
 				  				$("#preview-nacionalidade").text(msg.nacionalidade);
-				  				$("#preview-etnia").text("  ("+msg.etnia+")");
+				                var smallet = document.createElement("small");
+									smallet.innerHTML = "  ("+msg.etnia+")";
+									smallet.id = "preview-etnia";
+				  				$("#preview-nacionalidade").append(smallet);
 				                $('#select-etnia').val(msg.etnia);
 				                
 				                var array_b = msg.caracteristicas.split(',');
@@ -1415,6 +1418,14 @@
 	            	$("#random-name").show();
 	            	var selected_nacionalidade = $(this).val();
 				  	$("#preview-nacionalidade").text(selected_nacionalidade);
+				  	if($('#select-etnia').val() != ""){
+				  		var smallet = document.createElement("small");
+							smallet.innerHTML = "  ("+$('#select-etnia').val()+")";
+							smallet.id = "preview-etnia";
+		  				$("#preview-nacionalidade").append(smallet);
+				  	}
+
+
 	            	var selected_nacionalidade_id = -1;
 				  	for(var i = 0; i < nacionalidades.length; i++){
 				  		if(selected_nacionalidade == nacionalidades[i].nome){
@@ -1562,7 +1573,11 @@
                 $('#holder-etnia').append(c);
 
 	            $('#select-etnia').on('change', function() {
-			  		$("#preview-etnia").text("  ("+this.value+")");
+	            	$("#preview-etnia").remove();
+	                var smallet = document.createElement("small");
+						smallet.innerHTML = "  ("+this.value+")";
+						smallet.id = "preview-etnia";
+	  				$("#preview-nacionalidade").append(smallet);
 				});};
 			
 			function CreateCaracteristicas(){
