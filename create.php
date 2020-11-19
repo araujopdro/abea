@@ -1291,9 +1291,9 @@
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
 				                //for(var i = 0; i < array_b.length; i++){
-				                	var el = $("#"+array_b[0]);
+				                	var el_c = $("#"+array_b[0]);
 				                	console.log(array_b[0]);
-				                	console.log(el[0]);
+				                	console.log(el_c[0]);
 				                	//$(el[0]).attr("checked",true);
 				                	//ChangeCaracteristicas(_el[0]);
 				                //}
@@ -1304,10 +1304,10 @@
 				                var array_a = msg.habilidades.split(',');
 				                hab_selecionadas = array_a;
 				                for(var i = 0; i < array_a.length; i++){
-				                	var el = $('#'+array_a[i]);
+				                	var el_h = $('#'+array_a[i]);
 				                	console.log(array_a[i]);
-				                	console.log(el[0]);
-				                	$(el[0]).attr('checked',true);
+				                	console.log(el_h[0]);
+				                	$(el_h[0]).attr('checked',true);
 				                	ChangeHabilidade(array_a[i]);
 				                }
 				                
