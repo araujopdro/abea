@@ -183,7 +183,7 @@
 				            success: function(msg)
 				            {	
 			        			$('#buscar-submit').attr("disabled",false);
-				            	console.log(msg);
+			        			$('#form-buscar').trigger("reset");
 				        		SetPreview(msg);
 				        		cur_selected_char = msg.id;
 				        		$("#page-title").text("Editar Personagem");
@@ -232,7 +232,7 @@
 			            {	
 			        		$('#salvar').attr("disabled",false);
 			        		alert("Criado");
-			        		
+
 			        		ClearCharacter();
 			            }               
 			        });});
