@@ -1562,7 +1562,7 @@
                 $('#holder-etnia').append(c);
 
 	            $('#select-etnia').on('change', function() {
-			  		//console.log(this.value);
+			  		$("#preview-etnia").text("  ("+this.value+")");
 				});};
 			
 			function CreateCaracteristicas(){
