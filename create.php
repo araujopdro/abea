@@ -1293,7 +1293,7 @@
 				                for(var i = 0; i < array_b.length; i++){
 				                	var s = "#"+array_b[i];
 				                	$(s).attr('checked',true);
-				                	ChangeCaracteristicas($(s[0]));
+				                	ChangeCaracteristicas($(s));
 				                }
 
 				                char_resistencia = msg.resistencia;
