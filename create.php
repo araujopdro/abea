@@ -1292,7 +1292,8 @@
 				                car_selecionadas = array_b;
 				                for(var i = 0; i < array_b.length; i++){
 				                	$("#"+array_b[i]).attr('checked',true);
-			                		ChangeCaracteristicas($("#"+array_b[i])[0]);
+				                	console.log($("#"+array_b[i])[0]);
+			                		//ChangeCaracteristicas();
 				                }
 
 				                char_resistencia = msg.resistencia;
