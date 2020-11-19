@@ -237,7 +237,7 @@
 			        		$('#salvar').attr("disabled",false);
 			        		alert("Criado");
 
-			        		$('#form').trigger("reset");
+			        		$('#form')[0].reset();
 			        		ClearCharacter();
 			            }               
 			        });});
