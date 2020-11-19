@@ -121,8 +121,8 @@
 			$( document ).ready(function() {
 				$.get("html_modules/char_preview.html", function (data) {
                     $("#preview-holder").append(data);
-                }
-                
+                });
+
 		      	$.get("html_modules/navbar.html", function (data) {
                     $("#main").append(data);
                     var nav_active = $("#nav-create");
