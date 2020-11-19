@@ -1596,11 +1596,12 @@
 
                 	$('#holder-caracteristicas').append(c);
                 }
-                
+
 				$('input.input-caracteristicas').on('change', function(evt) {
 					ChangeCaracteristicas(this);
 				});};
 			function ChangeCaracteristicas(_el){
+				console.log(_el);
 	            var limit = 3;
 				if(!_el.checked){
 			   		$("#preview-caracteristica-"+_el.id).remove();
@@ -2198,8 +2199,8 @@
 					</div>
 				</div>
 				<div style="display: flex">
-					<h5 style="display: flex;flex-direction: column;" id="preview-habilidades"></h5>
-					<div style="margin-right: 2em;display: flex;flex: 1;">
+					<h5 style="display: flex;flex-direction: column;flex: 1;" id="preview-habilidades"></h5>
+					<div style="margin-right: 2em;display: flex;">
 						<h6 style="margin-right: 0.3em;color: lightcoral;">Resist.:</h6>
 						<h5 id="preview-resistencia">10</h5>
 					</div>
