@@ -727,12 +727,12 @@ function SetPreview(msg){
 
 
 function ClearCharacter(){
-    $("#preview-nome").text();
-    $("#preview-idade").text();
-    $("#preview-nacionalidade").text();
-    $("#preview-caracteristicas").text();
-    $("#preview-habilidades").text();
-    $("#preview-resistencia").text();
+    $("#preview-nome").text("");
+    $("#preview-idade").text("");
+    $("#preview-nacionalidade").empty();
+    $("#preview-caracteristicas").empty();
+    $("#preview-habilidades").empty();
+    $("#preview-resistencia").text("");
     $("#preview-bens").empty();
     $("#preview-dinheiro").text();
 
