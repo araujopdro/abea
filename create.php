@@ -1258,7 +1258,6 @@
 			var char_din = 1000;
 
 			$( document ).ready(function() {
-				
 		      	$.get("navbar.html", function (data) {
                     $("#main").append(data);
                     var nav_active = $("#nav-create");
@@ -1292,10 +1291,9 @@
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
 				                for(var i = 0; i < array_b.length; i++){
-				                	console.log(array_b[i]);
-				                	$("#"+array_b[i]).prop( "checked", true );
+				                	$("#"+array_b[i]).prop("checked",true);
+				                	ChangeCaracteristicas($("#"+array_b[i]));
 				                }
-				                $(".caracteristicas-holder:not(#caracteristicas-"+array_b[0]+",#caracteristicas-"+array_b[1]+",#caracteristicas-"+array_b[2]+")").slideUp('fast');
 
 				                char_resistencia = msg.resistencia;
 				  				$("#preview-resistencia").text(char_resistencia.toString());
@@ -1316,9 +1314,9 @@
 				                var array_c = msg.bens.split(',');
 				                bens_iniciais = array_c;
 				                $("#preview-bens").empty();
-				                // for(var i = 0; i < array_c.length; i++){
-				                // 	AddBens(array_c[i])
-				                // }
+				                for(var i = 0; i < array_c.length; i++){
+				                	AddBens(array_c[i])
+				                }
 				                
 				                $('#input-historia').val(msg.historia);
 				            }               
@@ -1367,8 +1365,7 @@
 			            {	
 			        		alert("Criado");
 			            }               
-			        });
-			    });
+			        });});
 
 			    $("#input-nome").on("change paste keyup", function() {
 				   $("#preview-nome").text($("#input-nome").val());
@@ -1470,6 +1467,7 @@
     				$('#holder-naci-icon').attr("src", nacionalidades[selected_nacionalidade_id].icon);
 
 				});};
+			
 			function CreateIdade(){
                 $('#select-idade').remove();
                 var c = document.createDocumentFragment();
@@ -1527,6 +1525,7 @@
 	            $('#select-idade').on('change', function() {
 				  	$("#preview-idade").text($(this).val());
 				});};
+			
 			function CreateEtnia(){
                 $('#select-etnia').remove();
                 var c = document.createDocumentFragment();
@@ -1565,6 +1564,7 @@
 	            $('#select-etnia').on('change', function() {
 			  		//console.log(this.value);
 				});};
+			
 			function CreateCaracteristicas(){
                 $('#holder-caracteristicas').empty();
                 for(var i = 0; i < caracteristicas.length; i++){
@@ -1600,37 +1600,39 @@
 
 	            var limit = 3;
 				$('input.input-caracteristicas').on('change', function(evt) {
-					if(!this.checked){
-				   		$("#preview-caracteristica-"+this.id).remove();
-						for(var i = 0; i < car_selecionadas.length; i++){
-							if(this.id == car_selecionadas[i]){
-	  							car_selecionadas.splice(i, 1);
-							}
+					ChangeCaracteristicas(this);
+				});};
+			function ChangeCaracteristicas(_el){
+				if(!_el.checked){
+			   		$("#preview-caracteristica-"+_el.id).remove();
+					for(var i = 0; i < car_selecionadas.length; i++){
+						if(_el.id == car_selecionadas[i]){
+								car_selecionadas.splice(i, 1);
 						}
 					}
+				}
 
-				   	if($("input[name='caracteristicas']:checked").length > limit) {
-			       		this.checked = false;
-				   	}
+			   	if($("input[name='caracteristicas']:checked").length > limit) {
+		       		_el.checked = false;
+			   	}
 
-				   	if(this.checked){
-				   		car_selecionadas.push(this.id);
-				   		var c = document.createDocumentFragment();
-	                	var span = document.createElement("span");
-	                		console.log(this)
-	                		span.innerHTML = this.value;
-	                		span.id = "preview-caracteristica-"+this.id;
-							c.appendChild(span);
-	                	$("#preview-caracteristicas").append(c);
-				   	}
+			   	if(_el.checked){
+			   		car_selecionadas.push(_el.id);
+			   		var c = document.createDocumentFragment();
+	            	var span = document.createElement("span");
+	            		span.innerHTML = _el.value;
+	            		span.id = "preview-caracteristica-"+_el.id;
+						c.appendChild(span);
+	            	$("#preview-caracteristicas").append(c);
+			   	}
 
 
-				   	if($("input[name='caracteristicas']:checked").length == limit){
-				   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
-				   	}else if($("input[name='caracteristicas']:checked").length < limit){
-				   		$(".caracteristicas-holder").slideDown('fast');
-				   	}
-				});};
+			   	if($("input[name='caracteristicas']:checked").length == limit){
+			   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
+			   	}else if($("input[name='caracteristicas']:checked").length < limit){
+			   		$(".caracteristicas-holder").slideDown('fast');
+			   	}};
+			
 			function CreateHabilidades(){
                 $('#holder-habilidades').empty();
                 for(var i = 0; i < habilidades.length; i++){
@@ -1767,24 +1769,16 @@
 
 	            //var limit = 20;
 				$('input.input-habilidades').on('change', function(evt) {
-					console.log("on change")
 					ChangeHabilidade(this.id);
-				});
-			};
-			
-			
+				});};	
 			function ChangeHabilidade(hab){
 				var r = /\d+/;
 				var number = parseInt(hab.match(r));
 				var id = hab.replace(/[0-9]/g, '');
-				
-				console.log(number);
-				console.log(id);
 
             	$(".preview-habilidade-"+id).remove();
             	var el = $("#"+hab);
 			 	if(el[0].checked){
-			 		console.log("checked");
 			 		DiminuirPtsH(number);
 			 		AumentarResistencia(id,number);
 			 		//ChecarBens(id, 0);
@@ -1821,7 +1815,6 @@
 					});
 				   	$("#"+id).addClass("bold");
 			 	}else{
-			 		console.log("not checked");
 			 		AumentarPtsH(number);
 			 		DiminuirResistencia(id,number);
 			 		//ChecarBens(id, 1);
@@ -1829,7 +1822,6 @@
 					var c = document.createDocumentFragment();
                 	var span = document.createElement("span");
                 		span.className = "preview-habilidade-"+id;
-                		console.log(number)
                 		var a = number - 1;
                 		var d = id.replace('-',' ');
                 		span.innerHTML = d+" "+a;
@@ -1850,9 +1842,6 @@
 								var _number = parseInt(this.id.match(_r));
 								var _id = this.id.replace(/[0-9]/g, '');
 					   			$("#"+_id).removeClass("after3");
-
-								console.log(_id);
-								console.log(_id + "after3");
 							});
   						}
 						var b = hab_selecionadas.indexOf(id+2);
@@ -1864,9 +1853,6 @@
 								var _number = parseInt(this.id.match(_r));
 								var _id = this.id.replace(/[0-9]/g, '');
 					   			$("#"+_id).removeClass("after2");
-
-								console.log(_id);
-								console.log(_id + "after2");
 							});
   						}
 						var a = hab_selecionadas.indexOf(id+1);
@@ -1879,9 +1865,6 @@
 								var _id = this.id.replace(/[0-9]/g, '');
 					   			$("#"+_id).removeClass("after1");
 				   				$("#"+_id).removeClass("bold");
-
-								console.log(_id);
-								console.log(_id + "after1");
 							});
 							}
   						var _hab = [];
@@ -1954,6 +1937,7 @@
 				   		$("#"+id+i).prop("checked",false);
 				   	}
 			 	};};
+			
 			function AddBens(obj){
                 $('#preview-bens').empty();
 				bens_iniciais.push(obj);
@@ -1978,8 +1962,6 @@
             });
 
             function ToggleCategoria(el){
-            	console.log("toggle categoria");
-            	console.log("habilidades-categoria-holder-"+el.id);
             	$("#habilidades-categoria-holder-"+el.id.replace(/ /g,'-')).slideToggle('fast', function() {
 				    if ($(this).is(':visible'))
 				        $(this).css('display','flex');
@@ -2011,7 +1993,6 @@
             }
 
             function PreviousName(){
-            	console.log(cur_name);
             	if(cur_name - 1 < 0){
             		$("#previous-name").hide();
             		return;
@@ -2033,7 +2014,6 @@
     			$('#input-portrait').attr("src", "/imgs/portraits/portrait"+a+".jpg");
     			$('#preview-portrait').attr("src", "/imgs/portraits/portrait"+a+".jpg");
     			cur_portrait = sorted_portraits.length-1;
-        		console.log(sorted_portraits);
 
             	if(sorted_portraits.length >= 2){
             		$("#previous-portrait").show();
@@ -2041,8 +2021,6 @@
             }
 
             function PreviousPortrait(){
-            	console.log(sorted_portraits);
-            	console.log(cur_portrait);
             	if(cur_portrait - 1 < 0){
             		$("#previous-portrait").hide();
             		return;
@@ -2062,7 +2040,6 @@
         			char_pts_h += _number;
             	}
 			  	$("#preview-pts-h").text(char_pts_h.toString());
-        		console.log("pts_h++")
             }
 
             function DiminuirPtsH(_number){
@@ -2072,7 +2049,6 @@
         			char_pts_h -= _number;
             	}
 			  	$("#preview-pts-h").text(char_pts_h.toString());
-        		console.log("pts_h--")
             }
 
             function AumentarResistencia(_id, _number){
@@ -2080,7 +2056,6 @@
             	if(_number == 3 && i > -1){
             		char_resistencia++;
 				  	$("#preview-resistencia").text(char_resistencia.toString());
-            		console.log("resistência++")
             	}
             }
 
@@ -2089,7 +2064,6 @@
             	if(_number == 3 && i > -1){
             		char_resistencia--;
 				  	$("#preview-resistencia").text(char_resistencia.toString());
-            		console.log("resistência--")
             	}
             }
 
@@ -2224,7 +2198,13 @@
 						<h5 id="preview-pts-h">20</h5>
 					</div>
 				</div>
-				<h5 style="display: flex;flex-direction: column;" id="preview-habilidades"></h5>
+				<div style="display: flex">
+					<h5 style="display: flex;flex-direction: column;" id="preview-habilidades"></h5>
+					<div style="margin-right: 2em;display: flex;">
+						<h6 style="margin-right: 0.3em;color: lightcoral;">Resist.:</h6>
+						<h5 id="preview-resistencia">10</h5>
+					</div>
+				</div>
 			</div>
 			<div style="margin-top: 1em;">
 				<div style="display: flex">
