@@ -1304,7 +1304,7 @@
 				                hab_selecionadas = array_a;
 				                // for(var i = 0; i < array_a.length; i++){
 				                // 	console.log(array_a[i]);
-				                	// var el = $('#'+array_a[0]);
+				                	var el = $('#'+array_a[0]);
 				                	// console.log(array_a[0]);
 				                	// console.log($('#'+array_a[0]));
 				                	// console.log(el[0]);
