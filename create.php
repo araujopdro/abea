@@ -1290,12 +1290,11 @@
 				                
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
-				                //for(var i = 0; i < array_b.length; i++){
-				                	$("#"+array_b[0]).attr('checked',true);
-				                	var mds = $("#"+array_b[0])[0];
-				                	console.log(mds);
+				                for(var i = 0; i < array_b.length; i++){
+				                	$("#"+array_b[i]).attr('checked',true);
+				                	var mds = $("#"+array_b[i])[0];
 			                		ChangeCaracteristicas(mds);
-				                //}
+				                }
 
 				                char_resistencia = msg.resistencia;
 				  				$("#preview-resistencia").text(char_resistencia.toString());
@@ -1610,7 +1609,6 @@
 					console.log("!not checked");
 			   		$("#preview-caracteristica-"+_el.id).remove();
 			   		if($("input[name='caracteristicas']:checked").length < limit){
-				   		console.log("menor q o limit")
 				   		$(".caracteristicas-holder").slideDown('fast');
 				   	}
 					for(var i = 0; i < car_selecionadas.length; i++){
@@ -1621,17 +1619,11 @@
 				}
 
 			   	if($("input[name='caracteristicas']:checked").length > limit) {
-					console.log("exceed limit");
 		       		_el.checked = false;
 			   	}
 
 			   	if(_el.checked){
 			   		console.log("checked")
-				   	if($("input[name='caracteristicas']:checked").length == limit){
-				   		console.log("igual limit")
-				   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
-				   	}
-
 			   		car_selecionadas.push(_el.id);
 			   		var c = document.createDocumentFragment();
 	            	var span = document.createElement("span");
@@ -1639,6 +1631,11 @@
 	            		span.id = "preview-caracteristica-"+_el.id;
 						c.appendChild(span);
 	            	$("#preview-caracteristicas").append(c);
+
+				   	if($("input[name='caracteristicas']:checked").length == limit){
+				   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
+				   	}
+
 			   	}
 			};
 			function CreateHabilidades(){
