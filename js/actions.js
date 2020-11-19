@@ -740,6 +740,9 @@ function ClearCharacter(){
     cur_portrait = 0;
 
     cur_selected_char = -1;
+    
+    $("input-caracteristicas").attr('checked',true);
+    $(".caracteristicas-holder").slideDown('fast');
 
     $("#preview-nome").text("");
     $("#preview-idade").text("");
