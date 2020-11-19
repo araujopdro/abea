@@ -1293,7 +1293,9 @@
 				                for(var i = 0; i < array_b.length; i++){
 				                	$("#"+array_b[i]).prop("checked",true);
 				                	var _el = $("#"+array_b[i]);
-				                	ChangeCaracteristicas(_el[0]);
+				                	console.log(_el);
+				                	console.log(_el[0]);
+				                	//ChangeCaracteristicas(_el[0]);
 				                }
 
 				                char_resistencia = msg.resistencia;
