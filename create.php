@@ -140,8 +140,8 @@
 					
 
 				</div>
-				<input id="cancelar" class="btn btn-outline-success my-2 my-sm-0" onclick="ClearCharacter()" value="CANCELAR">
-				<input id="salvar" class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit" value="SALVAR">
+				<input id="cancelar" class="btn btn-danger my-2 my-sm-0" onclick="ClearCharacter()" value="CANCELAR">
+				<input id="salvar" class="btn btn-success my-2 my-sm-0" type="submit" name="submit" value="SALVAR">
 			</form>
 		</div>
 
@@ -154,7 +154,6 @@
 		
 		<script type="text/javascript">
 			var bens_iniciais = [];
-
 			var car_selecionadas = [];
 			var hab_selecionadas = [];
 			var char_resistencia = 10;
@@ -238,7 +237,7 @@
 			        		$('#salvar').attr("disabled",false);
 			        		alert("Criado");
 
-			        		this.reset();
+			        		$('#form').trigger("reset");
 			        		ClearCharacter();
 			            }               
 			        });});

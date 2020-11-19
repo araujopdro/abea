@@ -727,14 +727,35 @@ function SetPreview(msg){
 
 
 function ClearCharacter(){
+    bens_iniciais = [];
+    car_selecionadas = [];
+    hab_selecionadas = [];
+    char_resistencia = 10;
+    char_pts_h = 20;
+    char_din = 1000;
+
+    sorted_names = [];
+    cur_name = 0;
+    sorted_portraits = [];
+    cur_portrait = 0;
+
+    cur_selected_char = -1;
+
     $("#preview-nome").text("");
     $("#preview-idade").text("");
+    $('#input-portrait').attr("src", "/imgs/portraits/portrait0.jpg");
+    $('#preview-portrait').attr("src", "/imgs/portraits/portrait0.jpg");
     $("#preview-nacionalidade").empty();
     $("#preview-caracteristicas").empty();
     $("#preview-habilidades").empty();
-    $("#preview-resistencia").text("");
+    $("#preview-pts-h").text(char_pts_h.toString());
+    $("#preview-resistencia").text(char_resistencia.toString());
     $("#preview-bens").empty();
-    $("#preview-dinheiro").text();
+    $("#preview-dinheiro").text(char_din.toString());
 
-    $("#page-title").text("Editar Personagem");
+    $("#page-title").text("Criar Personagem");
+
+    AddBens("Rede");
+    AddBens("Mochila");
+    AddBens("Roupas comuns");
 }
