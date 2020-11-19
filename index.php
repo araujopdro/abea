@@ -31,6 +31,20 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 		<script type="text/javascript">
+			var bens_iniciais = [];
+			var car_selecionadas = [];
+			var hab_selecionadas = [];
+			var char_resistencia = 10;
+			var char_pts_h = 20;
+			var char_din = 1000;
+
+            var sorted_names = [];
+            var cur_name = 0;
+            var sorted_portraits = [];
+            var cur_portrait = 0;
+
+            var cur_selected_char = -1;
+            
 			$( document ).ready(function() {
 				$.get("html_modules/char_preview.html", function (data) {
                     $("#preview-holder").append(data);
