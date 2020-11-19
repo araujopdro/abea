@@ -1952,7 +1952,7 @@
 				   	}
 			 	};};
 			
-			function AddBens(obj){=
+			function AddBens(obj){
 				bens_iniciais.push(obj);
 				var c = document.createDocumentFragment();
             	var span = document.createElement("span");
