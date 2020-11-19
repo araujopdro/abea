@@ -1286,9 +1286,7 @@
 				  				$("#preview-idade").text(msg.idade);
 				                $('#select-nacionalidade').val(msg.nacionalidade);
 				  				$("#preview-nacionalidade").text(msg.nacionalidade);
-				  				var small_etnia = document.createElement("small");
-				  					small_etnia.innerHTML = "  ("+msg.etnia+")";
-			  					$("#preview-nacionalidade").append(small_etnia);
+				  				$("#preview-etnia").text("  ("+msg.etnia+")");
 				                $('#select-etnia').val(msg.etnia);
 				                
 				                var array_b = msg.caracteristicas.split(',');
@@ -2185,7 +2183,7 @@
 			</div>
 			<div style="margin-top: 1em;">
 				<h6 style="color: lightcoral;">Nacionalidade:</h6>
-				<h5 id="preview-nacionalidade"></h5>
+				<h5 id="preview-nacionalidade"> <small id="preview-etnia"></small></h5>
 			</div>
 			<div style="margin-top: 1em;">
 				<h6 style="color: lightcoral;">Características:</h6>
