@@ -166,7 +166,7 @@
             var cur_portrait = 0;
 
 			$( document ).ready(function() {
-		      	$.get("modules_html/navbar.html", function (data) {
+		      	$.get("html_modules/navbar.html", function (data) {
                     $("#main").append(data);
                     var nav_active = $("#nav-create");
                     nav_active.addClass("active");

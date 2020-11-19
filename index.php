@@ -15,7 +15,7 @@
 
 		<script type="text/javascript">
 			$( document ).ready(function() {
-		      	$.get("modules_html/navbar.html", function (data) {
+		      	$.get("html_modules/navbar.html", function (data) {
                     $("#main").append(data);
                     var nav_active = $("#nav-home");
                     nav_active.addClass("active");
