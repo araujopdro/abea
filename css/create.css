@@ -51,6 +51,7 @@ h6, h5, h6{
 #holder-caracteristicas{
 	display: flex;
     flex-wrap: wrap;
+    margin: 1.5em 0 2.5em;
 }
 .caracteristicas-holder{
     flex: 1 1 30%;

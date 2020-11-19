@@ -21,7 +21,7 @@
 					<h6 style="color: lightcoral;">Nome:</h6>
 					<h5 id="preview-nome"></h5>
 				</div>
-				<div style="margin-right: 2em;display: flex;">	
+				<div style="display: flex;">	
 					<h6 style="margin-right: 0.3em;color: lightcoral;">Idade:</h6>
 					<h5 id="preview-idade"></h5>
 				</div>
@@ -37,14 +37,14 @@
 			<div style="margin-top: 1em;">
 				<div style="display: flex">
 					<h6 style="flex: 1;margin-right: 1.5em;color: lightcoral;">Habilidades:</h6>
-					<div style="margin-right: 2em;display: flex;">
+					<div style="display: flex;">
 						<h6 style="margin-right: 0.3em;color: lightcoral;">PH:</h6>
 						<h5 id="preview-pts-h">20</h5>
 					</div>
 				</div>
 				<div style="display: flex">
 					<h5 style="display: flex;flex-direction: column;flex: 1;" id="preview-habilidades"></h5>
-					<div style="margin-right: 2em;display: flex;">
+					<div style="display: flex;">
 						<h6 style="margin-right: 0.3em;color: lightcoral;">Resist.:</h6>
 						<h5 id="preview-resistencia">10</h5>
 					</div>
