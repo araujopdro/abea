@@ -1293,7 +1293,6 @@
 				                //for(var i = 0; i < array_b.length; i++){
 				                	var el = $("#"+array_b[0]);
 				                	console.log(array_b[0]);
-				                	console.log(el);
 				                	console.log(el[0]);
 				                	//$(el[0]).attr("checked",true);
 				                	//ChangeCaracteristicas(_el[0]);
@@ -1306,6 +1305,8 @@
 				                hab_selecionadas = array_a;
 				                for(var i = 0; i < array_a.length; i++){
 				                	var el = $('#'+array_a[i]);
+				                	console.log(array_a[i]);
+				                	console.log(el[0]);
 				                	$(el[0]).attr('checked',true);
 				                	ChangeHabilidade(array_a[i]);
 				                }
