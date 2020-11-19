@@ -55,9 +55,11 @@
 				            },
 				            success: function(msg)
 				            {	
-				        		console.log(msg);
+			        			$('#buscar-submit').attr("disabled",false);
 			        			$('#form-buscar').trigger("reset");
-				            }               
+				        		SetPreview(msg);
+				        		cur_selected_char = msg.id;
+				            }                
 				        });
 				    });
                 });
