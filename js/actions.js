@@ -740,9 +740,15 @@ function ClearCharacter(){
     cur_portrait = 0;
 
     cur_selected_char = -1;
-    
+
+    $("#select-nacionalidade").val("");
+    $("#select-etnia").val("");
+    $("#input-nome").val("");
+    $("#select-idade").val("");
     $("input-caracteristicas").attr('checked',true);
     $(".caracteristicas-holder").slideDown('fast');
+    
+    $("#input-historia").val("");
 
     $("#preview-nome").text("");
     $("#preview-idade").text("");
