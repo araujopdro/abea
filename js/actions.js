@@ -474,7 +474,7 @@ function ChangeHabilidade(hab){
             if(c >= 0){
                 $(".requisito-"+id+3).prop("checked", false);
                 $(".requisito-"+id+3).prop("disabled", true);
-                    $(".requisito-"+id+3).each(function() {
+                $(".requisito-"+id+3).each(function() {
                     var _r = /\d+/;
                     var _number = parseInt(this.id.match(_r));
                     var _id = this.id.replace(/[0-9]/g, '');
@@ -756,6 +756,8 @@ function ClearCharacter(){
             this.checked = false;
             var id = this.id.replace(/[0-9]/g, '');
             $("#"+id).removeClass("bold after1 after2 after3");
+            $(".requisito-"+id+2).prop("disabled", true);
+            $(".requisito-"+id+3).prop("disabled", true);
         }
     });
 
