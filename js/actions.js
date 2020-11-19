@@ -745,9 +745,17 @@ function ClearCharacter(){
     $("#select-etnia").val("");
     $("#input-nome").val("");
     $("#select-idade").val("");
-    $("input-caracteristicas").attr('checked',true);
+    $('input[name="caracteristicas"]').each(function() {
+        this.checked = false;
+    });
     $(".caracteristicas-holder").slideDown('fast');
-    
+
+
+    $('input[name="habilidades"]').each(function() {
+        this.checked = false;
+        ChangeHabilidade(this);
+    });
+
     $("#input-historia").val("");
 
     $("#preview-nome").text("");
