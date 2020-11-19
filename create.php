@@ -1956,7 +1956,7 @@
 				bens_iniciais.push(obj);
 				var c = document.createDocumentFragment();
             	var span = document.createElement("span");
-            		span.innerHTML = bens_iniciais[i];
+            		span.innerHTML = obj;
 					c.appendChild(span);
 			};
 
