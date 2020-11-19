@@ -756,8 +756,7 @@ function ClearCharacter(){
             this.checked = false;
             var id = this.id.replace(/[0-9]/g, '');
             $("#"+id).removeClass("bold after1 after2 after3");
-            $(".requisito-"+id+2).prop("disabled", true);
-            $(".requisito-"+id+3).prop("disabled", true);
+            $(".requisito-"+this.id).prop("disabled", true);
         }
     });
 
