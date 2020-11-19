@@ -14,6 +14,9 @@
   		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body> 
+		<div id="preview-holder" style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
+		</div>
+
 		<div style="width: 100%;position: fixed;top: 0;" id="header">
 			<div id="main" style="width: 45vw;margin: auto;">
     	
@@ -29,6 +32,11 @@
 
 		<script type="text/javascript">
 			$( document ).ready(function() {
+				$.get("html_modules/char_preview.html", function (data) {
+                    $("#preview-holder").append(data);
+                }
+
+
 		      	$.get("html_modules/navbar.html", function (data) {
                     $("#main").append(data);
                     var nav_active = $("#nav-home");

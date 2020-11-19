@@ -14,52 +14,7 @@
   		<link rel="stylesheet" href="css/create.css">
 	</head>
 	<body> 
-		<div style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
-			<div style="display: flex;"><span style="width: 35%;display: block;margin-bottom: 1.5em;"><img style="width: 100%;" id="preview-portrait" src="/imgs/portraits/portrait0.jpg"></span></div>
-			<div style="display: flex">
-				<div style="flex: 1;margin-right: 1.5em;">
-					<h6 style="color: lightcoral;">Nome:</h6>
-					<h5 id="preview-nome"></h5>
-				</div>
-				<div style="display: flex;">	
-					<h6 style="margin-right: 0.3em;color: lightcoral;">Idade:</h6>
-					<h5 id="preview-idade"></h5>
-				</div>
-			</div>
-			<div style="margin-top: 1em;">
-				<h6 style="color: lightcoral;">Nacionalidade:</h6>
-				<h5 id="preview-nacionalidade"> <small id="preview-etnia"></small></h5>
-			</div>
-			<div style="margin-top: 1em;">
-				<h6 style="color: lightcoral;">Características:</h6>
-				<h5 style="display: flex;flex-direction: column;" id="preview-caracteristicas"></h5>
-			</div>
-			<div style="margin-top: 1em;">
-				<div style="display: flex">
-					<h6 style="flex: 1;margin-right: 1.5em;color: lightcoral;">Habilidades:</h6>
-					<div style="display: flex;">
-						<h6 style="margin-right: 0.3em;color: lightcoral;">PH:</h6>
-						<h5 id="preview-pts-h">20</h5>
-					</div>
-				</div>
-				<div style="display: flex">
-					<h5 style="display: flex;flex-direction: column;flex: 1;" id="preview-habilidades"></h5>
-					<div style="display: flex;">
-						<h6 style="margin-right: 0.3em;color: lightcoral;">Resist.:</h6>
-						<h5 id="preview-resistencia">10</h5>
-					</div>
-				</div>
-			</div>
-			<div style="margin-top: 1em;">
-				<div style="display: flex">
-					<h6 style="flex: 1;margin-right: 1.5em;color: lightcoral;">Bens:</h6>
-					<div style="margin-right: 2em;display: flex;">
-						<h6 style="margin-right: 0.3em;color: lightcoral;">$:</h6>
-						<h5 id="preview-dinheiro">1000</h5>
-					</div>
-				</div>
-				<h5 style="display: flex;flex-direction: column;" id="preview-bens"></h5>
-			</div>
+		<div id="preview-holder" style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
 		</div>
 
 
@@ -164,6 +119,10 @@
             var cur_selected_char = -1;
 
 			$( document ).ready(function() {
+				$.get("html_modules/char_preview.html", function (data) {
+                    $("#preview-holder").append(data);
+                }
+                
 		      	$.get("html_modules/navbar.html", function (data) {
                     $("#main").append(data);
                     var nav_active = $("#nav-create");
