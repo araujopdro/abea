@@ -171,6 +171,7 @@
 
                     $( "#form-buscar" ).submit(function( e ) {
 				        e.preventDefault();
+				        ClearCharacter();
 			        	$('#buscar-submit').attr("disabled",true);
 				        $.ajax({
 				            url: 'php/consulta.php',
