@@ -1287,7 +1287,7 @@
 				                $('#select-nacionalidade').val(msg.nacionalidade);
 				  				$("#preview-nacionalidade").text(msg.nacionalidade);
 				  				var small_etnia = document.createElement("small");
-				  					small_etnia.innerHTML = "("+msg.etnia")";
+				  					small_etnia.innerHTML = "("+msg.etnia+")";
 			  					$("#preview-nacionalidade").append(small_etnia);
 				                $('#select-etnia').val(msg.etnia);
 				                
