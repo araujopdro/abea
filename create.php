@@ -1293,7 +1293,7 @@
 				                //for(var i = 0; i < array_b.length; i++){
 				                	var el_c = $("#"+array_b[0]);
 				                	console.log(array_b[0]);
-				                	console.log(el_c[0]);
+				                	console.log(el_c);
 				                	//$(el[0]).attr("checked",true);
 				                	//ChangeCaracteristicas(_el[0]);
 				                //}
@@ -1306,7 +1306,7 @@
 				                for(var i = 0; i < array_a.length; i++){
 				                	var el_h = $('#'+array_a[i]);
 				                	console.log(array_a[i]);
-				                	console.log(el_h[0]);
+				                	console.log(el_h);
 				                	$(el_h[0]).attr('checked',true);
 				                	ChangeHabilidade(array_a[i]);
 				                }
