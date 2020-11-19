@@ -1302,16 +1302,11 @@
 
 				                var array_a = msg.habilidades.split(',');
 				                hab_selecionadas = array_a;
-				                // for(var i = 0; i < array_a.length; i++){
-				                // 	console.log(array_a[i]);
-				                	var el = $('#'+array_a[0]);
-				                	// console.log(array_a[0]);
-				                	// console.log($('#'+array_a[0]));
-				                	// console.log(el[0]);
-
+				                for(var i = 0; i < array_a.length; i++){
+				                	var el = $('#'+array_a[i]);
 				                	$(el[0]).attr('checked',true);
-				                	ChangeHabilidade(array_a[0]);
-				                //}
+				                	ChangeHabilidade(array_a[i]);
+				                }
 				                
 				                char_pts_h = msg.pts_h;
 			  					$("#preview-pts-h").text(char_pts_h.toString());
