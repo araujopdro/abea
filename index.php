@@ -25,7 +25,7 @@
 				        e.preventDefault();
 				        console.log($('#busca').val());
 				        $.ajax({
-				            url: 'consulta.php',
+				            url: 'php/consulta.php',
 				            type:'POST',
 				            contentType: "application/x-www-form-urlencoded;charset=utf-8",
 				            data:
@@ -41,14 +41,9 @@
                 });
 			});
 		</script>
-		<style type="text/css">
-			html, body{
-				width: 100%;
-				height: 100%;
-				margin: 0;
-			    background-color: white;
-			}
-		</style>
+
+  		<link rel="stylesheet" href="index.css">
+
 	</head>
 	<body> 
 		<div style="width: 100%;position: fixed;top: 0;" id="header">

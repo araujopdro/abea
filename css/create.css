@@ -1,0 +1,93 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+    background-color: white;
+}
+h6, h5, h6{
+	margin: 0;
+}
+
+.habilidades-habilidade-holder{
+	display: flex;
+	flex-direction: column;
+		margin-left: 15px;
+}
+
+.habilidades-niveis-holder{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.habilidades-habilidade-name:before {
+    content: " » ";
+}
+
+.small-custo{
+	font-weight: normal !important;
+}
+
+.bold{
+	font-weight: bolder;
+}
+
+.after1:after{
+    content: " 1 ";
+}
+
+.after2:after{
+    content: " 2 ";
+}
+
+.after3:after{
+    content: " 3 ";
+}
+
+.label-caracteristicas, .label-habilidade{
+	margin-left: 10px;
+	margin-bottom: 0;
+}
+
+.caracteristicas-holder{
+
+}
+
+.caracteristicas-text{
+    display: block;
+		margin-bottom: 15px;
+}
+
+.habilidades-descricao{
+	display: block;
+		margin-bottom: 5px;
+}
+
+.habilidades-nivel{
+	display: block;
+}
+
+.clickable{
+	text-decoration: underline;
+	font-style: italic;
+	cursor: pointer;
+}
+#previous-name,#previous-portrait, #random-name{
+	display: none;
+}
+.habilidades-categoria-name{
+	text-decoration: underline;
+}
+
+.habilidades-categoria-name:before {
+    content: " » ";
+}
+
+.nacionalidade-flavor-title{
+	font-weight: bold;
+}
+
+.nacionalidade-aliados-title,.nacionalidade-inimigos-title{
+	font-size: 1.2em;
+	font-weight: bold;
+}
