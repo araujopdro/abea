@@ -239,8 +239,10 @@ function CreateCaracteristicas(){
         ChangeCaracteristicas(this);
     });};
 function ChangeCaracteristicas(_el){
+    console.log(_el);
     var limit = 3;
     if(!_el.checked){
+        console.log("not checked")
         $("#preview-caracteristica-"+_el.id).remove();
         if($("input[name='caracteristicas']:checked").length < limit){
             $(".caracteristicas-holder").slideDown('fast');
@@ -254,9 +256,11 @@ function ChangeCaracteristicas(_el){
 
     if($("input[name='caracteristicas']:checked").length > limit) {
         _el.checked = false;
+        console.log("limit")
     }
 
     if(_el.checked){
+        console.log("checked")
         car_selecionadas.push(_el.id);
         var c = document.createDocumentFragment();
         var span = document.createElement("span");
@@ -699,6 +703,7 @@ function SetPreview(msg){
         $("#"+array_b[i]).attr('checked',true);
         console.log($("#"+array_b[i]));
         var mds = $("#"+array_b[i])[0];
+        mds.checked = true;
         console.log(mds);
         ChangeCaracteristicas(mds);
     }
@@ -730,6 +735,7 @@ function SetPreview(msg){
 
 
 function ClearCharacter(){
+    console.log("ClearCharacter");
     bens_iniciais = [];
     car_selecionadas = [];
     hab_selecionadas = [];
