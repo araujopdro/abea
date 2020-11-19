@@ -1306,8 +1306,8 @@
 				                // 	console.log(array_a[i]);
 				                	//ChangeHabilidade(array_a[0]);
 				                	console.log(array_a[0]);
-				                	console.log($('#'+array_a[0]));
-				                	$('#'+array_a[0]).attr('checked',true);
+				                	console.log($('#'+array_a[0][0]));
+				                	$('#'+array_a[0][0]).attr('checked',true);
 				                //}
 				                
 				                char_pts_h = msg.pts_h;
