@@ -1305,6 +1305,8 @@
 				                // for(var i = 0; i < array_a.length; i++){
 				                // 	console.log(array_a[i]);
 				                	//ChangeHabilidade(array_a[0]);
+				                	console.log(array_a[0]);
+				                	console.log($('#'+array_a[0]));
 				                	$('#'+array_a[0]).attr('checked',true);
 				                //}
 				                
