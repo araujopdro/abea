@@ -1290,11 +1290,14 @@
 				                
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
-				                for(var i = 0; i < array_b.length; i++){
-				                	var el = $("#"+array_b[i]);
-				                	$(el[0]).attr("checked",true);
+				                //for(var i = 0; i < array_b.length; i++){
+				                	var el = $("#"+array_b[0]);
+				                	console.log(array_b[0]);
+				                	console.log(el);
+				                	console.log(el[0]);
+				                	//$(el[0]).attr("checked",true);
 				                	//ChangeCaracteristicas(_el[0]);
-				                }
+				                //}
 
 				                char_resistencia = msg.resistencia;
 				  				$("#preview-resistencia").text(char_resistencia.toString());
