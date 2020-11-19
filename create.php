@@ -11,7 +11,7 @@
 		
 		<link rel="shortcut icon" type="image/png" href="imgs/favicon.png"/>
 		
-  		<link rel="stylesheet" href="create.css">
+  		<link rel="stylesheet" href="css/create.css">
 	</head>
 	<body> 
 		<div style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
@@ -167,7 +167,7 @@
             var cur_portrait = 0;
 
 			$( document ).ready(function() {
-		      	$.get("navbar.html", function (data) {
+		      	$.get("modeules_html/navbar.html", function (data) {
                     $("#main").append(data);
                     var nav_active = $("#nav-create");
                     nav_active.addClass("active");
