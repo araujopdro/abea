@@ -1290,13 +1290,11 @@
 				                
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
-				                //for(var i = 0; i < array_b.length; i++){
-				                	var el_c = $("#"+array_b[0]);
-				                	console.log(array_b[0]);
-				                	console.log(el_c);
+				                for(var i = 0; i < array_b.length; i++){
+				                	var el_c = $("#"+array_b[i]);
 				                	$(el_c[0]).attr('checked',true);
-				                	//ChangeCaracteristicas(_el[0]);
-				                //}
+				                	ChangeCaracteristicas($(el_c[0]));
+				                }
 
 				                char_resistencia = msg.resistencia;
 				  				$("#preview-resistencia").text(char_resistencia.toString());
