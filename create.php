@@ -1317,6 +1317,7 @@
 
 				                var array_c = msg.bens.split(',');
 				                $("#preview-bens").empty();
+				                bens_iniciais = [];
 				                for(var i = 0; i < array_c.length; i++){
 				                	AddBens(array_c[i])
 				                }
@@ -1958,6 +1959,7 @@
             	var span = document.createElement("span");
             		span.innerHTML = obj;
 					c.appendChild(span);
+				$("#preview-bens").append(span);
 			};
 
             $(document).ready(function() {
