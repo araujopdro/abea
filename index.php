@@ -29,6 +29,9 @@
 		<script src="https://kit.fontawesome.com/3f043c6910.js" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+		
+		<script src="js/refs.js"></script>
+		<script src="js/actions.js"></script>
 
 		<script type="text/javascript">
 			var bens_iniciais = [];
@@ -44,7 +47,7 @@
             var cur_portrait = 0;
 
             var cur_selected_char = -1;
-            
+
 			$( document ).ready(function() {
 				$.get("html_modules/char_preview.html", function (data) {
                     $("#preview-holder").append(data);
