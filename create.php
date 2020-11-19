@@ -1952,16 +1952,13 @@
 				   	}
 			 	};};
 			
-			function AddBens(obj){
-                $('#preview-bens').empty();
+			function AddBens(obj){=
 				bens_iniciais.push(obj);
-				for(var i = 0; i < bens_iniciais.length; i++){
-					var c = document.createDocumentFragment();
-	            	var span = document.createElement("span");
-	            		span.innerHTML = bens_iniciais[i];
-						c.appendChild(span);
-	            	$('#preview-bens').append(c);
-				}};
+				var c = document.createDocumentFragment();
+            	var span = document.createElement("span");
+            		span.innerHTML = bens_iniciais[i];
+					c.appendChild(span);
+			};
 
             $(document).ready(function() {
             	CreateCaracteristicas();
