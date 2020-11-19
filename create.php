@@ -1292,7 +1292,7 @@
 				                car_selecionadas = array_b;
 				                for(var i = 0; i < array_b.length; i++){
 				                	$("#"+array_b[i]).attr('checked',true);
-			                		ChangeCaracteristicas($(s).html());
+			                		ChangeCaracteristicas($("#"+array_b[i]).html());
 				                }
 
 				                char_resistencia = msg.resistencia;
