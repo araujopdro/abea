@@ -1294,7 +1294,7 @@
 				                	var el_c = $("#"+array_b[0]);
 				                	console.log(array_b[0]);
 				                	console.log(el_c);
-				                	//$(el[0]).attr("checked",true);
+				                	$(el_c[0]).attr('checked',true);
 				                	//ChangeCaracteristicas(_el[0]);
 				                //}
 
