@@ -752,8 +752,11 @@ function ClearCharacter(){
 
 
     $('input[name="habilidades"]').each(function() {
-        this.checked = false;
-        ChangeHabilidade(this);
+        if(this.checked){
+            this.checked = false;
+            var id = hab.replace(/[0-9]/g, '');
+            $("#"+id).removeClass("bold after1 after2 after3");
+        }
     });
 
     $("#input-historia").val("");
