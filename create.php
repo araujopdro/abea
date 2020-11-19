@@ -1612,7 +1612,7 @@
 			   		if($("input[name='caracteristicas']:checked").length < limit){
 				   		console.log("menor q o limit")
 				   		$(".caracteristicas-holder").slideDown('fast');
-				   	}};
+				   	}
 					for(var i = 0; i < car_selecionadas.length; i++){
 						if(_el.id == car_selecionadas[i]){
 								car_selecionadas.splice(i, 1);
@@ -1627,7 +1627,6 @@
 
 			   	if(_el.checked){
 			   		console.log("checked")
-			   		
 				   	if($("input[name='caracteristicas']:checked").length == limit){
 				   		console.log("igual limit")
 				   		$(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
@@ -1641,7 +1640,7 @@
 						c.appendChild(span);
 	            	$("#preview-caracteristicas").append(c);
 			   	}
-			
+			};
 			function CreateHabilidades(){
                 $('#holder-habilidades').empty();
                 for(var i = 0; i < habilidades.length; i++){
