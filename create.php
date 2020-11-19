@@ -1291,11 +1291,8 @@
 				                var array_b = msg.caracteristicas.split(',');
 				                car_selecionadas = array_b;
 				                for(var i = 0; i < array_b.length; i++){
-				                	var s = "#"+array_b[i];
-				                	$(s).attr('checked',true);
-				                	$.each($(s), function(){
-				                		ChangeCaracteristicas($(this));
-						            });				                
+				                	$("#"+array_b[i]).attr('checked',true);
+			                		ChangeCaracteristicas($(s).html());
 				                }
 
 				                char_resistencia = msg.resistencia;
@@ -1603,6 +1600,7 @@
 				$('input.input-caracteristicas').on('change', function(evt) {
 					ChangeCaracteristicas(this);
 				});};
+
 			function ChangeCaracteristicas(_el){
 				console.log(_el);
 	            var limit = 3;
