@@ -749,8 +749,9 @@ function SetPreview(msg){
 
     var array_a = msg.habilidades.split(',');
     for(var i = 0; i < array_a.length; i++){
-        var value = array_a[i].replace("-", " ").replace(re, '$& ');
+        var value = array_a[i].replace('-',' ').replace(re, '$& ');
         var id = array_a[i].replace(/[0-9]/g, '');
+            
         PreviewHabilidade(-1, ".preview-habilidade-"+id);
         PreviewHabilidade(1, "preview-habilidade-"+id, value);
     }
