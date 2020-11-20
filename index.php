@@ -14,13 +14,14 @@
   		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body> 
-		<div id="preview-holder" style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
-		</div>
 
 		<div style="width: 100%;position: fixed;top: 0;" id="header">
 			<div id="main" style="width: 45vw;margin: auto;">
-    	
+    			
     		</div>
+
+			<div id="preview-holder" style="height: 80%; overflow-y: auto; background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
+			</div>
 		</div>
 
 
