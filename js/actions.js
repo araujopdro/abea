@@ -743,14 +743,15 @@ function SetPreview(msg){
     var re = /[^0-9](?=[0-9])/g; 
     var array_b = msg.caracteristicas.split(',');
     for(var i = 0; i < array_b.length; i++){
-        var result = array_b[i].replace(re, '$& ');
+        var result = array_b[i].replace(re, '$& ').replace("-", " ");
         PreviewCaracteristica(1, "preview-caracteristica-"+array_b[i], result);
     }
 
     var array_a = msg.habilidades.split(',');
     for(var i = 0; i < array_a.length; i++){
-        var result = array_a[i].replace(re, '$& ');
-        PreviewHabilidade(1, "preview-habilidade-"+array_a[i], result);
+        var value = array_a[i].replace(re, '$& ').replace("-", " ");
+        var id = array_a[i].replace(/[0-9]/g, '');
+        PreviewHabilidade(1, "preview-habilidade-"+id, value);
     }
     
     char_resistencia = msg.resistencia;
