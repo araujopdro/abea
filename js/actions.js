@@ -678,7 +678,7 @@ function TitleCriar(){
 }
 
 function PreviewCaracteristica(_i, _id, _value){
-    if(i > 0){
+    if(_i > 0){
         var c = document.createDocumentFragment();
         var span = document.createElement("span");
             span.innerHTML = _value;
@@ -691,7 +691,7 @@ function PreviewCaracteristica(_i, _id, _value){
 }
 
 function PreviewHabilidade(_i, _id, _value){
-    if(i > 0){
+    if(_i > 0){
 
     }else{
         $(_id).remove();
@@ -744,7 +744,8 @@ function SetPreview(msg){
 
     var array_a = msg.habilidades.split(',');
     for(var i = 0; i < array_a.length; i++){
-        //ChangeCaracteristicas(mds);
+        var result = array_b[i].replace(re, '$& ');
+        PreviewHabilidade(1, array_a[i], result);
     }
     
     char_resistencia = msg.resistencia;
