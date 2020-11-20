@@ -91,7 +91,7 @@
 					<label for="input-nome">Escreva um pouco sobre a sua história.<br><small>Use sua nacionalidade, etnia, características e habilidades para te ajudar a pensar na história do seu personagem.</small></label>
 					<textarea class="form-control" id="input-historia" name="historia" required="true"></textarea>
 				</div>
-				<input id="cancelar" class="btn btn-danger my-2 my-sm-0" onclick="ClearCharacter()" value="CANCELAR">
+				<input id="cancelar" class="btn btn-danger my-2 my-sm-0" onclick="ClearCharacter(); TitleCriar();" value="CANCELAR">
 				<input id="salvar" class="btn btn-success my-2 my-sm-0" type="submit" name="submit" value="SALVAR">
 			</form>
 		</div>
@@ -193,7 +193,9 @@
 			        		$('#salvar').attr("disabled",false);
 			        		alert("Criado");
 
+			        		ClearVars();
 			        		ClearCharacter();
+			        		ClearPreview();
 			            }               
 			        });});
 

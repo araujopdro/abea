@@ -29,7 +29,7 @@
 		<script src="https://kit.fontawesome.com/3f043c6910.js" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-		
+
 		<script src="js/refs.js"></script>
 		<script src="js/actions.js"></script>
 
@@ -61,7 +61,6 @@
 
                     $( "#form-buscar" ).submit(function( e ) {
 				        e.preventDefault();
-				        console.log($('#busca').val());
 				        $.ajax({
 				            url: 'php/consulta.php',
 				            type:'POST',
@@ -72,6 +71,7 @@
 				            },
 				            success: function(msg)
 				            {	
+				            	ClearPreview();
 			        			$('#buscar-submit').attr("disabled",false);
 			        			$('#form-buscar').trigger("reset");
 				        		SetPreview(msg);

@@ -238,12 +238,13 @@ function CreateCaracteristicas(){
     $('input.input-caracteristicas').on('change', function(evt) {
         ChangeCaracteristicas(this);
     });};
+
 function ChangeCaracteristicas(_el){
     console.log(_el);
     var limit = 3;
     if(!_el.checked){
         console.log("not checked")
-        $("#preview-caracteristica-"+_el.id).remove();
+        PreviewCaracteristica(-1, "#preview-caracteristica-"+_el.id, null);
         if($("input[name='caracteristicas']:checked").length < limit){
             $(".caracteristicas-holder").slideDown('fast');
         }
@@ -262,13 +263,7 @@ function ChangeCaracteristicas(_el){
     if(_el.checked){
         console.log("checked")
         car_selecionadas.push(_el.id);
-        var c = document.createDocumentFragment();
-        var span = document.createElement("span");
-            span.innerHTML = _el.value;
-            span.id = "preview-caracteristica-"+_el.id;
-            c.appendChild(span);
-        $("#preview-caracteristicas").append(c);
-
+        PreviewCaracteristica(1, "#preview-caracteristica-"+_el.id, _el.value);
         if($("input[name='caracteristicas']:checked").length == limit){
             $(".caracteristicas-holder:not(#caracteristicas-"+car_selecionadas[0]+",#caracteristicas-"+car_selecionadas[1]+",#caracteristicas-"+car_selecionadas[2]+")").slideUp('fast');
         }
@@ -417,22 +412,19 @@ function ChangeHabilidade(hab){
     var number = parseInt(hab.match(r));
     var id = hab.replace(/[0-9]/g, '');
 
-    $(".preview-habilidade-"+id).remove();
+    PreviewHabilidade(-1, ".preview-habilidade-"+id);
+    
     var el = $("#"+hab);
     if(el[0].checked){
         DiminuirPtsH(number);
         AumentarResistencia(id,number);
-        //ChecarBens(id, 0);
-        $("#"+id).addClass("after"+number);
-
-        var c = document.createDocumentFragment();
-        var span = document.createElement("span");
-            span.className = "preview-habilidade-"+id;
-            var s = id.replace("-"," ");
-            span.innerHTML = s+" "+number;
-            c.appendChild(span);
-        $("#preview-habilidades").append(c);
         
+        $("#"+id).addClass("after"+number);
+        
+        var s = id.replace("-"," ");
+        
+        PreviewHabilidade(1, "preview-habilidade-"+id, s+" "+number)
+
         var _hab = [];
         $.each($("input[name='habilidades']:checked"), function(){
             _hab.push($(this).val());
@@ -681,32 +673,38 @@ function DiminuirResistencia(_id, _number){
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;}
 
-function SetPreview(msg){
+function TitleCriar(){
+    $("#page-title").text("Criar Personagem");
+}
+
+function PreviewCaracteristica(_i, _id, _value){
+    if(i > 0){
+        var c = document.createDocumentFragment();
+        var span = document.createElement("span");
+            span.innerHTML = _value;
+            span.id = "preview-caracteristica-"+_id;
+            c.appendChild(span);
+        $("#preview-caracteristicas").append(c);
+    }else{
+        $(_id).remove();
+    }
+}
+
+function PreviewHabilidade(_i, _id, _value){
+    if(i > 0){
+
+    }else{
+        $(_id).remove();
+    }
+}
+
+function SetEdit(msg){
     $('#input-nome').val(msg.nome);
-    $("#preview-nome").text(msg.nome);
     sorted_portraits = [msg.perfil];
     $('#input-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
-    $('#preview-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
     $('#select-idade').val(msg.idade);
-    $("#preview-idade").text(msg.idade);
     $('#select-nacionalidade').val(msg.nacionalidade);
-    $("#preview-nacionalidade").text(msg.nacionalidade);
-    var smallet = document.createElement("small");
-        smallet.innerHTML = "  ("+msg.etnia+")";
-        smallet.id = "preview-etnia";
-    $("#preview-nacionalidade").append(smallet);
     $('#select-etnia').val(msg.etnia);
-    
-    var array_b = msg.caracteristicas.split(',');
-    for(var i = 0; i < array_b.length; i++){
-        $("#"+array_b[i]).attr('checked',true);
-        var mds = $("#"+array_b[i])[0];
-        mds.checked = true;
-        ChangeCaracteristicas(mds);
-    }
-
-    char_resistencia = msg.resistencia;
-    $("#preview-resistencia").text(char_resistencia.toString());
 
     var array_a = msg.habilidades.split(',');
     hab_selecionadas = array_a;
@@ -715,24 +713,57 @@ function SetPreview(msg){
         $(el_h[0]).attr('checked',true);
         ChangeHabilidade(array_a[i]);
     }
+
+    var array_b = msg.caracteristicas.split(',');
+    for(var i = 0; i < array_b.length; i++){
+        $("#"+array_b[i]).attr('checked',true);
+        var mds = $("#"+array_b[i])[0];
+        mds.checked = true;
+        ChangeCaracteristicas(mds);
+    }
+
+    $('#input-historia').val(msg.historia);
+}
+
+function SetPreview(msg){
+    $("#preview-nome").text(msg.nome);
+    $('#preview-portrait').attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
+    $("#preview-idade").text(msg.idade);
+    $("#preview-nacionalidade").text(msg.nacionalidade);
+    var smallet = document.createElement("small");
+        smallet.innerHTML = "  ("+msg.etnia+")";
+        smallet.id = "preview-etnia";
+    $("#preview-nacionalidade").append(smallet);
+
+    var re = /[^0-9](?=[0-9])/g; 
+    var array_b = msg.caracteristicas.split(',');
+    for(var i = 0; i < array_b.length; i++){
+        var result = array_b[i].replace(re, '$& ');
+        PreviewCaracteristica(1, array_b[i], result);
+    }
+
+    var array_a = msg.habilidades.split(',');
+    for(var i = 0; i < array_a.length; i++){
+        //ChangeCaracteristicas(mds);
+    }
     
+    char_resistencia = msg.resistencia;
+    $("#preview-resistencia").text(char_resistencia.toString());
+
     char_pts_h = msg.pts_h;
-        $("#preview-pts-h").text(char_pts_h.toString());
+     $("#preview-pts-h").text(char_pts_h.toString());
+
     char_din = msg.dinheiro;
-        $("#preview-dinheiro").text(char_din.toString());
+    $("#preview-dinheiro").text(char_din.toString());
 
     var array_c = msg.bens.split(',');
     $("#preview-bens").empty();
     bens_iniciais = [];
     for(var i = 0; i < array_c.length; i++){
         AddBens(array_c[i])
-    }
-    
-    $('#input-historia').val(msg.historia);};
+    }};
 
-
-function ClearCharacter(){
-    console.log("ClearCharacter");
+function ClearVars(){
     bens_iniciais = [];
     car_selecionadas = [];
     hab_selecionadas = [];
@@ -746,28 +777,9 @@ function ClearCharacter(){
     cur_portrait = 0;
 
     cur_selected_char = -1;
+}
 
-    $("#select-nacionalidade").val("");
-    $("#select-etnia").val("");
-    $("#input-nome").val("");
-    $("#select-idade").val("");
-    $('input[name="caracteristicas"]').each(function() {
-        this.checked = false;
-    });
-    $(".caracteristicas-holder").slideDown('fast');
-
-
-    $('input[name="habilidades"]').each(function() {
-        if(this.checked){
-            this.checked = false;
-            var id = this.id.replace(/[0-9]/g, '');
-            $("#"+id).removeClass("bold after1 after2 after3");
-            $(".requisito-"+this.id).prop("disabled", true);
-        }
-    });
-
-    $("#input-historia").val("");
-
+function ClearPreview(){
     $("#preview-nome").text("");
     $("#preview-idade").text("");
     $('#input-portrait').attr("src", "/imgs/portraits/portrait0.jpg");
@@ -779,9 +791,26 @@ function ClearCharacter(){
     $("#preview-resistencia").text(char_resistencia.toString());
     $("#preview-bens").empty();
     $("#preview-dinheiro").text(char_din.toString());
+}
 
-    $("#page-title").text("Criar Personagem");
-
+function ClearEdit(){
+    $("#select-nacionalidade").val("");
+    $("#select-etnia").val("");
+    $("#input-nome").val("");
+    $("#select-idade").val("");
+    $('input[name="caracteristicas"]').each(function() {
+        this.checked = false;
+    });
+    $(".caracteristicas-holder").slideDown('fast');
+    $('input[name="habilidades"]').each(function() {
+        if(this.checked){
+            this.checked = false;
+            var id = this.id.replace(/[0-9]/g, '');
+            $("#"+id).removeClass("bold after1 after2 after3");
+            $(".requisito-"+this.id).prop("disabled", true);
+        }
+    });
+    $("#input-historia").val("");
     AddBens("Rede");
     AddBens("Mochila");
     AddBens("Roupas comuns");
