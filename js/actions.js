@@ -751,6 +751,7 @@ function SetPreview(msg){
     for(var i = 0; i < array_a.length; i++){
         var value = array_a[i].replace(re, '$& ').replace("-", " ");
         var id = array_a[i].replace(/[0-9]/g, '');
+        PreviewHabilidade(-1, "preview-habilidade-"+id);
         PreviewHabilidade(1, "preview-habilidade-"+id, value);
     }
     
