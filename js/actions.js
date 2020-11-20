@@ -744,7 +744,7 @@ function SetPreview(msg){
     var array_b = msg.caracteristicas.split(',');
     for(var i = 0; i < array_b.length; i++){
         var result = array_b[i].replace(re, '$& ');
-        PreviewCaracteristica(1, "preview-caracteristica-"array_b[i], result);
+        PreviewCaracteristica(1, "preview-caracteristica-"+array_b[i], result);
     }
 
     var array_a = msg.habilidades.split(',');
