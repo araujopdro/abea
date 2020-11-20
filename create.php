@@ -14,8 +14,7 @@
   		<link rel="stylesheet" href="css/create.css">
 	</head>
 	<body> 
-		<div id="preview-holder" style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
-		</div>
+		<div id="preview-holder"></div>
 
 
 		<div id="main" style="width: 45vw;margin: auto;"></div>
@@ -194,7 +193,7 @@
 			        		alert("Criado");
 
 			        		ClearVars();
-			        		ClearCharacter();
+			        		ClearEdit();
 			        		ClearPreview();
 			            }               
 			        });});
