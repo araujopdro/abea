@@ -148,6 +148,7 @@
 			        			$('#buscar-submit').attr("disabled",false);
 			        			$('#form-buscar').trigger("reset");
 				        		SetPreview(msg);
+				        		SetEdit(msg);
 				        		cur_selected_char = msg.id;
 				        		$("#page-title").text("Editar Personagem");
 				            }               
