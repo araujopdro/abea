@@ -450,7 +450,6 @@ function ChangeHabilidade(hab){
     }else{
         AumentarPtsH(number);
         DiminuirResistencia(id,number);
-        //ChecarBens(id, 1);
 
         var c = document.createDocumentFragment();
         var span = document.createElement("span");
