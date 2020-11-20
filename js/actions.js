@@ -682,7 +682,7 @@ function PreviewCaracteristica(_i, _id, _value){
         var c = document.createDocumentFragment();
         var span = document.createElement("span");
             span.innerHTML = _value;
-            span.id = "preview-caracteristica-"+_id;
+            span.id = _id;
             c.appendChild(span);
         $("#preview-caracteristicas").append(c);
     }else{
@@ -692,7 +692,12 @@ function PreviewCaracteristica(_i, _id, _value){
 
 function PreviewHabilidade(_i, _id, _value){
     if(_i > 0){
-
+        var c = document.createDocumentFragment();
+        var span = document.createElement("span");
+            span.innerHTML = _value;
+            span.className = _id;
+            c.appendChild(span);
+        $("#preview-habilidades").append(c);
     }else{
         $(_id).remove();
     }
@@ -739,13 +744,13 @@ function SetPreview(msg){
     var array_b = msg.caracteristicas.split(',');
     for(var i = 0; i < array_b.length; i++){
         var result = array_b[i].replace(re, '$& ');
-        PreviewCaracteristica(1, array_b[i], result);
+        PreviewCaracteristica(1, "preview-caracteristica-"array_b[i], result);
     }
 
     var array_a = msg.habilidades.split(',');
     for(var i = 0; i < array_a.length; i++){
         var result = array_a[i].replace(re, '$& ');
-        PreviewHabilidade(1, array_a[i], result);
+        PreviewHabilidade(1, "preview-habilidade-"+array_a[i], result);
     }
     
     char_resistencia = msg.resistencia;
