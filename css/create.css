@@ -107,7 +107,17 @@ h6, h5, h6{
 	display: flex;
 	flex-direction: column;
 	padding: 1em;
-	border-radius: 0.6em;"
+	border-radius: 0.6em;
+	overflow-y: auto;
+    height: 80%;
+    font-size: 14px;
 }
 
+#preview-holder .h6, #preview-holder h6 {
+    font-size: 1em;
+}
+
+#preview-holder .h5, #preview-holder h5 {
+    font-size: 1.25em;
+}
 
