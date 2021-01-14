@@ -15,10 +15,7 @@
 	</head>
 	<body> 
 		<div class="container-fluid">
-			<div class="row">
-				<div id="main" style="width: 45vw;margin: auto;">
-	    	
-	    		</div>
+			<div class="row" id="main">
 			</div>
 			<div class="row" id="preview-holder"></div>
 		</div>
