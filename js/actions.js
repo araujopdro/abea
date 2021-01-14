@@ -450,7 +450,6 @@ function ChangeHabilidade(hab){
     }else{
         AumentarPtsH(number);
         DiminuirResistencia(id,number);
-        //ChecarBens(id, 1);
 
         var c = document.createDocumentFragment();
         var span = document.createElement("span");
@@ -759,8 +758,8 @@ function SetPreview(msg){
     char_resistencia = msg.resistencia;
     $("#preview-resistencia").text(char_resistencia.toString());
 
-    char_pts_h = msg.pts_h;
-     $("#preview-pts-h").text(char_pts_h.toString());
+    //char_pts_h = msg.pts_h;
+    //$("#preview-pts-h").text(char_pts_h.toString());
 
     char_din = msg.dinheiro;
     $("#preview-dinheiro").text(char_din.toString());
