@@ -14,21 +14,22 @@
   		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body> 
-		<div id="preview-holder" style="width: 20%;background-color: black;color: white;position: fixed;top: 5%;left: 2.5%;display: flex;flex-direction: column;padding: 1em;border-radius: 0.6em;">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="main" style="width: 45vw;margin: auto;">
+	    	
+	    		</div>
+			</div>
+			<div class="row" id="preview-holder"></div>
 		</div>
-
-		<div style="width: 100%;position: fixed;top: 0;" id="header">
-			<div id="main" style="width: 45vw;margin: auto;">
-    	
-    		</div>
-		</div>
-
-
-
 		
+		<div style="width: 100%;position: fixed;top: 0;" id="header">
+			
+		</div>
+
 		<script src="https://kit.fontawesome.com/3f043c6910.js" crossorigin="anonymous"></script>
-		<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
 
 		<script src="js/refs.js"></script>
 		<script src="js/actions.js"></script>
