@@ -86,6 +86,12 @@
 				<div class="row pb-4 px-4 mx-4 mb-4" id="preview-habilidades">
 
 				</div>
+				<div class="row px-4 m-4">
+					<div class="pointer ml-4" onclick="Save()">
+						<span class="ml-2" ><i class="fas fa-save"></i></span>
+						<span>Salvar Itens</span>
+					</div>
+				</div>
 				<div class="row pb-4 px-4 mx-4 justify-content-between">
 					<h3 class="ml-4 user-select-none">
 						<span class="m-2"><i class="fas fa-suitcase"></i></span>

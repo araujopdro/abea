@@ -56,3 +56,28 @@ $( document ).ready(function() {
 function Strike(id){
     $("#car-preview-label-"+id).toggleClass("strike");
 }
+
+function Save(){
+    var _data = {
+        "id":character_id,
+        "dinheiro":$("#preview-dinheiro").val(),
+        "bens":$("#preview-bens").val()
+    };
+
+    $("#preview-holder").hide(); 
+    $("#spinner-loading").show();
+    
+    console.log("Save",_data)
+    $.ajax({
+        url: '/php/edit_goods.php',
+        type:'POST',
+        contentType: "application/x-www-form-urlencoded;charset=utf-8",
+        data: _data,
+        success: function(msg)
+        {   
+            setTimeout(function(){
+                window.location.href="character.php?id="+character_id;
+            }, 1500);
+        }               
+    });
+}
