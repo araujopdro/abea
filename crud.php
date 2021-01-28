@@ -24,6 +24,10 @@
 			  <span class="sr-only">Loading...</span>
 			</div>
 			<div class="page" id="preview-holder">
+				<div style="position: absolute; top: 3rem; right: 3rem;">
+					<span class="display-3 pointer" onclick="Save()"><i class="fas fa-save"></i></span>
+				</div>
+
 				<div class="row justify-content-center p-4 m-4">
 					<div style="position: relative; width: 185px;">
 						<span class="crud-change-profile" data-toggle="modal" data-target="#crud-modal-profile"><i class="fas fa-user-edit"></i></span>
@@ -34,7 +38,9 @@
 				<div class="row flex-column p-2 m-2">
 					<h1 class="mx-auto user-select-none">
 						<input class="h4 item-holder inner-shadow p-2" type="text" name="crud-nome" placeholder="Nome" id="crud-nome"><br>
-						<input class="h5 item-holder inner-shadow p-2" type="number" name="crud-idade" placeholder="Idade" id="crud-idade"></h1>
+						<input class="h5 item-holder inner-shadow p-2" type="number" name="crud-idade" placeholder="Idade" id="crud-idade">
+					</h1>
+					
 					<h5 class="mx-auto my-2 user-select-none d-flex align-self-center">
 						<span class="mx-3" style="visibility: hidden;"><i class="fas fa-flag"></i></span>
 						<span>
@@ -42,7 +48,19 @@
 								
 							</select>
 						</span>
-						<span class="mx-3"><i class="fas fa-flag"></i></span></h5>
+						<span class="mx-3"><i class="fas fa-flag"></i></span>
+					</h5>
+
+					<h6 class="mx-auto my-2 user-select-none d-flex align-self-center">
+						<span class="mx-3" style="visibility: hidden;"><i class="fas fa-flag"></i></span>
+						<span>
+							<select class="item-holder inner-shadow p-1 px-2" id="crud-etnia">
+								
+							</select>
+						</span>
+						<span class="mx-3" style="visibility: hidden;"><i class="fas fa-flag"></i></span>
+					</h6>
+
 					<div class="row px-4 pb-4 mx-4 mt-4">
 						<div class="mx-auto h5">
 							<span>Bio</span>
@@ -83,11 +101,11 @@
 					</h3>
 					<div class="mr-4">
 						<span class="h6 m-1"><i class="fas fa-coins"></i></span>
-						<input class="h2 px-3 input-number inner-shadow" id="preview-dinheiro" type="number">
+						<input class="h2 px-3 input-number inner-shadow" id="crud-dinheiro" type="number">
 					</div>
 				</div>
 				<div class="row pb-4 px-4 mx-4 mb-4">
-					<textarea class="item-holder mx-4 p-4 inner-shadow" id="preview-bens" style="height: 350px"></textarea>
+					<textarea class="item-holder mx-4 p-4 inner-shadow" id="crud-bens" style="height: 350px"></textarea>
 				</div>
 			</div>
 		</div>

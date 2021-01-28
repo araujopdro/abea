@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,7 +32,17 @@
 				</div>
 				<div class="row flex-column p-2 m-2">
 					<h1 class="mx-auto user-select-none"><span class="h3" style="visibility: hidden;">20</span><span id="preview-nome">Lorem Ipsum</span>, <span class="h3" id="preview-idade">20</span></h1>
-					<h5 class="mx-auto my-2 user-select-none"><span class="mx-3" style="visibility: hidden;"><i class="fas fa-flag"></i></span><span id="preview-nacionalidade">Nacionalidade</span><span class="mx-3"><i class="fas fa-flag"></i></span></h5>
+					
+					<h5 class="mx-auto my-2 user-select-none">
+						<span class="mx-3" style="visibility: hidden;"><i class="fas fa-flag"></i></span>
+						<span id="preview-nacionalidade">Nacionalidade</span>
+						<span class="mx-3"><i class="fas fa-flag"></i></span>
+					</h5>
+					<h6 class="mx-auto mt-1 mb-3 user-select-none">
+						<span class="mx-3" style="visibility: hidden;"><i class="fas fa-flag"></i></span>
+						<span id="preview-etnia">Nacionalidade</span>
+						<span class="mx-3" style="visibility: hidden;"><i class="fas fa-flag"></i></span>
+					</h6>
 					<div class="row px-4 pb-4 mx-4 mt-4">
 						<div class="mx-auto h5">
 							<span>Bio</span>
@@ -50,19 +61,19 @@
 				<div class="row flex-column px-2 pb-2 mb-2">
 					<div class="my-2 p-4 d-flex justify-content-around">
 						<div>
-						    <label for="car-preview-1" id="car-preview-label-1" class="h3 user-select-none">
-							    <input type="checkbox" id="car-preview-1"> Característica 1
-							</label>
+						    <span for="car-preview-1" onclick="Strike(1)" id="car-preview-label-1" class="h3 user-select-none pointer">
+							     Característica 1
+							</span>
 						</div>
 						<div>
-						    <label for="car-preview-2" id="car-preview-label-2" class="h3 user-select-none">
-						    	<input type="checkbox" id="car-preview-2"> Característica 2
-						    </label>
+						    <span for="car-preview-2" onclick="Strike(2)" id="car-preview-label-2" class="h3 user-select-none pointer">
+						    	Característica 2
+						    </span>
 						</div>
 						<div>
-						    <label for="car-preview-3" id="car-preview-label-3" class="h3 user-select-none">
-						    	<input type="checkbox" id="car-preview-3"> Característica 3
-						    </label>
+						    <span for="car-preview-3" onclick="Strike(3)" id="car-preview-label-3" class="h3 user-select-none pointer">
+						    	 Característica 3
+						    </span>
 						</div>
 					</div>
 				</div>
@@ -72,17 +83,8 @@
 						<u>Habilidades:</u>
 					</h3>
 				</div>
-				<div class="row pb-4 px-4 mx-4 mb-4">
-					<div class="col-4 d-flex flex-column">
-						<span class="h4 text-center user-select-none mt-4">Acrobacia 3</span>
-						<span class="description h6 ubuntu font-weight-light">rolamentos básicos e estrelinhas - saltos mortais e piruetas - andar na corda bamba e fazer rotações e saltos entre barras</span>
+				<div class="row pb-4 px-4 mx-4 mb-4" id="preview-habilidades">
 
-						<span class="h4 text-center user-select-none mt-4">Natação 3</span>
-						<span class="description h6 ubuntu font-weight-light">rolamentos básicos e estrelinhas - saltos mortais e piruetas - andar na corda bamba e fazer rotações e saltos entre barras</span>
-
-						<span class="h4 text-center user-select-none mt-4">Furtividade 2</span>
-						<span class="description h6 ubuntu font-weight-light">rolamentos básicos e estrelinhas - saltos mortais e piruetas - andar na corda bamba e fazer rotações e saltos entre barras</span>
-					</div>
 				</div>
 				<div class="row pb-4 px-4 mx-4 justify-content-between">
 					<h3 class="ml-4 user-select-none">
@@ -97,18 +99,12 @@
 				<div class="row pb-4 px-4 mx-4 mb-4">
 					<textarea class="item-holder mx-4 p-4 inner-shadow" id="preview-bens" style="height: 350px"></textarea>
 				</div>
-				<div class="row pb-4 px-4 mx-4 justify-content-between">
-					<h3 class="ml-4 user-select-none">
-						<span class="m-2"><i class="fas fa-address-book"></i></span>
-						<u>Diário:</u>
-					</h3>
-				</div>
-				<div class="row pb-4 px-4 mx-4 mb-4">
-					<textarea class="item-holder mx-4 p-4 inner-shadow" style="height: 350px"></textarea>
-				</div>
 			</div>
 		</div>
 
+		<script type="text/javascript">
+			var character_id = <?php echo json_encode($id); ?>;
+		</script>
 		<script src="https://kit.fontawesome.com/3f043c6910.js" crossorigin="anonymous"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>

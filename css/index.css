@@ -147,6 +147,9 @@ input::-webkit-inner-spin-button {
     border: darkgray 1px solid;
 }
 
+.strike{
+    text-decoration: line-through;
+}
 .pointer{
 	cursor: pointer;
 }
@@ -160,7 +163,7 @@ input::-webkit-inner-spin-button {
 	color: red;
 }
 .habilidades-holder-modal{
-	
+
 }
 
 .caracteristicas-holder{

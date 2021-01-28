@@ -7,6 +7,7 @@ $( document ).ready(function() {
     };
     CreateCaracteristicas();
     CreateNacionalidade();
+    CreateEtnia();
     HabilidadesModal();
     ProfileModal();
 
@@ -232,7 +233,21 @@ function ProfileModal(){
         $("#profiles-modal").append(c);
     }
 }
+function CreateEtnia(){
+    var option = document.createElement("option");
+        option.value = "";
+        option.text = "(...)";
+        option.selected = true;
+        option.disabled = true;
+    $("#crud-etnia").append(option);
 
+    for(var i = 0; i < etnias.length; i++){
+        var option = document.createElement("option");
+            option.value = etnias[i];
+            option.text = etnias[i];
+        $("#crud-etnia").append(option);
+    }
+}
 function CreateNacionalidade(){
     var option = document.createElement("option");
         option.value = "";
@@ -331,7 +346,9 @@ function GetChars(){
             $("#crud-idade").val(msg.idade);
             CalculatePH(msg.idade);
             $("#crud-historia").val(msg.historia);
+            selected_profile = msg.perfil;
             $("#crud-portrait").attr("src", "/imgs/portraits/portrait"+msg.perfil+".jpg");
+            $("#crud-etnia").val(msg.etnia);
             $("#crud-nacionalidade").val(msg.nacionalidade);
             var _caracteristicas = msg.caracteristicas.split(',');
             for(var i = 0; i < _caracteristicas.length; i++){
@@ -343,10 +360,81 @@ function GetChars(){
             hab_selecionadas = msg.habilidades.split(',');
             CalculateCost();
 
-            $("#preview-bens").val(msg.bens);
-            $("#preview-dinheiro").val(msg.dinheiro);
+            $("#crud-bens").val(msg.bens);
+            $("#crud-dinheiro").val(msg.dinheiro);
 
             setTimeout(function(){ $("#preview-holder").show(); $("#spinner-loading").hide()}, 2000);
+        }               
+    });
+}
+
+function Erro(s){
+    console.log(s)
+}
+
+function Save(){
+    var _data = {
+        "id":character_id,
+        "nome":$("#crud-nome").val(),
+        "idade":$("#crud-idade").val(),
+        "historia":$("#crud-historia").val(),
+        "perfil":selected_profile,
+        "nacionalidade":$("#crud-nacionalidade").val(),
+        "etnia":$("#crud-etnia").val(),
+        "dinheiro":$("#crud-dinheiro").val(),
+        "bens":$("#crud-bens").val(),
+        "habilidades":hab_selecionadas.toString(),
+        "caracteristicas":car_selecionadas.toString(),
+    };
+    if(_data.nome == ""){
+        Erro('nome');
+        return;
+    }
+    
+    if(_data.idade == ""){
+        Erro('idade');
+        return;
+    }
+
+    if(_data.historia == ""){
+        Erro('historia');
+        return;
+    }
+
+    console.log(selected_profile);
+    if(_data.perfil == 0){
+        Erro('perfil');
+        return;
+    }
+
+    if(_data.nacionalidade == 0){
+        Erro('nacionalidade');
+        return;
+    }
+    
+    if(_data.caracteristicas == ""){
+        Erro('caracteristicas');
+        return;
+    }
+    
+    if(_data.habilidades == "" || hab_selecionadas_cost > hab_selecionadas_total){
+        Erro('habilidades');
+        return;
+    }
+
+    $("#preview-holder").hide(); 
+    $("#spinner-loading").show();
+    console.log("Save",_data)
+    $.ajax({
+        url: '/php/edit.php',
+        type:'POST',
+        contentType: "application/x-www-form-urlencoded;charset=utf-8",
+        data: _data,
+        success: function(msg)
+        {   
+            setTimeout(function(){
+                window.location.href="character.php?id="+character_id;
+            }, 1500);
         }               
     });
 }
