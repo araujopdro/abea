@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,13 +31,16 @@
 					</div>
 				</div>
 				<div class="row flex-column p-2 m-2">
-					<h1 class="mx-auto user-select-none"><span class="h3" style="visibility: hidden;">20</span><span id="preview-nome">Lorem Ipsum</span>, <span class="h3" id="preview-idade">20</span></h1>
+					<h1 class="mx-auto user-select-none">
+						<input class="h4 item-holder inner-shadow p-2" type="text" name="crud-nome" placeholder="Nome" id="crud-nome"><br>
+						<input class="h5 item-holder inner-shadow p-2" type="number" name="crud-idade" placeholder="Idade" id="preview-idade"></h1>
 					<h5 class="mx-auto my-2 user-select-none"><span class="mx-3" style="visibility: hidden;"><i class="fas fa-flag"></i></span><span id="preview-nacionalidade">Nacionalidade</span><span class="mx-3"><i class="fas fa-flag"></i></span></h5>
 					<div class="row px-4 pb-4 mx-4 mt-4">
 						<div class="mx-auto h5">
 							<span>Bio</span>
 						</div>
-						<span class="px-4 ubuntu" id="preview-historia" style="font-size: 0.85rem"></span>
+						<span style="font-size: 0.85rem"></span>
+						<textarea class="ubuntu item-holder mx-4 p-4 inner-shadow" id="crud-historia" style="height: 250px"></textarea>
 					</div>
 				</div>
 
@@ -46,8 +50,11 @@
 						<u>Características:</u>
 					</h3>
 				</div>
+				<div class="row px-2 pb-2 mb-2 d-flex" id="holder-caracteristicas">
 
-				<div class="row flex-column px-2 pb-2 mb-2">
+				</div>
+
+				<!-- <div class="row flex-column px-2 pb-2 mb-2">
 					<div class="my-2 p-4 d-flex justify-content-around">
 						<div>
 						    <label for="car-preview-1" id="car-preview-label-1" class="h3 user-select-none">
@@ -65,7 +72,7 @@
 						    </label>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="row pb-4 px-4 mx-4 justify-content-start">
 					<h3 class="ml-4 user-select-none">
 						<span class="m-2"><i class="fas fa-user-check"></i></span>
@@ -113,8 +120,14 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 
-		<script type="text/javascript" src="js/character.js"></script>
+
+
+		<script type="text/javascript">
+			var character_id = <?php echo json_encode($id); ?>;
+		</script>
 		<script type="text/javascript" src="js/refs.js"></script>
 		<script type="text/javascript" src="js/actions.js"></script>
+
+		<script type="text/javascript" src="js/crud.js"></script>
 	</body>
 </html>

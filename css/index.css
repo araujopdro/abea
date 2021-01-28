@@ -14,6 +14,22 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
+#paper-holder{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+    border-radius: 0.75rem;
+}
+
+#paper-holder img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.75rem;
+}
+
 .input-number{
 	width: 150px;
 	text-align: right;
@@ -44,7 +60,7 @@ input::-webkit-inner-spin-button {
 }
 
 .ubuntu{
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Ubuntu', sans-serif!important;
 }
 
 .page {
@@ -93,6 +109,19 @@ input::-webkit-inner-spin-button {
 
 #preview-holder{
 	display: none;
+    position: relative;
+}
+
+.caracteristicas-holder{
+	flex: 0 0 33%;
+	padding: 1.75rem;
+	justify-content: center;
+}
+.label-caracteristicas{
+	margin-left: 0.25rem;
+}
+.caracteristicas-text{
+	display: block;
 }
 
 /*.item-preview:hover{
