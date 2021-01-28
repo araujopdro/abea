@@ -26,15 +26,23 @@
 			<div class="page" id="preview-holder">
 				<div class="row justify-content-center p-4 m-4">
 					<div style="position: relative; width: 185px;">
+						<span class="crud-change-profile" data-toggle="modal" data-target="#crud-modal-profile"><i class="fas fa-user-edit"></i></span>
 						<span class="inner-shadow" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 3rem;"></span>
-						<img class="profile-portrait" id="preview-portrait" src="/imgs/portraits/portrait0.jpg" style="width: 100%;">
+						<img class="profile-portrait" id="crud-portrait" src="/imgs/portraits/portrait0.jpg" style="width: 100%;">
 					</div>
 				</div>
 				<div class="row flex-column p-2 m-2">
 					<h1 class="mx-auto user-select-none">
 						<input class="h4 item-holder inner-shadow p-2" type="text" name="crud-nome" placeholder="Nome" id="crud-nome"><br>
-						<input class="h5 item-holder inner-shadow p-2" type="number" name="crud-idade" placeholder="Idade" id="preview-idade"></h1>
-					<h5 class="mx-auto my-2 user-select-none"><span class="mx-3" style="visibility: hidden;"><i class="fas fa-flag"></i></span><span id="preview-nacionalidade">Nacionalidade</span><span class="mx-3"><i class="fas fa-flag"></i></span></h5>
+						<input class="h5 item-holder inner-shadow p-2" type="number" name="crud-idade" placeholder="Idade" id="crud-idade"></h1>
+					<h5 class="mx-auto my-2 user-select-none d-flex align-self-center">
+						<span class="mx-3" style="visibility: hidden;"><i class="fas fa-flag"></i></span>
+						<span>
+							<select class="item-holder inner-shadow p-1 px-2" id="crud-nacionalidade">
+								
+							</select>
+						</span>
+						<span class="mx-3"><i class="fas fa-flag"></i></span></h5>
 					<div class="row px-4 pb-4 mx-4 mt-4">
 						<div class="mx-auto h5">
 							<span>Bio</span>
@@ -50,45 +58,22 @@
 						<u>Características:</u>
 					</h3>
 				</div>
-				<div class="row px-2 pb-2 mb-2 d-flex" id="holder-caracteristicas">
+				<div class="row p-3 m-4 mb-2 d-flex" id="holder-caracteristicas">
 
 				</div>
-
-				<!-- <div class="row flex-column px-2 pb-2 mb-2">
-					<div class="my-2 p-4 d-flex justify-content-around">
-						<div>
-						    <label for="car-preview-1" id="car-preview-label-1" class="h3 user-select-none">
-							    <input type="checkbox" id="car-preview-1"> Característica 1
-							</label>
-						</div>
-						<div>
-						    <label for="car-preview-2" id="car-preview-label-2" class="h3 user-select-none">
-						    	<input type="checkbox" id="car-preview-2"> Característica 2
-						    </label>
-						</div>
-						<div>
-						    <label for="car-preview-3" id="car-preview-label-3" class="h3 user-select-none">
-						    	<input type="checkbox" id="car-preview-3"> Característica 3
-						    </label>
-						</div>
+				<div class="row pb-4 px-4 mx-4 justify-content-between">
+					<div class="d-flex">
+						<h3 class="ml-4 user-select-none">
+							<span class="m-2"><i class="fas fa-user-check"></i></span>
+							<u>Habilidades:</u>
+						</h3>
+						<span class="ml-4 m-2 pointer h6 ubuntu" data-toggle="modal" data-target="#crud-modal-hab">Add Habilidade <i class="fas fa-plus-square"></i></span></span>
 					</div>
-				</div> -->
-				<div class="row pb-4 px-4 mx-4 justify-content-start">
-					<h3 class="ml-4 user-select-none">
-						<span class="m-2"><i class="fas fa-user-check"></i></span>
-						<u>Habilidades:</u>
-					</h3>
+					<span class="h5 mr-4">PH: <span class=" ml-2" id="crud-ph"></span> | <span class="" id="crud-ph-total"></span></span>
 				</div>
 				<div class="row pb-4 px-4 mx-4 mb-4">
-					<div class="col-4 d-flex flex-column">
-						<span class="h4 text-center user-select-none mt-4">Acrobacia 3</span>
-						<span class="description h6 ubuntu font-weight-light">rolamentos básicos e estrelinhas - saltos mortais e piruetas - andar na corda bamba e fazer rotações e saltos entre barras</span>
+					<div class="col-12 d-flex flex-column" id="crud-habilidades">
 
-						<span class="h4 text-center user-select-none mt-4">Natação 3</span>
-						<span class="description h6 ubuntu font-weight-light">rolamentos básicos e estrelinhas - saltos mortais e piruetas - andar na corda bamba e fazer rotações e saltos entre barras</span>
-
-						<span class="h4 text-center user-select-none mt-4">Furtividade 2</span>
-						<span class="description h6 ubuntu font-weight-light">rolamentos básicos e estrelinhas - saltos mortais e piruetas - andar na corda bamba e fazer rotações e saltos entre barras</span>
 					</div>
 				</div>
 				<div class="row pb-4 px-4 mx-4 justify-content-between">
@@ -104,16 +89,40 @@
 				<div class="row pb-4 px-4 mx-4 mb-4">
 					<textarea class="item-holder mx-4 p-4 inner-shadow" id="preview-bens" style="height: 350px"></textarea>
 				</div>
-				<div class="row pb-4 px-4 mx-4 justify-content-between">
-					<h3 class="ml-4 user-select-none">
-						<span class="m-2"><i class="fas fa-address-book"></i></span>
-						<u>Diário:</u>
-					</h3>
-				</div>
-				<div class="row pb-4 px-4 mx-4 mb-4">
-					<textarea class="item-holder mx-4 p-4 inner-shadow" style="height: 350px"></textarea>
-				</div>
 			</div>
+		</div>
+
+		<div class="modal fade" id="crud-modal-hab" tabindex="-1" role="dialog" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body row" id="habilidades-modal">
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary" onclick="SaveHabilidades()">Salvar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="modal fade" id="crud-modal-profile" tabindex="-1" role="dialog" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body justify-content-between" id="profiles-modal">
+
+		      </div>
+		    </div>
+		  </div>
 		</div>
 
 		<script src="https://kit.fontawesome.com/3f043c6910.js" crossorigin="anonymous"></script>
