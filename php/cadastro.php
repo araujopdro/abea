@@ -1,26 +1,15 @@
 <?php
 	session_start();
-
-	date_default_timezone_set('America/Sao_Paulo');
-	$data = date('d/m/Y H:i:s', time());
+	include_once("config.php");
+	
 	$nome = $_POST['nome'];
-	$idade = $_POST['idade'];
-	$perfil = $_POST['perfil'];
-	$nacionalidade = $_POST['nacionalidade'];
-	$etnia = $_POST['etnia'];
-	$dinheiro = $_POST['dinheiro'];
-	$bens = $_POST['bens'];
-	$caracteristicas = $_POST['caracteristicas'];
-	$resistencia = $_POST['resistencia'];
-	$habilidades = $_POST['habilidades'];
-	$historia = $_POST['historia'];
 
-	include_once("conectar.php");
+	$query_cadastro = "INSERT INTO ".$table." (`name`) VALUES ('$nome')";
+	
+	mysqli_query($bd, $query_cadastro)or die(mysqli_error($bd));
+	$this_id = $bd->insert_id;
 
-	mysqli_query($bd, "SET NAMES 'utf8'");
-	mysqli_query($bd, 'SET character_set_connection=utf8');
-	mysqli_query($bd, 'SET character_set_client=utf8');
-	mysqli_query($bd, 'SET character_set_results=utf8');
-
-	mysqli_query($bd, "INSERT INTO characters (`nome`, `perfil`, `idade`, `nacionalidade`, `etnia`, `caracteristicas`, `resistencia`, `habilidades`, `dinheiro`, `bens`, `historia`) VALUES ('$nome', '$perfil', '$idade', '$nacionalidade', '$etnia', '$caracteristicas', '$resistencia', '$habilidades', '$dinheiro', '$bens', '$historia')")or die(mysqli_error($bd));
+	$value = array('response' => $this_id);
+	header('Content-Type: application/json;');
+	echo json_encode($value);
 ?>
