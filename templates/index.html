@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+ 
+    <title>ABEA - Criador de Personagem</title>
+    <link rel="icon" type="image/png" href="imgs/favicon.png"/>
+    <link rel="stylesheet" href="css/flag-icon.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <style type="text/css">
+      html, body {
+        margin: 0px !important;
+        padding: 0 !important;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .menu-icon{
+        color: #4b4b4b;
+        font-size: 2.1rem;
+        text-align: center;
+      }
+
+      .menu-icon > span{
+        display: block;
+        margin-top: -0.35em;
+        font-size: 0.33em;
+        font-weight: bold;
+      }
+
+      .arw-icon.active{
+        color: #0d6efd;
+      }
+
+      .menu-icon.active{
+        color: #0d6efd;
+        cursor: pointer;
+      }
+
+      .arw-icon.inactive{
+        color: #6c757d;
+        cursor: default;
+      }
+
+      .menu-icon.inactive{
+        color: #6c757d;
+        cursor: default;
+      }
+
+      .menu-arw{
+
+      }
+
+      .dark-gray{
+        color: #4b4b4b;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <div class="container-fluid justify-content-center text-dark py-4" id="app">
+      <div class="col-12 col-lg-3 text-center mx-auto">
+        <div class="h3 dark-gray my-3 ">A Bandeira da Arara e do Elefante<br><small>Criador de Personagem</small></div>
+        <div class="d-flex justify-content-center align-items-center">
+          
+          <div class="col-2 menu-icon active text-center" id="menu-icon-geral" onclick="Navigate('geral')">
+            <i class="fas fa-user"></i>
+            <span>geral</span>
+          </div>
+
+          <i class="fas fa-angle-right mx-1 arw-icon inactive" id="arw-icon-historia"></i>
+          <div class="col-2 menu-icon inactive text-center" id="menu-icon-historia" onclick="Navigate('hist')">
+            <i class="fas fa-scroll" style="font-size: 1.8rem;"></i>
+            <span>histórico</span>
+          </div>
+          
+          <i class="fas fa-angle-right mx-1 arw-icon inactive" id="arw-icon-caracteristicas"></i>
+          <div class="col-2 menu-icon inactive text-center" id="menu-icon-caracteristicas" onclick="Navigate('car')">
+            <i class="fas fa-diagnoses" style="font-size: 2.1rem;"></i>
+            <span>aspectos</span>
+          </div>
+          
+          <i class="fas fa-angle-right mx-1 arw-icon inactive" id="arw-icon-habilidades"></i>
+          <div class="col-2 menu-icon inactive text-center" id="menu-icon-habilidades" onclick="Navigate('hab')">
+            <i class="fas fa-list-ul" style="font-size: 1.8rem;"></i>
+            <span>habilidades</span>
+          </div>
+          
+          <i class="fas fa-angle-right mx-1 arw-icon inactive" id="arw-icon-bens"></i>
+          <div class="col-2 menu-icon inactive text-center" id="menu-icon-bens" onclick="Navigate('bens')">
+            <i class="fas fa-briefcase" style="font-size: 1.8rem;"></i>
+            <span>bens</span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center my-2">
+          <button type="button" id="set-char" class="btn btn-outline-success btn-sm px-4 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            visualizar o personagem
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+ 
+  </body>
+</html>

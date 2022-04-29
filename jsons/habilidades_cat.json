@@ -1,0 +1,17 @@
+[
+  {"title":"Habilidades Gerais","icon":"fas fa-running"},
+  {"title":"Habilidades Silvestres","icon":"fas fa-campground"},
+  {"title":"Armas","icon":"fas fa-bomb"},
+  {"title":"Artes Marciais","icon":"fas fa-ribbon"},
+  {"title":"Habilidades Sociais","icon":"fas fa-user-friends"},
+  {"title":"Habilidades Militares e Navais","icon":"fas fa-ship"},
+  {"title":"Artesanatos","icon":"fas fa-gift"},
+  {"title":"Artes","icon":"fas fa-palette"},
+  {"title":"Instrumentos Musicais","icon":"fas fa-guitar"},
+  {"title":"Outros Ofícios","icon":"fas fa-tools"},
+  {"title":"Estudos Acadêmicos","icon":"fas fa-book"},
+  {"title":"Graças Divinas","icon":"fas fa-cross"},
+  {"title":"Poderes de Fôlego","icon":"fab fa-gripfire"},
+  {"title":"Poderes de Ifá","icon":"fas fa-spa"},
+  {"title":"Línguas","icon":"fas fa-language"}
+]
