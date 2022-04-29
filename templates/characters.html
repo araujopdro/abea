@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for char in characters %}
+	<h5>{{char.name}}</h5>
+{% endfor %}
+
+{% endblock %}
