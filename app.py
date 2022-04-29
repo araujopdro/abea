@@ -1,6 +1,6 @@
-from src.server.instance import server
+from import Flask, render_template
+app = Flask(__name__)
 
-from src.controllers.characters import *
-
-
-server.run()
+@app.route('/')
+def index():
+	return("hello world")
