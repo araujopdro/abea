@@ -79,6 +79,12 @@ class Ethnicity(db.Model):
 	def __repr__(self):
 		return '<ethnicity %r>' % self.id
 
+class EthnicitySchema(ma.SQLAlchemyAutoSchema):
+	class Meta:
+		model = Ethnicity
+
+ethnicity_schema = EthnicitySchema(many=True)
+
 ###ROUTES
 @app.route('/')
 def index():
@@ -91,7 +97,7 @@ def index():
 	skills = Skill.query.all()
 
 	feats = Feats.query.all()
-	ethnicities = Ethnicity.query.all()
+	ethnicities = ethnicity_schema.dump(Ethnicity.query.all())
 	return render_template("create_char.html", nations=nations, nations_cat=nations_cat, skills=skills, skills_cat=skills_cat, feats=feats, ethnicities=ethnicities)
 
 @app.route('/characters')
@@ -148,6 +154,9 @@ def update_char(id):
 
 			if 'items' in request_data:
 				update_char.items = request_data['items']
+
+			if 'history' in request_data:
+				update_char.history = request_data['history']
 
 		try:
 			db.session.commit()

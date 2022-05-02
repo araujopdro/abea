@@ -202,7 +202,7 @@
 		</div>
 
 		<div class="px-5 py-2" style="display: none; border-bottom-color: rgba(0, 0, 0, 0.125); border-bottom-style: solid; border-bottom-width: 1px;" id="nasc-flavor-holder">
-			<div class="text-center"><span class="flag-icon flag-icon-squared" id="nasc-flag"></span></div>
+			<div class="text-center" id="nasc-flavor-title"></div>
 			<small id="nacs-flavor">
 			</small>
 		</div>
@@ -365,24 +365,24 @@
 						</label>
 						<div id="nvl-{{cat.id}}-{{skill.id}}" style="display: none;">
 							{% if skill.level_1 and skill.level_2 and skill.level_3 %} 
-							<div style="border-bottom: 1px solid lightgray;">
+							<div class="py-1" style="border-bottom: 1px solid lightgray;">
 								<small>
 									<strong>nível 1</strong> - {{skill.level_1}}
 								</small>
 							</div>
-							<div style="border-bottom: 1px solid lightgray;">
+							<div class="py-1" style="border-bottom: 1px solid lightgray;">
 								<small>
 									<strong>nível 2</strong> - {{skill.level_2}}
 								</small>
 							</div>
-							<div style="border-bottom: 1px solid lightgray;">
+							<div class="py-1" style="border-bottom: 1px solid lightgray;">
 								<small>
 									<strong>nível 3</strong> - {{skill.level_3}}
 								</small>
 							</div>
 							{% endif %} 
 							{% if skill.description %} 
-							<div style="border-bottom: 1px solid lightgray;">
+							<div class="py-1" style="border-bottom: 1px solid lightgray;">
 								<small>
 									{{skill.description}}
 								</small>
@@ -455,6 +455,7 @@
 		"sp": 0
 	}
 
+	let ethnicities = {{ ethnicities|tojson|safe }};
 	$( document ).ready(function() {
     var limit = 4;
     $('input.chckbx').change(function() {
@@ -485,6 +486,9 @@
     });
 
     $("#etnia-select").change(function(){
+  		let idx = ethnicities.findIndex(x => x.title == this.value);
+  		$("#et-flavor-holder").show();
+  		$("#et-flavor").text(ethnicities[idx].flavor);
     	$("#hist-etnia").text("etnia: "+this.value);
     });
 
@@ -587,8 +591,14 @@
   function SelectNation(_nation){
   	$("#hist-nome").text("nome:");
   	$("#hist-nome").prop('disabled', false);
+
+  	$("#nasc-flavor-title").empty();
+  	$("#nasc-flavor-title").append("<span class='flag-icon flag-icon-squared me-2 flag-icon-"+_nation.flag+"'></span>"+_nation.title);
+  	$("#nasc-flavor-holder").show();
+  	$("#nacs-flavor").text(_nation.flavor);
+
   	let nation_class = "flag-icon flag-icon-squared ms-2 me-1 flag-icon-"+_nation.flag
-  	$("#hist-nac").html("nacionalidade:<span class='"+nation_class+"'></span>"+_nation.title);
+  	$("#hist-nac").html("nacionalidade: "+_nation.title);
     character.nationality = _nation.id;
   }
 
