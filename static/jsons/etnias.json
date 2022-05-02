@@ -1,10 +1,8 @@
-{
-	"etnias":[
-		{"title":"Branco","flavor":"Indivíduos com características físicas historicamente associadas às populações da Europa"},
-		{"title":"Negro","flavor":"Indivíduos com características físicas historicamente associadas às populações da África"},
-		{"title":"Indígena","flavor":"Indivíduos de uma das mais de 305 etnias"},
-		{"title":"Mulato","flavor":"Um termo que designa a pessoa que é descendente de negros africanos e brancos europeus"},
-		{"title":"Mameluco","flavor":"Um termo que designa a pessoa que é descendente de indígena e brancos europeus"},
-		{"title":"Cafuzo","flavor":"Um termo que designa a pessoa que é descendente de indígena e negros africanos"}
-	]
-}
+[
+	{"title":"Branco","flavor":"Indivíduos com características físicas historicamente associadas às populações da Europa"},
+	{"title":"Negro","flavor":"Indivíduos com características físicas historicamente associadas às populações da África"},
+	{"title":"Indígena","flavor":"Indivíduos de uma das mais de 305 etnias"},
+	{"title":"Mulato","flavor":"Um termo que designa a pessoa que é descendente de negros africanos e brancos europeus"},
+	{"title":"Mameluco","flavor":"Um termo que designa a pessoa que é descendente de indígena e brancos europeus"},
+	{"title":"Cafuzo","flavor":"Um termo que designa a pessoa que é descendente de indígena e negros africanos"}
+]

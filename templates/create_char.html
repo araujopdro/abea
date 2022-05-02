@@ -1,0 +1,686 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<style type="text/css">
+	html, body {
+		margin: 0px !important;
+		padding: 0 !important;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.menu-icon{
+		color: #4b4b4b;
+		font-size: 2.1rem;
+		text-align: center;
+	}
+
+	.menu-icon > span{
+		display: block;
+		margin-top: -0.35em;
+		font-size: 0.33em;
+		font-weight: bold;
+	}
+
+	.arw-icon.active{
+		color: #0d6efd;
+	}
+
+	.menu-icon.active{
+		color: #0d6efd;
+		cursor: pointer;
+	}
+
+	.arw-icon.inactive{
+		color: #6c757d;
+		cursor: default;
+	}
+
+	.menu-icon.inactive{
+		color: #6c757d;
+		cursor: default;
+	}
+
+	.menu-arw{
+
+	}
+
+	.dark-gray{
+		color: #4b4b4b;
+	}
+</style>
+
+<!-- HEADER -->
+<div class="col-12 col-lg-3 text-center mx-auto">
+	<div class="h3 dark-gray my-3 ">A Bandeira da Arara e do Elefante<br><small>Criador de Personagem</small></div>
+	<div class="d-flex justify-content-center align-items-center">
+		
+		<div class="col-2 menu-icon active text-center" id="menu-icon-geral" onclick="Navigate('geral')">
+			<i class="fas fa-user"></i>
+			<span>geral</span>
+		</div>
+
+		<i class="fas fa-angle-right mx-1 arw-icon inactive" id="arw-icon-historia"></i>
+		<div class="col-2 menu-icon inactive text-center" id="menu-icon-historia" onclick="Navigate('hist')">
+			<i class="fas fa-scroll" style="font-size: 1.8rem;"></i>
+			<span>histórico</span>
+		</div>
+		
+		<i class="fas fa-angle-right mx-1 arw-icon inactive" id="arw-icon-caracteristicas"></i>
+		<div class="col-2 menu-icon inactive text-center" id="menu-icon-caracteristicas" onclick="Navigate('car')">
+			<i class="fas fa-diagnoses" style="font-size: 2.1rem;"></i>
+			<span>aspectos</span>
+		</div>
+		
+		<i class="fas fa-angle-right mx-1 arw-icon inactive" id="arw-icon-habilidades"></i>
+		<div class="col-2 menu-icon inactive text-center" id="menu-icon-habilidades" onclick="Navigate('hab')">
+			<i class="fas fa-list-ul" style="font-size: 1.8rem;"></i>
+			<span>habilidades</span>
+		</div>
+		
+		<i class="fas fa-angle-right mx-1 arw-icon inactive" id="arw-icon-bens"></i>
+		<div class="col-2 menu-icon inactive text-center" id="menu-icon-bens" onclick="Navigate('bens')">
+			<i class="fas fa-briefcase" style="font-size: 1.8rem;"></i>
+			<span>bens</span>
+		</div>
+	</div>
+	<div class="d-flex justify-content-center my-2">
+		<button type="button" id="set-char" onclick="ShowCharacter()" class="btn btn-outline-primary btn-sm px-4 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			visualizar o personagem
+		</button>
+	</div>
+</div>
+
+<!-- MODAL PERSONAGEM -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header justify-content-between">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="visibility: hidden;"></button>
+        <h5 class="modal-title text-center" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- <div> 
+          <strong> :</strong><small> </small>
+        </div> -->
+        <br>
+        <div class="my-1">
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="SaveCharacter()">Salvar Personagem</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VISAO GERAO -->
+<div class="col-12 col-lg-3 mx-auto pt-2 page-holder" style="user-select: none;" id="visaogeral-holder">
+	<div class="h4 text-center">Visão Geral</div>
+	<div class="px-2">Para criar um personagem são necessárias quatro etapas:</div>
+	<div class="my-3">
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item"><i class="fas fa-scroll"></i><span class="ps-2">Definir o histórico do personagem</span></li>
+			<li class="list-group-item"><i class="fas fa-diagnoses"></i><span class="ps-2">Escolher suas características</span></li>
+			<li class="list-group-item"><i class="fas fa-list-ul"></i><span class="ps-2">Escolher suas habilidades</span></li>
+			<li class="list-group-item"><i class="fas fa-briefcase"></i><span class="ps-2">Definir seus bens inciais</span></li>
+		</ul>
+	</div>
+
+	<div class="d-flex justify-content-end"><button type="button" onclick="Navigate('hist')" class="btn btn-outline-primary btn-sm px-4">Avançar</button></div>
+	<div class="px-2 mt-5"><small>*para criar personagens míticos <em><small>(curupira, caipora e etc.)</small></em> a gente tem que conversar antes.</small></div>
+</div>
+
+<!-- HISTORICO HOLDER -->
+<div class="col-12 col-lg-3 mx-auto pt-2 page-holder" style="user-select: none; display: none;" id="historia-holder">
+	<div class="h4 text-center">História</div>
+
+	<div class="px-2">
+		As informações a seguir servem para te ajudar a pensar na história do seu personagem, e a com excessõa da Idade, nenhuma delas afeta as habilidades dele.
+		<br>
+		<small>
+			<br>Onde ele nasceu? Em quais outros lugares ele morou?
+			<br>Como eram seus pais ou as pessoas que o criaram?
+			<br>O que ele fez antes desta aventura? Exerceu algum outro ofício?
+			<br>Quais são as suas motivações?
+		</small>
+		<br><br>
+		e estiver com dificuldade de pensar em alguma, você pode avançar para as próximas etapas, ver as características e habilidades disponíveis, e voltar aqui.
+	</div>
+
+	<div class="accordion accordion-flush my-3" id="accordionFlushExample">
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingOne">
+				<button id="hist-etnia" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+					etnia: --
+				</button>
+			</h2>
+			<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">
+					<select class="form-select" aria-label="Default select example" id="etnia-select">
+						<option selected>Selecione uma opção..</option>
+						{% for ethnicity in ethnicities %}	<option value="{{ethnicity.title}}">{{ethnicity.title}}</option>{% endfor %}
+					</select>
+				</div>
+			</div>
+			<div class="px-5 py-2" style="display: none;" id="et-flavor-holder">
+				<small id="et-flavor">
+				</small>
+			</div>
+		</div>
+
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingTwo">
+				<button class="accordion-button collapsed" id="hist-nac" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+					nacionalidade: --
+				</button>
+			</h2>
+			<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">
+	  			{% for cat in nations_cat %}
+					<div id="nation-cat-{{loop.index}}">
+						<div class="my-2">{{ cat.category }}</div>
+	  				{% for nation in nations if nation.category == cat.category %}
+						<div class="form-check" id="nation-{{nation.id}}">
+							<input class="form-check-input" type="radio" name="povo-radio" id="radio-povo-{{nation.id}}" onclick="SelectNation( {{nation}} )" value="{{nation.title}}" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+							<label class="form-check-label" for="radio-povo-{{nation.id}}">
+								<span class="flag-icon flag-icon-squared me-2 flag-icon-{{nation.flag}}"></span>{{nation.title}}
+							</label>
+						</div>
+	  				{% endfor %}
+					</div>
+  				{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		<div class="px-5 py-2" style="display: none; border-bottom-color: rgba(0, 0, 0, 0.125); border-bottom-style: solid; border-bottom-width: 1px;" id="nasc-flavor-holder">
+			<div class="text-center"><span class="flag-icon flag-icon-squared" id="nasc-flag"></span></div>
+			<small id="nacs-flavor">
+			</small>
+		</div>
+
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingThree">
+				<button class="accordion-button collapsed" id="hist-idade" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+					idade: --
+				</button>
+			</h2>
+			<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body"><input id="idade-slider" type="range" class="form-range" min="16" max="60" step="1"  value="16"></div>
+				<div class="text-warning bg-dark p-1" id="idade-warning" style="border-radius: 0.35rem; font-size: 0.7rem;">
+					<i class="fas fa-exclamation-circle"></i><small> - Para idades maiores do que 22, precisamos combinar antes, pois a idade afeta as habilidades do personagem.</small>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingFour">
+				<button class="accordion-button collapsed" id="hist-nome" disabled type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+					nome: <i class="ms-2 fas fa-lock"></i>
+				</button>
+			</h2>
+			<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">
+					<div class="input-group">
+						<input type="text" class="form-control" id="nome">
+						<input type="text" class="form-control" id="sobre">
+						<button class="btn btn-outline-primary" type="button" id="button-addon2" onclick="SetName()"><i class="fas fa-dice"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingFive">
+				<button class="accordion-button collapsed" id="hist-hist" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+					histórico:
+				</button>
+			</h2>
+			<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">
+					<div class="form-group">
+						<textarea class="form-control" id="hist-hist-textarea" rows="5"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="d-flex justify-content-between">
+		<button type="button" onclick="Navigate('geral')" class="btn btn-outline-primary btn-sm px-4">Voltar</button>
+		<button type="button" onclick="Navigate('car')" class="btn btn-outline-primary btn-sm px-4">Avançar</button>
+	</div>
+</div>
+
+
+<!-- FEATS HOLDER -->
+<div class="col-12 col-lg-3 mx-auto pt-2 page-holder" style="user-select: none; display: none;" id="feats-holder">
+	<div class="h4 text-center">Características</div>
+	<div class="px-2"> Escolha 4 para o seu personagem. Entre as características escolhidas, optar ao menos por uma que possa ser considerada um defeito tornará o personagem ainda mais interessante:</div>
+	<div class="d-flex py-3" style="flex-wrap: wrap;"> 
+	  {% for feat in feats %}
+			<div class="form-check col-12 my-1 feat-holder">
+				<input class="form-check-input chckbx" name="feat-checkbox" type="checkbox" id="feat-{{feat.id}}" onclick="SelectCaracteristicas( {{feat.id}} )">
+				<label class="form-check-label" for="feat-{{feat.id}}">
+					<strong>{{ feat.title }}</strong><small> {{ feat.flavor }}</small>
+				</label>
+			</div>
+	  {% endfor %}
+	</div>
+
+	<div class="d-flex justify-content-between">
+		<button type="button" onclick="Navigate('hist')" class="btn btn-outline-primary btn-sm px-4">Voltar</button>
+		<button type="button" onclick="Navigate('hab')" class="btn btn-outline-primary btn-sm px-4">Avançar</button>
+	</div>
+</div>
+
+
+<!-- HABILIDADES HOLDER -->
+<div class="col-12 col-lg-3 mx-auto pt-2 page-holder" style="user-select: none; display: none;" id="hab-holder">
+	<div class="h4 text-center">Habilidades</div>
+	<div class="px-2"><span id="hab-info">
+		Baseado na idade do seu personagem, você tem 20 <em>pontos de habilidade</em> para ensinar ao seu personagem. Cada habilidade tem 3 niveis de maestria, que dão bônus diferentes às suas rolagens nos testes.
+		<br><br>
+		Existem dezenas de habilidades divididas por categorias, tente misturar habilidades de áreas diferentes, e não se preocupe em pegar apenas as habilidades 'úteis' ou funcionais, é interessante incluir habilidades de artes, artesenatos e estudos acadêmicos para enriquecer o mundo e a história do seu personagem.</span>
+		<div class="d-flex justify-content-between mt-4">
+			<span class="text-center"><strong>Nível 1</strong><br><small>Aprendiz +3*<br>custo: 1<em>ph</em></small></span>
+			<span class="text-center"><strong>Nível 2</strong><br><small>Praticante +6*<br>custo: 3<em>ph</em></small></span>
+			<span class="text-center"><strong>Nível 3</strong><br><small>Mestre +9*<br>custo: 7<em>ph</em></small></span>
+		</div>
+		<div class="mb-4 text-end"><small>*bônus na rolagem</small></div>
+		Seu personagem já começa com uma habilidade, o seu <strong>idioma nato</strong>, e o recomendado é que você escolha mais <strong>6 habilidades</strong> de Nível 1, <strong>2 habilidades</strong> de Nível 2 e <strong>1 habilidade</strong> de Nível 3.
+		<br><br><small>
+		.Usuários de <em>Graças Divinas, Poderes de Fôlego e Poderes de Ifá</em> <strong>não</strong> podem ter habilidades em <em>Armas</em> e precisam ter pelo menos <em>Nível 1</em> nas habilidades base dos seus poderes mágicos, <em>Fé, Fôlego e Ifá</em> respectivamente.<br><br>
+		.Algumas habilidades aumentam a resistência (vida) do seu personagem quando melhoradas até o <em>Nível 3</em>, são elas: Acrobacia, Força-Física, Natação, Escalada, Boxe, Capoiera, Luta-livre</small>
+	</div>
+
+	<div class="text-center my-4">
+		<button id="dist-toggle" type="button" class="btn btn-outline-primary btn-sm px-4 mb-2" disabled="disabled" onclick="ToggleHab()">Distribuir Pontos</button>
+
+		<div class="text-warning bg-dark p-1" id="dist-warning" style="border-radius: 0.35rem; font-size: 0.67rem;">
+			<i class="fas fa-exclamation-circle"></i><small> - selecione as suas habilidades para depois distribuir os pontos em cada uma.</small>
+		</div>
+
+	</div>
+
+	<!-- DISTRIBUICAO DE PONTOS -->
+	<div class="d-none flex-wrap" id="dist-holder">
+		<div class="col-12 text-center bold" id="sp-title"></div>
+		{% for skill_nvl in skills %}
+		<div class="d-none flex-wrap justify-content-between align-items-center col-12 mb-2 py-2" id="hab-points-{{skill_nvl.id}}" style="border-bottom: 1px solid lightgray;">
+			<div class="col-12 text-center"><strong>{{ skill_nvl.title }}</strong></div>
+			<div class="form-check mt-2">
+				<input class="form-check-input" type="radio" name="hab-points-{{ skill_nvl.id }}" id="hab-points-{{ skill_nvl.id }}-nivel-1" onclick="NivelSkill( {{skill_nvl.id}}, 1 )">
+				<label class="form-check-label" for="hab-points-{{ skill_nvl.id }}-nivel-1">
+					Nível 1
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="hab-points-{{ skill_nvl.id }}" id="hab-points-{{ skill_nvl.id }}-nivel-2" onclick="NivelSkill( {{skill_nvl.id}}, 2 )">
+				<label class="form-check-label" for="hab-points-{{ skill_nvl.id }}-nivel-2">
+					Nível 2
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="hab-points-{{ skill_nvl.id }}" id="hab-points-{{ skill_nvl.id }}-nivel-3" onclick="NivelSkill( {{skill_nvl.id}}, 3 )">
+				<label class="form-check-label" for="hab-points-{{ skill_nvl.id }}-nivel-3">
+					Nível 3
+				</label>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+<!-- SELECAO DE HABILIDADES -->
+	<div class="accordion accordion-flush my-3" id="accordion_flush2">
+	  {% for cat in skills_cat %}
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="accordion_flush2_headingOne">
+				<button id="cats-{{cat.id}}" class="accordion-button collapsed mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{cat.id}}" aria-expanded="false" aria-controls="flush-collapseOne">
+					<span><i class="{{cat.icon}}"></i></span>{{cat.category}}
+				</button>
+  			{% for skill_prv in skills if skill_prv.category == cat.category %}
+					<div class="ps-5 h6 mt-1" id="preview-{{cat.id}}-{{skill_prv.id}}"  style="display: none;">
+						<i class="fas fa-check"></i><span class="ms-2">{{skill_prv.title}}</span>
+					</div>
+ 				{% endfor %}
+			</h2>
+			<div id="flush-collapse-{{cat.id}}" class="accordion-collapse collapse" data-bs-parent="#accordion_flush2">
+				<div class="accordion-body">
+	  			{% for skill in skills if skill.category == cat.category %}
+					<div class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="" id="input-{{cat.id}}-{{skill.id}}" onclick="SelectHab('nvl-{{cat.id}}-{{skill.id}}', 'preview-{{cat.id}}-{{skill.id}}', {{skill.id}})">
+						<label class="form-check-label" for="input-{{cat.id}}-{{skill.id}}">
+							{{skill.title}}
+						</label>
+						<div id="nvl-{{cat.id}}-{{skill.id}}" style="display: none;">
+							{% if skill.level_1 and skill.level_2 and skill.level_3 %} 
+							<div style="border-bottom: 1px solid lightgray;">
+								<small>
+									<strong>nível 1</strong> - {{skill.level_1}}
+								</small>
+							</div>
+							<div style="border-bottom: 1px solid lightgray;">
+								<small>
+									<strong>nível 2</strong> - {{skill.level_2}}
+								</small>
+							</div>
+							<div style="border-bottom: 1px solid lightgray;">
+								<small>
+									<strong>nível 3</strong> - {{skill.level_3}}
+								</small>
+							</div>
+							{% endif %} 
+							{% if skill.description %} 
+							<div style="border-bottom: 1px solid lightgray;">
+								<small>
+									{{skill.description}}
+								</small>
+							</div>
+							{% endif %} 
+						</div>
+					</div>
+	 				{% endfor %}
+				</div>
+			</div>
+		</div>
+	  {% endfor %}
+	</div>
+
+	<div class="d-flex justify-content-between">
+		<button type="button" onclick="Navigate('car')" class="btn btn-outline-primary btn-sm px-4">Voltar</button>
+		<button type="button" onclick="Navigate('bens')" class="btn btn-outline-primary btn-sm px-4">Avançar</button>
+	</div>
+</div>
+
+<!-- BENS -->
+<div class="col-12 col-lg-3 mx-auto pt-2 page-holder" style="user-select: none; display: none;" id="bens-holder">
+	<div class="h4 text-center">Bens Iniciais</div>
+	<div class="px-2">Todos os os personagens começam com alguns bens básicos:</div>
+	<div class="my-3">
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item"><span>1.000 réis</span></li>
+			<li class="list-group-item"><span>Roupas simples</span></li>
+			<li class="list-group-item"><span>Mochila ou Bolsa</span></li>
+			<li class="list-group-item"><span>Saco de dormir ou Rede</span></li>
+			<li class="list-group-item"><span>Usuários de poderes possuem um artigo de sua crença:<br><small>Fé - Crucifixo<br> Fôlego - Cachimbo e a Maracá<br> Ifá - Ikins e o Iroke Ifá</span></small></li>
+			<li class="list-group-item"><span>Instrumentos/Ferramentas relativos a habilidades de pelo menos Nível 2<small><br>ex: alguém com <em>Nível 2</em> em <em>Poesia</em> pode começar com <em>Papel e Bico de Pena</em></small></span></li>
+		</ul>
+	</div>
+	<div class="px-2 pt-2 pb-4">
+		<small>escreva abaixo os itens iniciais do seu personagem (sem o dinheiro):</small><br><span style="font-size: 0.7em;">ex: roupas simples, mochila, rede, ferramenta para confecção de flechas, arco simples, 10x flechas</span><br>
+		<textarea class="form-control mt-2" id="text-items" rows="5" style="font-size: 0.875em;"></textarea>
+	</div>
+	<div class="d-flex justify-content-start"><button type="button" onclick="Navigate('hab')" class="btn btn-outline-primary btn-sm px-4">Voltar</button></div>
+</div>
+
+<script type="text/javascript">
+
+
+ //  let character = {
+	//   "name":"",
+	//   "age":16,
+	//   "nationality":"",
+	//   "history":"",
+	//   "feats":[],
+	//   "skills":[],
+	//   "skills_lvl":[],
+	//   "base_energy":0,
+	//   "sp":20,
+	//   "money":1000,
+	//   "items":""
+	// }
+
+	let character = {
+		"age": "21",
+		"base_energy": 0,
+		"feats": "14,154,384,504",
+		"history": "paçoca téstê",
+		"items": "roupas simples, asdoknadkn",
+		"money": 1000,
+		"name": "Eduardo García",
+		"nationality": 4,
+		"skills": "174,184,514,504,294,404,44,164,1084,1104",
+		"skills_lvl": "2,1,1,1,1,1,3,2,1,1",
+		"sp": 0
+	}
+
+	$( document ).ready(function() {
+    var limit = 4;
+    $('input.chckbx').change(function() {
+      if(this.checked){
+        $(this).parent().addClass("selected-feat");
+      }else{
+        $(this).parent().removeClass("selected-feat");
+          $(".feat-holder").show();
+      }
+
+      if($("input[name='feat-checkbox']:checked").length == limit){
+          $(".feat-holder:not(.selected-feat)").hide();
+      }
+    });
+
+    $('#text-items').change(function() {
+  		character.items = $('#text-items').val();
+    });
+
+    $("#idade-slider").change(function(){
+    	$("#hist-idade").text("idade: "+this.value);
+      character.age = this.value;
+      if(this.value <= 22) {
+      	$("#idade-warning").hide()
+      } else{
+      	$("#idade-warning").show()
+      }
+    });
+
+    $("#etnia-select").change(function(){
+    	$("#hist-etnia").text("etnia: "+this.value);
+    });
+
+    $("#hist-hist-textarea").keyup(function(){
+    	character.history = $("#hist-hist-textarea").val();
+    	$("#hist-hist").html("histórico: <i class='ms-2 fas fa-check-circle'></i>");
+    });
+	});
+	
+	function getRandomInt(max) {
+			return Math.floor(Math.random() * max);
+	}
+
+	function ShowCharacter(){
+		//$("exampleModalLabel").html(character.name+"<br><span><small>"+character.age+"</span></small>");
+		console.log(character)
+	}
+
+	function SaveCharacter() {
+		// character.feats = character.feats.join(",");
+		// character.skills = character.skills.join(",");
+		// character.skills_lvl = character.skills_lvl.join(",");
+		$.ajax({
+        url: '/create_char',
+        type:'POST',
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify(character),
+        success: function(msg)
+        {   
+          console.log(msg)
+        }               
+    });
+	}
+
+	let nations = {{ nations|tojson|safe }};
+  function SetName(){
+  	let idx = nations.findIndex(x => x.id == character.nationality);
+
+    let nomes = nations[idx].first_names.split(",");
+    let sobre = nations[idx].last_names.split(",");
+
+    let rnd_nome = getRandomInt(nomes.length)
+    let rnd_sobre  = getRandomInt(sobre.length);
+
+    character.name = nomes[rnd_nome] + " " + sobre[rnd_sobre];
+
+    $("#hist-nome").text("nome: "+character.name);
+    $("#nome").val(nomes[rnd_nome]);
+    $("#sobre").val(sobre[rnd_sobre]);
+  }
+
+  function NivelSkill(skill_id, new_nvl){
+		let idx = character.skills.indexOf(skill_id);
+    let cur_nvl = character.skills_lvl[idx];
+
+    if(new_nvl != cur_nvl){
+    	switch(cur_nvl){
+	  		case 1:
+	  				character.sp += 1;
+	  			break
+	  		case 2:
+	  				character.sp += 3;
+	  			break
+	  		case 3:
+	  				character.sp += 7;
+	  			break
+	  	}
+
+    	switch(new_nvl){
+	  		case 1:
+	  				character.sp -= 1;
+	  			break
+	  		case 2:
+	  				character.sp -= 3;
+	  			break
+	  		case 3:
+	  				character.sp -= 7;
+	  			break
+	  	}
+	  	character.skills_lvl[idx] = new_nvl;
+    }
+    $("#sp-title").text("ph: "+character.sp);
+  }
+
+  function SelectCaracteristicas(id){
+    if(character.feats.includes(id)){
+        character.feats.splice(character.feats.indexOf(id), 1)
+    }else{
+        character.feats.push(id)
+    }
+  }
+
+  function ToggleHab() {
+    $("#dist-toggle").toggleText('Distribuir Pontos', 'Selecionar Habilidades');
+    $("#dist-holder").toggleClass("d-flex").toggleClass("d-none");
+    $("#accordion_flush2").toggle();
+    $("#sp-title").text("ph: "+character.sp);
+  }
+
+  function SelectNation(_nation){
+  	$("#hist-nome").text("nome:");
+  	$("#hist-nome").prop('disabled', false);
+  	let nation_class = "flag-icon flag-icon-squared ms-2 me-1 flag-icon-"+_nation.flag
+  	$("#hist-nac").html("nacionalidade:<span class='"+nation_class+"'></span>"+_nation.title);
+    character.nationality = _nation.id;
+  }
+
+  function SelectHab(nvl_id, pvw_id, skill_id) {
+    $("#hab-info").hide();
+
+    $("#dist-warning").hide();
+    $("#dist-toggle").prop("disabled", false);
+
+    $('#'+nvl_id).toggle();
+    $('#'+pvw_id).toggle();
+    $('#hab-points-'+skill_id).toggleClass("d-flex").toggleClass("d-none");
+
+
+    if(character.skills.includes(skill_id)){
+    		let idx = character.skills.indexOf(skill_id);
+
+        NivelSkill(skill_id, 0);
+
+        character.skills.splice(idx, 1);
+        character.skills_lvl.splice(idx, 1);
+    }else{
+        character.skills.push(skill_id);
+        character.skills_lvl.push(0);
+    }
+  }
+
+	function Navigate(i){
+		switch(i){
+			case 'geral':
+				$(".arw-icon").addClass("inactive").removeClass("active");
+				$(".menu-icon").addClass("inactive").removeClass("active");
+
+				$("#menu-icon-geral").removeClass("inactive").addClass("active");
+
+				$(".page-holder").hide();
+				$("#visaogeral-holder").show();
+				break;
+			case 'hist':
+				$(".arw-icon").addClass("inactive").removeClass("active");
+				$(".menu-icon").addClass("inactive").removeClass("active");
+
+				$("#menu-icon-geral").removeClass("inactive").addClass("active");
+
+				$("#arw-icon-historia").removeClass("inactive").addClass("active");
+				$("#menu-icon-historia").removeClass("inactive").addClass("active");
+
+				$(".page-holder").hide();
+				$("#historia-holder").show();
+				break;
+			case 'car':
+				$(".arw-icon").addClass("inactive").removeClass("active");
+				$(".menu-icon").addClass("inactive").removeClass("active");
+
+				$("#menu-icon-geral").removeClass("inactive").addClass("active");
+
+				$("#arw-icon-historia").removeClass("inactive").addClass("active");
+				$("#menu-icon-historia").removeClass("inactive").addClass("active");
+
+				$("#arw-icon-caracteristicas").removeClass("inactive").addClass("active");
+				$("#menu-icon-caracteristicas").removeClass("inactive").addClass("active");
+
+				$(".page-holder").hide();
+				$("#feats-holder").show();
+				break;
+			case 'hab':
+				$(".arw-icon").addClass("inactive").removeClass("active");
+				$(".menu-icon").addClass("inactive").removeClass("active");
+
+				$("#menu-icon-geral").removeClass("inactive").addClass("active");
+
+				$("#arw-icon-historia").removeClass("inactive").addClass("active");
+				$("#menu-icon-historia").removeClass("inactive").addClass("active");
+
+				$("#arw-icon-caracteristicas").removeClass("inactive").addClass("active");
+				$("#menu-icon-caracteristicas").removeClass("inactive").addClass("active");
+				
+				$("#arw-icon-habilidades").removeClass("inactive").addClass("active");
+				$("#menu-icon-habilidades").removeClass("inactive").addClass("active");
+
+				$(".page-holder").hide();
+				$("#hab-holder").show();
+				break;
+			case 'bens':
+				$(".arw-icon").addClass("active").removeClass("inactive");
+				$(".menu-icon").addClass("active").removeClass("inactive");
+				
+				$(".page-holder").hide();
+				$("#bens-holder").show();
+				break;
+		}
+	}
+</script>
+{% endblock %}
+	 
